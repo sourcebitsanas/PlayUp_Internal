@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"> 
+<string name="regionEurope">ヨーロッパ</string> 
+<string name="werfriends">あなたの友達</string> 
+<string name="MessageMe">友達にDM</string> 
+<string name="regionAsia">アジア</string> 
+<string name="name">ユーザー名</string> 
+<string name="regionNorthAmerica">北アメリカ</string> 
+<string name="matches_live_now">速報中</string> 
+<string name="regionAfrica">アフリカ</string> 
+<string name="ok">OK</string> 
+<string name="regionSouthAmerica">南アメリカ</string> 
+<string name="recentInvites">最近招待した友達</string> 
+<string name="regionOceania">オセアニア</string> 
+<string name="more">もっと見る</string> 
+<string name="sendFeedback">フィードバック</string> 
+<string name="logIn">ここからログイン</string> 
+<string name="hangout_with_friends">ここからログイン</string> 
+<string name="noProviderFound">接続に失敗しました。しばらくしてからもう一度試してみてください。</string> 
+<string name="matches">件、一致しました。</string> 
+<string name="active">オンライン</string> 
+<string name="loveSports">スポーツ、好き？</string> 
+<string name="inviteAndHangout">友達誘ってハングアウトしましょう！</string> 
+<string name="loading">読み込み中</string> 
+<string name="newHangout">ハングアウト作成</string> 
+<string name="findLeagues">リーグを探す</string> 
+<string name="findFixtures">試合予定を探す</string> 
+<string name="justNow">数秒前</string> 
+<string name="hour">時間前</string> 
+<string name="hours">時間前</string> 
+<string name="days">日前</string> 
+<string name="weeks">週間前</string> 
+<string name="months">ヶ月前</string> 
+<string name="years">年前</string> 
+<string name="today">今日</string> 
+<string name="tomorrow">明日</string> 
+<string name="yesterday">昨日</string> 
+<string name="lastWeek">先週</string> 
+<string name="lastMonth">先月</string> 
+<string name="lastYear">去年</string> 
+<string name="starting">まもなく開始</string> 
+<string name="starts">開始</string> 
+<string name="directMessages">メッセージ</string> 
+<!-- Need to add a line break -->
+ <string name="direct_conversation">ここから友達に\nメッセージを送ります</string> 
+ <string name="posting">投稿中...</string> 
+ <string name="error_message_posted">接続に失敗しました。しばらくしてからもう一度試してみてください。</string> 
+ <string name="error_message_addFriend">接続に失敗しました。しばらくしてからもう一度試してみてください。</string> 
+ <string name="app_name">PlayUp</string> <string name="no_network">接続に失敗しました。しばらくしてからもう一度試してみてください。</string> 
+ <string name="server_not_found">接続に失敗しました。しばらくしてからもう一度試してみてください。</string> 
+ <string name="internet_connectivity_dialog">接続に失敗しました。しばらくしてからもう一度試してみてください。</string> 
+ <string name="no_provider_data">接続に失敗しました。しばらくしてからもう一度試してみてください。</string> 
+ <string name="logoutText">ログアウトしますか？</string> <string name="anonymous">ここからログイン</string> 
+ <string name="login">ここからログイン</string> <string name="youarefriends">あなたの友達</string> 
+ <string name="awaitingforconfirmation">友達リクエストを承認</string> <string name="invited">友達リクエストを送信しました</string> 
+ <string name="connected">リンク済み</string> <string name="confirm">OK</string> <string name="cancel">キャンセル</string> 
+ <string name="my_profile">プロフィール</string> <string name="all_sports">スポーツ</string> 
+ <string name="my_sports">マイスポーツ</string> <string name="about">PlayUpについて</string> 
+ <string name="friends">友達</string> <string name="notifications">アラート</string> 
+ <string name="menu_invite_friends">友達を招待する</string> 
+ <string name="menu_edit_profile">プロフィールを編集</string> 
+ <string name="menu_all_sports_results">スポーツ</string> 
+ <string name="menu_show_leagues">リーグを選択</string> 
+ <string name="menu_calendar">カレンダー</string> 
+ <string name="loginErrMsg">接続に失敗しました。しばらくしてからもう一度試してみてください。</string> 
+ <string name="connection_msg">SNSアカウント を使ってログイン してください。</string> 
+ <string name="myleages_title">マイスポーツ</string> 
+ <string name="connectwith">リンクされていません</string> 
+ <string name="leagues_msg">お好みのリーグ\nを登録しましょう</string> 
+ <string name="sports">スポーツ</string> 
+ <string name="mySportsTitle">マイスポーツ</string> 
+ <string name="mySportsMsg">スポーツで世界と繋がろう！\n世界中の熱戦に素早くアクセス\n速報見ながらハングアウト！</string> 
+ <string name="live">試合中</string> 
+<!-- String resource for top bar fragment for Search -->
+ <string name="search">検索</string> 
+ <string name="hangoutEdittextHint">ハングアウト名</string> 
+ <string name="privateDesc">非公開 - 招待ユーザーのみが参加可能</string> 
+ <string name="publicDesc">公開 - すべてのユーザーが参加可能</string> 
+ <string name="publicTxt">公開</string> 
+ <string name="privateTxt">非公開</string> 
+ <string name="create_room">新しい\nハングアウト\n作成</string> 
+ <string name="allSports_results">スポーツ</string> 
+ <string name="friendLoginMessage">SNSアカウントを使ってログインしてください。</string> 
+ <string name="feedback">お問い合わせ、ご要望はこちら</string> 
+ <string name="createRoomFailedMsg">接続に失敗しました。しばらくしてからもう一度試してみてください。</string> 
+ <string name="hangoutText">新しいハングアウト作成</string> 
+ <string name="completed">終了</string> 
+ <string name="over">OVR</string> 
+ <string name="zero">0</string> 
+ <string name="liveNow">速報中</string> 
+ <string name="noLive">開催中の試合はありません</string> 
+ <string name="yousay">メッセージ</string> 
+ <string name="friend">友達</string> 
+ <string name="noMatches">見つかりませんでした</string> 
+ <string name="thisisyou">あなた</string> 
+ <string name="addasafriend">友達になる</string> 
+ <string name="recentHangout">最近参加したハングアウト</string> 
+ <string name="privateRoomMessage">プライベート（非公開）のハングアウトです。</string> 
+ <string name="your_friends">あなたの友達</string> 
+ <string name="sendYouFriendRequest">あなたに友達リクエストを送信</string> 
+<!-- About -->
+ <string name="about_text">PlayUpはスポーツファンのためのグローバルなSNSです。世界中のスポーツ速報を見ながら、友達や世界中のスポーツファンとコミュニケーションが楽しめます。スポーツ大好きな仲間とハングアウトで熱く語り合ってください。</string> <string name="feedback_subject">PlayUp フィードバック</string> <string name="feedback_mail_id">feedback@PlayUp.com</string> 
+<!-- Provider -->
+ <string name="provider_messsage">SNSアカウント\nを使ってログイン\nしてください。</string> 
+<!-- Need to add a line break -->
+ <string name="noPostMessagesLeftText">友達を招待する</string> 
+<!-- Need to add a line break -->
+ <string name="noPostMessagesRightText">書き込みをする</string> 
+ <string name="notification_err ">接続に失敗しました。しばらくしてからもう一度試してみてください。</string> 
+ <string name="notification_welcome">PlayUpへようこそ！</string> 
+ <string name="notification_welcome_desc">SNSアカウントを使ってログインしてください。</string> 
+ <string name="accepted">承認しました</string> 
+ <string name="ignored">無視しました</string> 
+ <string name="done">作成する</string> 
+ <string name="min">分前</string> 
+ <string name="mins">分前</string> 
+ <string name="no_playup_friend_str">DMを送信するには、最初に相手をPlayUpのハングアウトに招待してください。</string>
+  <string name="pleasewait">お待ちください...</string> 
+  <string name="post">投稿</string> 
+<!-- Updated String -->
+ <string name="runrate">RR</string> 
+ <string name="lastball">L\'Ball</string> 
+ <string name="home">ホーム</string> 
+ <string name="name_this_gp">グループには好きな名前を！</string> 
+ <string name="private_lobby_default_text">仲間とここでチャットができます。</string> 
+ <string name="createNewGroup">新しい\nグループ作成</string> 
+ <string name="privateLobbyRoomDesc">作成しているグループは非公開です。 \n会話はあなたと友達だけに限定されます。</string> 
+ <string name="privateLobbyHint">名前を入力</string> 
+ <string name="startConversation">会話を\n始めましょう</string> 
+ <string name="privateLobbyMessage11">みんないっしょに</string> 
+ <string name="privateLobbyMessage12">ステキなコメントはありませんか？</string> 
+ <string name="privateLobbyMessage21">スポーツ、好き？</string> 
+ <string name="privateLobbyMessage22">皆でハングアウト</string> 
+ <string name="privateLobbyRoomMessage">下から試合を\n選択してください</string> 
+ <string name="confirmFriend">友達リクエストを承認</string> 
+ <string name="noFavLiveSport_header">マイスポーツがありません</string> 
+ <string name="noFavLiveSport_content">マイスポーツを追加しましょう！</string> 
+ <string name="noFavouriteSport_header">マイスポーツは開催されてません</string> 
+ <string name="noFavouriteSport_content">もっと追加しませんか？</string> 
+ <string name="edit_room">編集</string> 
+ <string name="create_private_room">新しいグループ</string> 
+ <string name="awaiting">結果待ち</string> 
+ <string name="awaitingResults">まもなく開始</string> 
+ <string name="editLobbyRoomDesc">グループ名を編集</string> 
+ <string name="menu_sports">スポーツ &amp; スコア</string>
+ <string name="noAdditionalMatches">他の試合はありません</string> 
+ <string name="postGameScoresMsg">終了後に結果表示</string> 
+ <string name="setRegion">地域設定</string> 
+ <string name="shareFailure">共有できませんでした</string> 
+ <string name="shareResponse">共有しました</string> 
+ <string name="upcoming"/> 
+ <string name="updateVersion">新しいPlayUpが用意できました。ぜひアップデートしてください。</string> 
+ <string name="update_region">地域設定</string> 
+ <string name="mysocial_title">ソーシャルネットワーク</string> 
+ <string name="logout">ログアウト</string> 
+ <string name="set_region">地域設定</string> 
+<!-- updated string -->
+ <string name="shareDialogTitle">スコアを共有</string> 
+ <string name="dateFormat">M月d日</string> </resources>

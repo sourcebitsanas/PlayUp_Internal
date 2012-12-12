@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120px"
+    android:layout_height="120px" >
+
+    <ImageView
+        android:id="@+id/friendImage"
+        android:layout_width="120px"
+        android:layout_height="120px"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/friendStatus"
+        android:layout_width="13dip"
+        android:layout_height="13dip"
+        android:paddingLeft="5dp"
+        android:src="@drawable/green_dot" />
+
+    <ImageView
+        android:id="@+id/friendType"
+        android:layout_width="16dip"
+        android:layout_height="16dip"
+        android:layout_gravity="bottom|right" />
+
+</RelativeLayout>

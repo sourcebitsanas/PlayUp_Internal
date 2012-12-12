@@ -1,0 +1,90 @@
+package com.playup.android.util.json;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.playup.android.util.Constants;
+import com.playup.android.util.DatabaseUtil;
+import com.playup.android.util.Logs;
+import com.playup.android.util.Util;
+
+/**
+ * Context Detailed  
+ */
+public class ContextDetailedJsonUtil {
+	
+	
+	
+
+	private final String ITEMS_KEY 				=  "items";
+	private final String SELF_KEY 				=  ":self";
+	
+	private final String TYPE_KEY = ":type";
+	
+private boolean inTransaction = false;
+	
+	public ContextDetailedJsonUtil ( JSONObject jsonObj, boolean inTransaction ) {
+		
+		this.inTransaction = inTransaction;
+		if ( jsonObj != null ) {
+			parseData ( jsonObj );
+		}
+	}
+	
+	private void parseData ( JSONObject jsonObj) {
+
+		DatabaseUtil dbUtil = DatabaseUtil.getInstance();
+		/*if ( Constants.X <= 320 && Constants.Y <= 480 && Constants.DPI <= 160 ) {
+		} else {*/
+		
+		if ( !inTransaction ) {
+		
+			dbUtil.getWritabeDatabase().beginTransaction();
+			
+		}
+		//}
+		try {
+			
+			
+			
+			// get items
+			JSONArray jArr = jsonObj.getJSONArray( ITEMS_KEY );
+			
+			int count = jArr.length();
+			
+			for ( int i = 0; i < count ; i++ ) {
+				JSONObject jObj = jArr.getJSONObject( i );
+				
+				// get context self url
+				String context_url = jObj.getString( SELF_KEY );
+				dbUtil.setHeader ( context_url, jObj.getString( TYPE_KEY ), false  );
+				
+				
+				// save it in database.
+				dbUtil.setContext ( context_url );
+			}
+			
+			
+			
+			
+		} catch (JSONException e) {
+			  Logs.show(e);
+		}finally{
+			/*if ( Constants.X <= 320 && Constants.Y <= 480 && Constants.DPI <= 160 ) {
+			} else {*/
+			/**
+			 * Cleaning Memory
+			 */
+			new Util().releaseMemory(jsonObj);
+			if ( !inTransaction ) {
+				dbUtil.getWritabeDatabase().setTransactionSuccessful();
+				dbUtil.getWritabeDatabase().endTransaction();
+				
+				
+			}
+				
+			//}
+		}
+	}
+}

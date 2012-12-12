@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="-2dip"
+    android:background="#F7F7F4" 
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdgeLength="0dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+        
+            <!-- League base Starts -->
+
+            <LinearLayout
+                android:id="@+id/leagueBase"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/bottomShadow"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/strip_shadow"/>
+            <!-- League base Ends -->
+
+        </LinearLayout>
+    </ScrollView>
+    
+    
+     <ImageView
+                android:id="@+id/zeroGraphic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/zero_graphic"
+                android:visibility="gone"
+            />
+        
+
+</RelativeLayout>

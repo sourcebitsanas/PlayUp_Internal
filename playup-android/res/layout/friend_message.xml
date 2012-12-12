@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F4" >
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutbase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/base_bar"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/sendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/private_message_selector" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/friendMessageList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+        android:layout_above="@id/linearLayoutbase"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dip" 
+        android:visibility="gone">
+    </ListView>
+    
+        
+        <!-- No conversation view -->
+        <RelativeLayout 
+            android:id="@+id/noConversationsView"
+            android:layout_above="@id/linearLayoutbase"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:background="#4B4B4B"
+            android:layout_alignParentRight="true" >
+            
+         
+             <ImageView 
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+               android:scaleType="fitXY"
+                android:src="@drawable/no_message_image"/> 
+            
+            
+           <LinearLayout
+            	android:id="@+id/noMessageTextView"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentRight="true"
+	            android:paddingRight="20dip"
+	            android:orientation="vertical">
+	            <TextView
+	                android:id="@+id/friendsTo"
+	                style="@style/leagueName"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/direct_conversation" 
+	                android:gravity="right"/>
+	
+	          
+       	 </LinearLayout>
+
+        <!-- End of Left Texts -->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/noMessageTextView"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/how_to_arrow"
+            android:paddingBottom="20dip"
+            android:layout_marginRight="27dip"
+            android:visibility="visible" />
+            
+        </RelativeLayout>
+         <ImageView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@id/linearLayoutbase"
+	        android:scaleType="fitXY"
+	        android:src="@drawable/base_bar_shadow" />
+
+</RelativeLayout>

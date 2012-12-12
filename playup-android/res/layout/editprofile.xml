@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="-2dip"
+    android:background="#F7F7F4" >
+
+    <LinearLayout
+        android:id="@+id/user_profile_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-2dip"
+        android:background="@drawable/base_green"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/avtarTounge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tounge" />
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/blank_avatar1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip" >
+
+            <TextView
+                android:id="@+id/editprofile_userId"
+                style="@style/UserNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/editprofile_bg_img"
+                android:layout_alignRight="@+id/editprofile_bg_img"
+                android:layout_marginLeft="25dip"
+                android:paddingBottom="1dip" />
+
+            <ImageView
+                android:id="@+id/editprofile_bg_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/profile_info_base" />
+
+            <TextView
+                android:id="@+id/user_name"
+                style="@style/userName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/editprofile_userId"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/editprofile_bg_img"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="10dip"
+                android:ellipsize="end"
+                android:singleLine="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- This view contains user avatar, name and user id -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/user_profile_view" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/name_panel"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/nameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dip"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/name" />
+
+                <EditText
+                    android:id="@+id/usernameEdittext"
+                    style="@style/UserProfileEditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dip"
+                    android:background="@android:color/transparent"
+                    android:singleLine="true"
+                     />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:text="@string/done"
+                android:textColor="#FFFFFF" 
+                android:textStyle="bold"
+                android:paddingLeft="4dip"
+                android:paddingRight="4dip"
+                android:background="@drawable/done_selector"
+                android:enabled="false" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/toungeExpandView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="-2dip"
+        android:background="@drawable/tounge"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+         <ImageView
+            android:id = "@+id/toungeExpandView_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tounge" />
+
+            <ImageView
+                android:id="@+id/avtarImage1"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY"
+                 android:visibility="gone"
+                android:src="@drawable/blank_avatar1" />
+
+            <ImageView
+                android:id="@+id/avtarImage2"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_below="@id/avtarImage1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY"
+                 android:visibility="gone"
+                android:src="@drawable/blank_avatar1" />
+
+            <ImageView
+                android:id="@+id/avtarImage3"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_below="@id/avtarImage2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY"
+                 android:visibility="gone"
+                android:src="@drawable/blank_avatar1" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

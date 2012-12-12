@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+   
+    <!-- Bottom 2dp Shadow -->
+    <item>
+         <shape  android:shape="rectangle">
+
+            <gradient android:startColor="#D0D0D0" android:endColor="#F0F0F0" android:angle="270"/> 
+            <corners android:radius="5dp" 
+                android:topLeftRadius="0dip"
+                android:topRightRadius="0dip"
+                android:bottomLeftRadius="5dip"
+                android:bottomRightRadius="5dip" /> 
+			<padding
+			    android:left="-15dip"
+			    android:right="-15dip"
+			    android:bottom="5dip"
+			     />
+        </shape> 
+        
+        
+        
+    </item>
+</layer-list>

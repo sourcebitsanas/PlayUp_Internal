@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sport_base_load" >
+
+        <TextView
+            android:id="@+id/mysportsItemName"
+            style="@style/User_Options"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="top"
+            android:lineSpacingExtra="-8dip"
+            android:paddingTop="2dip"
+             android:paddingRight="2dip"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/mysportsItemImage"
+            android:layout_width="fill_parent"
+            android:layout_height="210px"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="1.1dip"
+            android:layout_marginRight="1.1dip"
+            android:layout_below="@id/mysportsItemName"
+            android:layout_centerHorizontal="true"/>
+        
+        <TextView
+	        android:id="@+id/liveImage"  
+	        style="@style/live"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginTop="45dp"
+	        android:layout_marginRight="5dp"
+	        android:paddingLeft="4dp"
+	        android:paddingRight="4dp"
+	        android:background="@drawable/live_icon"
+	        android:gravity="center"
+	        android:text="@string/live"
+	        android:visibility="gone" />
+        
+        
+    </RelativeLayout>
+
+    
+    <ProgressBar
+        android:id="@+id/mysportsItemProgressbar"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-50dp" />
+
+</LinearLayout>

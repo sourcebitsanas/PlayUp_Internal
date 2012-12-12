@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F4" >
+
+          <LinearLayout
+		        android:id="@+id/dummyHeaderView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ticket_texture"
+                android:visibility="invisible" />
+		     <RelativeLayout
+                android:id="@+id/stripDown"
+                android:layout_below="@id/dummyHeaderView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/strip"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:visibility="visible" >
+                
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/strip_arrow" />
+
+                <TextView
+                    android:id="@+id/stripLiveCountDown"
+                    style="@style/SearchText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/live_summary_base"
+                    android:gravity="center"
+                    android:paddingLeft="2dip"
+                    android:paddingRight="2dip"
+                         android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                    android:text=""
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linearLayout12"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/base_bar"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/addFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="left"
+                android:layout_marginLeft="25dip"
+                android:src="@drawable/private_friend_selector" />
+
+            <ImageView
+                android:id="@+id/write_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="22dip"
+                android:src="@drawable/private_message_selector" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutMiddle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/linearLayout12"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/stripDown"
+            android:background="#F7F7F4" >
+
+            <!-- Start of no Friends Background Image -->
+
+            <RelativeLayout
+                android:id="@+id/noFriendsView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/linearLayout12"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/stripDown"
+                android:background="#4B4B4B" >
+
+                <ImageView
+                    android:id="@+id/no_post_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/no_post_image"
+                    android:visibility="visible" />
+
+                <!-- Start of Left Texts -->
+
+                <LinearLayout
+                    android:id="@+id/inviteFriendsMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="25dip"
+                    android:layout_marginTop="20dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/invite"
+                        style="@style/leagueName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/noPostMessagesLeftText" />
+                </LinearLayout>
+
+                <!-- End of Left Texts -->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@id/inviteFriendsMain"
+                    android:layout_marginLeft="40dip"
+                    android:layout_marginTop="42dip"
+                    android:background="@drawable/how_to_arrow"
+                    android:paddingBottom="20dip"
+                    android:visibility="visible" />
+
+                <!-- Start of Right Texts -->
+
+                <LinearLayout
+                    android:id="@+id/messageRealMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dip"
+                    android:layout_marginTop="25dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/messageIn"
+                        style="@style/leagueName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:text="@string/noPostMessagesRightText" />
+                </LinearLayout>
+
+                <!-- End of Right Texts -->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/messageRealMain"
+                    android:layout_marginRight="40dip"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/how_to_arrow"
+                    android:paddingBottom="20dip" />
+            </RelativeLayout>
+
+            <!-- End of no Friends Background Image -->
+
+            <ListView
+                android:id="@+id/userChatListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/stripDown"
+                android:cacheColorHint="#FFFFFF"
+                android:dividerHeight="-1px"
+                android:fadingEdge="none"
+                android:fadingEdgeLength="0dip"
+                android:visibility="gone" >
+            </ListView>
+
+            <LinearLayout
+                android:id="@+id/noMessages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:cacheColorHint="#FFFFFF"
+                android:dividerHeight="-1px"
+                android:fadingEdge="none"
+                android:fadingEdgeLength="0dip"
+                android:orientation="vertical"
+                android:padding="30dip"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loading"
+                    android:textColor="#29aa4e"
+                    android:textSize="20dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addFriendsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="-1px"
+                android:background="@drawable/friends_base"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/addFrnds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/addfriendsselector" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <Gallery
+                        android:id="@+id/friendGallery"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:fadingEdge="none"
+                        android:spacing="8dip" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/strip_shadow" 
+                    android:layout_below="@id/stripDown"
+                    android:visibility="visible"/>
+        
+        <RelativeLayout
+             	android:id="@+id/matchHeaderBottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                 android:layout_below="@id/dummyHeaderView" >
+
+                <com.playup.android.customview.CustomGallery
+	                    android:id="@+id/matchGallery"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:background="#FF4754"
+	                    android:fadingEdge="none"
+	                    android:spacing="-1dip"
+	                    android:unselectedAlpha="1.0"
+	                    android:visibility="visible" />
+
+                <!-- Strip Layout -->
+
+                <RelativeLayout
+                    android:id="@+id/stripUp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/strip"
+                    android:layout_below="@id/matchGallery"
+                    android:clickable="true"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:visibility="visible" >
+                
+                    <ImageView
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:scaleType="fitXY"
+	                    android:src="@drawable/strip_shadow"
+	                    android:visibility="gone"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/strip_arrow_d" />
+
+                    <TextView
+                        android:id="@+id/stripLiveCountUp"
+                        style="@style/SearchText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/live_summary_base"
+                        android:gravity="center"
+                        android:paddingLeft="2dip"
+                        android:paddingRight="2dip"
+                             android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:text=""
+                        android:visibility="gone" />
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/strip_shadow" 
+                    android:layout_below="@id/stripUp"
+                    android:visibility="visible"/>
+    </RelativeLayout>
+        
+        
+        
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/linearLayout12"
+            android:scaleType="fitXY"
+            android:src="@drawable/base_bar_shadow" />
+
+        
+
+        <RelativeLayout 
+	        android:layout_height="wrap_content"
+	        android:layout_width ="fill_parent"
+	        android:layout_alignParentTop="true"
+	        android:visibility="visible">
+       
+        <RelativeLayout 
+		    android:id="@+id/matchHeaderLayout"
+		    android:layout_height="wrap_content"
+		    android:layout_width="fill_parent"
+		    android:background="@drawable/ticket_texture"
+		    android:padding="0dp"
+		    android:visibility="visible">		    
+		</RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/commonStrip"
+                android:layout_below="@id/matchHeaderLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/strip"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:visibility="gone" >
+                
+                <ImageView
+                    android:id="@+id/stripArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/strip_arrow" />
+
+                <TextView
+                    android:id="@+id/commonStripCount"
+                    style="@style/SearchText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/live_summary_base"
+                    android:gravity="center"
+                    android:paddingLeft="2dip"
+                    android:paddingRight="2dip"
+                         android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                    android:text=""
+                    android:visibility="gone" />
+        </RelativeLayout>
+        
+		<ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/commonStrip"
+            android:scaleType="fitXY"
+            android:src="@drawable/strip_shadow"
+            android:visibility="visible" />
+		<ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/matchHeaderLayout"
+            android:scaleType="fitXY"
+            android:src="@drawable/strip_shadow"
+            android:visibility="visible" />
+         
+   </RelativeLayout>
+        
+        
+        <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/strip_shadow" />
+    </RelativeLayout>

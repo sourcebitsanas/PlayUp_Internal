@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    >
+
+    
+    
+    <RelativeLayout android:id = "@+id/weekView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+   
+         
+       >
+        
+        <TextView android:id = "@+id/period" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+             android:paddingTop="10dp"
+              android:layout_centerHorizontal="true"
+         
+              style="@style/userName"
+             />
+        
+
+        <TextView
+            android:id="@+id/weekNumber"
+            style="@style/weekNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/period"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/weekStart"
+            style="@style/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weekNumber"
+            android:gravity="bottom"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/weekEnd"
+            style="@style/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weekStart"
+            android:layout_centerHorizontal="true" 
+            android:gravity="top"/>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#575757" >
+
+    <ScrollView
+        android:id="@+id/menu_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:fadingEdgeLength="0dip" >
+
+        <LinearLayout
+            android:id="@+id/menu_main_li"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" android:alwaysDrawnWithCache="false">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/body_divider" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#575757" android:alwaysDrawnWithCache="false">
+
+                <LinearLayout
+                    android:id="@+id/username_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:background="@drawable/content_box"
+                    android:orientation="horizontal"
+                    android:padding="10dip">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/text_user"
+                            style="@style/Text_User"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:paddingLeft="12dip"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:id="@+id/text_user_subtitle"
+                            style="@style/User_Subtitle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text_user"
+                            android:ellipsize="end"
+                            android:paddingLeft="12dip"
+                            android:singleLine="true" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" 
+                        android:layout_weight="3">
+
+                       <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" 
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="5dip">
+                        <ImageView
+                            android:id="@+id/img_avtar_bg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/avatar" />
+
+                        <ImageView
+                            android:id="@+id/img_avtar"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginLeft="11.2dp"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="1dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/head"/>
+                    </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                  
+            </LinearLayout>
+            
+             <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/body_divider" />
+
+            <RelativeLayout
+                android:id="@+id/menu_home"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:background="#575757"
+                android:paddingRight="18dip"
+                android:layout_gravity="center_vertical" android:alwaysDrawnWithCache="false">
+
+                <ImageView
+                    android:id="@+id/icon_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="32dp"
+                    android:src="@drawable/menu_home_icon" />
+
+                <TextView
+                    android:id="@+id/home_textview"
+                    style="@style/SearchText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                     android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/icon_home"
+                    android:text="@string/home" />
+            </RelativeLayout>
+
+               <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/body_divider" />
+
+
+      <!--  notification itemm -->
+
+            <RelativeLayout
+                android:id="@+id/menu_notifications"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:background="#575757"
+                android:paddingRight="18dip"
+                android:layout_gravity="center_vertical" android:alwaysDrawnWithCache="false">
+
+                <ImageView
+                    android:id="@+id/icon_bell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="32dp"
+                    android:src="@drawable/icon_notifications" />
+
+                <TextView
+                    android:id="@+id/notification_textview"
+                    style="@style/SearchText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                     android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/icon_bell"
+                    android:text="@string/notifications" />
+
+                <TextView
+                    android:id="@+id/topbar_notification_text"
+                    style="@style/topBarTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:background="@drawable/menu_notification_panel"
+                    android:paddingLeft="12dip"
+                    android:paddingRight="12dip"
+                    android:paddingTop="1dip"
+                    android:text=""
+                    android:visibility="gone" />
+                
+            </RelativeLayout>
+
+            <include layout="@layout/menu_body_divider" />
+
+            <!--  direct message itemm -->
+            <RelativeLayout
+                android:id="@+id/menu_directMessages"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:background="#575757"
+               android:paddingRight="18dip"
+                android:layout_gravity="center_vertical" android:alwaysDrawnWithCache="false">
+
+                <ImageView
+                    android:id="@+id/icon_dir_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="32dp"
+                    android:src="@drawable/icon_dir_message" />
+
+                <TextView
+                    android:id="@+id/directMessages_textview"
+                    style="@style/SearchText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/icon_dir_message"
+                    android:text="@string/directMessages" />
+
+             
+                <TextView
+                    android:id="@+id/topbar_directMessages_text"
+                    style="@style/topBarTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="99+"
+                    android:background="@drawable/menu_dir_messaging_panel"
+                    android:paddingLeft="12dip"
+                    android:paddingRight="12dip"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+            <include android:id="@+id/directmMsgDivider"
+                 layout="@layout/menu_body_divider" />
+
+           
+            <!--  sports and scores itemm -->
+            <LinearLayout
+                android:id="@+id/menu_allSportsResults"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:background="#575757"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dip" android:alwaysDrawnWithCache="false">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="13dip"
+                    android:src="@drawable/icon_sports" />
+
+                <TextView
+                    android:id="@+id/allSport_txtview"
+                    style="@style/SearchText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="18dip"
+                    android:text="@string/menu_sports" />
+            </LinearLayout>
+            
+            
+            <!--  whats hot features block  -->
+
+            <LinearLayout
+                android:id="@+id/featureTextHeader"
+                android:layout_width="fill_parent"
+                  android:layout_height="18dip"
+                android:background="@drawable/content_divider"
+                android:gravity="center_vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/feature_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dip"
+                    android:text="@string/feature_text"
+                    android:textSize="11dip" />
+            </LinearLayout>
+             
+             <LinearLayout
+                android:id="@+id/menu_whatshot_items"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" android:alwaysDrawnWithCache="false">
+            </LinearLayout>
+                   
+             
+               <!--  favourite leagues block  -->
+             
+             <LinearLayout
+                android:id="@+id/favouriteTextHeader"
+                android:layout_width="fill_parent"
+                 android:layout_height="20dip"
+                android:background="@drawable/content_divider"
+                android:gravity="center_vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/favourite_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dip"
+                    android:text="@string/favourite_text"
+                    android:textSize="11dip" />
+            </LinearLayout>
+             
+             <LinearLayout
+                android:id="@+id/favourite_items"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" android:alwaysDrawnWithCache="false">
+            </LinearLayout>
+             
+             
+             <!--  recent activity block  -->
+             
+             <LinearLayout
+                android:id="@+id/recentActivityText"
+                android:layout_width="fill_parent"
+                android:layout_height="18dip"
+                android:background="@drawable/content_divider"
+                android:gravity="center_vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/my_recent_activity_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dip"
+                    android:text="@string/recentHangout"
+                    android:textSize="11dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_recent_activity_li"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+            </LinearLayout>
+             
+            <ImageView 
+                android:layout_height="18dip"
+                android:layout_width="fill_parent"
+                android:background="@drawable/content_divider"/>
+
+            <!-- friends item -->
+            <LinearLayout
+                android:id="@+id/menu_friends"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:background="#575757"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dip" android:alwaysDrawnWithCache="false">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dip"
+                    android:src="@drawable/icon_friends" />
+
+                <TextView
+                    android:id="@+id/menuFriends_txtview"
+                    style="@style/SearchText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="18dip"
+                    android:text="@string/friends" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/includeDivider"
+                layout="@layout/menu_body_divider" />
+
+             <!-- about item -->
+            <LinearLayout
+                android:id="@+id/menu_about"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:background="#575757"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dip" android:alwaysDrawnWithCache="false">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dip"
+                    android:src="@drawable/icon_about" />
+
+                <TextView
+                    android:id="@+id/about_txtview"
+                    style="@style/SearchText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="18dip"
+                    android:text="@string/about" />
+            </LinearLayout>
+
+            <include layout="@layout/menu_body_divider" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20dip"
+                android:background="#575757" android:alwaysDrawnWithCache="false">
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="matrix"
+                android:src="@drawable/base_menu"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

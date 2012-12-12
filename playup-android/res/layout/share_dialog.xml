@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialogRoot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#aa000000" >
+
+    <LinearLayout
+        android:id="@+id/dialogView"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#FFFFFFFF"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/dialogTitle"
+            style="@style/shareDialogTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFFFF"
+            android:layout_marginLeft="20dip"
+            android:gravity="center_vertical"
+            android:text="@string/shareDialogTitle" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#27AAE1" />
+
+        <ListView
+            android:id="@+id/providerList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:divider="@null">
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

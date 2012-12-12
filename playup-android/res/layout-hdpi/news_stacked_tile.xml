@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:id="@+id/newsBase"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:padding="0dp"
+    android:orientation="vertical">
+    
+<RelativeLayout
+        android:id="@+id/stackedTimestamp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">    
+
+        <RelativeLayout 
+            android:id="@+id/stackImageLayout"
+            android:layout_height="88dp"
+            android:layout_width="88dp"
+             android:layout_marginRight="10dp"
+            android:background="@drawable/default_tile">
+             
+            <ImageView
+                android:id="@+id/stackImage"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:scaleType = "centerCrop" 
+               />
+				
+			<ImageView
+                    android:id="@+id/playerIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   	android:layout_centerInParent="true"
+                    android:src="@drawable/round_play" 
+                    android:visibility="visible"
+                 />
+            
+        </RelativeLayout>
+          
+
+        <RelativeLayout 
+            android:layout_height="88dp"
+            android:layout_width="fill_parent"
+            android:layout_toRightOf="@id/stackImageLayout"
+            >
+			
+             <RelativeLayout  
+            android:id="@+id/textLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_marginTop="-2dip"
+            >
+
+            <TextView
+                android:id="@+id/stackTitle"
+                style="@style/stackedNewsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:ellipsize="end"
+               />
+
+            <TextView
+                android:id="@+id/stackSummary"
+                style="@style/player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stackTitle"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="" 
+               />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/footerContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-2dip"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/sourceIcon"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_marginRight="4dip"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingLeft="2dp" >
+
+                <TextView
+                    android:id="@+id/footerTitle"
+                    style="@style/footerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="bottom|left"
+                    android:singleLine="true"
+                    android:text="" />
+
+                <ImageView
+                    android:id="@+id/socialIcon"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/footerTitle"
+                    android:layout_marginRight="3dip"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/footerSubtitle"
+                    style="@style/leagueSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/footerTitle"
+                    android:layout_toRightOf="@+id/socialIcon"
+                    android:ellipsize="end"
+                    android:gravity="top"
+                    android:singleLine="true"
+                    android:text="" />
+            </RelativeLayout>
+             </LinearLayout>
+        </RelativeLayout>
+       
+       
+    </RelativeLayout>
+    
+	<View
+        android:id="@+id/listDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#E5E5E5" 
+        android:visibility="visible"/>
+	</LinearLayout>
+</LinearLayout>

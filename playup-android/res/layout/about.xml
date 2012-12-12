@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F4"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/aboutScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dip"
+                android:background="@drawable/grey_base"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dip"
+                    android:src="@drawable/about_logo" />
+
+                <TextView
+                    android:id="@+id/aboutText"
+                    style="@style/aboutText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dip"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/about_text" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginTop="20dip"
+                    android:src="@drawable/tagline_about" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/feedbackView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:background="@drawable/feedback_base"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/feedbackImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:src="@drawable/feedback_icon" />
+
+                <ImageView
+                    android:id="@+id/redLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/red_line" />
+
+                <TextView
+                    android:id="@+id/feedbackText"
+                    style="@style/recentActivityList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dip"
+                    android:text="@string/feedback" />
+            </LinearLayout>
+            
+            <TextView 
+                android:id="@+id/versionName"
+                android:layout_gravity="right"
+                 android:layout_marginRight="10dip"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/aboutText"
+                android:text=""/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

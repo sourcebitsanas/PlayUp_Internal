@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_list_relativelayout"
+    android:layout_width="fill_parent"
+    android:layout_height="55dip"
+    android:background="#575757"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip"
+    android:paddingTop="5dip">
+
+    
+    <!-- <TextView
+        android:id="@+id/recent_activity_sub_text_view"
+        style="@style/topBarTitleText"
+        android:layout_width="35dip"
+        android:layout_height="23dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dip"
+        android:background="#464646"
+        android:gravity="center"
+        android:text="37" android:layout_centerVertical="true"/> 
+        -->
+      <TextView 
+          
+          android:id="@+id/recent_activity_sub_text_view"
+        style="@style/topBarTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dip"
+         android:gravity="center"
+         android:layout_centerVertical="true"
+         android:background="@drawable/post_count"
+         android:paddingLeft="8dip"
+         android:paddingRight="8dip"
+         android:paddingTop="2dip"
+         android:text="37"
+         
+            />
+
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_toLeftOf="@id/recent_activity_sub_text_view"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dip"
+        android:layout_marginRight="10dip"
+        >
+    
+    <TextView
+        android:id="@+id/recent_activity_main_text_view"
+        style="@style/connceton_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="Rangers Crew" />
+     <TextView
+        android:id="@+id/recentMatchName"
+        style="@style/recentMatchName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="AUS vs IND" />
+    
+    </LinearLayout>
+
+</RelativeLayout>

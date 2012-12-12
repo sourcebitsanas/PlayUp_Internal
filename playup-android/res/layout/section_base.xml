@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#EEEEEC" >
+<ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdgeLength="0dip"
+        android:fillViewport="true" 
+        android:id = "@+id/scrollView">
+        
+        <LinearLayout
+            android:id="@+id/section_base"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:visibility="visible">
+        </LinearLayout>
+             
+  </ScrollView>
+  
+ <RelativeLayout
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/spinner_base" >
+
+            <ProgressBar
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_centerInParent="true" />
+</RelativeLayout>
+  
+<ImageView 
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:background="@drawable/strip_shadow"/>
+</RelativeLayout>

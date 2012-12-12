@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+   <!--  <item android:id="@+id/menu_my_sports"
+          android:title="@string/my_sports" 
+          android:icon="@drawable/menu_sport"/>
+    <item android:id="@+id/menu_home"
+          android:title="@string/menu_home" 
+          android:icon="@drawable/menu_home_about"/> -->
+</menu>

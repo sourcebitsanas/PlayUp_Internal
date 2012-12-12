@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:layout_gravity="center"
+     android:gravity="center_horizontal">
+    <RelativeLayout
+        android:id="@+id/gameview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/myprofile_league_base"
+         >
+        <ImageView 
+            android:id="@+id/league_image"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <TextView
+         android:text = "indian premier league"
+        android:id="@+id/league_name"
+        android:layout_height="wrap_content"
+        android:layout_width="80dip"
+        android:gravity="center"
+        style="@style/league_name"
+        />
+</LinearLayout>

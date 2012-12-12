@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/updateRegionItem"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        
+        >
+         <ImageView
+	        android:id="@+id/map"
+	        
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:paddingLeft="20dp"
+	        android:scaleType="fitXY"
+	        />
+
+          <ImageView
+	        android:id="@+id/tick"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="20dp"
+	        android:scaleType="fitXY"
+	        android:src="@drawable/green_tick" />
+         
+	    <TextView
+	        android:id="@+id/regionName"
+	        style="@style/regionName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_toRightOf="@id/map"
+	        android:layout_toLeftOf="@id/tick"
+	        android:paddingLeft="20dp" 
+	        android:singleLine="true"
+	        android:ellipsize="end"/>
+
+	   
+        
+    </RelativeLayout>
+   
+
+	    <ImageView
+	        android:id="@+id/divider"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/updateRegionItem"
+	        android:layout_marginLeft="2dip"
+	        android:layout_marginRight="2dip"
+	        android:background="@drawable/list_divider" />
+
+</RelativeLayout>

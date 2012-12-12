@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+      >
+
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip"
+    android:orientation="vertical" 
+      >
+    
+    <!-- header text -->
+
+    <RelativeLayout
+        android:id="@+id/playupFriendsMainLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#F7F7F4"
+        android:layout_marginTop="-3dip"
+        android:layout_marginBottom="-2dip"
+       >
+
+        <TextView
+            android:id="@+id/pfriends_no"
+            style="@style/activt_user_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:gravity="bottom"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/pfriends_text"
+            style="@style/activt_user_no"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@id/pfriends_no"
+             android:gravity="bottom"
+            android:text="friends" />
+    </RelativeLayout>
+
+    
+    <RelativeLayout
+        android:id="@+id/friend_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_base_top"
+        android:clickable="true"
+        android:focusable="true"
+     >
+
+        <!-- UI for Image Avtar -->
+
+	 
+           <RelativeLayout
+            android:id="@+id/avatarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:layout_marginTop="2dip">
+ 
+            <ImageView 
+                   android:layout_width="wrap_content"
+            	   android:layout_height="wrap_content"
+            	   android:background="@drawable/blank_avatar"
+                />
+            <ImageView
+                android:id="@+id/imageViewpostAvatar"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="10.5dp"
+                android:layout_marginTop="4.5dp"
+                
+                 />
+            
+        </RelativeLayout>
+        
+               
+
+        <!-- End of Image Avatar -->
+
+		    <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/noFriends"
+                android:text="@string/noMatches"
+                style="@style/nomatches"
+                android:gravity="center"
+                android:layout_marginLeft="20dip"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                />
+        <!-- Middle view Starts -->
+
+        <RelativeLayout
+            android:id="@+id/middleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@id/avatarView"
+            
+             >
+
+        
+            <!-- Middle view - user main view -->
+
+
+            <RelativeLayout
+                android:id="@+id/userMainView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+           	    >
+
+                <ImageView
+                    android:id="@+id/providerImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:src="@drawable/home_icon" />
+
+                <TextView
+                    android:id="@+id/userNameText"
+                    style="@style/matchRoomUserName"
+                    android:layout_width="fill_parent"
+                    android:layout_marginTop="7dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Aaronman how are you doihgn frwerwerwe wrwer werwrwerwer" />
+            </RelativeLayout>
+
+            <!-- Middle view - user sub view -->
+
+            <RelativeLayout
+                android:id="@+id/userSubView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userMainView"
+               >
+
+                <ImageView
+                    android:id="@+id/greenDot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                   android:layout_centerVertical="true"
+                    android:src="@drawable/green_dot" />
+
+                <TextView
+                    android:id="@+id/userNameSubText"
+                    style="@style/userNameSubText"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dip"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:text="Aaron Edwards" 
+                   
+                    
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+        <!-- Middle view ends -->
+
+       
+    </RelativeLayout>
+</LinearLayout>
+   
+   
+    <RelativeLayout
+        android:id="@+id/friendGapLinearView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="@drawable/gap_image" 
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingRight="15dip" >
+
+           <LinearLayout
+               android:id="@+id/gapTextLayout"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:orientation="vertical">
+	            <TextView
+	                android:id="@+id/friendGapTextView"
+	                style="@style/gapNumber"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_horizontal" />
+	
+	            <TextView
+	                android:id="@+id/friendGapMoreTextView"
+	                style="@style/gapText"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_horizontal"
+	                android:text="@string/more"
+	                android:layout_marginTop="-8dip" />
+             </LinearLayout>
+              
+               <ProgressBar
+	            android:id="@+id/gapProgress"
+	            android:layout_width="35dip"
+	            android:layout_height="35dip"
+	            android:layout_gravity="center_vertical|center_horizontal"
+	            android:visibility="gone"
+	          />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

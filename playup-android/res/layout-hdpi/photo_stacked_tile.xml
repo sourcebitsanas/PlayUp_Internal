@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+<RelativeLayout 
+        android:id="@+id/stackedImageTile"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:visibility="visible"
+       >
+        <ImageView 
+            android:id="@+id/stackedImageView"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:src="@drawable/banner_default"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"/>
+        
+</RelativeLayout>
+
+</LinearLayout>

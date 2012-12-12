@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/login_emailtextview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="30dip"
+            android:layout_weight="6.0"
+            android:background="@android:drawable/edit_text"
+            android:clickable="false"
+            android:gravity="left|center_vertical"
+            android:text="Hostname"
+            android:textColor="#333300"
+            android:textSize="18dip" />
+
+        <EditText
+            android:id="@+id/login_emailedittext"
+            android:layout_width="fill_parent"
+            android:layout_height="20dip"
+            android:layout_alignTop="@+id/login_emailtextview"
+            android:layout_marginLeft="160dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="12dip"
+            android:layout_weight="3.0"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:gravity="left|center_vertical"
+            android:hint="Hostname"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textSize="14dip" />
+
+        <TextView
+            android:id="@+id/login_passwordtextview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_emailtextview"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="6.0"
+            android:background="@android:drawable/edit_text"
+            android:clickable="false"
+            android:gravity="left|center_vertical"
+            android:text="Port"
+            android:textColor="#333300"
+            android:textSize="18dip" />
+
+        <EditText
+            android:id="@+id/login_passwordEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="20dip"
+            android:layout_alignTop="@+id/login_passwordtextview"
+            android:layout_below="@+id/login_emailedittext"
+            android:layout_marginLeft="160dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="12dip"
+            android:layout_weight="3.0"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:hint="port"
+            android:singleLine="true"
+            android:textSize="14dip" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="280dip"
+            android:layout_height="50dip"
+            android:layout_alignLeft="@+id/login_emailtextview"
+            android:layout_below="@+id/login_passwordEditText"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="35dip"
+            android:paddingLeft="10dip"
+            android:text="Save"
+            android:textColor="#ffffff"
+            android:textSize="17dip"
+            android:textStyle="bold" >
+        </Button>
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="280dip"
+            android:layout_height="50dip"
+            android:layout_alignLeft="@+id/login_emailtextview"
+            android:layout_below="@+id/btn_save"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="35dip"
+            android:paddingLeft="10dip"
+            android:text="Clear"
+            android:textColor="#ffffff"
+            android:textSize="17dip"
+            android:textStyle="bold" >
+        </Button>
+    </RelativeLayout>
+
+</ScrollView>

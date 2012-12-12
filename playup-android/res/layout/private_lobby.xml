@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F4"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <!-- Top header part starts here -->
+
+		<RelativeLayout 
+		    android:id="@+id/matchHeaderLayout"
+		    android:layout_height="wrap_content"
+		    android:layout_width="fill_parent"
+		    android:background="@drawable/ticket_texture"
+		    android:padding="0dip"
+		    android:visibility="visible">
+		    
+		</RelativeLayout>
+
+          <RelativeLayout 
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              > 
+        	<RelativeLayout
+                android:id="@+id/stripDown"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/strip"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/stripArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/strip_arrow" />
+                
+                <TextView 
+                    android:id="@+id/stripLiveCountDown"
+                    style="@style/SearchText"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:paddingRight="2dip"
+                    android:paddingLeft="2dip"
+                    android:layout_marginRight="10dip"
+                         android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                    android:background="@drawable/live_summary_base"
+                    />
+            </RelativeLayout>
+            
+        	<RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:layout_below="@id/stripDown"
+            android:orientation="vertical">
+             
+            <GridView
+                android:id="@+id/roomBase"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="@android:color/transparent"
+           		android:fadingEdgeLength="0dip"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:listSelector="#F7F7F4"
+                android:horizontalSpacing="4dip"
+                android:verticalSpacing="8dip"
+                android:visibility="gone" >
+                
+            </GridView>
+            
+			<ImageView
+                android:id="@+id/shadowDown"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stripDown"
+                android:scaleType="fitXY"
+                android:src="@drawable/strip_shadow" />
+        </RelativeLayout>
+        	
+        <LinearLayout
+                android:id="@+id/matchHeaderBottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <!-- Gallery layout -->
+
+			     <com.playup.android.customview.CustomGallery
+                    android:id="@+id/matchGallery"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FF4754"
+                    android:fadingEdge="none"
+                    android:spacing="0dip"
+                    android:visibility="gone" />
+               
+               
+                <!-- Strip shadow -->
+                <!-- Strip Layout -->
+
+                <RelativeLayout
+                    android:id="@+id/stripUp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/strip"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/strip_arrow_d" />
+                     <TextView 
+	                    android:id="@+id/stripLiveCountUp"
+	                    style="@style/SearchText"
+	                    android:layout_height="wrap_content"
+	                    android:layout_width="wrap_content"
+	                    android:text=""
+	                    android:visibility="gone"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true"
+	                    android:gravity="center"
+	                    android:paddingRight="2dip"
+                        android:paddingLeft="2dip"
+                             android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:layout_marginRight="10dip"
+	                    android:background="@drawable/live_summary_base"/>
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ticket_base_shadow" 
+                    android:visibility="visible"/>
+            </LinearLayout>
+            
+               <ImageView
+                    android:id="@+id/stripShadow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/strip_shadow" />
+        	</RelativeLayout> 
+        <!-- Top header part ends here -->
+
+        
+
+        <RelativeLayout
+            android:id="@+id/progressView"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/spinner_base" >
+
+                <ProgressBar
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    
+         <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/strip_shadow" />
+</RelativeLayout>

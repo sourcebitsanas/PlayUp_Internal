@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            
+        <ImageView
+            android:id="@+id/postAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/post_avatar" />
+        
+        <ImageView
+            android:id="@+id/blankAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/blank_avatar" />
+        
+        </RelativeLayout>

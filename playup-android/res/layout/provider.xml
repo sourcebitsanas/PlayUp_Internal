@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#343434" android:clickable="true">
+
+    <ImageView
+        android:id="@+id/provider_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/silhouette" />
+
+    <TextView 
+          android:id="@+id/provider_text1"
+          style="@style/providerMessage"
+        android:layout_marginLeft="25dip"
+        android:layout_marginRight="25dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/provider_logo"
+        android:gravity="center"
+        android:text="@string/provider_messsage"
+        android:textSize="23dip" />
+
+    <TextView
+        android:id="@+id/provider_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/provider_text1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="a message."
+        android:textSize="23dip" 
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/provider_text3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/provider_text2"
+        android:gravity="center"
+        android:text="Xx Xxxxxx Xxxxxx"
+        android:textSize="23dip" 
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/provider_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/provider_logo"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dip"
+        android:gravity="center">
+       
+    </LinearLayout>
+
+</RelativeLayout>

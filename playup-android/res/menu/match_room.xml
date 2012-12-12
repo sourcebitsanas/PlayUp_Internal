@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- <item android:id="@+id/create_room"
+          android:title="@string/create_room" 
+          android:icon="@drawable/menu_create_hangout"/>
+    
+    <item android:id="@+id/menu_all_sports"
+          android:title="@string/allSports_results" 
+          android:icon="@drawable/menu_sport"/>
+    
+    <item android:id="@+id/menu_home"
+          android:title="@string/allSports_home" 
+          android:icon="@drawable/menu_home_about"/> -->
+</menu>

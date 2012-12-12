@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+ <string name="regionEurope">欧洲</string> 
+ <string name="werfriends">你们已经是好友了</string> 
+ <string name="MessageMe">给我发消息</string>
+  <string name="regionAsia">亚洲</string>
+   <string name="name">姓名</string> 
+   <string name="regionNorthAmerica">北美洲</string> 
+   <string name="matches_live_now">直播中</string> 
+   <string name="regionAfrica">非洲</string> 
+   <string name="ok">OK</string> 
+   <string name="regionSouthAmerica">南美洲</string> 
+   <string name="recentInvites">最近联系的好友</string> 
+   <string name="regionOceania">大洋洲</string> 
+   <string name="more">更多</string> 
+   <string name="sendFeedback">发送反馈</string> 
+   <string name="logIn">登录！</string> 
+   <string name="hangout_with_friends">和朋友们一起畅玩</string> 
+   <string name="noProviderFound">对不起！连接出现问题，请稍候再试</string> 
+   <string name="matches">匹配</string> <string name="active">在线</string> 
+   <string name="loveSports">喜爱体育？</string> 
+   <string name="inviteAndHangout">和朋友们一起畅聊</string> 
+   <string name="loading">加载中...</string> 
+   <string name="newHangout">新聊天室</string> 
+   <string name="findLeagues">查找联赛</string> 
+   <string name="findFixtures">根据时间查找</string> 
+   <string name="justNow">即时</string> 
+   <string name="hour">时</string> 
+   <string name="hours">小时</string> 
+   <string name="days">天</string> 
+   <string name="weeks">周</string> 
+   <string name="months">月</string> 
+   <string name="years">年</string> 
+   <string name="today">今天</string> 
+   <string name="tomorrow">明天</string> 
+   <string name="yesterday">昨天</string> 
+   <string name="lastWeek">上周</string> 
+   <string name="lastMonth">上个月</string> 
+   <string name="lastYear">去年</string> 
+   <string name="starting">比赛即将开始</string> 
+   <string name="starts">分钟后开始</string> 
+   <string name="directMessages">消息</string> 
+<!-- Need to add a line break -->
+ <string name="direct_conversation">发送消息给好友</string> 
+ <string name="posting">发布中...</string> 
+ <string name="error_message_posted">对不起！连接出现问题，请稍候再试</string> 
+ <string name="error_message_addFriend">对不起！连接出现问题，请稍候再试</string> 
+ <string name="app_name">PlayUp</string> 
+ <string name="no_network">对不起！连接出现问题，请稍候再试</string> 
+ <string name="server_not_found">对不起！连接出现问题，请稍候再试</string> 
+ <string name="internet_connectivity_dialog">对不起！连接出现问题，请稍候再试</string> 
+ <string name="no_provider_data">对不起！连接出现问题，请稍候再试</string> 
+ <string name="logoutText">确认登出PlayUp？</string> 
+ <string name="anonymous">登录！</string> 
+ <string name="login">登录</string> 
+ <string name="youarefriends">你们已经是好友了</string> 
+ <string name="awaitingforconfirmation">确认加为好友</string> 
+ <string name="invited">好友邀请已发送</string> 
+ <string name="connected">已链接</string> 
+ <string name="confirm">OK</string> 
+ <string name="cancel">取消</string> 
+ <string name="my_profile">个人档案</string> 
+ <string name="all_sports">所有赛事</string> 
+ <string name="my_sports">我喜爱的赛事</string> 
+ <string name="about">关于</string> 
+ <string name="friends">我的好友</string> 
+ <string name="notifications">我的通知</string> 
+ <string name="menu_invite_friends">邀请你的好友一起聊</string> 
+ <string name="menu_edit_profile">编辑个人档案</string> 
+ <string name="menu_all_sports_results">所有赛事</string> 
+ <string name="menu_show_leagues">选择联赛</string> 
+ <string name="menu_calendar">赛程</string> 
+ <string name="loginErrMsg">对不起！连接出现问题，请稍候再试</string> 
+ <string name="connection_msg">链接你的社交网络让你的朋友一起加入吧</string> 
+ <string name="myleages_title">我喜爱的赛事</string> 
+ <string name="connectwith">链接中</string> 
+ <string name="leagues_msg">浏览所有赛事，\n定制喜爱的赛事信息</string> 
+ <string name="sports">所有赛事</string> 
+ <string name="mySportsTitle">我喜爱的赛事</string> 
+ <string name="mySportsMsg">选择赛事，创建聊天室，邀请好友，免费发送信息</string> 
+ <string name="live">直播</string> 
+<!-- String resource for top bar fragment for Search -->
+ <string name="search">搜索</string> 
+ <string name="hangoutEdittextHint">新名字</string> 
+ <string name="privateDesc">私人聊天室——仅限好友</string> 
+ <string name="publicDesc">公共聊天室——所有用户</string> 
+ <string name="publicTxt">公共聊天室</string> 
+ <string name="privateTxt">私人聊天室</string> 
+ <string name="create_room">创建一个聊天室</string> 
+ <string name="allSports_results">所有赛事</string> 
+ <string name="friendLoginMessage">链接你的社交网络让你的朋友一起加入吧</string> 
+ <string name="feedback">告诉我们，你对PlayUp的建议</string> 
+ <string name="createRoomFailedMsg">对不起！连接出现问题，请稍候再试</string> 
+ <string name="hangoutText">创建一个聊天室</string> 
+ <string name="completed">赛事已毕</string> <string name="over">轮</string> 
+ <string name="zero">0</string> <string name="liveNow">直播中</string> 
+ <string name="noLive">没有直播的比赛</string> 
+ <string name="yousay">说点啥吧...</string> 
+ <string name="friend">好友</string> 
+ <string name="noMatches">搜索无结果</string> 
+ <string name="thisisyou">这是你的个人档案</string> 
+ <string name="addasafriend">加我为好友</string> 
+ <string name="recentHangout">最近活动</string> 
+ <string name="privateRoomMessage">抱歉这是一个私人聊天室</string> 
+ <string name="your_friends">你们已经是好友了</string> 
+ <string name="sendYouFriendRequest">想加您为好友</string> 
+<!-- About -->
+ <string name="about_text">我们是一个基于手机的社交网络。为全球的体育迷们提供最全的赛事，最及时的实时比分以及免费的好友信息互动。选择你喜爱的赛事，邀请你的好友，一起在直播中畅玩吧！</string> <string name="feedback_subject">PlayUp 建议反馈</string> <string name="feedback_mail_id">feedback@PlayUp.com</string> 
+<!-- Provider -->
+ <string name="provider_messsage">链接你的社交网络让你的朋友一起加入吧</string> 
+<!-- Need to add a line break -->
+ <string name="noPostMessagesLeftText">邀请你的好友一起聊</string> 
+<!-- Need to add a line break -->
+ <string name="noPostMessagesRightText">说些什么吧</string> 
+ <string name="notification_err ">对不起！连接出现问题，请稍候再试</string> 
+ <string name="notification_welcome">欢迎加入PlayUp！</string> 
+ <string name="notification_welcome_desc">链接你的社交网络让你的朋友一起加入吧</string> 
+ <string name="accepted">接受邀请</string> <string name="ignored">忽略邀请</string> 
+ <string name="done">完成</string> 
+ <string name="min">分钟</string> 
+ <string name="mins">分钟</string> 
+ <string name="no_playup_friend_str">你需要邀请朋友加入PlayUp，之后你就可以给他们发送私信了</string> 
+ <string name="pleasewait">请稍等</string> 
+ <string name="post">发布</string> 
+<!-- Updated String -->
+ <string name="runrate">得分率</string> 
+ <string name="lastball">最后一球</string> 
+ <string name="home">主页</string> 
+ <string name="name_this_gp">给这个群取个名吧</string> 
+ <string name="private_lobby_default_text">这是您的私人聊天室。给它取个名吧</string> 
+ <string name="createNewGroup">创建一个新群</string> 
+ <string name="privateLobbyRoomDesc">在这里您创建的是私人社交群，\n所有的对话仅限您和您的好友们</string> 
+ <string name="privateLobbyHint">新名字</string> 
+ <string name="startConversation">开始对话</string> 
+ <string name="privateLobbyMessage11">赶快加入！</string> 
+ <string name="privateLobbyMessage12">说说你的想法？</string> 
+ <string name="privateLobbyMessage21">喜爱体育？</string> 
+ <string name="privateLobbyMessage22">跟随一起</string> 
+ <string name="privateLobbyRoomMessage">从以下您的直播赛事中挑选一个</string> 
+ <string name="confirmFriend">确认加为好友</string> 
+ <string name="noFavLiveSport_header">您还没有挑选喜爱的赛事</string> 
+ <string name="noFavLiveSport_content">快来挑选您喜爱的赛事</string> 
+ <string name="noFavouriteSport_header">您喜爱的赛事暂无直播比赛</string> 
+ <string name="noFavouriteSport_content">添加更多赛事？</string> 
+ <string name="edit_room">编辑</string> 
+ <string name="create_private_room">新群</string> 
+ <string name="awaiting">结果\n等待中</string> 
+ <string name="awaitingResults">即将开始</string> 
+ <string name="editLobbyRoomDesc">编辑您的群名</string> 
+ <string name="menu_sports">所有赛事和比分</string> 
+ <string name="noAdditionalMatches">无更多比赛</string> 
+ <string name="postGameScoresMsg">比分仅赛后更新</string> 
+ <string name="setRegion">设置地域</string> 
+ <string name="shareFailure">分享未完成</string> 
+ <string name="shareResponse">分享已成功</string> 
+ <string name="upcoming">即将到来</string> 
+ <string name="updateVersion">PlayUp有新版本啦！赶快更新一下吧。</string> 
+ <string name="update_region">更新您所在区域</string> 
+ <string name="mysocial_title">社交网络</string> 
+ <string name="logout">登出</string> 
+ <string name="set_region">设置地域</string> 
+<!-- updated string -->
+
+ <string name="shareDialogTitle">分享到:</string> 
+ <string name="dateFormat">M月d日</string> </resources>

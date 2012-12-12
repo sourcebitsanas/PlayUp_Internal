@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+     android:background="#F7F7F4" >
+
+    
+    <!--  friends view -->
+    <LinearLayout
+        android:id="@+id/onlineView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/activeUserList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:fadingEdgeLength="0dip"
+            android:footerDividersEnabled="false" 
+            android:focusableInTouchMode="false"
+            android:listSelector="#F7F7F4"
+            
+            android:visibility="gone">
+        </ListView>
+    </LinearLayout>
+
+        
+<!--  progress view -->
+ <LinearLayout
+        android:id="@+id/progressFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="30dip"
+        android:visibility="gone"
+        >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:textColor="#29aa4e"
+            android:textSize="20dip" />
+    </LinearLayout> 
+    
+     <!--  offline view -->
+ <LinearLayout
+        android:id="@+id/offLineView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+   
+     	<RelativeLayout
+            android:id="@+id/loginView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dip"
+            android:background="#FFFFFF" >
+
+            
+            <LinearLayout
+                android:id="@+id/provider_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:paddingTop="20dip" 
+                android:paddingBottom="20dip"/>
+            
+            <TextView
+                android:id="@+id/mysportsLoginText"
+                style="@style/friendLogInText"
+                android:layout_below="@id/provider_layout"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dip"
+                android:text="@string/friendLoginMessage" />
+            
+        </RelativeLayout>
+        
+     	<ImageView 
+     	    android:id="@+id/friendBgImage"
+     	    android:layout_height="wrap_content"
+     	    android:layout_width="fill_parent"
+     	    android:background="@drawable/hangout"
+     	    android:layout_marginLeft="8dip"
+     	    android:layout_marginRight="8dip"/>
+     
+    </LinearLayout> 
+ 
+
+</RelativeLayout>

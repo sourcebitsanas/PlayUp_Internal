@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_others"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="2" >
+
+    <RelativeLayout
+        android:id="@+id/private_social_sports_1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="4dip"
+        android:layout_weight="1"
+        android:background="@drawable/all_sport_tag"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/item_placeholder_1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="4dip"
+        android:layout_weight="1"
+        android:background="@drawable/create_room_base"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/hangoutText"
+            style="@style/SearchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:maxWidth="100dip"
+            android:paddingBottom="2dip"
+            android:text="@string/hangoutText" />
+
+        <ImageView
+            android:id="@+id/hangoutPlusImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dip"
+            android:src="@drawable/plus_icon" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/favouriteTile1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="4dip"
+        android:layout_weight="1"
+        android:background="@drawable/sport_base"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingBottom="1dip"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/favouriteView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/favouriteStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dip"
+                android:src="@drawable/fav_star" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/favouriteImage1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:background="#ffffffff" >
+
+            <ImageView
+                android:id="@+id/favImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/leagueName1"
+                style="@style/User_Options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="top"
+                android:lineSpacingExtra="-5dip"
+                android:paddingRight="2dip"
+                android:paddingTop="2dip"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/liveImage1"
+                style="@style/live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/live_icon"
+                android:gravity="center"
+                android:text="@string/live"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_others_1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="4dip"
+        android:layout_weight="1"
+        android:background="@drawable/sport_base"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/itemTitle"
+                style="@style/mySportsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:lineSpacingExtra="-2dip"
+                android:maxLength="30"
+                android:maxLines="3"
+                android:minHeight="45dip"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/commentingNumber"
+                style="@style/listUserTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/itemTitle"
+                android:layout_marginRight="8dip"
+                android:background="@drawable/comments_bubble"
+                android:gravity="center_horizontal"
+                android:paddingBottom="3dip"
+                android:paddingLeft="2dip"
+                android:paddingRight="2dip"
+                android:paddingTop="2dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="-5dip" >
+
+            <TextView
+                android:id="@+id/uName"
+                style="@style/matchRoomUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toLeftOf="@+id/commentTime"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/comment_desc"
+                style="@style/matchItemComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uName"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:minHeight="40dip"
+                android:text="" />
+
+            <!--
+             <LinearLayout 
+                android:id="@+id/comment_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uName"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip" > 
+                </LinearLayout>
+            -->
+
+            <TextView
+                android:id="@+id/commentTime"
+                style="@style/listUserTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/uName"
+                android:layout_alignBottom="@+id/uName"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_others_2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="4dip"
+        android:layout_weight="1"
+        android:background="@drawable/sport_base"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/itemTitle"
+                style="@style/mySportsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:lineSpacingExtra="-2dip"
+                android:maxLength="30"
+                android:maxLines="3"
+                android:minHeight="45dip" />
+
+            <TextView
+                android:id="@+id/commentingNumber"
+                style="@style/listUserTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/itemTitle"
+                android:layout_marginRight="8dip"
+                android:background="@drawable/comments_bubble"
+                android:gravity="center_horizontal"
+                android:paddingBottom="3dip"
+                android:paddingLeft="2dip"
+                android:paddingRight="2dip"
+                android:paddingTop="2dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="-5dip" >
+
+            <TextView
+                android:id="@+id/uName"
+                style="@style/matchRoomUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toLeftOf="@+id/commentTime"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/comment_desc"
+                style="@style/matchItemComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uName"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:minHeight="40dip" />
+
+            <!--
+             <LinearLayout 
+                android:id="@+id/comment_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uName"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"> 
+                </LinearLayout>
+            -->
+
+            <TextView
+                android:id="@+id/commentTime"
+                style="@style/listUserTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/uName"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_placeholder_2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="4dip"
+        android:layout_weight="1"
+        android:background="@drawable/create_room_base"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/hangoutText"
+            style="@style/SearchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:maxWidth="100dip"
+            android:paddingBottom="2dip"
+            android:text="@string/hangoutText" />
+
+        <ImageView
+            android:id="@+id/hangoutPlusImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dip"
+            android:src="@drawable/plus_icon" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/favouriteTile2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="4dip"
+        android:layout_weight="1"
+        android:background="@drawable/sport_base"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingBottom="1dip"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/favouriteView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/favouriteStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dip"
+                android:src="@drawable/fav_star" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/favouriteImage2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:background="#ffffffff" >
+
+            <ImageView
+                android:id="@+id/favImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/leagueName2"
+                style="@style/User_Options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="top"
+                android:lineSpacingExtra="-5dip"
+                android:paddingRight="2dip"
+                android:paddingTop="2dip"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/liveImage2"
+                style="@style/live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/live_icon"
+                android:gravity="center"
+                android:text="@string/live"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/private_social_sports_2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="4dip"
+        android:layout_weight="1"
+        android:background="@drawable/all_sport_tag"
+        android:visibility="gone" />
+
+</LinearLayout>

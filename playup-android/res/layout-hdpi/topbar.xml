@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topBarParentLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true" >
+
+    <RelativeLayout
+        android:id="@+id/gradient_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/header_gradient" >
+
+        <!-- Search button for friends fragment -->
+
+        <FrameLayout
+            android:id="@+id/leftView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip" >
+
+            <RelativeLayout
+                android:id="@+id/topbar_rel_search"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:gravity="center_vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/searchRelative"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/leagueSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/search_button" />
+
+                    <ProgressBar
+                        android:id="@+id/friendsSearchSpinner"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/searchView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@id/searchRelative"
+                    android:visibility="gone" >
+
+                    <EditText
+                        android:id="@+id/leagueSearchEdittext"
+                        style="@style/SearchText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        android:cursorVisible="true"
+                        android:hint="Find Leagues"
+                        android:paddingBottom="2dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:singleLine="true" >
+
+                        <requestFocus />
+                    </EditText>
+
+                    <View
+                        android:id="@+id/bottomLine"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@+id/leagueSearchEdittext"
+                        android:background="#F0F0F0" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="8dip"
+                        android:layout_above="@+id/bottomLine"
+                        android:layout_alignParentRight="true"
+                        android:background="#F0F0F0" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="8dip"
+                        android:layout_above="@+id/bottomLine"
+                        android:layout_alignParentLeft="true"
+                        android:background="#F0F0F0" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/topbar_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/logo" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/back_chevron_rel"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/back_chevron"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/back_chevron" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/topbar_title_text"
+            style="@style/topBarTitleText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="34dip"
+            android:layout_toLeftOf="@+id/shareAndSearchLayout"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingRight="10dip"
+            android:singleLine="true"
+            android:text="" />
+
+        <RelativeLayout
+            android:id="@+id/shareAndSearchLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@+id/topbar_divider1" >
+
+            <ImageView
+                android:id="@+id/friendsSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/search_button" />
+
+            <ImageView
+                android:id="@+id/shareScores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/share_icon"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <!-- Divider 1 -->
+
+        <ImageView
+            android:id="@+id/topbar_divider1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/topbar_home_imgView"
+            android:src="@drawable/header_divider" />
+
+        <!-- Home image -->
+
+        <ImageView
+            android:id="@+id/topbar_home_imgView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip"
+            android:src="@drawable/green_p" />
+
+        <!-- Notification Background -->
+
+
+        <!-- Notification Text -->
+
+        <TextView
+            android:id="@+id/topbar_notification_text"
+            style="@style/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/notification_base"
+            android:gravity="center"
+            android:paddingLeft="4dip"
+            android:paddingRight="4dip"
+            android:text=""
+            android:visibility="gone" />
+
+        <!-- Title of the Topbar -->
+
+
+        <!-- Search Part starts here -->
+        <!-- Search Part ends here -->
+
+    </RelativeLayout>
+
+</RelativeLayout>

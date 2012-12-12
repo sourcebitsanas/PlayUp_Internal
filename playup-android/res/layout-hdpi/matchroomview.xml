@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+   android:background="#F7F7F4"
+    android:orientation="horizontal" 
+   >
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:clickable="true" 
+         android:paddingRight="8dip"
+        android:focusable="true">
+
+         <ImageView
+            android:id="@+id/remoteIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/remote_icon"
+            android:layout_marginLeft="15dip"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"/>
+        
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/remoteIcon"
+            android:layout_marginLeft="-1.5dip"
+            android:background="@drawable/post_base"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/userPost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dip" >
+
+                <TextView
+                    android:id="@+id/userName"
+                    style="@style/listUserText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_toLeftOf="@+id/userTimestamp"
+                    android:paddingRight="1dp"
+                    android:ellipsize="end"
+                    android:singleLine="true" 
+                    />
+
+                <TextView
+                    android:id="@+id/userMsg"
+                    style="@style/listUserMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/userName"
+                    android:paddingBottom="15dp"
+                    android:autoLink="all"
+                    android:linksClickable="true"/>
+
+                <TextView
+                    android:id="@+id/userTimestamp"
+                    style="@style/listUserTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="12dp"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+         
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/post_avatar"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/imageViewpostAvatar"
+            android:layout_width="38dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="18dp"
+            android:background="#ffffff"
+            android:layout_marginTop="9dp" 
+            android:src="@drawable/head"
+             android:visibility="visible"/>
+    </RelativeLayout>
+    
+        
+
+    <RelativeLayout android:layout_width="fill_parent" 
+
+        android:layout_height="wrap_content" 
+        android:background="@drawable/gap_image"
+        android:id="@+id/gapLinearView"
+        android:visibility="gone" >
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="15dip"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true" >
+			 <LinearLayout
+                android:id="@+id/gapTextLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/gapTextView" 
+                    style="@style/gapNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/gapMoreTextView"
+                    style="@style/gapText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="-8dip"
+                    android:text="@string/more" />
+                
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/gapProgress"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:visibility="gone" />
+		
+		</LinearLayout>
+
+	</RelativeLayout> 
+
+	
+</LinearLayout>

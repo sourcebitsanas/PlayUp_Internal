@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F4" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdgeLength="0dip"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="vertical" 
+            >
+
+
+            <LinearLayout
+                android:id="@+id/sportsBase_progress_li"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="4dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/progress_li"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center" 
+                   >
+
+                   <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/spinner_base" >
+
+                        <ProgressBar
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:layout_centerInParent="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sportsBase"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                     android:visibility="gone">
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Sports base Ends -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    
+         <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/strip_shadow" />
+</RelativeLayout>

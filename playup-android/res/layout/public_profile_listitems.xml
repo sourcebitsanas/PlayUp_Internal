@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/itemView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/redLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dip"
+            android:src="@drawable/red_line" />
+
+        
+        <LinearLayout 
+             android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@+id/chevron"
+            android:layout_toRightOf="@id/redLine"
+            android:paddingLeft="5dip" 
+            android:orientation="vertical"
+            >
+             <TextView
+	            android:id="@+id/roomName"
+	            style="@style/recentActivityList"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:ellipsize="end" 
+	            android:singleLine="true"/>
+        
+	        <TextView
+	            android:id="@+id/matchName"
+	            style="@style/match_Name"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:singleLine="true"/>
+              
+        </LinearLayout>
+       
+        
+
+        <ImageView
+            android:id="@+id/chevron"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="15dip"
+            android:src="@drawable/chevron" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/contentDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2.5dip"
+        android:layout_marginRight="2.5dip"
+        android:background="@drawable/content_divider1" />
+
+</LinearLayout>

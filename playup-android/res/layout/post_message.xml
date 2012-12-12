@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F4" >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_panel"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip" >
+
+                <include
+                    android:id="@+id/post_last_msg_layout"
+                    layout="@layout/matchroomview" />
+
+                <!--
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:background="@drawable/post_base"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/userPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dip" >
+
+                        <TextView
+                            android:id="@+id/userName"
+                            style="@style/listUserText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:ellipsize="end"
+                            android:paddingLeft="10dip"
+                            android:singleLine="true"
+                            android:text="Mike" />
+
+                        <TextView
+                            android:id="@+id/userMsg"
+                            style="@style/listUserMessage"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/userName"
+                            android:ellipsize="end"
+                            android:paddingBottom="15dp"
+                            android:paddingLeft="10dip"
+                            android:text="Yeh,Stronger player,he&apos;ll make the squad for Euro 2012." />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id = "@+id/userAvatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/post_avatar" />
+
+                <ImageView
+                    android:id="@+id/blank_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dip"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/blank_avatar" />
+                -->
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dip" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/post_base1"
+                    android:orientation="vertical" >
+
+                    <EditText
+                        android:id="@+id/userTextMessage"
+                        style="@style/userTextMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="95dip"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginRight="5dip"
+                        android:layout_marginTop="5dip"
+                         android:hint="@string/yousay"
+                        android:background="#ffffff"
+                        android:gravity="left"
+                        android:paddingBottom="10dip"
+                        android:paddingLeft="25dip"
+                        android:paddingRight="5dip"
+                        android:paddingTop="15dip" android:autoText="true"/>
+
+                    <TextView
+                        android:id="@+id/characterCount"
+                        style="@style/characterCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/userTextMessage"
+                        android:paddingBottom="10dip"
+                        android:paddingRight="10dip"
+                        android:text="140" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dip"
+                    android:layout_marginTop="10dip"
+                    android:src="@drawable/post_avatar" />
+
+                <ImageView
+                    android:id="@+id/blank_avatar_img"
+                    android:layout_width="35dip"
+                    android:layout_height="35dip"
+                    android:layout_marginLeft="17dip"
+                    android:layout_marginTop="14dip"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/head"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/base_bar"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:id="@+id/postprovider"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toLeftOf="@+id/postButton"
+             android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/postButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:text="@string/post"
+            android:paddingLeft="4dip"
+            android:paddingRight="4dip"
+            android:background="@drawable/postmessage_postbtn_selector" 
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+          <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_panel"
+        android:scaleType="fitXY"
+        android:src="@drawable/base_bar_shadow" />
+</RelativeLayout>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/baseLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/base_green"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="25dip"
+            android:background="@drawable/match_detail"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/matchOversText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="63dip"
+                android:text="OVR" />
+
+            <TextView
+                android:id="@+id/matchOversDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_toRightOf="@id/matchOversText"
+                android:text="28.3" />
+
+            <TextView
+                android:id="@+id/matchRunRateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@id/matchOversDetails"
+                android:text="RR" />
+
+            <TextView
+                android:id="@+id/matchRunRateDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_toRightOf="@id/matchRunRateText"
+                android:text="2.66" />
+
+            <TextView
+                android:id="@+id/matchLBallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@id/matchRunRateDetails"
+                android:text="L&apos;Ball" />
+
+            <TextView
+                android:id="@+id/matchLBallDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_toRightOf="@id/matchLBallText"
+                android:text="4" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/leftTeamLayout1"
+                android:layout_width="185dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dip"
+                android:background="@drawable/team_left" >
+
+                <ImageView
+                    android:id="@+id/countrySymbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginTop="15dip"
+                    android:src="@drawable/new_post" />
+
+                <TextView
+                    android:id="@+id/countryScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginTop="15dip"
+                    android:layout_toRightOf="@id/countrySymbol"
+                    android:text="215/6"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/prevcountryScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/countryScore"
+                    android:layout_marginLeft="15dip"
+                    android:layout_toRightOf="@id/countrySymbol"
+                    android:text="180/10"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/prevcountryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="39dip"
+                    android:layout_toRightOf="@id/prevcountryScore"
+                    android:text="ENG"
+                    android:textColor="#000000" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/firstPlayerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="P.collingwood"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/firstPlayerScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:layout_toRightOf="@id/firstPlayerName"
+                    android:text="15[40]" />
+
+                <TextView
+                    android:id="@+id/secondPlayerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/firstPlayerName"
+                    android:text="A.Cook"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/secondPlayerScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dip"
+                    android:layout_toRightOf="@id/secondPlayerName"
+                    android:text="14[30]" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/leftTeamLayout2"
+                android:layout_width="185dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-14dip"
+                android:background="@drawable/team_left" >
+
+                <ImageView
+                    android:id="@+id/countrySymbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginTop="15dip"
+                    android:src="@drawable/new_post" />
+
+                <TextView
+                    android:id="@+id/countryScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginTop="15dip"
+                    android:layout_toRightOf="@id/countrySymbol"
+                    android:text="215 dec"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/prevcountryScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/countryScore"
+                    android:layout_marginLeft="15dip"
+                    android:layout_toRightOf="@id/countrySymbol"
+                    android:text="216/10"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/prevcountryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="39dip"
+                    android:layout_toRightOf="@id/prevcountryScore"
+                    android:text="AUS"
+                    android:textColor="#000000" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/firstPlayerName2ndTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="P.collingwood"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/firstPlayerScore2ndTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:layout_toRightOf="@id/firstPlayerName2ndTeam"
+                    android:text="15[40]" />
+
+                <TextView
+                    android:id="@+id/secondPlayerName2ndTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/firstPlayerName2ndTeam"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="A.Cook"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/secondPlayerScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dip"
+                    android:layout_toRightOf="@id/secondPlayerName2ndTeam"
+                    android:text="14[30]" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

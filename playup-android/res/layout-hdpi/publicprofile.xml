@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F4" android:clickable="true" android:focusable="true" android:focusableInTouchMode="true">
+
+    <!-- This view contains user avatar, name and user id              android:background="#DFDFDF" -->
+
+    <LinearLayout
+        android:id="@+id/publicprofile_li"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/profile_green_base"
+        android:orientation="horizontal"
+        android:clickable="true" >
+
+        <RelativeLayout
+            android:id="@+id/avtar_main_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="-4dip"
+            android:background="@drawable/profile_avatar"
+            android:gravity="top|center_horizontal"
+            android:paddingLeft="-2dip"
+            android:paddingTop="3dip" >
+
+          <ImageView
+                  android:id="@+id/profile_image_bg"
+                 
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/profile_avatar"
+                   />
+ 
+            <ImageView
+                android:id="@+id/profile_image"
+                
+                android:layout_width="72dip"
+                android:layout_height="72dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="4.5dip"
+                android:scaleType="fitXY"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/connected_userview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/profile_info_base" >
+
+            <TextView
+                android:id="@+id/user_name"
+                style="@style/userName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dip"
+                android:ellipsize="end"
+                android:paddingTop="17dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/user_id"
+                style="@style/UserNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_name"
+                android:layout_marginLeft="30dip"
+                android:paddingTop="28dip" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- End of avatar, name and user id -->
+
+    <RelativeLayout
+        android:id="@+id/publicprofile_rel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/publicprofile_li"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="10dip"
+         android:clickable="true" 
+         android:focusable="true"
+          android:focusableInTouchMode="true">
+
+        
+        <!--  Start of Direct Message friend graphic loading view -->
+        
+        
+         <RelativeLayout
+            android:id="@+id/friend_graphic_dmLoading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+             android:background="@drawable/wire_base" 
+             android:visibility="gone"
+            >   
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="4dp" />
+        </RelativeLayout>
+        
+        
+         <!--  End of Direct Message friend graphic loading view -->
+        
+
+        
+        <!--  Start of Direct Message Friend Graphic green View  -->
+        
+        
+        
+         <RelativeLayout
+            android:id="@+id/friend_graphic_frndMe"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/green_base"
+           android:visibility="gone"
+             >
+  
+            <TextView
+                android:id="@+id/addFriendText_dm"
+                style="@style/addFriendText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="42dip"
+                android:text="@string/addasafriend"
+                />
+            
+             <ImageView
+                android:id="@+id/addFriendIcon_dm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plus_icon_dm"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+            />
+            
+              <ImageView
+                android:id="@+id/addFriendIcon_dm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/friend_icon_dm"
+                android:layout_alignParentLeft="true"
+                 android:layout_centerVertical="true"  />
+           
+            
+        </RelativeLayout>
+        
+        
+         <!--  End of Direct Message Friend Graphic green View  -->
+        
+        
+        <!--  Start of Direct Message Message Me Graphic View  -->
+        
+         <RelativeLayout
+            android:id="@+id/messageMe_graphic_add_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+             android:background="@drawable/green_base"
+            android:visibility="gone"
+             >
+            
+              <ImageView
+                android:id="@+id/messageIcon_dm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/message_icon"
+                android:layout_alignParentLeft="true"
+                 android:layout_centerVertical="true"  />
+           
+              <TextView
+                android:id="@+id/werFriendText_dm"
+                style="@style/werFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_toRightOf="@id/messageIcon_dm"
+               android:layout_marginTop="3dip"
+                android:text="@string/werfriends" />
+              
+               <TextView
+                android:id="@+id/messageMeText_dm"
+                style="@style/addFriendText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/werFriendText_dm"
+                 android:layout_toRightOf="@id/messageIcon_dm"
+                android:text="@string/MessageMe"
+                android:layout_marginTop="-5dip"
+                
+                 />
+            
+               
+             <ImageView
+                android:id="@+id/chevronIcon_dm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chevron_d"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dip"
+                android:layout_centerVertical="true" />
+               
+        </RelativeLayout>
+        
+          <!--  End  of Direct Message Message Me Graphic View  -->
+        
+        
+        
+        <!--  Start of This is You graphic  -->
+        
+        <RelativeLayout
+            android:id="@+id/friend_graphic_you_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+            android:visibility="gone"
+             >
+
+            <ImageView
+                android:id="@+id/itsYouFriendIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dip"
+                android:src="@drawable/friend_icon" />
+
+            <ImageView
+                android:id="@+id/friend_graphic_you"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/itsYouFriendIcon"
+                android:background="@drawable/friend_graphic_you" />
+
+            <TextView
+                android:id="@+id/itsYouText"
+                style="@style/yourFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:text="@string/thisisyou" />
+        </RelativeLayout>
+        
+          <!--  End of This is You graphic  -->
+        
+        <!--  Start of Direct Message Friend Request send friend graphic view  -->
+        
+        
+         <RelativeLayout
+            android:id="@+id/friend_graphic_reqSend"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/wire_base" 
+            android:visibility="gone"
+             >
+
+            <ImageView
+                android:id="@+id/itsYouFriendIcon_dm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/friend_green_icon" />
+
+           
+
+            <TextView
+                android:id="@+id/friendReqSendText"
+                style="@style/yourFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/itsYouFriendIcon_dm"
+                 android:text="@string/invited"
+                />
+            
+            <ImageView
+                android:id="@+id/reqSendTick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/tick_icon" />
+            
+            
+        </RelativeLayout>
+        
+        
+         <!--  End of Direct Message Friend Request send friend graphic view  -->
+        
+        
+    </RelativeLayout>
+    
+
+    <TextView
+        android:clickable="true"
+        android:id="@+id/myRecentActivity_title"
+        style="@style/header_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/publicprofile_rel"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/header_base"
+        android:paddingLeft="15dip"
+        android:paddingTop="2dip"
+        android:text="@string/recentHangout" />
+
+  
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/myRecentActivity_title"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip" >
+
+        <ListView
+            android:id="@+id/recentActivityListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:fadingEdgeLength="0dip"
+            android:footerDividersEnabled="false"
+            android:listSelector="@drawable/listselector"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/no_recent_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/add_friend_graphic"/>
+    </FrameLayout>
+   
+
+</RelativeLayout>

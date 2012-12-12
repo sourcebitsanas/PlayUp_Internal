@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#F7F7F4"
+    android:orientation="horizontal"
+    android:paddingRight="8dip" >
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true" >
+
+        <LinearLayout
+            android:id="@+id/postBase"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/post_base"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/userPost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="5dip"
+                   >
+
+               <TextView
+                    android:id="@+id/userTimestamp"
+                    style="@style/listUserTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="14dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"/>
+                
+                
+                <TextView
+                    android:id="@+id/unreadMessageCount"
+                    style="@style/topBarTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/userTimestamp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dip"
+                    android:background="@drawable/post_count_bg"
+                    android:gravity="center"
+                    android:paddingBottom="7dip"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="2dip"
+                    android:layout_marginTop="4dip"/>
+                
+                
+                 <TextView
+                    android:id="@+id/userName"
+                    style="@style/listUserText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    
+                    android:layout_toLeftOf="@+id/userTimestamp"
+                    android:ellipsize="end"
+                    android:paddingRight="1dp"
+                    android:singleLine="true"/>
+                
+                
+                <TextView
+                    android:id="@+id/userMsg"
+                    style="@style/listUserMessage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/userName"
+                    android:paddingBottom="15dp"
+                    android:paddingRight="10dip"
+                    android:layout_toLeftOf="@id/unreadMessageCount"
+                    android:ellipsize="end"/>
+
+                
+
+                <ImageView
+                    android:id="@+id/rightChevron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/userTimestamp"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="6dip"
+                    android:src="@drawable/chevron" />
+
+                <!--
+                     <TextView
+                        android:id="@+id/unreadMessageCount"
+                        android:background="@drawable/post_count_bg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/userTimestamp"
+                        android:layout_toLeftOf="@id/rightChevron"
+                         android:gravity="center"
+                        android:text="12" />
+                -->
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/post_avatar" />
+
+        <ImageView
+            android:id="@+id/imageViewpostAvatar"
+            android:layout_width="38dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="9dp"
+            android:background="#ffffff" />
+        -->
+
+        <RelativeLayout
+            android:id="@+id/user_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/postBase"
+            android:layout_alignParentTop="true" >
+
+            <ImageView
+                android:id="@+id/postAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/post_avatar" />
+
+            <ImageView
+                android:id="@+id/imageViewpostAvatar"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                 />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

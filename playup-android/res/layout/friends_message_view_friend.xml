@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/friendLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dip"
+    android:layout_marginRight="8dip"
+    android:clickable="true"
+    android:focusable="true" >
+
+    <LinearLayout
+        android:id="@+id/base1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-10dip"
+        android:layout_toRightOf="@+id/avatar_layout_left"
+        android:background="@drawable/post_base"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/messageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dip" >
+
+             <TextView
+                android:id="@+id/userTimestamp1"
+                style="@style/listUserTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="5 min" />
+             
+            <TextView
+                android:id="@+id/userMsg1"
+                style="@style/listUserMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="6dip"
+                android:layout_toLeftOf="@id/userTimestamp1"
+                android:autoLink="all"
+                android:linksClickable="true"
+                android:paddingBottom="6dp"
+                android:paddingRight="10dip"
+                android:text="user" />
+
+           
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/avatar_layout_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/post_avatar" />
+
+        <ImageView
+            android:id="@+id/imgViewpostAvatar"
+            android:layout_width="36.5dp"
+            android:layout_height="36.5dp"
+            android:layout_marginLeft="8.5dp"
+            android:layout_marginTop="4dp"
+            android:background="#ffffff" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F4"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/notificationList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:fadingEdgeLength="0dip"
+        android:listSelector="#F7F7F4" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/anonymous_notification"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dip"
+        android:background="#F7F7F4"
+        android:clickable="true"
+        android:padding="0dip" >
+
+        <!-- Start of Base -->
+
+        <LinearLayout
+            android:id="@+id/postBase"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dip"
+            android:layout_marginRight="7dip"
+            android:layout_toRightOf="@+id/avatar_layout"
+            android:background="@drawable/post_base"
+            android:orientation="vertical"
+            android:padding="0dip" >
+
+            <RelativeLayout
+                android:id="@+id/userPost"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="5dip" >
+
+                <RelativeLayout
+                    android:id="@+id/name_time_arrow_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:padding="0dip" >
+
+                    <ImageView
+                        android:id="@+id/blueDot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/blue_dot" />
+
+                    <TextView
+                        android:id="@+id/userName"
+                        style="@style/listUserText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:layout_toLeftOf="@+id/blueDot"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/notification_welcome" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/msg_confirm_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name_time_arrow_layout"
+                    android:layout_marginRight="10dip" >
+
+                    <!-- Cross and Tick Button Starts Here -->
+
+                    <ImageView
+                        android:id="@+id/arrowChevron"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/chevron" />
+
+                    <TextView
+                        android:id="@+id/userMsg"
+                        style="@style/listUserMessage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:layout_toLeftOf="@+id/arrowChevron"
+                        android:text="@string/notification_welcome_desc" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/avatar_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/postBase"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/postAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/playup_avatar" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/nonotification"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" android:gravity="center">
+
+        <ImageView
+            android:id="@drawable/zero_graphic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:src="@drawable/zero_graphic" />
+
+    </LinearLayout>
+
+</RelativeLayout>

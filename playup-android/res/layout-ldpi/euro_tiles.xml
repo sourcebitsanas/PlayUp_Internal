@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+<RelativeLayout
+    android:id="@+id/base" 
+    android:layout_width="fill_parent"
+    android:layout_height="100px"
+    android:padding="1.5dip"
+    android:background="@drawable/sport_base">
+   
+
+     <RelativeLayout
+            android:id="@+id/euro_tile_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" 
+			android:background="#ffffffff">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/tileName"
+                style="@style/User_Options"
+                android:layout_width="wrap_content"
+                android:layout_height="30px"
+                android:layout_marginLeft="8dp"
+                android:gravity="top"
+                android:lineSpacingExtra="-5dip"
+                android:paddingRight="2dip"
+                android:paddingTop="2dip"
+                android:text="" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ImageWithSummary"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/titleLayout"
+            android:visibility="visible" >
+            
+             <ImageView
+                     android:id="@+id/ImageWithSummaryImage"
+                     android:layout_width="fill_parent"
+                     android:layout_height="fill_parent"
+                     android:adjustViewBounds="true"
+                     android:scaleType="centerCrop"
+                      />
+              <View
+                android:id="@+id/solidImageOverlay"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone"  />
+
+            <TextView
+                android:id="@+id/ImageSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="top|left"
+                android:maxLines="2"
+                android:paddingBottom="8dip"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dip"
+                android:paddingTop="4dip"
+                android:text="" 
+                android:visibility = "gone"/>
+
+            <TextView
+                android:id="@+id/liveImage"
+                style="@style/live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/live_icon"
+                android:gravity="center"
+                android:text="@string/live"
+                android:visibility = "gone" />
+            
+            
+                 <ImageView
+                android:id="@+id/playerIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src = "@drawable/round_play"
+                android:visibility = "gone"
+                />
+                
+
+            <!-- layout for count and matches/county name text -->
+
+
+            <!--
+    <LinearLayout
+        android:id="@+id/countView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:visibility="visible" >
+	        
+        <TextView 
+            android:id="@+id/countTextView"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="123"
+        	android:gravity="left"/>
+         <TextView 
+            android:id="@+id/countryTextView"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="India"
+        	android:gravity="left"/>
+        
+    </LinearLayout>
+
+
+
+
+            -->
+
+        </RelativeLayout>
+
+        <LinearLayout
+                android:id="@+id/footerContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="6dip"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:paddingTop="8dip"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/sourceIcon"
+                    android:layout_width="28dip"
+                    android:layout_height="28dip"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="4dip"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:paddingLeft="2dp" >
+
+                    <TextView
+                        android:id="@+id/footerTitle"
+                        style="@style/footerTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="bottom|left"
+                        android:singleLine="true"
+                        android:text="" />
+
+                    <ImageView
+                        android:id="@+id/socialIcon"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_below="@+id/footerTitle"
+                        android:layout_marginRight="3dip"
+                        android:scaleType="fitXY"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/footerSubtitle"
+                        style="@style/leagueSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/footerTitle"
+                        android:layout_toRightOf="@+id/socialIcon"
+                        android:ellipsize="end"
+                        android:gravity="top"
+                        android:singleLine="true"
+                        android:text="" />
+                </RelativeLayout>
+            </LinearLayout>
+          
+    </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dip"
+    android:paddingRight="8dip"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/item_first"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/hero_base">
+
+        <TextView
+            android:id="@+id/itemTitle"
+            style="@style/mySportsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dip"
+            android:layout_weight="2"
+            android:text="Title text is here" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dip"
+            android:paddingBottom = "5dip"
+            android:layout_weight="4" >
+
+            <TextView
+                android:id="@+id/commentingNumber"
+                style="@style/listUserTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_horizontal"
+                android:layout_marginRight="8dip"
+                android:paddingBottom="3dip"
+                android:paddingLeft="2dip"
+                android:paddingRight="2dip"
+                android:paddingTop="2dip"
+                android:text="123"
+                android:background="@drawable/comments_bubble" 
+               />
+
+            <TextView
+                android:id="@+id/uName"
+                style="@style/matchRoomUserName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/commentingNumber"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="5dip"
+                android:layout_toLeftOf="@+id/commentTime"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="User name" />
+
+            <TextView
+                android:id="@+id/comment_desc"
+                style="@style/matchRoomComment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uName"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="3dip"
+                android:layout_marginTop="5dip"
+                android:maxLines="3"
+				android:singleLine="false" 
+                android:layout_toLeftOf="@+id/userAvatarView"
+                android:text="" />
+
+           
+  <!--           
+         
+            <LinearLayout 
+                android:id="@+id/comment_desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uName"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="3dip"
+                android:layout_marginTop="5dip"
+                android:layout_toLeftOf="@+id/userAvatarView"
+                ></LinearLayout>
+                  -->
+
+
+            <TextView
+                android:id="@+id/commentTime"
+                style="@style/listUserTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/uName"
+                android:layout_alignBottom="@+id/uName"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_marginRight="8dip"
+                android:layout_toLeftOf="@+id/userAvatarView"
+                android:text="10 mins" />
+
+            <RelativeLayout
+                android:id="@+id/userAvatarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/commentingNumber"
+                android:layout_marginBottom="8dip"
+                android:layout_marginRight="10dip"
+                >
+             <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:background="@drawable/avatar_blank"
+                />    
+                
+            <ImageView
+                 android:id="@+id/userAvatarHolder"
+                android:layout_width="90dip"
+                android:layout_height="90dip"
+                android:layout_marginLeft="12dip"
+                android:layout_marginTop="6dip"
+                android:background="@drawable/blank_avatar1"
+                />
+             <ImageView
+                android:id="@+id/userAvatar"
+                android:layout_width="72dip"
+                android:layout_height="76dip"
+                android:layout_marginLeft="21dip"
+                android:layout_marginTop="6dip" 
+                android:scaleType="fitXY"          
+               />
+            
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_others"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2" >
+
+        <include
+            android:id="@+id/item_ther_1"
+            android:layout_weight="1"
+            layout="@layout/private_lobby_item" />
+    </LinearLayout>
+    
+</LinearLayout>

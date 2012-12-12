@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F4" >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_panel" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip" >
+
+                <include
+                    android:id="@+id/post_last_msg_layout"
+                    layout="@layout/matchroomview" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                
+                    
+                    <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/post_base1"
+                    android:orientation="vertical" >
+
+                    <EditText
+                        android:id="@+id/userTextMessage"
+                        style="@style/userTextMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="95dp"
+                        android:gravity="left"
+                        android:hint="@string/yousay"
+                        android:background="@android:color/transparent"
+                        android:paddingBottom="10dip"
+                        android:paddingLeft="25dip"
+                        android:paddingRight="8dip"
+                        android:paddingTop="15dip"
+                        android:scrollbars="vertical" />
+
+                    <TextView
+                        android:id="@+id/characterCount"
+                        style="@style/characterCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/userTextMessage"
+                        android:paddingBottom="10dip"
+                        android:paddingRight="10dip"
+                        android:text="140" />
+                    
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dip"
+                    android:layout_marginTop="10dip"
+                    android:src="@drawable/post_avatar" />
+
+                <ImageView
+                    android:id="@+id/blank_avatar_img"
+                    android:layout_width="39dip"
+                    android:layout_height="39dip"
+                    android:layout_marginLeft="16.2dip"
+                    android:layout_marginTop="14.5dip"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/head" />
+            </RelativeLayout>
+
+          
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/base_bar"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:id="@+id/postprovider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@+id/postButton"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal" />
+
+        <Button
+            android:id="@+id/postButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:textStyle="bold"
+            android:paddingLeft="4dip"
+            android:paddingRight="4dip"
+            android:textColor="#FFFFFF"
+            android:text="@string/post"
+            android:background="@drawable/postmessage_postbtn_selector" 
+             
+         />
+    </RelativeLayout>
+    
+          <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_panel"
+        android:scaleType="fitXY"
+        android:src="@drawable/base_bar_shadow" />
+
+</RelativeLayout>

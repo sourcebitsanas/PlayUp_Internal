@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F4" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdgeLength="0dip"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <!-- This view contains user avatar, name and user id -->
+
+            <LinearLayout
+                android:id="@+id/avtarGreenBase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dip"
+                android:background="@drawable/profile_green_base"
+                android:orientation="horizontal" >
+
+            <RelativeLayout
+                    android:id="@+id/avtar_main_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="-4dip"
+                    android:paddingTop="4dip" >
+
+                   
+                    <ImageView
+                        android:id="@+id/profile_image_bg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/tounge" />
+ 
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="69dp"
+                        android:layout_height="71dp"
+                        android:layout_marginTop="4dip"
+                        android:layout_marginLeft="8dp"
+                        android:scaleType="fitXY" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/connected_userview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="13dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/profile_info_base"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        style="@style/userName"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="9dip"
+                        android:ellipsize="end"
+                        android:paddingTop="17dp"
+                        android:singleLine="true"
+                        android:text="Ambrose Johannesen" />
+
+                    <TextView
+                        android:id="@+id/user_id"
+                        style="@style/UserNumber"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/user_name"
+                        android:layout_marginLeft="25dip"
+                        android:layout_marginTop="29dp"
+                        android:text="12345" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/disconnected_userview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" >
+
+                    <ImageView
+                        android:id="@+id/notconnectedImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="4dp"
+                        android:src="@drawable/not_connected" />
+
+                    <TextView
+                        android:id="@+id/connectionMsg"
+                        style="@style/connceton_msg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/notconnectedImg"
+                        android:layout_marginLeft="8dip"
+                       android:layout_marginTop="6dip"
+                        android:gravity="left"
+                        android:lineSpacingExtra="-3dip"
+                        android:text="@string/connection_msg" />
+                </RelativeLayout>
+            </LinearLayout>
+            
+            <RelativeLayout
+                    android:id="@+id/updateRegionView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="65dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                   
+                 
+                    
+                    android:background="@drawable/log_out_base" >
+
+				    
+				    <RelativeLayout
+	                    android:id="@+id/globe"
+	                    android:layout_width="60dip"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerVertical="true" >
+                    <ImageView
+                        android:id="@+id/updateRegion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/globe_icon"
+                        />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/vertical_divider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:scaleType="fitXY"
+                        android:paddingTop="2dip"
+                        android:paddingBottom="2dip"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/globe"
+                        android:src="@drawable/red_line" />
+
+                    <TextView
+                        android:id="@+id/updateRegionTitile"
+                        style="@style/recentActivityList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       	android:paddingTop="13dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/vertical_divider"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="@string/update_region" />
+                    
+                    
+                    
+                    
+                     <TextView
+                        android:id="@+id/regionCode"
+                        style="@style/UserNumber_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                      	android:layout_below="@id/updateRegionTitile"
+                      	android:layout_toRightOf="@id/vertical_divider"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/chevron"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text=""
+                         />
+                     
+                     <ImageView
+                          android:id="@+id/chevron"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentRight="true"
+				        android:layout_centerVertical="true"
+				        android:paddingRight="19dip"
+				        android:src="@drawable/chevron" />
+                    
+                </RelativeLayout>
+            <!-- Social network view -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="10dip" >
+
+                <RelativeLayout
+                    android:id="@+id/mysocial"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/mysocial_header"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dip"
+                        android:src="@drawable/header_base" />
+
+                    <TextView
+                        android:id="@+id/mysocial_title"
+                        style="@style/header_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13dp"
+                        android:text="@string/mysocial_title" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/myprovider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mysocial"
+                    android:orientation="vertical" />
+
+                
+
+
+            </RelativeLayout>
+            
+                
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                <!-- Logout view -->
+
+                <RelativeLayout
+                    android:id="@+id/logout_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    
+                    android:visibility="gone"
+                    android:background="@drawable/log_out_base" 
+                  >
+
+                     <RelativeLayout
+	                    android:id="@+id/logoBase"
+	                    android:layout_width="60dip"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerVertical="true" >
+                    <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/log_out" />
+                    </RelativeLayout>
+                    
+
+                    <ImageView
+                        android:id="@+id/vertical_divider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:scaleType="fitXY"
+                        android:paddingTop="2dip"
+                        android:paddingBottom="2dip"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/logoBase"
+                        android:src="@drawable/red_line" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        style="@style/recentActivityList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/vertical_divider"
+                        android:text="@string/logout" />
+                </RelativeLayout>
+                
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

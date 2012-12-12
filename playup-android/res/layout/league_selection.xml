@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F7" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#F7F7F7" >
+
+        <ListView
+            android:id="@+id/leaguesListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#F7F7F7"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:fadingEdgeLength="0dip"
+            android:footerDividersEnabled="false" 
+            >
+        </ListView>
+      
+    </LinearLayout>
+    
+     <LinearLayout
+                android:id="@+id/progressLeagues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:padding="30dip"
+                android:visibility="gone">
+
+              	<ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loading"
+                    android:textColor="#29aa4e"
+                    android:textSize="20dip"/>
+                
+            </LinearLayout>
+            
+     <ImageView 
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:background="@drawable/strip_shadow"
+         />
+
+</RelativeLayout>

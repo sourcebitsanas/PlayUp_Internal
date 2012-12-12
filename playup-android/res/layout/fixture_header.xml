@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/user_profile_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-2dip"
+        android:background="@drawable/profile_green_base">
+
+        <!-- Start of Layout for tounge image -->
+
+		<RelativeLayout 
+		     android:id="@+id/round_select_base"
+		    android:layout_height="wrap_content"
+		    android:layout_width="wrap_content"
+		    android:background="@drawable/round_select_base"
+		    android:layout_centerHorizontal="true"
+		    >
+
+				        <TextView 
+				            android:id = "@+id/period" 
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:layout_alignParentTop="true"
+				            android:paddingTop="10dp"
+				            android:layout_centerHorizontal="true"
+				            style="@style/userName"
+				            android:text="week"
+				            android:visibility="invisible"
+				             />
+				        
+				
+				        <TextView
+				            android:id="@+id/weekNumber"
+				            style="@style/weekNumber"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:layout_below="@+id/period"
+				            android:layout_marginTop="-8dip"
+				            android:layout_centerHorizontal="true"
+				            android:text="12" 
+				            android:visibility="invisible"/>
+				
+				        <TextView
+				            android:id="@+id/weekStart"
+				            style="@style/userName"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:layout_below="@+id/weekNumber"
+				            android:gravity="bottom"
+				            android:layout_marginTop="-4dip"
+				            android:layout_centerHorizontal="true" 
+				            android:text="week"
+				             android:visibility="invisible"/>
+				
+				        <TextView
+				            android:id="@+id/weekEnd"
+				            style="@style/userName"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:layout_below="@+id/weekStart"
+				            android:layout_centerHorizontal="true" 
+				            android:layout_marginTop="-2dip"
+				            android:paddingBottom="10dip"
+				            android:gravity="top"
+				            android:text="week"
+				            android:visibility="invisible"/>
+	
+	 </RelativeLayout>
+	
+      
+	<com.playup.android.customview.CustomGallery 
+	    android:spacing="10dip"
+	    android:id = "@+id/fixtureGallery"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"/>
+       
+
+
+</RelativeLayout>
+
+</RelativeLayout>

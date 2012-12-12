@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SettingsDialogTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- <item name="android:background">@@color/dimtrans_bg</item> -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowContentOverlay">@android:color/transparent</item>
+    </style>
+
+    <!-- Setting Parent child Hierarchy for styles -->
+
+    <style name="league_name_parent">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="league_name" parent="league_name_parent">
+        <item name="android:textColor">#4B4B4B</item>
+    </style>
+
+    <style name="live_parent">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="live" parent="live_parent">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="userName_parent">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="userName" parent="userName_parent">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="characterCount" parent="userName_parent">
+        <item name="android:textColor">#736E73</item>
+    </style>
+
+    <style name="listUserTime" parent="userName_parent">
+        <item name="android:textColor">#B9B6B9</item>
+    </style>
+
+    <style name="wkText" parent="userName_parent">
+        <item name="android:textColor">#46FF64</item>
+    </style>
+
+    <style name="hangoutCharacterCount" parent="userName_parent">
+        <item name="android:textColor">#ABA8AB</item>
+    </style>
+
+    <style name="privateDesc" parent="userName_parent">
+        <item name="android:textColor">#9D999D</item>
+    </style>
+    
+     <style name="footerText" parent="userName_parent">
+        <item name="android:textColor">#787878</item>
+    </style>
+
+      <style name="recentMatchName" parent="userName_parent">
+        <item name="android:textColor">#979797</item>
+    </style>  
+         
+       <style name="match_Name" parent="userName_parent">
+        <item name="android:textColor">#9A9A9A</item>
+    </style> 
+   
+    <style name="werFriends" parent="userName_parent">
+        <item name="android:textColor">#40875A</item>
+    </style>
+
+    <style name="player" parent="userName_parent">
+        <item name="android:textColor">#696B6E</item>
+    </style>
+    
+    <style name="lastEventName" parent="userName_parent">
+        <item name="android:textColor">#FF4754</item>
+    </style>
+        
+     <style name="subplayer" parent="userName_parent">
+        <item name="android:textColor">#969799</item>
+    </style>
+     <style name="lobbyCharCount" parent="userName_parent">
+        <item name="android:textColor">#ABA8AB</item>
+    </style>
+    <style name="leagueSubTitle" parent="userName_parent">
+        <item name="android:textColor">#B8B6B8</item>
+    </style>
+     <style name="liveRegionName" parent="userName_parent">
+        <item name="android:textColor">#726D72</item>
+    </style>
+    
+    <style name="footerTitle" parent="userName_parent">
+        <item name="android:textColor">#FF4653</item>
+    </style>
+
+         
+    <style name="UserNumber_parent">
+        <item name="android:textSize">13sp</item>
+    </style>
+    
+        
+        
+
+    <style name="UserNumber" parent="UserNumber_parent">
+        <item name="android:textColor">#46FF64</item>
+    </style>
+
+    <style name="connection_status" parent="UserNumber_parent">
+        <item name="android:textColor">#ABABAB</item>
+    </style>
+
+    <style name="header_title" parent="UserNumber_parent">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="listUserMessage" parent="UserNumber_parent">
+        <item name="android:textColor">#ABABAB</item>
+    </style>
+
+    <style name="timeText" parent="UserNumber_parent">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="User_Subtitle" parent="UserNumber_parent">
+        <item name="android:textColor">#ABABAB</item>
+    </style>
+
+    <style name="matchItemComment" parent="UserNumber_parent">
+        <item name="android:textColor">#616161</item>
+    </style>
+    
+     <style name="userNameSubText" parent="UserNumber_parent">
+        <item name="android:textColor">#9A9A9A</item>
+    </style>
+    
+    <style name="gapText" parent="UserNumber_parent">
+        <item name="android:textColor">#F5F5F5</item>
+    </style>
+    
+  <style name="leagueId" parent="UserNumber_parent">
+        <item name="android:textColor">#9D999D</item>
+    </style>
+    
+  <style name="acceptedIgnore" parent="UserNumber_parent">
+        <item name="android:textColor">#AFACAC</item>
+    </style>
+   <style name="overs" parent="UserNumber_parent">
+        <item name="android:textColor">#696B6E</item>
+    </style>
+    <style name="lastBall" parent="UserNumber_parent">
+        <item name="android:textColor">#FF4754</item>
+    </style>
+    <style name="createPrivateLobbyDesc" parent="UserNumber_parent">
+        <item name="android:textColor">#726D72</item>
+    </style>
+    <style name="upcomingText" parent="UserNumber_parent">
+        <item name="android:textColor">#FF4653</item>
+    </style>
+    
+
+    
+    <style name="userTextMessage_parent">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="userTextMessage" parent="userTextMessage_parent">
+        <item name="android:textColor">#000000 </item>
+    </style>
+
+    <style name="league_item_subname" parent="userTextMessage_parent">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    
+    <style name="leagueNameHeader" parent="userTextMessage_parent">
+        <item name="android:textColor">#736E73</item>
+    </style>
+
+    <style name="teamNameId" parent="userTextMessage_parent">
+        <item name="android:textColor">#5F5A5A</item>
+    </style>
+    
+     <style name="newsStackTitle" parent="userTextMessage_parent">
+        <item name="android:textColor">#86BBC8</item>
+    </style>
+    
+    
+    
+    <style name="recentActivityList_parent">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="recentActivityList" parent="recentActivityList_parent">
+        <item name="android:textColor">#4B4B4B</item>
+    </style>
+
+    <style name="connceton_msg" parent="recentActivityList_parent">
+        <item name="android:textColor">#46FF64</item>
+    </style>
+
+  
+    <style name="SearchText" parent="recentActivityList_parent">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="User_Options" parent="recentActivityList_parent">
+        <item name="android:textColor">#979797</item>
+    </style>
+
+    <style name="mySportsTitle" parent="recentActivityList_parent">
+        <item name="android:textColor">#404040</item>
+    </style>
+
+    <style name="matchRoomUserName" parent="recentActivityList_parent">
+        <item name="android:textColor">#FF4754</item>
+    </style>
+
+	 <style name="nomatches" parent="recentActivityList_parent">
+        <item name="android:textColor">#736E73</item>
+    </style>
+     <style name="galleryTeamName" parent="recentActivityList_parent">
+        <item name="android:textColor">#FFCCCC</item>
+    </style>
+    <style name="leagueTitle" parent="recentActivityList_parent">
+        <item name="android:textColor">#565656</item>
+    </style>
+     <style name="shareDialogTitle" parent="recentActivityList_parent">
+        <item name="android:textColor">#27AAE1</item>
+     </style>
+    
+     <style name="stackedNewsTitle" parent="recentActivityList_parent">
+        <item name="android:textColor">#000000</item>
+    </style>
+      
+
+	     
+    <style name="UserProfileEditText_parent">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="UserProfileEditText" parent="UserProfileEditText_parent">
+        <item name="android:textColor">#FF4754</item>
+    </style>
+
+    <style name="addFriendText" parent="UserProfileEditText_parent">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="yourFriends" parent="UserProfileEditText_parent">
+        <item name="android:textColor">#9D999D</item>
+    </style>
+
+    <style name="listUserText" parent="UserProfileEditText_parent">
+        <item name="android:textColor">#FF4754</item>
+    </style>
+
+    <style name="Text_User" parent="UserProfileEditText_parent">
+        <item name="android:textColor">#FF4754</item>
+    </style>
+
+    <style name="mySportsMsg" parent="UserProfileEditText_parent">
+        <item name="android:textColor">#D5D3D5</item>
+    </style>
+
+    <style name="hangoutEdittext" parent="UserProfileEditText_parent">
+        <item name="android:textColor">#616161</item>
+    </style>
+    
+     <style name="aboutText" parent="UserProfileEditText_parent">
+        <item name="android:textColor">#4B4B4B</item>
+    </style>
+    <style name="liveLeagueName" parent="UserProfileEditText_parent">
+        <item name="android:textColor">#27A544</item>
+    </style>
+    <style name="headerSummary" parent="UserProfileEditText_parent">
+        <item name="android:textColor">#616161</item>
+    </style>
+
+    <style name="topBarTitleText_parent">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="topBarTitleText" parent="topBarTitleText_parent">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="privateTxt" parent="topBarTitleText_parent">
+        <item name="android:textColor">#736E73</item>
+    </style>
+    <style name="liveNow" parent="topBarTitleText_parent">
+        <item name="android:textColor">#27A544</item>
+    </style>
+    
+   
+
+ 	 <style name="friendLogInText">
+        <item name="android:textSize">18sp</item>
+         <item name="android:textColor">#BAC0C0</item>
+    </style>       
+        
+    <style name="league_item_name_parent">
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="league_item_name" parent="league_item_name_parent">
+        <item name="android:textColor">#A59F9B</item>
+    </style>
+
+    <style name="leagueName_parent">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="leagueName" parent="leagueName_parent">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="teamName" parent="leagueName_parent">
+        <item name="android:textColor">#696B6E</item>
+    </style>
+    <style name="leaderBoardPosition" parent="leagueName_parent">
+        <item name="android:textColor">#FF4754</item>
+    </style>
+    
+
+    <style name="matchRoomComment_parent">
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="matchRoomComment" parent="matchRoomComment_parent">
+        <item name="android:textColor">#FF4754</item>
+    </style>
+
+    <style name="providerMessage" parent="matchRoomComment_parent">
+        <item name="android:textColor">#D5D3D5</item>
+    </style>
+    <style name="league_msg_parent">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    
+
+        
+     <style name="gapNumber">
+        <item name="android:textSize">23sp</item>
+        <item name="android:textColor">#F5F5F5</item>
+    </style>
+    
+     
+      <style name="teamScheduleScore">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#FF4754</item>
+    </style>
+        
+    <style name="weekNumber_parent">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="weekNumber" parent="weekNumber_parent">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="activt_user_no" parent="weekNumber_parent">
+        <item name="android:textColor">#C0BEC0</item>
+    </style>
+    
+    <style name="teamScore" parent="weekNumber_parent">
+        <item name="android:textColor">#FF4754</item>
+    </style>
+    
+     <style name="matchStartingTime" parent="weekNumber_parent">
+        <item name="android:textColor">#FF4653</item>
+    </style>
+    
+    <style name="text_score_parent">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="text_score" parent="text_score_parent">
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="live_number_parent">
+        <item name="android:textSize">38sp</item>
+    </style>
+
+    <style name="live_number" parent="live_number_parent">
+        <item name="android:textColor">#736E73</item>
+    </style>
+   
+         <style name="regionName">
+        <item name="android:textSize">15sp</item>
+        
+    </style> 
+    
+   
+</resources>

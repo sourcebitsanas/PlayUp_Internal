@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+   
+   <!--  <item android:id="@+id/menu_invite_frineds"
+          android:title="@string/menu_invite_friends" 
+          android:icon="@drawable/menu_add_friends"/>
+    
+    <item android:id="@+id/menu_match_home"
+          android:title="@string/menu_match_home" />
+    
+    <item android:id="@+id/menu_home"
+          android:title="@string/menu_home"
+          android:icon="@drawable/menu_home_about" /> -->
+</menu>

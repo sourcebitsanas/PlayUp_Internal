@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="66dip"
+    android:background="#343434"
+    android:paddingBottom="5dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip">
+
+  
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/fixture_base" 
+        android:layout_marginTop="10dip">
+		 <RelativeLayout
+		     android:id="@+id/weekView"
+		     android:layout_width="68dip"
+	         android:layout_height="wrap_content"
+	         android:layout_marginLeft="2dip"
+	         android:layout_alignParentBottom="true">
+	        <TextView
+	            android:id="@+id/weekTextView"
+	            style="@style/userName"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:gravity="center_horizontal"
+	            android:text=""
+	             />
+	        <TextView
+	            android:id="@+id/weekNumber"
+	            style="@style/weekNumber"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/weekTextView"
+	            android:layout_centerHorizontal="true"
+	            android:maxWidth="50dip"
+	             android:gravity="center"
+	            android:text="12344556"
+	          
+	           />
+      </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dip"
+            android:layout_toRightOf="@+id/weekView"
+           android:layout_centerVertical="true"
+           android:paddingTop="7dip"
+            android:layout_marginRight="10dip">
+
+            <TextView
+                android:id="@+id/weekDesc"
+                style="@style/addFriendText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="09:45 - 12:30 06 JAN" android:layout_toLeftOf="@+id/arrow"/>
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/list_arrow_white" />
+        </RelativeLayout>
+
+    
+    </RelativeLayout>
+
+</RelativeLayout>

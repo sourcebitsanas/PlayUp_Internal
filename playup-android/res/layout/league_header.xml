@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/live_header_base">
+    
+    <TextView 
+        android:id="@+id/leagueName"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text=""
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dip"
+        style="@style/liveLeagueName"/>
+    <TextView 
+        android:id="@+id/countryName"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text=""
+        android:layout_toRightOf="@id/leagueName"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:layout_marginLeft="10dip"
+        style="@style/liveRegionName"/>
+    
+</RelativeLayout>

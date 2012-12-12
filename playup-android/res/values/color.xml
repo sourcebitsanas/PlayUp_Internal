@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>     
+    <color name="black">#000000</color> 
+    <color name="white">#ffffff</color>
+    <color name="homepressed">#00D7DC</color>
+    <color name="grey">#D3D3D3</color>
+    
+    
+    
+    <drawable name="focused">#ffff00</drawable>
+    <drawable name="normal">#FFFFFF</drawable>
+</resources>

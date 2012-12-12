@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dip"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:padding="10dip">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/internet_connectivity_dialog"
+        android:textSize="20dip" android:gravity="center">
+    </TextView>
+
+    <Button
+        android:id="@+id/provider_dialog_ok"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        android:textSize="20dip" >
+    </Button>
+
+</LinearLayout>

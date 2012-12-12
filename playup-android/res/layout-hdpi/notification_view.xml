@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#F7F7F4"
+    android:clickable="true"
+    android:padding="0dip" 
+    android:layout_marginBottom="-1dip">
+
+    <!-- Start of Base -->
+
+    <LinearLayout
+        android:id="@+id/postBase"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-10dip"
+        android:layout_marginRight="7dip"
+        android:layout_toRightOf="@+id/avatar_layout"
+        android:background="@drawable/post_base"
+        android:orientation="vertical"
+        android:padding="0dip" >
+
+        <!-- Start of Premier league layout -->
+
+        <RelativeLayout
+            android:id="@+id/premierLeague"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:paddingBottom="5dip"
+            android:paddingLeft="0dip"
+            android:paddingRight="0dip"
+            android:paddingTop="5dip" >
+
+            <TextView
+                android:id="@+id/leagueId"
+                style="@style/leagueId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:layout_toLeftOf="@+id/teamNameId"
+                android:ellipsize="end"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/blueDot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/blue_dot" />
+
+            <TextView
+                android:id="@+id/teamNameId"
+                style="@style/teamNameId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/blueDot" 
+                android:layout_alignWithParentIfMissing="true"
+                 android:paddingRight="10dip"/>
+
+            <ImageView
+                android:id="@+id/redLine"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_alignLeft="@+id/leagueId"
+               android:layout_alignParentRight="true"
+                android:layout_below="@id/leagueId"
+                 android:layout_marginTop="5dip" 
+                android:background="@drawable/notification_red_line"
+                />
+        </RelativeLayout>
+        <!-- End of Premier league layout -->
+
+        <RelativeLayout
+            android:id="@+id/userPost"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="5dip" >
+
+            <RelativeLayout
+                android:id="@+id/name_time_arrow_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:padding="0dip" android:gravity="center_vertical">
+
+                <FrameLayout
+                    android:id="@+id/dot_arrow_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignTop="@+id/userName"
+                    android:layout_centerVertical="true"
+                    android:padding="0dip"
+                    android:layout_alignBottom="@+id/userName">
+
+                    <ImageView
+                        android:id="@+id/blueDot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/blue_dot"
+                         android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/arrowChevron"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/chevron" 
+                        android:layout_gravity="center_vertical"/>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/userTimestamp"
+                    style="@style/listUserTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/userName"
+                    android:layout_marginRight="5dip"
+                    android:layout_toLeftOf="@+id/dot_arrow_layout"
+                    android:padding="0dip"
+                    android:singleLine="true" android:gravity="center_vertical" android:layout_alignTop="@+id/userName"/>
+
+                <TextView
+                    android:id="@+id/userName"
+                    style="@style/listUserText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:layout_toLeftOf="@+id/userTimestamp"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/msg_confirm_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_time_arrow_layout"
+                android:layout_marginRight="10dip" >
+
+                <!-- Cross and Tick Button Starts Here -->
+
+                <FrameLayout
+                    android:id="@+id/confirmationlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" >
+
+                    <!-- Start For Accepted and Ignore Text -->
+
+                    <LinearLayout
+                        android:id="@+id/confirmation_li_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <RelativeLayout
+                            android:id="@+id/buttonBaseCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dip"
+                            android:background="@drawable/button_base" >
+
+                            <ImageView
+                                android:id="@+id/buttonCross"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/button_tick" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/buttonBaseUncheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_base" >
+
+                            <ImageView
+                                android:id="@+id/buttonCross"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/button_cross" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/acceptedIgnore"
+                        style="@style/acceptedIgnore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@drawable/result_base"
+                        android:gravity="center"
+                        android:text=""
+                        android:visibility="visible" />
+
+                    <!-- End For Accepted and Ignore Text -->
+
+
+                    <!-- Start of Cross Button -->
+
+
+                    <!-- End of Cross Button -->
+
+
+                    <!-- Start of Tick Button -->
+
+
+                    <!-- End of Tick Button -->
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/userMsg"
+                    style="@style/listUserMessage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:layout_toLeftOf="@+id/confirmationlayout" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/avatar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/postBase"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/premierLeague_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+           >
+
+            <ImageView
+                android:id="@+id/postAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/post_avatar" />
+
+            <ImageView
+                android:id="@+id/imageViewpostAvatar"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="18.5dp"
+                android:layout_marginTop="8.8dp"
+                android:background="#ffffff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/user_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+             >
+
+            <ImageView
+                android:id="@+id/postAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/post_avatar" />
+
+            <ImageView
+                android:id="@+id/imageViewpostAvatar"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="18.5dp"
+                android:layout_marginTop="8.8dp"
+                android:background="#ffffff" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gapLinearView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/postBase"
+        android:background="@drawable/gap_image"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingRight="15dip" >
+            
+            <LinearLayout
+                android:id="@+id/gapTextLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/friendGapTextView"
+                    style="@style/gapNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/friendGapMoreTextView"
+                    style="@style/gapText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="-8dip"
+                    android:text="@string/more" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/gapProgress"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:visibility="gone" />
+</LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

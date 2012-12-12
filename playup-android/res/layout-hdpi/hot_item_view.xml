@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/menu_whats_hot"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:background="#575757" >
+
+                <ImageView
+                    android:id="@+id/icon_whats_hot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="27dp"
+                    android:minWidth="35dip"
+                     />
+
+                <TextView
+                     android:id="@+id/hot_textview_item"
+        			style="@style/SearchText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dip"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical"
+                    android:layout_toRightOf="@+id/icon_whats_hot"
+                    />
+            </RelativeLayout>
+            

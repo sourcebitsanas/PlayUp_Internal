@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+ 
+    >
+    
+    <RelativeLayout 
+        android:layout_width="48dip"
+        android:layout_height="48dip"
+        android:id = "@+id/iconLayout">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:layout_centerVertical="true"
+        android:src="@drawable/notification_g" />
+    
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/subject"
+        android:layout_width="fill_parent"
+       	
+        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent.Title"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10px"
+        android:layout_toRightOf="@+id/iconLayout"
+        android:text="Subject" />
+
+    <TextView
+        android:id="@+id/message"
+        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subject"
+        android:layout_marginLeft="10px"
+        android:layout_toRightOf="@+id/iconLayout"
+        android:text="Message"/>
+
+</RelativeLayout>

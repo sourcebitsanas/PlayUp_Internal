@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.playup.android"
+    android:installLocation="preferExternal"
+    	android:versionCode="18"
+    android:versionName="3.2.1" >
+
+
+
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    
+
+    <application
+        android:name=".application.PlayupLiveApplication"
+        android:icon="@drawable/launcher"
+        android:label="@string/app_name" 
+        android:debuggable="false">
+        <activity
+            android:name=".activity.PlayUpActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+
+
+             <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> 
+        </activity>
+        <activity
+            android:name=".activity.VideoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.ProxySettings"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            
+             android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+
+            
+            
+
+
+
+
+<!--  
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+
+            </intent-filter> -->
+
+
+        </activity>
+
+        <!--
+         Only C2DM servers can send messages for the app. If permission is not set - any other app can generate it 
+        <receiver
+            android:name=".receiver.C2DMReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+
+             Receive the actual message 
+            <intent-filter >
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.playup.android" />
+            </intent-filter>
+             Receive the registration id 
+            <intent-filter >
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.playup.android" />
+            </intent-filter>
+        </receiver>
+
+
+        -->
+        <!-- REQUIRED -->
+        <receiver android:name="com.urbanairship.CoreReceiver" >
+
+            <!-- REQUIRED IntentFilter - For Helium and Hybrid -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+        </receiver>
+
+        <!-- REQUIRED for C2DM and Hybrid -->
+        <receiver
+            android:name="com.urbanairship.push.c2dm.C2DMPushReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+
+            <!-- Receive the actual message -->
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- MODIFICATION REQUIRED - Use your package name as the category -->
+                <category android:name="com.playup.android" />
+            </intent-filter>
+            <!-- Receive the registration id -->
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <!-- MODIFICATION REQUIRED - Use your package name as the category -->
+                <category android:name="com.playup.android" />
+            </intent-filter>
+        </receiver>
+
+        <!-- REQUIRED -->
+        <!--
+             The 'android:process' parameter is optional. Set it to a value starting
+            with a colon (:) to make it run in a separate,
+            private process
+
+        -->
+        <service
+            android:name="com.urbanairship.push.PushService"
+            android:process=":com.urbanairship.push.process" />
+
+        <!-- OPTIONAL, if you want to receive push, push opened and registration completed intents -->
+        <!-- Replace the receiver below with your package and class name -->
+        <receiver android:name="com.playup.android.receiver.IntentReceiver" />
+
+        <!-- Fiksu Analytics -->
+        <receiver
+            android:name="com.playup.android.receiver.InstallTracking"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <!-- VServ Receiver -->
+
+
+        <!-- <receiver android:name="mobi.vserv.android.trackingengine.VservInstallReceiver" /> -->
+
+
+        <!-- mobile app tracker Receiver -->
+        <!--
+        <receiver android:name="com.mobileapptracker.Tracker" android:exported="true">
+			<intent-filter>
+				<action android:name="com.android.vending.INSTALL_REFERRER" />
+			</intent-filter>
+		</receiver>
+
+        -->
+        <receiver android:name="com.mobileapptracker.Tracker" />
+    </application>
+
+    <!-- Only this application can receive the messages and registration result -->
+    <permission
+        android:name="com.playup.android.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.playup.android.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive message -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- REQUIRED -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- REQUIRED for wifi wake functionality -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- REQUIRED FOR FIKSU -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:xlargeScreens="true" />
+
+</manifest>

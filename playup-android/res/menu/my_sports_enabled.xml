@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- <item android:id="@+id/menu_all_sports" 
+	    android:title="@string/menu_all_sports_results" 
+	    android:icon="@drawable/menu_sport"/>
+	
+	<item android:id="@+id/menu_home" 
+	    android:title="@string/menu_home" 
+	    android:icon="@drawable/menu_home_about"/>
+	
+	<item android:id="@+id/menu_show_leagues"
+          android:title="@string/menu_show_leagues" />
+    
+    <item android:id="@+id/menu_calendar"
+          android:title="@string/menu_calendar" 
+<<<<<<< HEAD
+          android:icon="@drawable/menu_fixtures"/>
+   
+=======
+          android:icon="@drawable/menu_fixtures"/> 
+    
+	<item android:id="@+id/menu_proxy" 
+	    android:title="@string/menu_proxy" />
+>>>>>>> 18e65bf48a297640d556e96f0f4db038bd9fb786
+-->
+<item android:id="@+id/menu_show_leagues"
+          android:title="@string/menu_show_leagues" 
+          android:icon="@drawable/icon_c_menu_leagues_g"/>
+    
+    <item android:id="@+id/menu_calendar"
+          android:title="@string/menu_calendar"
+          android:icon="@drawable/icon_c_menu_calendar_g" />
+
+
+</menu>

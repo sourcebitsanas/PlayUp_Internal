@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/content_base_middle" >
+
+      <RelativeLayout
+          android:id="@+id/logoBase"
+          android:layout_width="60dip"
+	      android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          >
+            <ImageView
+	        android:id="@+id/logo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"/>
+          
+      </RelativeLayout>
+      
+  
+
+    <ImageView
+        android:id="@+id/vertical_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:layout_toRightOf="@+id/logoBase"
+        android:src="@drawable/red_line" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/vertical_divider" >
+
+        <TextView
+            android:id="@+id/connectText"
+            style="@style/connection_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/connectwith" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/recentActivityList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/connectText" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/connectPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="18dip"
+        android:src="@drawable/connect_plus"/>
+
+</RelativeLayout>

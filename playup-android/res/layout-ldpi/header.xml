@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F4"
+    android:orientation="vertical">
+
+    
+<RelativeLayout 
+    android:visibility="visible"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:layout_alignParentTop="true"
+    android:id = "@+id/matchHighLights">
+    
+      <RelativeLayout 
+        android:id="@+id/matchHeaderLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:padding="0dip"
+        android:background="@drawable/ticket_texture">
+        
+    </RelativeLayout>
+       
+        <ImageView 
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:scaleType="fitXY"
+            android:layout_below="@id/matchHeaderLayout"
+            android:src="@drawable/ticket_divider"/>
+        
+        <TextView 
+            android:id = "@+id/summary"
+            style="@style/headerSummary"
+            android:layout_width = "fill_parent"
+            android:layout_height="wrap_content"
+              android:layout_below="@+id/matchHeaderLayout"
+            android:layout_marginTop="10dip"
+            android:visibility="visible"
+            android:paddingLeft="15dip"
+            android:paddingRight="10dip"
+            android:maxLines="2"
+            />
+
+</RelativeLayout>
+   
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/ImageWithSummaryView"
+        android:layout_width="fill_parent"
+        android:layout_height="170dp"
+        android:layout_alignParentTop="true"
+         >
+	<ImageView
+	     android:id="@+id/imageViewWithSummary"
+	    android:layout_height="fill_parent"
+	    android:layout_width="fill_parent"
+	     android:adjustViewBounds="true"
+         android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/ImageSummary"
+            style="@style/SearchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="20dip"
+            android:paddingBottom="20dp"
+            android:paddingRight="10dp"
+            android:shadowColor="#000000"
+            android:lineSpacingExtra="-4dip"
+            android:text="" />
+
+
+        <ImageView
+            android:id="@+id/playerIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+             android:src="@drawable/round_play"
+         />
+    </RelativeLayout>
+
+     <LinearLayout 
+        android:id="@+id/onlyImageBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/onlyImage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+         />
+   </LinearLayout>
+        
+   <RelativeLayout
+        android:id="@+id/footerContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/sourceIcon"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:scaleType="centerCrop"         
+            android:visibility="visible"
+            android:layout_below="@+id/summary"
+            android:layout_marginLeft="15dip"
+            android:layout_centerVertical="true" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/sourceIcon"
+            android:layout_below="@+id/summary"
+            android:layout_centerVertical="true"
+            android:paddingLeft="8dp">
+
+            <TextView
+                android:id="@+id/footerTitle"
+                style="@style/footerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="footer title"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+
+            <ImageView
+                android:id="@+id/socialIcon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_below="@+id/footerTitle"
+                android:layout_marginRight="2dip"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/footerSubtitle"
+                style="@style/leagueSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/footerTitle"
+                android:layout_toRightOf="@+id/socialIcon"
+                android:text="footerSubtitle" 
+                android:singleLine="true"
+                android:ellipsize="end"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+     <RelativeLayout 
+       android:id="@+id/updateFeature"
+       android:layout_height="fill_parent"
+       android:layout_width="fill_parent"
+       android:background="#FFFFFF"
+       android:visibility="gone"
+       >
+       <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="New Updates are avialable, tap here to upate"
+           android:layout_centerInParent="true"/>
+   </RelativeLayout>
+</RelativeLayout>

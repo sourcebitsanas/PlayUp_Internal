@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="-2dip"
+    android:background="#F7F7F4" >
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical" 
+            android:clickable="true"
+            android:focusable="true"
+            
+            android:focusableInTouchMode="true">
+
+
+           <include layout="@layout/fixture_header" android:id="@+id/fixture_header"/>
+
+            <!-- League base Starts -->
+ 
+       
+      
+       
+        <RelativeLayout 
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content">
+          
+          <ListView
+                android:id="@+id/leagueBase"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#F7F7F7"
+            	android:cacheColorHint="@android:color/transparent"
+            	android:divider="@null"
+            	android:fadingEdgeLength="0dip"
+                android:footerDividersEnabled="false" 
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:visibility="visible"/>
+          
+   
+          
+            <!-- League base Ends -->
+            
+             <LinearLayout
+                android:id="@+id/progressLeagues"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:padding="30dip"
+                android:visibility="gone"
+                android:gravity="bottom">
+
+              	<ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   	android:layout_gravity="left"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loading"
+                    android:textColor="#29aa4e"
+                    android:textSize="20dip"/>
+                
+            </LinearLayout>
+          
+          
+           <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/strip_shadow" />
+          
+      </RelativeLayout>
+
+        </LinearLayout>
+ 	
+         
+            
+
+</RelativeLayout>

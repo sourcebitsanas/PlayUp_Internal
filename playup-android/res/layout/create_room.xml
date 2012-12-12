@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F4" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <!-- View which contains edittext field in a white background -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="8dip"
+                android:background="@drawable/room_base_white"
+                android:focusable="false"
+                android:focusableInTouchMode="false" >
+
+                <EditText
+                    android:id="@+id/hangoutEdittext"
+                    style="@style/hangoutEdittext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hangoutEdittextHint"
+                    android:singleLine="true" 
+                    android:maxLength="30"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    
+                    android:autoText="true"/>
+            </RelativeLayout>
+
+            <!-- View which contains switch field in a grey background -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:background="@drawable/room_base_grey" >
+
+                <!-- Character count textview -->
+
+                <TextView
+                    android:id="@+id/characterCount"
+                    style="@style/hangoutCharacterCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dip"
+                    android:paddingTop="2dip"
+                    android:text="0" />
+
+                <!-- View which contains switch field with private and public textviews along side -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/privateTxt"
+                        style="@style/privateTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/privateTxt" />
+
+                    <ImageView
+                        android:id="@+id/switchImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="15dip"
+                        android:src="@drawable/switch_private" />
+
+                    <TextView
+                        android:id="@+id/publicTxt"
+                        style="@style/privateTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/publicTxt" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- private description -->
+
+            <TextView
+                android:id="@+id/privateDesc"
+                style="@style/privateDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dip"
+                android:text="@string/privateDesc" />
+
+            <!-- public description -->
+
+            <TextView
+                android:id="@+id/publicDesc"
+                style="@style/privateDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dip"
+                android:text="@string/publicDesc" />
+
+            <!-- Done button -->
+
+            <Button
+                android:id="@+id/doneButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="10dip"
+                android:text="@string/done"
+                android:textColor="#FFFFFF" 
+                android:textStyle="bold"
+                android:paddingLeft="4dip"
+                android:paddingRight="4dip"
+                android:background="@drawable/done_selector"
+                android:enabled="false" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
