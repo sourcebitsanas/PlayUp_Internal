@@ -9367,10 +9367,11 @@ public Hashtable<String, Object>  getSportsCompetitionUrl ( final String vSports
 		values.put("vDirectConversationUrl", directConversationUrl );
 		values.put("vFriendType", vFriendType );
 		
-		values.put("vAppInvitationHref", appInvitationHrefUrl );
-		values.put("vSubjectHref", subjectHrefUrl );
-		values.put("vUserHref", vProfileHrefUrl );
-		values.put("vDirectConversationHref", directConversationHrefUrl );
+		values.put("vAppInvitationHrefUrl", appInvitationHrefUrl );
+		values.put("vSubjectHrefUrl", subjectHrefUrl );
+		values.put("vUserHrefUrl", vProfileHrefUrl );
+		values.put("vDirectConversationHrefUrl", directConversationHrefUrl );
+
 
 		//	int count = PlayupLiveApplication.getDatabaseWrapper().getTotalCount( " SELECT vFriendId FROM search_friends WHERE vFriendId = \"" + friendUid + "\"  " );
 
@@ -9423,10 +9424,11 @@ public Hashtable<String, Object>  getSportsCompetitionUrl ( final String vSports
 		values.put("iAccessPermitted", "" );
 		values.put("dLastActivitySince", "" );
 		
-		values.put("vAppInvitationHref", "" );
-		values.put("vSubjectHref", "" );
-		values.put("vUserHref", "" );
-		values.put("vDirectConversationHref", "" );
+		values.put("vAppInvitationHrefUrl", "" );
+		values.put("vSubjectHrefUrl","" );
+		values.put("vUserHrefUrl","" );
+		values.put("vDirectConversationHrefUrl","" );
+
 
 
 		values.put( "vGapId", gap_uid);
