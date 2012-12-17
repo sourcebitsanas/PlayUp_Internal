@@ -413,7 +413,7 @@ public class EditProfileFragment extends MainFragment implements OnClickListener
 	 */
 	private void setUserData () {
 		try{
-		Cursor c = PlayupLiveApplication.getDatabaseWrapper().selectQuery( " SELECT iUserId, vUserName, vName, vUserAvatarUrl, isAnonymousUser, vUserToken, vSelfUrl,nHrefUrl, iId FROM user WHERE isPrimaryUser = \"1\" " );
+		Cursor c = PlayupLiveApplication.getDatabaseWrapper().selectQuery( " SELECT iUserId, vUserName, vName, vUserAvatarUrl, isAnonymousUser, vUserToken, vSelfUrl,vHrefUrl, iId FROM user WHERE isPrimaryUser = \"1\" " );
 		if ( c != null  ) {
 
 			if ( c.getCount() > 0 ) {

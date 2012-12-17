@@ -259,7 +259,14 @@ public class PutConnectionMethod {
 
 			InputStream inputStream = urlConnection.getInputStream();
 
-			STATUS_CODE	=	urlConnection.getResponseCode();
+			try {
+				STATUS_CODE	=	urlConnection.getResponseCode();
+				} catch (Exception e) {
+				if (e.getMessage().contains("authentication challenge")) {
+				STATUS_CODE = HttpURLConnection.HTTP_UNAUTHORIZED;
+
+				} 
+				}
 			inputStream = processData( urlConnection.getHeaderFields(), inputStream );
 
 			

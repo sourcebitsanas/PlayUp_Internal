@@ -219,7 +219,14 @@ public class DeleteConnectionMethod {
 			InputStream inputStream	=	urlConnection.getInputStream();
 			inputStream = processData( urlConnection.getHeaderFields(), inputStream );
 
-			STATUS_CODE	=	urlConnection.getResponseCode();
+			try {
+				STATUS_CODE	=	urlConnection.getResponseCode();
+				} catch (Exception e) {
+				if (e.getMessage().contains("authentication challenge")) {
+				STATUS_CODE = HttpURLConnection.HTTP_UNAUTHORIZED;
+
+				} 
+				}
 			
 			if ( inputStream != null ) {
 				BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));

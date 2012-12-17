@@ -475,7 +475,14 @@ public class GetConnectionMethod_JavaNet {
 			
 			
 
-			STATUS_CODE	=	urlConnection.getResponseCode();
+			try {
+				STATUS_CODE	=	urlConnection.getResponseCode();
+				} catch (Exception e) {
+				if (e.getMessage().contains("authentication challenge")) {
+				STATUS_CODE = HttpURLConnection.HTTP_UNAUTHORIZED;
+
+				} 
+				}
 			
 			
 

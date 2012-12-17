@@ -304,7 +304,14 @@ public class PostConnectionMethod_JaveNet {
 			}
 
 			InputStream inputStream = null;
-			STATUS_CODE = urlConnection.getResponseCode();
+			try {
+				STATUS_CODE	=	urlConnection.getResponseCode();
+				} catch (Exception e) {
+				if (e.getMessage().contains("authentication challenge")) {
+				STATUS_CODE = HttpURLConnection.HTTP_UNAUTHORIZED;
+
+				} 
+				}
 			
 			if(STATUS_CODE == 401){
 				
@@ -361,7 +368,14 @@ public class PostConnectionMethod_JaveNet {
 				// release the memory
 				if(urlConnection!=null) {
 					
-					STATUS_CODE = urlConnection.getResponseCode();
+					try {
+						STATUS_CODE	=	urlConnection.getResponseCode();
+						} catch (Exception e) {
+						if (e.getMessage().contains("authentication challenge")) {
+						STATUS_CODE = HttpURLConnection.HTTP_UNAUTHORIZED;
+
+						} 
+						}
 				urlConnection.disconnect();
 					urlConnection = null;
 				}
@@ -449,7 +463,14 @@ public class PostConnectionMethod_JaveNet {
 			InputStream inputStream = null;
 			
 			
-			STATUS_CODE = urlConnection.getResponseCode();
+			try {
+				STATUS_CODE	=	urlConnection.getResponseCode();
+				} catch (Exception e) {
+				if (e.getMessage().contains("authentication challenge")) {
+				STATUS_CODE = HttpURLConnection.HTTP_UNAUTHORIZED;
+
+				} 
+				}
 			
 			
 			
@@ -506,7 +527,14 @@ public class PostConnectionMethod_JaveNet {
 				// release the memory
 				if(urlConnection!=null) {
 					
-					STATUS_CODE = urlConnection.getResponseCode();
+					try {
+						STATUS_CODE	=	urlConnection.getResponseCode();
+						} catch (Exception e) {
+						if (e.getMessage().contains("authentication challenge")) {
+						STATUS_CODE = HttpURLConnection.HTTP_UNAUTHORIZED;
+
+						} 
+						}
 				urlConnection.disconnect();
 					urlConnection = null;
 				}

@@ -1142,9 +1142,9 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 			} else {
 				
 				
-				vh.imageSummary1.setShadowLayer(0, 0, 0, 0);
-				vh.footerTitle1.setShadowLayer(0, 0, 0, 0);
-				vh.footerSubtitle1.setShadowLayer(0, 0, 0, 0);
+				vh.imageSummary2.setShadowLayer(0, 0, 0, 0);
+				vh.footerTitle2.setShadowLayer(0, 0, 0, 0);
+				vh.footerSubtitle2.setShadowLayer(0, 0, 0, 0);
 				
 				
 				
@@ -1170,8 +1170,8 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 					
 					if(m.vSourceIcon != null && m.vSourceIcon.trim().length() > 0 ) {
 						
-						vh.sourceIcon1.setVisibility(View.VISIBLE);
-						imageDownloader.download( m.vSourceIcon, vh.sourceIcon1, false,null);
+						vh.sourceIcon2.setVisibility(View.VISIBLE);
+						imageDownloader.download( m.vSourceIcon, vh.sourceIcon2, false,null);
 					}
 					
 					
@@ -1179,7 +1179,7 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 					if(m.vSocialIcon != null && m.vSocialIcon.trim().length() > 0){
 						
 						vh.socialIcon2.setVisibility(View.VISIBLE);
-						imageDownloader.download( m.vSocialIcon ,vh.socialIcon1, false,null );
+						imageDownloader.download( m.vSocialIcon ,vh.socialIcon2, false,null );
 					}
 					
 					
@@ -2157,6 +2157,12 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 				
 				
 			}else{
+				
+				vh.footerTitle1.setPadding(0, 0, 0, 0);
+				  
+				vh.footerTitle1.setTextSize(13);
+				vh.footerSubtitle1.setTextSize(13);
+				
 				vh.imageSummary1.setTextColor(Color.parseColor("#404040"));
 				vh.footerTitle1.setTextColor(Color.parseColor("#404040"));
 				vh.footerTitle1.setTypeface(Constants.OPEN_SANS_SEMIBOLD);
@@ -2182,6 +2188,12 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 				
 				
 			}else{
+				
+				vh.footerTitle2.setPadding(0, 0, 0, 0);
+				  
+				vh.footerTitle2.setTextSize(13);
+				vh.footerSubtitle2.setTextSize(13);
+				
 				vh.imageSummary2.setTextColor(Color.parseColor("#404040"));
 				vh.footerTitle2.setTextColor(Color.parseColor("#404040"));
 				vh.footerTitle2.setTypeface(Constants.OPEN_SANS_SEMIBOLD);

@@ -7,12 +7,12 @@ public final class Keys {
 
 	// Preferences related
 	public static final String 	PREFERENCE_NAME 		= "databasePref";
-	public static final String 	IS_DATABASE_EXISTS 		= "isDatabaseExists_Version3.2";
+	public static final String 	IS_DATABASE_EXISTS 		= "isDatabaseExists_Version3.2.2";
 
 
 
-	public static final boolean LOG_SHOW = true;
-//	public static final boolean LOG_SHOW = false;
+//	public static final boolean LOG_SHOW = true;
+	public static final boolean LOG_SHOW = false;
 
 
 
@@ -39,13 +39,13 @@ public final class Keys {
 
 
 	// production urls
-//	public static final String BASE_URL = "http://api.playup.com/"; 
-//	public static final String BASE_URL_NO_SLASH = "http://api.playup.com"; 
-//	public static final String FANBASE_URL_NO_SLASH = "http://fanbase.playup.com";
+	public static final String BASE_URL = "http://api.playup.com/"; 
+	public static final String BASE_URL_NO_SLASH = "http://api.playup.com"; 
+	public static final String FANBASE_URL_NO_SLASH = "http://fanbase.playup.com";
 	
 	
-	public static final String ROOT_URL = "http://staging.api.playupdev.com/v2/clients/"; 
-	public static final String ROOT_URL_NO_SLASH = "http://staging.api.playupdev.com/v2/clients"; 
+	public static final String ROOT_URL = "http://api.playup.com/v2/clients/"; 
+	public static final String ROOT_URL_NO_SLASH = "http://api.playup.com/v2/clients"; 
 //	public static final String FANBASE_URL_NO_SLASH = "http://fanbase.playup.com";
 	 
 
@@ -72,10 +72,14 @@ public final class Keys {
 	// staging urls
 
 
-	public static final String BASE_URL ="http://staging.api.playupdev.com/"; 
-	public static final String BASE_URL_NO_SLASH = "http://staging.api.playupdev.com"; 
-	public static final String FANBASE_URL_NO_SLASH = "http://staging.fanbase.playupdev.com"; 
+//	public static final String BASE_URL ="http://staging.api.playupdev.com/"; 
+//	public static final String BASE_URL_NO_SLASH = "http://staging.api.playupdev.com"; 
+//	public static final String FANBASE_URL_NO_SLASH = "http://staging.fanbase.playupdev.com"; 
+//	
+//	public static final String ROOT_URL = "http://staging.api.playupdev.com/v2/clients/"; 
+//	public static final String ROOT_URL_NO_SLASH = "http://staging.api.playupdev.com/v2/clients"; 
 
+	
 
 
 

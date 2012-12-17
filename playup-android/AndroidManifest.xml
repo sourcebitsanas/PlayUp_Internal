@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.playup.android"
     android:installLocation="preferExternal"
-    	android:versionCode="18"
-    android:versionName="3.2.1" >
+    	android:versionCode="19"
+    android:versionName="3.2.2" >
 
 
 
@@ -33,12 +33,12 @@
             android:windowSoftInputMode="stateHidden|adjustResize" >
 
 
-             <intent-filter>
+           <!--   <intent-filter>
 
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> 
+            </intent-filter>  -->
         </activity>
         <activity
             android:name=".activity.VideoActivity"
@@ -60,7 +60,7 @@
 
 
 
-<!--  
+ 
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,7 +68,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
 
 
-            </intent-filter> -->
+            </intent-filter>
 
 
         </activity>
