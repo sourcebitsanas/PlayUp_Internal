@@ -35,6 +35,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.Window;
+import android.webkit.WebViewFragment;
 import android.widget.RemoteViews;
 
 import com.flurry.android.FlurryAgent;
@@ -1011,7 +1012,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 		
 		Constants.isCurrent = false;
 
-
+		
 		FlurryAgent.onEndSession( PlayUpActivity.context );
 
 		if (refreshAllSportsTimer != null) {

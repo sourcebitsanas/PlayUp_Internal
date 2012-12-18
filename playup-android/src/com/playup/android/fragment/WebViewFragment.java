@@ -1,5 +1,6 @@
 package com.playup.android.fragment;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
@@ -44,8 +45,9 @@ import com.playup.android.util.Util;
 
 public class WebViewFragment extends MainFragment {
 
-
+	
 	private WebView webView;
+	
 	
 	private String url = null;
 
@@ -73,7 +75,11 @@ public class WebViewFragment extends MainFragment {
 
 				progressDialog.dismiss();
 			}
-
+			
+		//	Class.forName("android.webkit.WebView").getMethod("onDestroy", (Class[]) null).invoke(webView, (Object[]) null);
+			if(webView!=null){
+				//webView.destroy();
+			}
 		} catch  ( Exception e ) {
 			Logs.show(e);
 		} catch ( Error r ) {
@@ -92,6 +98,7 @@ public class WebViewFragment extends MainFragment {
 		
 		RelativeLayout li = null;
 		try {
+			Log.e("123","IN ON CREATIVE VIEWWW============");
 			li   =  ( RelativeLayout) inflater.inflate( R.layout.login_webview, null);
 
 			//webView = new WebView( PlayUpActivity.context );
@@ -101,17 +108,36 @@ public class WebViewFragment extends MainFragment {
 			webView  =  ( WebView) li.findViewById( R.id.webview );
 
 			webView.getSettings().setJavaScriptEnabled(true);
-			webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(false);
-			webView.getSettings().setPluginsEnabled(true);
+			webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 			
 			
-			webView.getSettings().setSupportMultipleWindows(false);			
+			try {
+				webView.getSettings().setPluginState(PluginState.ON_DEMAND);
+				
+			//	webView.getSettings().setPluginsEnabled(true);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				Log.e("234","setPluginState try catch"+e.getMessage());
+				
+			//	webView.getSettings().setPluginsEnabled(true);
+			}
+			
+			
+			
+		
+			
+			
+			
+			
+			webView.getSettings().setSupportMultipleWindows(true);			
 			webView.setVerticalScrollBarEnabled(true);
 			webView.setHorizontalScrollBarEnabled(true);
 			webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
 			webView.clearHistory();
 			webView.clearFormData();
 			webView.clearCache(true);
+			
+		
 
 			webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
 			
@@ -203,7 +229,7 @@ public class WebViewFragment extends MainFragment {
 
 		}catch(Exception e){
 
-			Logs.show(e);
+			Log.e("123","123"+e.getMessage());
 
 		}
 	}
@@ -234,6 +260,9 @@ public class WebViewFragment extends MainFragment {
 					public void onProgressChanged(WebView view, int progress) {
 
 						try{
+							
+							Log.e("123","Inside on progress changed >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+							
 							if ( isVisible() ) {
 								if ( progress < 100 ) {
 									
@@ -255,6 +284,10 @@ public class WebViewFragment extends MainFragment {
 							Logs.show(e);
 						}
 					}
+					
+					
+					
+					
 					
 					
 					
@@ -369,14 +402,14 @@ public class WebViewFragment extends MainFragment {
 
 
 					
-					//Log.e("123", "on load url------"+url);
+					Log.e("123", "on load url------"+url);
 				webView.loadUrl(url, map);
 
 
 
 			}
 		}catch(Exception e){
-			Logs.show(e);
+			Log.e("123","123"+e.getMessage());
 		}
 
 
@@ -402,7 +435,7 @@ public class WebViewFragment extends MainFragment {
 			}
 
 		}catch (Exception e) {
-			Logs.show ( e );
+			Log.e("123","123"+e.getMessage());
 		}
 	}
 
@@ -411,10 +444,33 @@ public class WebViewFragment extends MainFragment {
 	@Override
 	public void onResume () {
 		super.onResume();
-		
-//
+		Log.e("123","IN ON Resume VIEWWW============");
+		//webView.resumeTimers();
+//	
 //		setTopBar("");
 //		initialize();
+		
+		
+		try {
+			if(webView != null){
+				Class.forName("android.webkit.WebView").getMethod("onResume", (Class[]) null).invoke(webView, (Object[]) null);
+			}
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			Log.e("123","123"+e.getMessage());
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			Log.e("123","123"+e.getMessage());
+		} catch (InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			Log.e("123","123"+e.getMessage());
+		} catch (NoSuchMethodException e) {
+			// TODO Auto-generated catch block
+			Log.e("123","123"+e.getMessage());
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			Log.e("123","123"+e.getMessage());
+		}
 
 	}
 	/**
@@ -442,33 +498,50 @@ public class WebViewFragment extends MainFragment {
 
 	@Override
 	public void onPause() {
-
-	
-
 		super.onPause();
+	/*	
+		if(webView!=null){
+			webView.stopLoading();
+			webView.destroy();
+			//webView = null ;
+		}
+*/
+		
 		
 		if(progressDialog!=null){
 			progressDialog.dismiss();
 		}
 		
 		try {
-			
+			Log.e("123", "onPause==============>>>>>");
+//			webView.pauseTimers();
+//			webView.stopLoading();
 			
 			//incase of video/audio content,the playback has to be stopped on navigating back
 			Class.forName("android.webkit.WebView").getMethod("onPause", (Class[]) null).invoke(webView, (Object[]) null);
+//			//Class.forName("android.webkit.WebView").getMethod("onDestroy", (Class[]) null).invoke(webView, (Object[]) null);
+//			webView.destroy();
+			
+			
 		} catch (Exception e) {
 			
-			Logs.show(e);
+			e.printStackTrace();
 		}
 	}                                                                          
 
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		if ( webView != null ) {
-			webView.stopLoading();
+		try {
+			if ( webView != null ) {
 			
-			webView.destroy();
+			webView.stopLoading();
+				//Class.forName("android.webkit.WebView").getMethod("onP", (Class[]) null).invoke(webView, (Object[]) null);
+				webView.destroy();
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 
@@ -506,7 +579,7 @@ public class WebViewFragment extends MainFragment {
 							}
 						}
 					} catch (Exception e) {
-						Logs.show ( e );
+						Logs.show(e);
 					}
 				}
 
@@ -545,7 +618,7 @@ public class WebViewFragment extends MainFragment {
 			// TODO Auto-generated method stub
 			super.onPageFinished(view, url);
 			
-			
+			Log.e("123","Paage Dowmloaded==================");
 			setTopBar(view.getTitle());
 		}
 

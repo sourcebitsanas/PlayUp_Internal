@@ -3,7 +3,8 @@
     package="com.playup.android"
     android:installLocation="preferExternal"
     	android:versionCode="19"
-    android:versionName="3.2.2" >
+    android:versionName="3.2.2" 
+    >
 
 
 
@@ -22,33 +23,41 @@
         android:name=".application.PlayupLiveApplication"
         android:icon="@drawable/launcher"
         android:label="@string/app_name" 
-        android:debuggable="false">
+        android:debuggable="false"
+        android:hardwareAccelerated="true"
+        
+      
+   
+        >
         <activity
             android:name=".activity.PlayUpActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar"
-            android:windowSoftInputMode="stateHidden|adjustResize" >
+            android:windowSoftInputMode="stateHidden|adjustResize"
+           
+             >
 
 
-           <!--   <intent-filter>
+             <intent-filter>
 
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>  -->
+            </intent-filter> 
         </activity>
         <activity
             android:name=".activity.VideoActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.NoTitleBar" >
+            android:theme="@android:style/Theme.NoTitleBar" 
+           >
         </activity>
         <activity
             android:name=".activity.ProxySettings"
-            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             
              android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -60,7 +69,7 @@
 
 
 
- 
+ <!-- 
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,7 +77,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
 
 
-            </intent-filter>
+            </intent-filter> -->
 
 
         </activity>
