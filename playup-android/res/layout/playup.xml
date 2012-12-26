@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#000000">
+    
+    <RelativeLayout 
+        android:id="@+id/main1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#678909"
+        >
+        
+        <TextView android:id="@+id/header"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Live Radio"
+            android:textSize="30dp"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:padding="5dp"
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/close" />
+
+    </RelativeLayout>
+    
+    <include layout="@layout/mediascreen"
+        android:id="@+id/main2"/>
+    
+    <ListView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioList"
+            android:layout_below="@+id/main2"
+            android:layout_above="@+id/micBottom"
+            android:layout_marginBottom="10dp"
+            android:cacheColorHint="@android:color/transparent" 
+            android:fadingEdgeLength="0dip" 
+            android:footerDividersEnabled="false"
+            ></ListView>
+    
+    <ImageView
+        	android:padding="5dp"
+            android:id="@+id/micBottom"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+           	android:src="@drawable/mic" />
+
+</RelativeLayout>
