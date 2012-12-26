@@ -142,8 +142,10 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 
 	public View getView(int position) {
 
-		if( tilesData != null && tilesData.get("vDisplayType")!= null  )
+		if( tilesData != null && tilesData.get("vDisplayType")!= null  ){
 			vDisplayType = tilesData.get("vDisplayType").get( position );
+			Log.e("123", "vDisplayType----------"+vDisplayType+"-------"+tilesData);
+		}
 		else
 			vDisplayType = null;
 
