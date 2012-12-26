@@ -69,6 +69,15 @@ public class Types {
 	public static final String TEAM_SCHEDULE_TYPE = "application/vnd.playup.sport.team.fixture+json";
 	
 	
+	
+	public static final String AUDIO_LIST_TYPE			= "application/vnd.playup.audio-list+json";
+	
+	public static final String STATIONS_TYPE			= "application/vnd.playup.audio+json";
+	public static final String AUDIO_LINK_TYPE			= "audio/x-scpls";
+	
+	
+	public static final String TILE_AUDIO					= "application/vnd.playup.display.tile.audio+json";
+	public static final String TILE_AUDIO_LIST				= "application/vnd.playup.display.tile.audio-list+json";
 	public static final String TILE_TIMESTAMP 				= "application/vnd.playup.display.tile.timestamp+json";
 	public static final String TILE_SOLID 					= "application/vnd.playup.display.tile.solid+json";
 	public static final String TILE_PHOTO 					= "application/vnd.playup.display.tile.photo+json";

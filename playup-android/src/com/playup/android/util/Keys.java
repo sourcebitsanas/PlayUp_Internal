@@ -11,8 +11,8 @@ public final class Keys {
 
 
 
-//	public static final boolean LOG_SHOW = true;
-	public static final boolean LOG_SHOW = false;
+	public static final boolean LOG_SHOW = true;
+//	public static final boolean LOG_SHOW = false;
 
 
 

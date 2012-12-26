@@ -350,7 +350,7 @@ public class HeaderGalleryAdapter extends BaseAdapter implements OnItemClickList
 				vh.onlyImage.setVisibility(View.VISIBLE);	
 				setBackGroundColor( position, vh.onlyImageBackground ) ;
 				if( featuresData.get("vImageUrl").get(position)!= null && featuresData.get("vImageUrl").get(position).trim().length() >0 ) {
-					//Log.e("123", "Feature_Image==========>>>>>>>>>>>>>>>"+featuresData.get("vImageUrl").get(position));
+					
 					imageDownloader.download(featuresData.get("vImageUrl").get(position), vh.onlyImage, false, this,true);
 				}
 				return convertView;

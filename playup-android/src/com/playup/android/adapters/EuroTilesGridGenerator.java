@@ -257,27 +257,7 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 			
 			setImageAndBackgroundColor(position,lin);
 			
-			/*if(tilesData.get("vLinkUrl").get(position) != null && 
-					tilesData.get("vLinkUrl").get(position).trim().length() > 0){
-
-
-				lin.setTag(R.id.about_txtview,tilesData.get("vLinkUrl").get(position));
-				lin.setTag(R.id.active_users_text,tilesData.get("vLinkType").get(position));
-				lin.setOnTouchListener(this);
-			}else if(tilesData.get("vContentType").get(position) != null && 
-					tilesData.get("vContentType").get(position).equalsIgnoreCase(Constants.ACCEPT_TYPE_COMPETITION)){
-
-				lin.setTag(R.id.about_txtview,tilesData.get("vContentUrl").get(position));
-				lin.setTag(R.id.active_users_text,tilesData.get("vContentType").get(position));
-				lin.setTag(R.id.aboutText,tilesData.get("vContentId").get(position));
-				lin.setOnTouchListener(this);
-
-			}*/
 			
-		
-			
-			//Pravee : Modified as per the Href Link element : 
-		//	String vHrefUrl = tilesData.get("vHref").get(position);
 			
 			if(tilesData.get("vContentType").get(position) != null && 	tilesData.get("vContentType").get(position).equalsIgnoreCase(Constants.ACCEPT_TYPE_COMPETITION)){
 				
@@ -354,27 +334,7 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 			setFooterStyles( false);
 			
 			setImageAndBackgroundColor(position,lin);
-			/*if(tilesData.get("vLinkUrl").get(position) != null && 
-					tilesData.get("vLinkUrl").get(position).trim().length() > 0){
-
-
-				lin.setTag(R.id.about_txtview,tilesData.get("vLinkUrl").get(position));
-				lin.setTag(R.id.active_users_text,tilesData.get("vLinkType").get(position));
-				lin.setOnTouchListener(this);
-			}else if(tilesData.get("vContentType").get(position) != null && 
-					tilesData.get("vContentType").get(position).equalsIgnoreCase(Constants.ACCEPT_TYPE_COMPETITION)){
-
-				lin.setTag(R.id.about_txtview,tilesData.get("vContentUrl").get(position));
-				lin.setTag(R.id.active_users_text,tilesData.get("vContentType").get(position));
-				lin.setTag(R.id.aboutText,tilesData.get("vContentId").get(position));
-				lin.setOnTouchListener(this);
-
-			}*/
 			
-			
-			//Praveen : modified as per the href element 
-			
-			//String vHrefUrl = tilesData.get("vHref").get(position);
 			
 			if(tilesData.get("vContentType").get(position) != null && 	tilesData.get("vContentType").get(position).equalsIgnoreCase(Constants.ACCEPT_TYPE_COMPETITION)){
 			 
@@ -455,26 +415,7 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 			
 			setImageAndBackgroundColor(position,lin);
 			
-	/*		if(tilesData.get("vLinkUrl").get(position) != null && 
-					tilesData.get("vLinkUrl").get(position).trim().length() > 0){
-
-
-				lin.setTag(R.id.about_txtview,tilesData.get("vLinkUrl").get(position));
-				lin.setTag(R.id.active_users_text,tilesData.get("vLinkType").get(position));
-				lin.setOnTouchListener(this);
-			}else if(tilesData.get("vContentType").get(position) != null && 
-					tilesData.get("vContentType").get(position).equalsIgnoreCase(Constants.ACCEPT_TYPE_COMPETITION)){
-
-				lin.setTag(R.id.about_txtview,tilesData.get("vContentUrl").get(position));
-				lin.setTag(R.id.active_users_text,tilesData.get("vContentType").get(position));
-				lin.setTag(R.id.aboutText,tilesData.get("vContentId").get(position));
-				lin.setOnTouchListener(this);
-
-			}*/
-			
-			//Praveen : modified as per the href element
-			
-		//	String vHrefUrl = tilesData.get("vHref").get(position);
+	
 			
 			 if(tilesData.get("vContentType").get(position) != null && 	tilesData.get("vContentType").get(position).equalsIgnoreCase(Constants.ACCEPT_TYPE_COMPETITION)){
 
@@ -556,26 +497,6 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 			
 			setImageAndBackgroundColor(position,lin);
 			
-			/*if(tilesData.get("vLinkUrl").get(position) != null && 
-					tilesData.get("vLinkUrl").get(position).trim().length() > 0){
-
-
-				lin.setTag(R.id.about_txtview,tilesData.get("vLinkUrl").get(position));
-				lin.setTag(R.id.active_users_text,tilesData.get("vLinkType").get(position));
-				lin.setOnTouchListener(this);
-			}else if(tilesData.get("vContentType").get(position) != null && 
-					tilesData.get("vContentType").get(position).equalsIgnoreCase(Constants.ACCEPT_TYPE_COMPETITION)){
-
-				lin.setTag(R.id.about_txtview,tilesData.get("vContentUrl").get(position));
-				lin.setTag(R.id.active_users_text,tilesData.get("vContentType").get(position));
-				lin.setTag(R.id.aboutText,tilesData.get("vContentId").get(position));
-				lin.setOnTouchListener(this);
-
-			}*/
-			
-			//Praveen : modified as per the href element 
-			
-			//String vHrefUrl = tilesData.get("vHref").get(position);
 			
 			if(tilesData.get("vContentType").get(position) != null && tilesData.get("vContentType").get(position).equalsIgnoreCase(Constants.ACCEPT_TYPE_COMPETITION)){
 					
@@ -641,27 +562,7 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 			setImageAndBackgroundColor(position,lin);
 			
 			
-		/*	if(tilesData.get("vLinkUrl").get(position) != null && 
-					tilesData.get("vLinkUrl").get(position).trim().length() > 0){
-
-
-				lin.setTag(R.id.about_txtview,tilesData.get("vLinkUrl").get(position));
-				lin.setTag(R.id.active_users_text,tilesData.get("vLinkType").get(position));
-				lin.setOnTouchListener(this);
-			}else if(tilesData.get("vContentType").get(position) != null && 
-					tilesData.get("vContentType").get(position).equalsIgnoreCase(Constants.ACCEPT_TYPE_COMPETITION)){
-
-				lin.setTag(R.id.about_txtview,tilesData.get("vContentUrl").get(position));
-				lin.setTag(R.id.active_users_text,tilesData.get("vContentType").get(position));
-				lin.setTag(R.id.aboutText,tilesData.get("vContentId").get(position));
-				lin.setOnTouchListener(this);
-
-			}
-			*/
-			
-			///Praveen : modifies as per the Href element
-			// the below line is commented as vHrefUrl variable is never used
-			//String vHrefUrl = tilesData.get("vHref").get(position);
+		
 			
 			if(tilesData!=null && tilesData.get("vContentType").get(position) != null && 	tilesData.get("vContentType").get(position).equalsIgnoreCase(Constants.ACCEPT_TYPE_COMPETITION)){
 				if(tilesData.get("vContentHrefUrl").get(position)!=null && tilesData.get("vContentHrefUrl").get(position).trim().length()>0){
@@ -701,110 +602,7 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 			
 		}
 
-//		if( !vDisplayType.equalsIgnoreCase(Types.TILE_VIDEO) ) {
-//			
-//			if(tilesData.get("vFooterTitle").get(position) != null && tilesData.get("vFooterTitle").get(position).trim().length() > 0){
-//				footerContent.setVisibility(View.VISIBLE);
-//				footerTitle.setVisibility(View.VISIBLE);
-//				footerTitle.setText(tilesData.get("vFooterTitle").get(position));
-//			}
-//
-//			if(tilesData.get("vSource").get(position) != null && tilesData.get("vSource").get(position).trim().length() > 0){
-//				footerContent.setVisibility(View.VISIBLE);
-//				footerTitle.setVisibility(View.VISIBLE);
-//				footerTitle.setText(tilesData.get("vSource").get(position));
-//			}
-//
-//			if(tilesData.get("vFooterSubTitle").get(position) != null && tilesData.get("vFooterSubTitle").get(position).trim().length() > 0){
-//
-//				footerContent.setVisibility(View.VISIBLE);
-//				footerSubtitle.setVisibility(View.VISIBLE);
-//				footerSubtitle.setText(tilesData.get("vFooterSubTitle").get(position));
-//
-//			}
-//
-//			if(tilesData.get("vSourceIcon").get(position) != null && tilesData.get("vSourceIcon").get(position).trim().length() > 0 ) {
-//				footerContent.setVisibility(View.VISIBLE);
-//				sourceIcon.setVisibility(View.VISIBLE);
-//				imageDownloader.download( tilesData.get("vSourceIcon").get(position) , sourceIcon, false,null);
-//			}
-//
-//			if(tilesData.get("vSocialIcon").get(position) != null && tilesData.get("vSocialIcon").get(position).trim().length() > 0){
-//				footerContent.setVisibility(View.VISIBLE);
-//				socialIcon.setVisibility(View.VISIBLE);
-//				imageDownloader.download( tilesData.get("vSocialIcon").get(position) ,socialIcon, false,null );
-//			}
-//
-//			if(tilesData.get("vTimeStamp").get(position) != null && tilesData.get("vTimeStamp").get(position).trim().length() > 0){
-//
-//				footerContent.setVisibility(View.VISIBLE);
-//				footerSubtitle.setVisibility(View.VISIBLE);
-//				footerSubtitle.setText(dateUtil.gmt_to_local_timezone_tiles(tilesData.get("vTimeStamp").get(position)));
-//
-//			}
-//			
-//		}
-//		
-//
-//
-//		lin.findViewById(R.id.titleLayout).setVisibility(View.VISIBLE);
-//		tileName.setVisibility(View.VISIBLE);
-//		if(tilesData.get("vTitle").get(position) != null && tilesData.get("vTitle").get(position).trim().length() > 0){
-//			titleName = tilesData.get("vTitle").get(position).toUpperCase();
-//
-//			if( Constants.DENSITY.equalsIgnoreCase("low") || Constants.DENSITY.equalsIgnoreCase("medium") ) {
-//				if(titleName.length() > 25 ) {
-//					titleName = titleName.substring(0,22) +"...";
-//				}
-//			}
-//			tileName.setVisibility(View.VISIBLE);
-//			tileName.setText( titleName );
-//		}
-//
-//		
-//		setImageAndBackgroundColor(position, lin);
-//
-//		if(tilesData.get("iLive").get(position) != null && Integer.parseInt(tilesData.get("iLive").get(position)) == 1)
-//			liveImage.setVisibility(View.VISIBLE);
-//		else
-//			liveImage.setVisibility(View.GONE);
-//
-//
-//
-//
-//		if(tilesData.get("vSummary").get(position) != null && 
-//				tilesData.get("vSummary").get(position).trim().length() > 0){
-//			imageSummary.setVisibility(View.VISIBLE);
-//			imageSummary.setText(tilesData.get("vSummary").get(position));		
-//		}
-//
-//		else{
-//			imageSummary.setVisibility(View.GONE);
-//		}
 
-
-		
-		
-//		if(vDisplayType.equalsIgnoreCase(Types.TILE_VIDEO)){
-//
-//			imageSummary.setVisibility(View.GONE);
-//			footerTitle.setVisibility(View.GONE);
-//			footerSubtitle.setVisibility(View.GONE);
-//			socialIcon.setVisibility(View.GONE);
-//			sourceIcon.setVisibility(View.GONE);
-//			playerIcon.setVisibility(View.VISIBLE);
-//			
-//		}else{
-//			playerIcon.setVisibility(View.GONE);
-//		}
-
-//
-//		if(tilesData.get("vDisplayType").get(position) != null && 
-//				( tilesData.get("vDisplayType").get(position).equalsIgnoreCase(Types.TILE_HEADLINE) || tilesData.get("vDisplayType").get(position).equalsIgnoreCase(Types.TILE_SOLID) )){
-//			setFooterStyles( false );
-//
-//		}
-//		
 		
 		return lin;
 
@@ -1283,7 +1081,9 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 				vDisplayType.equalsIgnoreCase(Types.TILE_PHOTO) ||
 				vDisplayType.equalsIgnoreCase(Types.TILE_SOLID) ||
 				vDisplayType.equalsIgnoreCase(Types.TILE_TIMESTAMP) ||
-				vDisplayType.equalsIgnoreCase(Types.TILE_VIDEO) ) {
+				vDisplayType.equalsIgnoreCase(Types.TILE_VIDEO) ||
+				vDisplayType.equalsIgnoreCase(Types.TILE_AUDIO) || 
+				vDisplayType.equalsIgnoreCase(Types.TILE_AUDIO_LIST)) {
 			return true;
 		}
 		

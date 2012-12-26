@@ -3,6 +3,7 @@ package com.playup.android.util.json;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import android.graphics.Shader.TileMode;
 import android.util.Log;
 
 import com.playup.android.util.Constants;
@@ -16,24 +17,28 @@ public class BlockContentJsonUtil {
 	
 	private final String DENSITY_KEY = "density";
 	private final String HREF_KEY = "href";
+	private final String STATIONS_KEY = "stations";
+	private final String ITEMS_KEY = "items";
 	
-
+	
 	
 	private  final String HIGHLIGHT_KEY = "hilight";
 	private  final String SUMMARY_KEY = "summary";
 	private  final String SOURCE_ICON_KEY = "source_icon";
 	private  final String SOCIAL_ICON_KEY = "social_icon";
 	private  final String TIMESTAMP_KEY = "time_stamp";
+	private  final String BACKGROUND_KEY = "background";
 	
 	private  final String BACKGROUND_COLOR_KEY = "background_color";
 	private  final String BACKGROUND_IMAGE_KEY = "background_image";
 	private  final String SOURCE_KEY = "source";
 	private  final String LIVE_KEY = "live";
+	private  final String COUNT_KEY = "count";
 	
 	
-private  final String ACCESSORY_KEY = "accessory";
+	private  final String ACCESSORY_KEY = "accessory";
 
-	
+	private final String ICON_KEY = "icon";
 	private  final String SUBTITLE_KEY = "subtitle";
 	
 	
@@ -99,7 +104,9 @@ private  final String ACCESSORY_KEY = "accessory";
 		
 		String vName = null;
 		String vDisplayUrl = null;
-	
+		String vContentTitle = null;
+		String vContentSubTitle = null;
+		int vDisplayCount = 0;
 		String vDisplayType = null;
 		String vLinkUrl = null;
 		String vLinkHrefUrl = "";
@@ -122,7 +129,8 @@ private  final String ACCESSORY_KEY = "accessory";
 		String vHighLightId= null;
 		String vAccessory= null; 
 		String vSubtitle =null;
-
+		String vContentIcon = null;
+		String vRadioBackground = null;
 		
 		String vContentType = content.getString(TYPE_KEY);
 		String vContentId = content.getString(UID_KEY);		
@@ -178,6 +186,8 @@ private  final String ACCESSORY_KEY = "accessory";
 					vDisplayType.equalsIgnoreCase( Types.TILE_PHOTO ) || 
 					vDisplayType.equalsIgnoreCase( Types.TILE_HEADLINE ) ||  
 					vDisplayType.equalsIgnoreCase( Types.TILE_VIDEO ) || 
+					vDisplayType.equalsIgnoreCase( Types.TILE_AUDIO ) || 
+					vDisplayType.equalsIgnoreCase( Types.TILE_AUDIO_LIST ) || 
 					vDisplayType.equalsIgnoreCase( Types.FEATURE_HIGHLIGHT ) || 
 					vDisplayType.equalsIgnoreCase( Types.FEATURE_TIMESTAMP ) || 
 					vDisplayType.equalsIgnoreCase( Types.FEATURE_PHOTO ) || 
@@ -192,6 +202,14 @@ private  final String ACCESSORY_KEY = "accessory";
 				
 			if(!((vDisplayUrl == null || vDisplayUrl.trim().length() == 0) && (vDisplayHref == null || vDisplayHref.trim().length() == 0)))
 				dbUtil.setHeader(vDisplayHref,vDisplayUrl, vDisplayType, false);
+			
+			
+			
+			
+			vContentTitle = content.optString(TITLE_KEY);
+			vContentSubTitle = content.optString(SUBTITLE_KEY);
+			vContentIcon = content.optString(ICON_KEY);
+			
 			
 			 vTitle = display.optString(TITLE_KEY);
 			
@@ -287,6 +305,22 @@ private  final String ACCESSORY_KEY = "accessory";
 			}
 			}
 			
+			JSONArray background_jArr = display.optJSONArray(BACKGROUND_KEY);
+			
+			if(background_jArr != null){
+			for (int k = 0; k < background_jArr.length(); k++) {
+
+				JSONObject logo_jObj = background_jArr.getJSONObject(k);
+				if (Constants.DENSITY.equalsIgnoreCase(logo_jObj
+						.getString(DENSITY_KEY))) {
+
+					vRadioBackground = logo_jObj.getString(HREF_KEY);
+				}
+
+			}
+			}
+			
+			
 			JSONObject highlight = display.optJSONObject(HIGHLIGHT_KEY);
 			 vHighlightUrl = "";
 			 vHighlightType = "";
@@ -318,19 +352,103 @@ private  final String ACCESSORY_KEY = "accessory";
 			}
 			
 			
+				
+			
+			if(vContentType != null && vContentType.equalsIgnoreCase(Types.AUDIO_LIST_TYPE)  ){
+				
+				
+				
+				vDisplayCount = display.optInt(COUNT_KEY);
+				
+				JSONObject stations = content.getJSONObject(STATIONS_KEY);
+				if(stations.getString(TYPE_KEY).equalsIgnoreCase(Types.COLLECTIONS_DATA_TYPE)){
+					JSONArray items = stations.getJSONArray(ITEMS_KEY);
+					
+					for(int  i = 0 ; i < items.length();i++){
+						JSONObject radioStation = items.getJSONObject(i);
+						
+						
+						if(!(radioStation.getString(TYPE_KEY).equalsIgnoreCase(Types.STATIONS_TYPE)))
+							continue;
+						
+						
+						
+						
+						JSONObject radioStationDisplay = radioStation.getJSONObject(DISPLAY_KEY);
+						
+						if(radioStationDisplay.getString(TYPE_KEY).equalsIgnoreCase(Types.TILE_AUDIO)){
+							
+							
+							String vRadioId = radioStation.getString(UID_KEY);						
+							String vRadioTitle = radioStation.getString(TITLE_KEY);						
+							String vRadioSubTitle = radioStation.getString(SUBTITLE_KEY);						
+							String vRadioIcon= radioStation.getString(ICON_KEY);
+							
+							String vRadioDisplayTitle = radioStationDisplay.getString(TITLE_KEY);
+							
+							String vRadioDisplaySubTitle = radioStationDisplay.getString(SUBTITLE_KEY);
+							String vRadioStationBackground = "";
+							
+							JSONArray radio_background_jArr = radioStationDisplay.getJSONArray(BACKGROUND_KEY);
+							
+
+							for (int k = 0; k < radio_background_jArr.length(); k++) {
+
+								JSONObject logo_jObj = radio_background_jArr.getJSONObject(k);
+								if (Constants.DENSITY.equalsIgnoreCase(logo_jObj
+										.getString(DENSITY_KEY))) {
+
+									vRadioStationBackground = logo_jObj.getString(HREF_KEY);
+								}
+
+							}
+							
+							
+							JSONObject radioStationLink = radioStation.getJSONObject(LINK_KEY);
+							String vRadioStationUrl = "",vRadioSationHrefUrl = "",vRadioStationLinkType = "";
+							if(radioStationLink.getString(TYPE_KEY).equalsIgnoreCase(Types.AUDIO_LINK_TYPE)){
+								vRadioStationUrl = radioStationLink.optString(SELF_KEY);
+								vRadioSationHrefUrl = radioStationLink.optString(HREF_LINK_KEY);
+								vRadioStationLinkType = radioStationLink.getString(TYPE_KEY);
+							}
+							
+							
+							dbUtil.setRadioStationsData(vContentId,vRadioId,vRadioTitle,vRadioSubTitle,vRadioIcon,
+									vRadioDisplayTitle,vRadioDisplaySubTitle,vRadioStationBackground,vRadioStationUrl,vRadioSationHrefUrl,vRadioStationLinkType,i);
+						}
+						
+						
+						
+					}
+				
+				
+				}
+				
+				
+				
+			}
+			
+			if(vContentType != null && vContentType.equalsIgnoreCase(Types.STATIONS_TYPE)){
+				
+				dbUtil.setRadioStationsData(vContentId,vContentId,vContentTitle,vContentSubTitle,vContentIcon,
+						vTitle,vSubtitle,vRadioBackground,vLinkUrl,vLinkHrefUrl,vLinkType,0);
+			}
+			
+			
 		
 		
 			dbUtil.setContetData(vBlockContentId,vContentId,vContentType,vContentUrl,vContentHrefUrl,vName,vDisplayUrl,vDisplayHref,vDisplayType,vLinkUrl,vLinkType,
 					vImage,vFooterTitle,vFooterSubtitle,iLive,vBackgroundColor,vBackgroundImage,vSummary,vTitle,vSource,vSourceIcon,
-					vSocialIcon,vTimeStamp,vHighlightUrl,vHighlightHrefUrl,vHighlightType,vHighLightId,iOrderId,vAccessory, vSubtitle,vLinkHrefUrl);
+					vSocialIcon,vTimeStamp,vHighlightUrl,vHighlightHrefUrl,vHighlightType,vHighLightId,iOrderId,
+					vAccessory, vSubtitle,vLinkHrefUrl,vContentIcon,vContentSubTitle,vContentTitle,vRadioBackground,vDisplayCount);
 
-			}
+			
 		}
 			
 	
 		
 
-	
+			}
 		
 	
 	}catch(Exception e){

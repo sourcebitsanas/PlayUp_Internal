@@ -2,6 +2,7 @@ package com.playup.android.activity;
 
 
 import java.util.Hashtable;
+
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -35,7 +36,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.Window;
-import android.webkit.WebViewFragment;
+
 import android.widget.RemoteViews;
 
 import com.flurry.android.FlurryAgent;

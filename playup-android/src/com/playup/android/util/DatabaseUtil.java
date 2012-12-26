@@ -11650,6 +11650,11 @@ public Hashtable<String, Object>  getSportsCompetitionUrl ( final String vSports
  * @param iOrderId
  * @param vAccessory
  * @param vSubtitle
+ * @param vDisplayCount 
+ * @param vRadioBackground 
+ * @param vContentTitle 
+ * @param vContentSubTitle 
+ * @param vContentIcon 
  * @param vHrefUrl
  */
 	public void setContetData(String vBlockContentId, String vContentId,
@@ -11660,7 +11665,7 @@ public Hashtable<String, Object>  getSportsCompetitionUrl ( final String vSports
 			String vBackgroundImage, String vSummary, String vTitle,
 			String vSource, String vSourceIcon, String vSocialIcon,
 			String vTimeStamp, String vHighlightUrl,String vHighlightHrefUrl, String vHighlightType,
-			String vHighLightId,int iOrderId,String vAccessory,String vSubtitle,String vLinkHrefUrl) {
+			String vHighLightId,int iOrderId,String vAccessory,String vSubtitle,String vLinkHrefUrl, String vContentIcon, String vContentSubTitle, String vContentTitle, String vRadioBackground, int vDisplayCount) {
 
 
 
@@ -11710,6 +11715,13 @@ public Hashtable<String, Object>  getSportsCompetitionUrl ( final String vSports
 		
 		//added line
 		values.put("vLinkHrefUrl", vLinkHrefUrl);
+		
+		values.put("vRadioBackground", vRadioBackground);
+		values.put("vContentIcon", vContentIcon);
+		values.put("vContentSubTitle", vContentSubTitle);
+		values.put("vContentTitle", vContentTitle);
+		values.put("vDisplayCount", vDisplayCount);
+		
 
 		int count = PlayupLiveApplication.getDatabaseWrapper().getTotalCount( " SELECT vContentId FROM blockContent WHERE vContentId = \"" + vContentId + "\"  AND vBlockContentId = '"+vBlockContentId+"'" );
 
@@ -11982,7 +11994,7 @@ public Hashtable<String, Object>  getSportsCompetitionUrl ( final String vSports
 				"LEFT JOIN blocks b ON b.vBlockTileId = bc.vBlockContentId LEFT JOIN sections s ON " +
 				"s.vBlockId = b.vBlockId where s.VsectionId = '"+vSectionId+"' " +
 				" AND (vContentType = '"+Types.CONTENT_DATA_TYPE+ "' OR  vContentType = '"+Types.SECTION_DATA_TYPE+ "' " +
-				"OR vContentType = '"+Types.COMPETITION_DATA_TYPE+ "' ) AND LENGTH(b.vBlockTileId) > 0 "+			
+				"OR vContentType = '"+Types.COMPETITION_DATA_TYPE+ "' OR vContentType = '"+Types.AUDIO_LIST_TYPE+"' OR vContentType = '"+Types.STATIONS_TYPE+"' ) AND LENGTH(b.vBlockTileId) > 0 "+			
 				"ORDER BY iOrderId ASC ");
 
 	}
@@ -11996,7 +12008,7 @@ public Hashtable<String, Object>  getSportsCompetitionUrl ( final String vSports
 				"LEFT JOIN blocks b ON b.vBlockTileId = bc.vBlockContentId LEFT JOIN sections s ON " +
 				"s.vBlockId = b.vBlockId LEFT JOIN competition c ON s.VsectionId = c.vSectionId WHERE c.vCompetitionId = '"+vCompetitionId+"' " +
 				" AND (vContentType = '"+Types.CONTENT_DATA_TYPE+ "' OR  vContentType = '"+Types.SECTION_DATA_TYPE+ 
-				"' OR vContentType = '"+Types.COMPETITION_DATA_TYPE+ "' ) AND LENGTH(b.vBlockTileId) > 0 "+					
+				"' OR vContentType = '"+Types.COMPETITION_DATA_TYPE+ "' OR vContentType = '"+Types.AUDIO_LIST_TYPE+"' OR vContentType = '"+Types.STATIONS_TYPE+"' ) AND LENGTH(b.vBlockTileId) > 0 "+					
 				"ORDER BY iOrderId ASC" );
 
 	}
@@ -12222,8 +12234,10 @@ public Hashtable<String, Object>  getSportsCompetitionUrl ( final String vSports
 				"FROM blockContent bc LEFT JOIN contest_lobby cl on bc.vBlockContentId = cl.vBlockTileId WHERE " +
 				"cl.vContestId = '"+vContestId+"' AND (vDisplayType = '"+Types.TILE_HEADLINE+"' OR vDisplayType = '"+Types.TILE_PHOTO+"' OR " +
 				"vDisplayType = '"+Types.TILE_SOLID+"' OR vDisplayType = '"+Types.TILE_TIMESTAMP+"' OR " +
-				"vDisplayType = '"+Types.TILE_VIDEO+"') AND (vContentType = '"+Types.CONTENT_DATA_TYPE+ "' OR  vContentType = '"+Types.SECTION_DATA_TYPE+ "' " +
-				"OR vContentType = '"+Types.COMPETITION_DATA_TYPE+ "' ) ORDER BY iOrderId ASC");
+				"vDisplayType = '"+Types.TILE_VIDEO+"' OR vDisplayType = '"+Types.TILE_AUDIO_LIST+"'" +
+						" OR vDisplayType = '"+Types.TILE_AUDIO+"')" +
+						" AND (vContentType = '"+Types.CONTENT_DATA_TYPE+ "' OR  vContentType = '"+Types.SECTION_DATA_TYPE+ "' " +
+				" OR vContentType = '"+Types.COMPETITION_DATA_TYPE+ "' OR vContentType = '"+Types.AUDIO_LIST_TYPE+"' OR vContentType = '"+Types.STATIONS_TYPE+"' ) ORDER BY iOrderId ASC");
 
 	}
 
@@ -14146,6 +14160,50 @@ public int getCredentialsCount() {
 	}
 	
 	return 0;
+	
+}
+
+public void setRadioStationsData(String vContentId, String vRadioId,
+		String vRadioTitle, String vRadioSubTitle, String vRadioIcon,
+		String vRadioDisplayTitle, String vRadioDisplaySubTitle,
+		String vRadioStationBackground, String vRadioStationUrl,
+		String vRadioSationHrefUrl, String vRadioStationLinkType,int iOrderId) {
+	
+	
+	
+	
+	
+	ContentValues values = new ContentValues();
+	values.put("vContentId", vContentId);
+	values.put("vRadioId", vRadioId);
+	values.put("vRadioTitle", vRadioTitle);
+	values.put("vRadioSubTitle", vRadioSubTitle);
+	values.put("vRadioIcon", vRadioIcon);
+	values.put("vRadioDisplayTitle", vRadioDisplayTitle);
+	values.put("vRadioDisplaySubTitle", vRadioDisplaySubTitle);
+	values.put("vRadioStationBackground", vRadioStationBackground);
+	values.put("vRadioStationUrl", vRadioStationUrl);
+	values.put("vRadioSationHrefUrl", vRadioSationHrefUrl);
+	values.put("vRadioStationLinkType", vRadioStationLinkType);
+	values.put("iOrderId", iOrderId);
+	
+	int count = PlayupLiveApplication.getDatabaseWrapper().getTotalCount("SELECT vContentId FROM radioStations WHERE vContentId = '"+vContentId+"'" +
+			" AND vRadioId = '"+vRadioId+"'");
+	
+	
+	if(count > 0){
+		
+		PlayupLiveApplication.getDatabaseWrapper().queryMethod2(Constants.QUERY_UPDATE, null, "radioStations", values, " vContentId = '"+vContentId+"'" +
+			" AND vRadioId = '"+vRadioId+"'");
+		
+	}else{
+		
+		PlayupLiveApplication.getDatabaseWrapper().queryMethod2(Constants.QUERY_INSERT, null, "radioStations", values,null);
+			
+	}
+	
+	
+	
 	
 }
 
