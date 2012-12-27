@@ -29,7 +29,7 @@
 
     </RelativeLayout>
     
-    <include layout="@layout/mediascreen"
+    <include layout="@layout/mediaplayer"
         android:id="@+id/main2"/>
     
     <ListView android:layout_width="match_parent"

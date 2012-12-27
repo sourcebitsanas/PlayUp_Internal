@@ -22,20 +22,20 @@ public final class Keys {
 	 **/
 
 
-		// Flurry key 
-	public static final String PLAYUP_FLURRY_KEY = "D7C2ZQNJQ5NXGTXVWB4T";
-
-	// Airbrake key
-	public static final String AIRBRAKE_API_KEY	=	"8a48461a41712a0ee94f67b995fdb103";
-
-
+//		// Flurry key 
+//	public static final String PLAYUP_FLURRY_KEY = "D7C2ZQNJQ5NXGTXVWB4T";
+//
+//	// Airbrake key
+//	public static final String AIRBRAKE_API_KEY	=	"8a48461a41712a0ee94f67b995fdb103";
 
 
-	// app update url
-	public static final String PLAYUP_UPGRADE_URL = "http://s3.amazonaws.com/playup-live-upgrade/production/upgrade.json";
 
-	// analytics id
-	public static  String GOOGLE_ANALYTICS_TRACKING_ID			=	"UA-17783838-23";
+
+//	// app update url
+//	public static final String PLAYUP_UPGRADE_URL = "http://s3.amazonaws.com/playup-live-upgrade/production/upgrade.json";
+//
+//	// analytics id
+//	public static  String GOOGLE_ANALYTICS_TRACKING_ID			=	"UA-17783838-23";
 
 
 	// production urls
@@ -54,7 +54,7 @@ public final class Keys {
 	 **/
 	
 	
-/*//
+//
 //	// Flurry key
 	public static final String PLAYUP_FLURRY_KEY = "P63SHDH8NHYGQ4PMSNWK";
 //
