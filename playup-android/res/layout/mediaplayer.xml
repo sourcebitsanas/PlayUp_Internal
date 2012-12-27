@@ -25,7 +25,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/radioDesc"
-            android:paddingLeft="5dp">
+            android:paddingLeft="5dp"
+            android:visibility="gone">
             
          <ImageView
             android:padding="5dp"
@@ -43,8 +44,30 @@
             android:gravity="center"/>
         
         </RelativeLayout>
+        
+        
+        <RelativeLayout android:id="@+id/bufferingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioDesc"
+            android:paddingLeft="5dp">
+            
+          <ProgressBar
+              android:id = "@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-        <ImageView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buffering"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/progress"
+            />
+        
+        </RelativeLayout>
+
+        <Button
             android:id="@+id/pause"
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -52,6 +75,6 @@
             android:layout_below="@+id/radioName"
             android:paddingRight="10dp"
            
-            android:src="@drawable/pause" />
+            android:background="@drawable/pause" />
         
     </RelativeLayout>

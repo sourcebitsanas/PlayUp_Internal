@@ -1335,8 +1335,9 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 	public static void showErrorDialog(String msg){
 		
 		try {
-			//Log.e("123", "Inside handle the error condition!!!!!!!!!!Activity!!!!!!!!!!!!!!");
-			if(msg != null &&  msg.equalsIgnoreCase("errorFethchingCredentials")){
+			if(!Constants.isCurrent)
+				return;
+			if( msg != null &&  msg.equalsIgnoreCase("errorFethchingCredentials")){
 				if(PlayUpActivity.handler != null){
 					
 					PlayUpActivity.handler.post(new Runnable() {
@@ -1355,11 +1356,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 							alertDialog.setButton2("Quit", new DialogInterface.OnClickListener() {
 							      public void onClick(DialogInterface dialog, int which) {
 							 
-							       	//  PlayupLiveApplication.getFragmentManagerUtil().popBackStack();
-							      	int backStackEntryCount = PlayupLiveApplication.getFragmentManager().getBackStackEntryCount();
-							      	
-							        //Log.e("123", "backStackEntryCount------->>>"+backStackEntryCount);
-							       	//Log.e("123", "PlayupLiveApplication.getFragmentManagerUtil().getTopFragmentName()---->>>"+PlayupLiveApplication.getFragmentManagerUtil().getTopFragmentName());
+							       	
 							       						      
 										PlayUpActivity.context.finish();
 										Constants.isCurrent = false;
@@ -1392,21 +1389,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 							      public void onClick(DialogInterface dialog, int which) {
 							 					       						    	  	
 							    } });
-//						alertDialog.setButton2("Quit", new DialogInterface.OnClickListener() {
-//						      public void onClick(DialogInterface dialog, int which) {
-//						 
-//						       	//  PlayupLiveApplication.getFragmentManagerUtil().popBackStack();
-//						      	int backStackEntryCount = PlayupLiveApplication.getFragmentManager().getBackStackEntryCount();
-//						      	
-//						        Log.e("123", "backStackEntryCount------->>>"+backStackEntryCount);
-//						       	Log.e("123", "PlayupLiveApplication.getFragmentManagerUtil().getTopFragmentName()---->>>"+PlayupLiveApplication.getFragmentManagerUtil().getTopFragmentName());
-//						       						      
-//									PlayUpActivity.context.finish();
-//									Constants.isCurrent = false;
-//									
-//								
-//						       	 
-//						    } });
+
 							if(!alertDialog.isShowing())
 							alertDialog.show();
 							

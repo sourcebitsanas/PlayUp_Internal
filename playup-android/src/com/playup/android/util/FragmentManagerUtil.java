@@ -582,11 +582,14 @@ public class FragmentManagerUtil {
 	 */
 	public void onUpdate ( Message msg ) {
 		String fragmentName = getTopFragmentName();
-
+		
 		if (  fragmentMap != null && fragmentName != null ) {
 		}
 		
 		if ( fragmentName != null && fragmentName.trim().length() > 0 && fragmentMap != null && fragmentMap.containsKey( fragmentName ) ) {
+			
+			
+			
 			// check for the fragment class if it exists in our application or not!
 			MainFragment fragment = fragmentMap.get( fragmentName );
 

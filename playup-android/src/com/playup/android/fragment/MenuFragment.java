@@ -7,8 +7,10 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Message;
 
@@ -21,6 +23,7 @@ import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -30,6 +33,7 @@ import android.widget.TextView;
 import com.playup.android.R;
 import com.playup.android.activity.PlayUpActivity;
 import com.playup.android.application.PlayupLiveApplication;
+import com.playup.android.service.MediaPlayerService;
 import com.playup.android.util.Constants;
 
 import com.playup.android.util.DatabaseUtil;
@@ -86,6 +90,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 	View directmMsgDivider ;
 
 	int hotItemId = 100;
+	private Button pauseButton;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -127,12 +132,16 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 	private void initialize(final ScrollView content_layout) {	//verified
 		
 		username_layout = (LinearLayout) content_layout .findViewById(R.id.username_layout);
-
+		pauseButton = (Button)content_layout.findViewById(R.id.pause);
+		
 		txtView = (TextView) content_layout	.findViewById(R.id.topbar_notification_text);
 		directMessagesTxtView = (TextView) content_layout	.findViewById(R.id.topbar_directMessages_text);
 		myRecentActivityText = (TextView) content_layout.findViewById(R.id.my_recent_activity_text);
 		directmMsgDivider = ( View ) content_layout.findViewById( R.id.directmMsgDivider );
 
+		
+		content_layout.findViewById(R.id.bufferingLayout).setVisibility(View.GONE);
+		content_layout.findViewById(R.id.timeMain).setVisibility(View.VISIBLE);
 		// initialize views
 		initializeViews(content_layout);
 		
@@ -308,6 +317,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 	 */
 	private void setListeners() {	//verified
 
+		pauseButton.setOnClickListener(this);
 		recentActivityLi.setOnClickListener(this);
 		userNameTextView.setOnClickListener(this);
 		nameTextView.setOnClickListener(this);
@@ -1037,6 +1047,72 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 			
 			new Util().getProfileData();
 			
+		}else if(msg != null && msg.obj != null && msg.obj.toString().equalsIgnoreCase("UpdateTime")){
+			
+			if ( PlayUpActivity.handler != null) {
+
+				PlayUpActivity.handler.post(new Runnable() {
+
+					@Override
+					public void run() {
+						try {
+							if ( !isVisible() ) {
+								return;
+							}
+							
+
+							
+							content_layout.findViewById(R.id.bufferingLayout).setVisibility(View.GONE);
+							content_layout.findViewById(R.id.timeMain).setVisibility(View.VISIBLE);
+							
+							((TextView)content_layout.findViewById(R.id.time)).setText(msg.getData().getString("time"));
+							
+							refreshMyProfile();
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							Logs.show ( e );
+						}
+					}
+				});
+				
+				
+			
+			}
+			
+			
+			
+		}else if(msg != null && msg.obj != null && msg.obj.toString().equalsIgnoreCase("ShowBuffering")){
+			
+			if ( PlayUpActivity.handler != null) {
+
+				PlayUpActivity.handler.post(new Runnable() {
+
+					@Override
+					public void run() {
+						try {
+							if ( !isVisible() ) {
+								return;
+							}
+							
+
+							
+							content_layout.findViewById(R.id.bufferingLayout).setVisibility(View.VISIBLE);
+							content_layout.findViewById(R.id.timeMain).setVisibility(View.GONE);
+							
+							refreshMyProfile();
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							Logs.show ( e );
+						}
+					}
+				});
+				
+				
+			
+			}
+			
+			
+			
 		}
 		
 		else if ( PlayUpActivity.handler != null) {
@@ -1079,6 +1155,32 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 		Constants.isGrayBar = false;
 
 		switch (v.getId()) {
+		
+		
+		case R.id.pause:
+			
+			Log.e("123"," MediaPlayerService.isServiceStarted  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+MediaPlayerService.isServiceStarted);
+			
+			
+			if(MediaPlayerService.isServiceStarted){
+				
+				
+				if(MediaPlayerService.isPaused){	
+					new MediaPlayerService().play();
+				}else{
+					 new MediaPlayerService().pause();
+					
+				}
+				
+				
+			}else{
+				Intent startMediaPlayer = new Intent(PlayUpActivity.context,MediaPlayerService.class);
+				startMediaPlayer.putExtra("vRadioUrl", "http://espn-network.akacast.akamaistream.net/7/245/126490/v1/espn.akacast.akamaistream.net/espn-network");
+				PlayUpActivity.context.startService(startMediaPlayer);
+			}
+			
+			
+			break;
 
 		case R.id.menu_notifications:
 			PlayupLiveApplication.getFragmentManagerUtil().setFragment( "NotificationFragment" );
