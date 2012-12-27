@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -22,6 +23,8 @@ import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -39,6 +42,7 @@ import com.playup.android.util.ImageDownloaderSports;
 import com.playup.android.util.Logs;
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
+
 
 public class EuroTilesGridGenerator  implements OnTouchListener{
 
@@ -80,6 +84,7 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 	private String vSecColor = null;
 	private String vSecTitleColor = null;
 	private String vDisplayType = null;
+	private boolean pausePlay	=	false;
 
 
 
@@ -144,7 +149,7 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 
 		if( tilesData != null && tilesData.get("vDisplayType")!= null  ){
 			vDisplayType = tilesData.get("vDisplayType").get( position );
-			Log.e("123", "vDisplayType----------"+vDisplayType+"-------"+tilesData);
+			Log.e("123", "vDisplayType----------"+vDisplayType);
 		}
 		else
 			vDisplayType = null;
@@ -603,6 +608,140 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 			return lin;
 			
 		}
+		//vaibhav
+		else if(vDisplayType.equalsIgnoreCase(Types.TILE_AUDIO_LIST) || vDisplayType.equalsIgnoreCase(Types.TILE_AUDIO)){
+			
+			Log.e("123","inside audio list tile-----"+tilesData);
+			
+
+			
+
+			footerContent.setVisibility(View.VISIBLE);
+			playerIcon.setVisibility(View.VISIBLE);
+			playerIcon.setImageResource(R.drawable.pause_icon);
+			
+			
+			sourceIcon.setVisibility(View.VISIBLE);
+			sourceIcon.setImageResource(R.drawable.mic_png);
+
+			if(vDisplayType.equalsIgnoreCase(Types.TILE_AUDIO_LIST)){
+				if(tilesData.get("vDisplayCount").get(position) != null && tilesData.get("vDisplayCount").get(position).trim().length() > 0){
+				
+					footerSubtitle.setVisibility(View.VISIBLE);
+					footerSubtitle.setText(tilesData.get("vDisplayCount").get(position));
+				}
+			}else if(vDisplayType.equalsIgnoreCase(Types.TILE_AUDIO)){
+				if(tilesData.get("vDisplayCount").get(position) != null && tilesData.get("vDisplayCount").get(position).trim().length() > 0){
+					
+					footerSubtitle.setVisibility(View.GONE);
+					
+				}
+			}
+
+			
+			if(tilesData.get("vTitle").get(position) != null && tilesData.get("vTitle").get(position).trim().length() > 0){
+				
+				lin.findViewById(R.id.titleLayout).setVisibility(View.VISIBLE);
+				tileName.setVisibility(View.VISIBLE);
+				
+				titleName = tilesData.get("vTitle").get(position).toUpperCase();
+
+				if( Constants.DENSITY.equalsIgnoreCase("low") || Constants.DENSITY.equalsIgnoreCase("medium") ) {
+					if(titleName.length() > 25 ) {
+						titleName = titleName.substring(0,22) +"...";
+					}
+				}
+				
+				tileName.setText( titleName );
+			}else if(tilesData.get("vContentTitle").get(position) != null && tilesData.get("vContentTitle").get(position).trim().length() > 0){
+				lin.findViewById(R.id.titleLayout).setVisibility(View.VISIBLE);
+				tileName.setVisibility(View.VISIBLE);
+				
+				titleName = tilesData.get("vContentTitle").get(position).toUpperCase();
+
+				if( Constants.DENSITY.equalsIgnoreCase("low") || Constants.DENSITY.equalsIgnoreCase("medium") ) {
+					if(titleName.length() > 25 ) {
+						titleName = titleName.substring(0,22) +"...";
+					}
+				}
+				
+				tileName.setText( titleName );
+			}
+			
+//			if(tilesData.get("vSummary").get(position) != null && 
+//					tilesData.get("vSummary").get(position).trim().length() > 0){
+//				imageSummary.setVisibility(View.VISIBLE);
+//				imageSummary.setText(tilesData.get("vSummary").get(position));		
+//			}
+			
+			setImageAndBackgroundColor(position,lin);
+			
+			if(tilesData.get("vContentType").get(position) != null && 	(tilesData.get("vContentType").get(position).equalsIgnoreCase(Types.TILE_AUDIO_LIST)||tilesData.get("vContentType").get(position).equalsIgnoreCase(Types.TILE_AUDIO))){
+				if(vDisplayType.equalsIgnoreCase(Types.TILE_AUDIO_LIST)){
+					
+					lin.setTag(R.id.about_txtview,vDisplayType);
+					lin.setTag(R.id.active_users_text,vDisplayType);
+					lin.setOnTouchListener(this);
+					
+				}else if(vDisplayType.equalsIgnoreCase(Types.TILE_AUDIO)){
+					
+					lin.setTag(R.id.about_txtview,vDisplayType);
+					lin.setTag(R.id.active_users_text,vDisplayType);
+					lin.setOnTouchListener(this);
+					
+				}
+			}else if((tilesData.get("vLinkUrl").get(position) != null && tilesData.get("vLinkUrl").get(position).trim().length() > 0) ||
+					(tilesData.get("vLinkHrefUrl").get(position) != null && tilesData.get("vLinkHrefUrl").get(position).trim().length() > 0)){
+				lin.setTag(R.id.about_txtview,vDisplayType);
+				lin.setTag(R.id.active_users_text,vDisplayType);
+				lin.setOnTouchListener(this);
+			}
+			
+//			if(tilesData.get("vContentType").get(position) != null && 	tilesData.get("vContentType").get(position).equalsIgnoreCase(Constants.ACCEPT_TYPE_COMPETITION)){
+//				
+//				if(tilesData.get("vContentHrefUrl").get(position)!=null && tilesData.get("vContentHrefUrl").get(position).trim().length()>0){
+//					
+//				lin.setTag(R.id.avtarImage2,true);
+//					lin.setTag(R.id.about_txtview,tilesData.get("vContentHrefUrl").get(position));
+//				}
+//				else
+//				{
+//					lin.setTag(R.id.avtarImage2,false);
+//					lin.setTag(R.id.about_txtview,tilesData.get("vContentUrl").get(position));
+//				}
+//				lin.setTag(R.id.active_users_text,tilesData.get("vContentType").get(position));
+//				lin.setTag(R.id.aboutText,tilesData.get("vContentId").get(position));
+//				lin.setOnTouchListener(this);
+//
+//			}	
+//			else if((tilesData.get("vLinkUrl").get(position) != null && tilesData.get("vLinkUrl").get(position).trim().length() > 0) ||
+//					(tilesData.get("vLinkHrefUrl").get(position) != null && tilesData.get("vLinkHrefUrl").get(position).trim().length() > 0) ){
+//				
+//				if(tilesData.get("vLinkHrefUrl").get(position) != null && tilesData.get("vLinkHrefUrl").get(position).trim().length() > 0) {
+//					// Must implement the encoding logic here....
+//					lin.setTag(R.id.avtarImage2,true);
+//					lin.setTag(R.id.about_txtview,tilesData.get("vLinkHrefUrl").get(position) );
+//				}
+//				else
+//				{
+//					lin.setTag(R.id.avtarImage2,false);
+//					lin.setTag(R.id.about_txtview,tilesData.get("vLinkUrl").get(position));
+//				}
+//				lin.setTag(R.id.active_users_text,tilesData.get("vLinkType").get(position));
+//				lin.setOnTouchListener(this);
+//			}
+			
+		
+			lin.setTag(R.id.about_txtview,vDisplayType);
+			lin.setTag(R.id.active_users_text,vDisplayType);
+			lin.setOnTouchListener(this);
+			
+		
+			
+
+			return lin;
+			
+		}
 
 
 		
@@ -654,6 +793,7 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 				
 				
 				String type = v.getTag(R.id.active_users_text).toString();
+				Log.e("123" , "Inside onTouch of Euro Tiles Generator-----"+type);
 
 				//Log.e("123", "Type------"+type);
 				if( type  != null && type.equalsIgnoreCase(Constants.ACCEPT_TYPE_COVERSATION)){
@@ -785,7 +925,58 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 					} catch (RequestRepeatException e) {
 						Logs.show ( e );
 					}
-				} 
+				}else if(type != null && type.equalsIgnoreCase(Types.TILE_AUDIO_LIST) && !Constants.isFetchingCredentials){
+					// call POP UP window
+					Log.e("123", "on touch of tile radio----");
+//					playerIcon 			= (ImageView)v.findViewById(R.id.playerIcon);
+//					if(pausePlay){
+//						playerIcon.setImageResource(R.drawable.pause_icon);
+//						pausePlay	=	false;
+//					}else{
+//						
+//						playerIcon.setImageResource(R.drawable.round_play);
+//						pausePlay	=	true;
+//					}
+					
+					LayoutInflater layoutInflater    = (LayoutInflater)PlayUpActivity.context.getSystemService(PlayUpActivity.context.LAYOUT_INFLATER_SERVICE);  
+				    View popupView = layoutInflater.inflate(R.layout.popup_window, null);  
+				             final PopupWindow popupWindow = new PopupWindow(
+				               popupView, 
+				               LayoutParams.WRAP_CONTENT,  
+				                     LayoutParams.WRAP_CONTENT);  
+				             popupWindow.setBackgroundDrawable(new BitmapDrawable());
+				             popupWindow.setFocusable(true);
+				             popupWindow.setOutsideTouchable(true);
+				             ListView lv	=	(ListView) popupView.findViewById(R.id.radioList);
+//				             lv.setAdapter(new AdapterDemo(AndroidPopupWindowActivity.this));
+				             ImageView	close	=	(ImageView) popupView.findViewById(R.id.close);
+				             close.setOnClickListener(new View.OnClickListener() {
+								
+								@Override
+								public void onClick(View v) {
+									// TODO Auto-generated method stub
+									popupWindow.dismiss();
+								}
+							});
+				             popupWindow.showAtLocation(popupView, 0, 0, 0);
+				             popupWindow.update(25, 75 ,430, 720);
+				             
+					
+					
+				}else if(type != null && type.equalsIgnoreCase(Types.TILE_AUDIO) && !Constants.isFetchingCredentials){
+					
+					Log.e("123", "on touch of tile radio- single---");
+					playerIcon 			= (ImageView)v.findViewById(R.id.playerIcon);	
+					if(pausePlay){
+						playerIcon.setImageResource(R.drawable.pause_icon);
+						pausePlay	=	false;
+					}else{
+						
+						playerIcon.setImageResource(R.drawable.round_play);
+						pausePlay	=	true;
+					}
+					
+				}
 			}
 		}
 
@@ -946,6 +1137,14 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 					.length() > 0) {
 
 				imageUrl = tilesData.get("vBackgroundImage").get(position);
+			} else if(tilesData.get("vDisplayType") != null && tilesData.get("vDisplayType").get(position) != null 
+					&& (tilesData.get("vDisplayType").get(position).equalsIgnoreCase(Types.TILE_AUDIO_LIST ) || 
+							tilesData.get("vDisplayType").get(position).equalsIgnoreCase(Types.TILE_AUDIO ))){
+				
+				if(tilesData.get("vRadioBackground") != null && tilesData.get("vRadioBackground").get(position) != null
+						&& tilesData.get("vRadioBackground").get(position).trim().length() > 0)
+							imageUrl = tilesData.get("vRadioBackground").get(position);
+				
 			}
 			try {
 				if(bgColor != null && bgColor.trim().length() > 0){
@@ -1040,7 +1239,7 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 			} else {
 				imageWithSummary.setBackgroundColor( Color.GRAY );
 				if (imageUrl != null && imageUrl.trim().length() > 0) {
-					
+					//Log.e("123","setting image background : "+imageUrl);
 					imageDownloaderSports.download(imageUrl, imageWithSummary,false);
 				}
 

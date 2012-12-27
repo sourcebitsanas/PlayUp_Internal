@@ -13746,7 +13746,7 @@ public  Hashtable<String, Object> getRegionUrlFromRoot() {
 		return PlayupLiveApplication.getDatabaseWrapper().select("SELECT b.vBlockItemId,b.vBlockItemType,vContentId,vContentType,vDisplayUrl,vDisplayHrefUrl,vDisplayType,vHighlightUrl,vHighlightHrefUrl,vHighlightType," +
 				"vHighlightId,vSummary,vFooterTitle,vFooterSubTitle,vSourceIcon," +
 				"vSocialIcon,vImageUrl,vLinkUrl,vLinkHrefUrl,VName,vTimeStamp,vBackgroundColor," +
-				"vTitle,vSubtitle,iLive,vAccessory,vBackgroundImage,vSource,vContentUrl,vContentHrefUrl,vLinkType FROM blockContent bc " +
+				"vTitle,vSubtitle,iLive,vAccessory,vBackgroundImage,vSource,vContentUrl,vContentHrefUrl,vLinkType,vRadioBackground,vDisplayCount FROM blockContent bc " +
 				" LEFT JOIN blocks b ON b.vBlockItemId = bc.vBlockContentId " +
 				" WHERE bc.vBlockContentId =\""+vBlockItemId+"\""+
 				" ORDER BY iOrderId ASC" );
