@@ -4,19 +4,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         
-        android:layout_below="@+id/main1">
+        >
         
         <TextView android:id="@+id/radioName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Test Match Sofa"
+           
             android:paddingLeft="20dp"
             android:layout_marginTop="10dp"/>
         
         <TextView android:id="@+id/radioDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tom Holland Top 5 Cricket Books"
+            
             android:ellipsize="marquee"
             android:layout_below="@+id/radioName"
             android:paddingLeft="20dp"/>
@@ -39,7 +39,7 @@
         <TextView android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:text="0:09:51"
+           
             android:layout_toRightOf="@+id/mic"
             android:gravity="center"/>
         

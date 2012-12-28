@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.playup.android.R;
 import com.playup.android.activity.PlayUpActivity;
@@ -571,14 +572,73 @@ public class LeagueLobbyFragment extends MainFragment {
 									
 								} else if ( msg != null && msg.obj != null &&  msg.obj.toString().equalsIgnoreCase("handleBackButton") ) {
 									// back button handling
-									Constants.isGrayBar = false;
-	//								PlayupLiveApplication.getFragmentManagerUtil().popBackStack();
 									
-									PlayupLiveApplication.getFragmentManagerUtil().popBackStackImmediate();
+											if(PlayUpActivity.popUp != null && PlayUpActivity.popUp.popupWindow.isShowing()){
+												PlayUpActivity.popUp.popupWindow.dismiss();
+												PlayUpActivity.popUp = null;
+												PlayUpActivity.mediaPlayerService.stopTimer();
+											}else{
+												Constants.isGrayBar = false;
+			//								PlayupLiveApplication.getFragmentManagerUtil().popBackStack();
+											
+											PlayupLiveApplication.getFragmentManagerUtil().popBackStackImmediate();
+										}
 									
 								}else if(msg != null && msg.obj != null && msg.obj.toString().equalsIgnoreCase("credentials stored")){
 									
 									fetchSections();
+									
+								}else if(msg != null && msg.obj != null && msg.obj.toString().equalsIgnoreCase("UpdateTime")){
+									
+									
+
+										
+												try {
+													if ( !isVisible() ) {
+														return;
+													}
+													if(PlayUpActivity.popUp != null && PlayUpActivity.popUp.popupWindow.isShowing()){
+														PlayUpActivity.popUp.updateTime(msg.getData().getString("time"));
+													}
+
+													
+													
+													
+													
+												} catch (Exception e) {
+													// TODO Auto-generated catch block
+													Logs.show ( e );
+												}
+											
+										
+										
+									
+									
+									
+									
+									
+								}else if(msg != null && msg.obj != null && msg.obj.toString().equalsIgnoreCase("ShowBuffering")){
+									
+									
+												try {
+													if ( !isVisible() ) {
+														return;
+													}
+													
+													if(PlayUpActivity.popUp != null && PlayUpActivity.popUp.popupWindow.isShowing()){
+														PlayUpActivity.popUp.showBuffering();
+													}
+													
+													
+													
+													
+												} catch (Exception e) {
+													// TODO Auto-generated catch block
+													Logs.show ( e );
+												}
+										
+									
+									
 									
 								}
 						} catch (Exception e) {

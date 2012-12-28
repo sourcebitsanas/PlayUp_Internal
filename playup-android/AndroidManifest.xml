@@ -140,6 +140,12 @@
             private process
 
         -->
+        
+         <service
+            android:name=".service.MediaPlayerService"
+           />
+      
+        
         <service
             android:name="com.urbanairship.push.PushService"
             android:process=":com.urbanairship.push.process" />

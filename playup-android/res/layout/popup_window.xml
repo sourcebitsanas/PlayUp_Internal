@@ -2,11 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-    android:background="#000000">
+   android:background="#F7F7F7"
+   
+    >
     
     <RelativeLayout 
-        android:id="@+id/main1"
+        android:id="@+id/heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         
@@ -29,13 +30,23 @@
 
     </RelativeLayout>
     
+     <LinearLayout
+        android:id="@+id/mediaPlayer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading" >
+
+        
     <include layout="@layout/mediaplayer"
-        android:id="@+id/main2"/>
+       
+        />
+    </LinearLayout>
+  
     
     <ListView android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/radioList"
-            android:layout_below="@+id/main2"
+            android:layout_below="@+id/mediaPlayer"
             android:layout_above="@+id/micBottom"
             android:layout_marginBottom="10dp"
             android:cacheColorHint="@android:color/transparent" 

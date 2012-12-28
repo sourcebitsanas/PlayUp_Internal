@@ -23,8 +23,7 @@ public class RadioStationListAdapter extends BaseAdapter{
 	ViewHolder holder;
 	private ImageDownloader imageDownloader = null;
 
-	public RadioStationListAdapter(Hashtable<String, List<String>> stationList) {
-		// TODO Auto-generated constructor stub
+	public RadioStationListAdapter(Hashtable<String, List<String>> stationList) {		
 		
 		this.stationList	=	stationList;
 		inflater = ( LayoutInflater ) PlayUpActivity.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -36,31 +35,21 @@ public class RadioStationListAdapter extends BaseAdapter{
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
-		if(stationList.get("vContentId").size()>0){
-			return stationList.get("vContentId").size();
+		
+		if(stationList != null && stationList.get("vRadioId")!= null && stationList.get("vRadioId").size()>0){
+			return stationList.get("vRadioId").size();
 		}
 		return 0;
 	}
 
-	@Override
-	public Object getItem(int position) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public long getItemId(int position) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		if ( inflater == null ) {
-			LayoutInflater layoutInflater = ( LayoutInflater ) PlayUpActivity.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			return  layoutInflater.inflate( R.layout.leader_board_item, null);
+			inflater = ( LayoutInflater ) PlayUpActivity.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			
 		}
 
 		if (convertView == null) {
@@ -78,15 +67,17 @@ public class RadioStationListAdapter extends BaseAdapter{
 			holder		=	(ViewHolder) convertView.getTag();
 		}
 		
-		if(stationList != null && stationList.containsKey("vRadioTitle") && stationList.get("vRadioTitle").get(position) != null && stationList.get("vRadioTitle").get(position).trim().length() >0 ){
+		if(stationList.containsKey("vRadioTitle") && stationList.get("vRadioTitle") != null && stationList.get("vRadioTitle").get(position) != null && stationList.get("vRadioTitle").get(position).trim().length() >0 ){
 			holder.radioTitle.setText(stationList.get("vRadioTitle").get(position));
 		}
 		
-		if(stationList != null && stationList.containsKey("vRadioSubTitle") && stationList.get("vRadioSubTitle").get(position) != null&& stationList.get("vRadioSubTitle").get(position).trim().length() >0 ){
+		if(stationList.containsKey("vRadioSubTitle") && stationList.get("vRadioSubTitle") != null && stationList.get("vRadioSubTitle").get(position) != null&& stationList.get("vRadioSubTitle").get(position).trim().length() >0 ){
 			holder.radioSubTitle.setText(stationList.get("vRadioSubTitle").get(position));
 		}
 		
-		if(stationList != null && stationList.get("vRadioIcon").get(position) != null && stationList.get("vRadioIcon").get(position).trim().length() > 0)
+		if(stationList.containsKey("vRadioIcon") && stationList.get("vRadioTitle") != null && 
+				stationList.get("vRadioIcon").get(position) != null && 
+				stationList.get("vRadioIcon").get(position).trim().length() > 0)
 			imageDownloader.download(stationList.get("vRadioIcon").get(position), holder.logo, false, this);
 		
 		holder.soundPlay.setImageResource(R.drawable.speakerlow);
@@ -101,6 +92,18 @@ public class RadioStationListAdapter extends BaseAdapter{
 		ImageView soundPlay;
 		
 		
+	}
+
+	@Override
+	public Object getItem(int arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public long getItemId(int arg0) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

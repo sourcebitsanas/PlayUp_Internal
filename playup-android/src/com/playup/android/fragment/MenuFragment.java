@@ -91,6 +91,8 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 
 	int hotItemId = 100;
 	private Button pauseButton;
+	private TextView radioName;
+	private TextView radiodesc;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -132,13 +134,16 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 	private void initialize(final ScrollView content_layout) {	//verified
 		
 		username_layout = (LinearLayout) content_layout .findViewById(R.id.username_layout);
-		pauseButton = (Button)content_layout.findViewById(R.id.pause);
+		
 		
 		txtView = (TextView) content_layout	.findViewById(R.id.topbar_notification_text);
 		directMessagesTxtView = (TextView) content_layout	.findViewById(R.id.topbar_directMessages_text);
 		myRecentActivityText = (TextView) content_layout.findViewById(R.id.my_recent_activity_text);
 		directmMsgDivider = ( View ) content_layout.findViewById( R.id.directmMsgDivider );
 
+		pauseButton = (Button)content_layout.findViewById(R.id.pause);
+		radioName = (TextView) content_layout.findViewById(R.id.radioName);
+		radiodesc = (TextView) content_layout.findViewById(R.id.radioDesc);
 		
 		content_layout.findViewById(R.id.bufferingLayout).setVisibility(View.GONE);
 		content_layout.findViewById(R.id.timeMain).setVisibility(View.VISIBLE);
@@ -349,7 +354,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 	private void setValues() {	//verified
 
 		try {
-			
+			setRadio();
 			setWhatsHotItems();
 			setFavouriteItems();
 			setUserName();
@@ -367,6 +372,25 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 
 
 
+
+	private void setRadio() {
+		DatabaseUtil db = DatabaseUtil.getInstance();
+		Hashtable<String, List<String>> currentRadio = db.getCurrentRadio();
+		if(currentRadio != null && currentRadio.get("vRadioId") != null && currentRadio.get("vRadioId").size() > 0){
+			
+			PlayUpActivity.mediaPlayerService.startTimer();
+			radioName.setText(currentRadio.get("vRadioTitle").get(0));
+			radiodesc.setText(currentRadio.get("vRadioSubTitle").get(0));
+			pauseButton.setTag(R.id.aboutScrollView, false);
+			pauseButton.setTag(R.id.about_txtview, currentRadio.get("vRadioStationUrl").get(0));
+		}else{
+			radioName.setText("Welcome To Playup");
+			radiodesc.setText("About Us");
+			pauseButton.setTag(R.id.aboutScrollView, true);
+			pauseButton.setTag(R.id.about_txtview, "file:///android_asset/default.mp3");
+		}
+		
+	}
 
 	/**
 	 * for setting favourite items
@@ -1159,25 +1183,35 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 		
 		case R.id.pause:
 			
-			Log.e("123"," MediaPlayerService.isServiceStarted  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+MediaPlayerService.isServiceStarted);
 			
 			
-			if(MediaPlayerService.isServiceStarted){
+			
 				
 				
-				if(MediaPlayerService.isPaused){	
-					new MediaPlayerService().play();
-				}else{
-					 new MediaPlayerService().pause();
+			if(PlayUpActivity.mediaPlayerService != null)
+				Log.e("123"," MediaPlayerService.isServiceStarted  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+PlayUpActivity.mediaPlayerService.isServiceStarted);
+				
+			if(PlayUpActivity.mediaPlayerService != null && PlayUpActivity.mediaPlayerService.isServiceStarted){
 					
+					
+					if(PlayUpActivity.mediaPlayerService.isPaused){	
+						PlayUpActivity.mediaPlayerService.play();
+					}else{
+						PlayUpActivity.mediaPlayerService.pause();
+						
+					}
+					
+					
+				}else{
+					Intent startMediaPlayer = new Intent(PlayUpActivity.context,MediaPlayerService.class);
+					startMediaPlayer.putExtra("vRadioUrl", pauseButton.getTag(R.id.about_txtview).toString());
+					startMediaPlayer.putExtra("isDefault", Boolean.parseBoolean(pauseButton.getTag(R.id.aboutScrollView).toString()));
+					PlayUpActivity.context.startService(startMediaPlayer);
 				}
 				
 				
-			}else{
-				Intent startMediaPlayer = new Intent(PlayUpActivity.context,MediaPlayerService.class);
-				startMediaPlayer.putExtra("vRadioUrl", "http://espn-network.akacast.akamaistream.net/7/245/126490/v1/espn.akacast.akamaistream.net/espn-network");
-				PlayUpActivity.context.startService(startMediaPlayer);
-			}
+			
+			
 			
 			
 			break;

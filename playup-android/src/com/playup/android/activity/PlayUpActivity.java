@@ -3,6 +3,7 @@ package com.playup.android.activity;
 
 import java.util.Hashtable;
 
+
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -15,10 +16,12 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.ServiceConnection;
 import android.content.pm.PackageInfo;
 import android.content.res.Resources.NotFoundException;
 import android.net.ConnectivityManager;
@@ -42,12 +45,15 @@ import android.widget.RemoteViews;
 import com.flurry.android.FlurryAgent;
 import com.mobileapptracker.MobileAppTracker;
 import com.playup.android.R;
+import com.playup.android.adapters.RadioListPopUp;
 import com.playup.android.application.AirbrakeNotifier;
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.connection.methods.Crypto;
 import com.playup.android.database.DatabaseWrapper;
 import com.playup.android.interfaces.ActivityInterface;
 import com.playup.android.receiver.IntentReceiver;
+import com.playup.android.service.MediaPlayerService;
+
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.Keys;
@@ -93,12 +99,40 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 
 	private static Timer playUpFriendsTimer;
 	private static TimerTask playUpFriendsTask;
+	public static RadioListPopUp popUp;
 	
-	
+	public static MediaPlayerService mediaPlayerService;
 
+	
+	private static AlertDialog alertDialog;
+	
 	//private static Timer refreshProviderTokensTimer;
 	//private static TimerTask refreshProviderTokensTask;
-	private static AlertDialog alertDialog;
+	
+//	private boolean mIsBound = false;
+//	public static MediaPlayerService mServ;
+	
+//	private ServiceConnection Scon =new ServiceConnection(){
+//
+//		
+//
+//		@Override
+//		public void onServiceConnected(ComponentName name, IBinder service) {
+//			ServiceBinder binder = (ServiceBinder) service;
+//            mServ = binder.getService();
+//           
+//			
+//		}
+//
+//		@Override
+//		public void onServiceDisconnected(ComponentName name) {
+//			mServ = null;
+//			
+//		}
+//	};
+
+
+
 	
 
 	@Override
@@ -196,6 +230,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 
 
 			registerReceivers();
+//			doBindService();
 			setValues();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -329,12 +364,18 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 		FlurryAgent.onStartSession( this, Keys.PLAYUP_FLURRY_KEY );
 
 	}
+	
+	
+		
+	
 
 	@Override
 	protected void onResume() {
 
 		try {
 			super.onResume();
+			
+
 
 			context =  this;
 			// call to set playup keys
@@ -1410,7 +1451,18 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 
 	}
 
-
-
+//	void doBindService(){
+// 		bindService(new Intent(this,MediaPlayerService.class),
+//				Scon,Context.BIND_AUTO_CREATE);
+//		mIsBound = true;
+//	}
+//
+//	void doUnbindService(){
+//		if(mIsBound){
+//			unbindService(Scon);
+//      		mIsBound = false;
+//		}
+//	}
+//
 
 }
