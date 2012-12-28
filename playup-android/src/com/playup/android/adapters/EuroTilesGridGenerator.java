@@ -679,12 +679,14 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 			if(tilesData.get("vContentType").get(position) != null && 	(tilesData.get("vContentType").get(position).equalsIgnoreCase(Types.TILE_AUDIO_LIST)||tilesData.get("vContentType").get(position).equalsIgnoreCase(Types.TILE_AUDIO))){
 				if(vDisplayType.equalsIgnoreCase(Types.TILE_AUDIO_LIST)){
 					
+					lin.setTag(R.id.aboutText,tilesData.get("vContentId").get(position));
 					lin.setTag(R.id.about_txtview,vDisplayType);
 					lin.setTag(R.id.active_users_text,vDisplayType);
 					lin.setOnTouchListener(this);
 					
 				}else if(vDisplayType.equalsIgnoreCase(Types.TILE_AUDIO)){
 					
+					lin.setTag(R.id.aboutText,tilesData.get("vContentId").get(position));
 					lin.setTag(R.id.about_txtview,vDisplayType);
 					lin.setTag(R.id.active_users_text,vDisplayType);
 					lin.setOnTouchListener(this);
@@ -692,6 +694,7 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 				}
 			}else if((tilesData.get("vLinkUrl").get(position) != null && tilesData.get("vLinkUrl").get(position).trim().length() > 0) ||
 					(tilesData.get("vLinkHrefUrl").get(position) != null && tilesData.get("vLinkHrefUrl").get(position).trim().length() > 0)){
+				lin.setTag(R.id.aboutText,tilesData.get("vContentId").get(position));
 				lin.setTag(R.id.about_txtview,vDisplayType);
 				lin.setTag(R.id.active_users_text,vDisplayType);
 				lin.setOnTouchListener(this);
@@ -731,13 +734,13 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 //				lin.setOnTouchListener(this);
 //			}
 			
-		
 			lin.setTag(R.id.about_txtview,vDisplayType);
+			lin.setTag(R.id.aboutText,tilesData.get("vContentId").get(position));
 			lin.setTag(R.id.active_users_text,vDisplayType);
 			lin.setOnTouchListener(this);
 			
 		
-			
+			Log.e("123", "vContentId in getView----------"+tilesData.get("vContentId").get(position));
 
 			return lin;
 			
@@ -948,7 +951,13 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 				             popupWindow.setFocusable(true);
 				             popupWindow.setOutsideTouchable(true);
 				             ListView lv	=	(ListView) popupView.findViewById(R.id.radioList);
-//				             lv.setAdapter(new AdapterDemo(AndroidPopupWindowActivity.this));
+				             if(v.getTag(R.id.aboutText).toString() != null && v.getTag(R.id.aboutText).toString().trim().length() >0){
+				             Hashtable<String, List<String>> stationList	=	dbUtil.getRadioStaionsData(v.getTag(R.id.aboutText).toString());
+				            
+				             	if(stationList	!= null){
+				             		lv.setAdapter(new RadioStationListAdapter(stationList));
+				             	}
+				             }
 				             ImageView	close	=	(ImageView) popupView.findViewById(R.id.close);
 				             close.setOnClickListener(new View.OnClickListener() {
 								

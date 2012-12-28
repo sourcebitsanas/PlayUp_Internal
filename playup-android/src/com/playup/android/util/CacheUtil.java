@@ -36,6 +36,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Message;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
@@ -1003,7 +1004,7 @@ public class CacheUtil {
 			try {
 
 				
-
+				//Log.e("123", "inside download -------"+url+"------id------"+id);
 				URL aURL = new URL(url);
 				URLConnection conn = aURL.openConnection();
 				conn.connect();
@@ -1065,7 +1066,7 @@ public class CacheUtil {
 				if (bm != null) {
 					addBitmapToSoftCache(id, bm);
 				}
-
+				//Log.e("123", "aURL----"+aURL+"----bm------"+bm);
 				bis.close();
 				bis = null;
 				conn = null;
