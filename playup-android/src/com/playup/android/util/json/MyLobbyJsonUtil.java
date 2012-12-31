@@ -6,7 +6,7 @@ import org.json.JSONObject;
 
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -50,7 +50,7 @@ public class MyLobbyJsonUtil {
 
 		DatabaseUtil dbUtil = DatabaseUtil.getInstance();
 		JSONObject jObj = null;
-		Logs.show ( "begin ------------------------------------MyLobbyJsonUtil " + str);
+		//Logs.show ( "begin ------------------------------------MyLobbyJsonUtil " + str);
 			dbUtil.getWritabeDatabase().beginTransaction();
 		
 		try {
@@ -157,7 +157,7 @@ public class MyLobbyJsonUtil {
 			
 			
 		} catch (JSONException e) {
-			Logs.show ( e );
+			//Logs.show ( e );
 		}  finally {
 		
 			new Util().releaseMemory( jObj );

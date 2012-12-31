@@ -32,7 +32,7 @@ import com.playup.android.activity.PlayUpActivity;
 import com.playup.android.adapters.TeamScheduleAdapter;
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class TeamScheduleFragment extends MainFragment {
@@ -94,7 +94,7 @@ public class TeamScheduleFragment extends MainFragment {
 			setValues();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		
 	}
@@ -118,7 +118,7 @@ public class TeamScheduleFragment extends MainFragment {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 	
@@ -185,7 +185,7 @@ public class TeamScheduleFragment extends MainFragment {
 			
 
 		} catch ( Exception e ) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		} 
 	}
 	/**
@@ -221,14 +221,14 @@ public class TeamScheduleFragment extends MainFragment {
 						msg.setData(b);					
 						PlayupLiveApplication.callUpdateTopBarFragments(msg);
 					} catch (Exception e) {
-						Logs.show(e);
+//						Logs.show(e);
 					}
 					
 				
 			
 					
 				} catch (Exception e) {
-					Logs.show(e);
+//					Logs.show(e);
 				}
 				
 			}
@@ -279,7 +279,7 @@ public class TeamScheduleFragment extends MainFragment {
 						} catch (Exception e) {
 						// TODO Auto-generated catch block
 					
-						Logs.show(e);
+//						Logs.show(e);
 					}
 					
 					
@@ -352,19 +352,19 @@ public class TeamScheduleFragment extends MainFragment {
 											
 											showTeamSchedule();
 										} catch (Exception e) {
-											Logs.show(e);
+//											Logs.show(e);
 										}
 										
 									}
 								});
 							} catch (Exception e) {
-								Logs.show(e);
+//								Logs.show(e);
 							}
 							
 						}
 }
 					} catch (Exception e) {
-						Logs.show(e);
+//						Logs.show(e);
 					}
 					
 					
@@ -373,7 +373,7 @@ public class TeamScheduleFragment extends MainFragment {
 			
 			
 		}catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		
 		
@@ -439,18 +439,18 @@ public class TeamScheduleFragment extends MainFragment {
 											teamScheduleList.setVisibility( View.GONE );
 										}
 									} catch (Exception e) {
-										Logs.show(e);
+//										Logs.show(e);
 									}
 									
 								}
 							});
 						} catch (Exception e) {
-							Logs.show(e);
+//							Logs.show(e);
 						}
 						
 					}
 				} catch (Exception e) {
-					Logs.show(e);
+//					Logs.show(e);
 				}
 				
 			}
@@ -478,7 +478,7 @@ public class TeamScheduleFragment extends MainFragment {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		
 		return 0;
@@ -524,14 +524,14 @@ public class TeamScheduleFragment extends MainFragment {
 
 							}
 						}catch(Exception e){
-							Logs.show(e);
+//							Logs.show(e);
 						}
 					}
 					
 					
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 

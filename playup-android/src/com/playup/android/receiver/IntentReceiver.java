@@ -34,7 +34,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+
 
 
 import com.playup.android.activity.PlayUpActivity;
@@ -53,7 +53,7 @@ public class IntentReceiver extends BroadcastReceiver {
 		
 		String action = intent.getAction();
 		
-		 Log.e("234", "action===============>>>"+action);
+		 //Log.e("234", "action===============>>>"+action);
 
 		if (action.equals(PushManager.ACTION_PUSH_RECEIVED)) {
 		
@@ -79,7 +79,7 @@ public class IntentReceiver extends BroadcastReceiver {
 
 			String url = intent.getStringExtra("href");
 			
-			Log.e("234", "url======>>>>href====>>>"+url);
+			//Log.e("234", "url======>>>>href====>>>"+url);
 			
 			
 			if(url != null && url.trim().length() > 0){
@@ -127,7 +127,7 @@ public class IntentReceiver extends BroadcastReceiver {
 					DatabaseUtil dbUtil = DatabaseUtil.getInstance();
 					String url = intent.getStringExtra("href");
 				
-					Log.e("234", "url======>>>>href====>>>"+url);
+					//Log.e("234", "url======>>>>href====>>>"+url);
 					
 					int pushType = dbUtil.getPushType(vPushId);
 					
@@ -136,9 +136,9 @@ public class IntentReceiver extends BroadcastReceiver {
 							Hashtable<String, List<String>>data  = dbUtil.getDirectConversationData(vPushId);
 							Bundle bundle = new Bundle ();
 							bundle.putInt( "pushType",0);
-							Log.e("234", "vDirectConversationUrl=======>>>"+data.get("vDirectConversationUrl").get(0));
-							Log.e("234", "url======>>>>vShortUrl=======>>>"+data.get("vShortUrl").get(0));
-							Log.e("234", "url======>>>>vUserSelfUrl====>>>"+data.get("vUserSelfUrl").get(0));
+						//	Log.e("234", "vDirectConversationUrl=======>>>"+data.get("vDirectConversationUrl").get(0));
+						//	Log.e("234", "url======>>>>vShortUrl=======>>>"+data.get("vShortUrl").get(0));
+						//	Log.e("234", "url======>>>>vUserSelfUrl====>>>"+data.get("vUserSelfUrl").get(0));
 							
 							bundle.putString( "vShortUrl",data.get("vShortUrl").get(0));
 							bundle.putString( "vDirectConversationUrl",data.get("vDirectConversationUrl").get(0));
@@ -150,7 +150,7 @@ public class IntentReceiver extends BroadcastReceiver {
 								Bundle bundle = new Bundle ();
 								bundle.putInt( "pushType",1);
 								bundle.putString( "vConversationId",conversationId);
-								Log.e("234", "url======>>>>conversationId====>>>"+conversationId);
+							//	Log.e("234", "url======>>>>conversationId====>>>"+conversationId);
 								launch.putExtra("data", bundle);
 								dbUtil = null;						
 						}else if(pushType == 3){

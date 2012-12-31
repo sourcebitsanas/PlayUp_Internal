@@ -113,7 +113,7 @@ public class CreateRoomFragment extends MainFragment implements OnClickListener 
 			fromFragment = bundle.getString("fromFragment");
 		}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -165,7 +165,7 @@ public class CreateRoomFragment extends MainFragment implements OnClickListener 
 		PlayupLiveApplication.callUpdateTopBarFragments(msg);
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -241,7 +241,7 @@ public class CreateRoomFragment extends MainFragment implements OnClickListener 
 		}
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -298,7 +298,7 @@ public class CreateRoomFragment extends MainFragment implements OnClickListener 
 							}  
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show ( e );
+//							Logs.show ( e );
 						}
 					}
 
@@ -312,7 +312,7 @@ public class CreateRoomFragment extends MainFragment implements OnClickListener 
 			
 		}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -333,7 +333,7 @@ public class CreateRoomFragment extends MainFragment implements OnClickListener 
 		new Util().createConversationOrRoom(hangoutName,vContestId,privateStatus);
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 	
@@ -437,7 +437,7 @@ public class CreateRoomFragment extends MainFragment implements OnClickListener 
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 		}, 500);
@@ -453,7 +453,7 @@ public class CreateRoomFragment extends MainFragment implements OnClickListener 
 		//setValues();
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -470,7 +470,7 @@ public class CreateRoomFragment extends MainFragment implements OnClickListener 
 		}
 		setValues();
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 

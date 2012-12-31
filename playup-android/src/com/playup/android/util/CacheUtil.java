@@ -133,11 +133,11 @@ public class CacheUtil {
 
 		} catch (Exception e) {
 
-			Logs.show(e);
+		//	Logs.show(e);
 
 		} catch (Error e) {
 
-			Logs.show(e);
+		//	Logs.show(e);
 
 		}
 
@@ -414,13 +414,13 @@ public class CacheUtil {
 					PlayUpActivity.executorPool.execute(new DownloadThread(
 							imgView, key, url, imageDownloader, false));
 				} catch (RejectedExecutionException e) {
-					Logs.show(e);
+				//	Logs.show(e);
 				}
 
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -511,7 +511,7 @@ public class CacheUtil {
 				PlayUpActivity.executorPool.execute(new DownloadThread(imgView,
 						key, url, imageDownloader, false, notify));
 			} catch (RejectedExecutionException e) {
-				Logs.show(e);
+				//Logs.show(e);
 			}
 
 		}
@@ -831,7 +831,7 @@ public class CacheUtil {
 									linearLayout = null;
 
 								} catch (Exception e) {
-									Logs.show(e);
+									//Logs.show(e);
 								}
 
 								if (mBitmap != null) {
@@ -966,7 +966,7 @@ public class CacheUtil {
 
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show(e);
+						//Logs.show(e);
 					} finally {
 						// mBitmap.recycle();
 
@@ -1029,7 +1029,7 @@ public class CacheUtil {
 
 					} catch (Exception e) {
 						// TODO: handle exception
-						Logs.show(e);
+						//Logs.show(e);
 					}
 
 				}
@@ -1056,7 +1056,7 @@ public class CacheUtil {
 					}
 
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 				if (isRoundCornerReq) {
@@ -1076,16 +1076,16 @@ public class CacheUtil {
 
 				
 
-				Logs.show(e);
+				//Logs.show(e);
 
 			} catch (Exception e) {
 
 				
 
-				Logs.show(e);
+				//Logs.show(e);
 
 			} catch (OutOfMemoryError e) {
-				Logs.show(e);
+				//Logs.show(e);
 			}
 
 			return null;
@@ -1279,7 +1279,7 @@ public class CacheUtil {
 						+ key);
 		} catch (Error e) {
 
-			Logs.show(e);
+			//Logs.show(e);
 
 		}
 		return null;

@@ -107,7 +107,7 @@ public class ImageDownloader {
 			}
 			
 		} catch ( Exception e)  {
-			Logs.show( e);
+			//Logs.show( e);
 		}
 		
 
@@ -131,7 +131,7 @@ public class ImageDownloader {
 			
 
 		}catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}

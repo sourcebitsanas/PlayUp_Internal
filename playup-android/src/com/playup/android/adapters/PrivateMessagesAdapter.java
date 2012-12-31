@@ -40,7 +40,7 @@ import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
 import com.playup.android.util.FragmentManagerUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 
@@ -307,7 +307,7 @@ public class PrivateMessagesAdapter extends BaseAdapter implements OnClickListen
 
 
 		} catch ( Exception e ) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		return convertView;
 	}
@@ -384,7 +384,7 @@ public class PrivateMessagesAdapter extends BaseAdapter implements OnClickListen
 
 				}
 			} catch (Exception e) {
-				Logs.show(e);
+				//Logs.show(e);
 			}
 		}
 	};
@@ -578,7 +578,7 @@ public class PrivateMessagesAdapter extends BaseAdapter implements OnClickListen
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -694,7 +694,7 @@ public class PrivateMessagesAdapter extends BaseAdapter implements OnClickListen
 				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show ( e );
+				//Logs.show ( e );
 			}
 		}
 	}

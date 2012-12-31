@@ -28,6 +28,7 @@ import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.Keys;
 import com.playup.android.util.Logs;
+
 import com.playup.android.util.MacCreation;
 import com.playup.android.util.PreferenceManagerUtil;
 import com.playup.android.util.Util;
@@ -490,7 +491,7 @@ public class GetConnectionMethod_JavaNet {
 			//Check for the status , if 401 server has returned MAC credentials 
 
 
-			
+				
 			if(STATUS_CODE == 401 || STATUS_CODE == 403){
 				
 				
@@ -565,13 +566,13 @@ public class GetConnectionMethod_JavaNet {
 			return null;
 		} catch ( UnknownHostException e ) {
 			STATUS_CODE = 001;
-			Logs.show( e );
+			//Logs.show( e );
 		} catch (HttpException e) {
 			STATUS_CODE = 001;
-			Logs.show( e );
+			//Logs.show( e );
 
 		} catch (IOException e) {
-			Logs.show( e );
+			//Logs.show( e );
 
 			String topbarFragmentName = PlayupLiveApplication.getFragmentManagerUtil().getTopFragmentName();
 
@@ -584,7 +585,7 @@ public class GetConnectionMethod_JavaNet {
 							try {
 								new Util().logout();
 							} catch (Exception e) {
-								Logs.show ( e );
+							//	Logs.show ( e );
 							}
 						}
 
@@ -598,9 +599,9 @@ public class GetConnectionMethod_JavaNet {
 
 
 		} catch ( Exception e ) {
-			Logs.show( e );
+			//Logs.show( e );
 		}catch (Error e) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 
 		finally {
@@ -619,7 +620,7 @@ public class GetConnectionMethod_JavaNet {
 				proxyString = null;
 				url = null;
 			}catch (Exception e) {
-				Logs.show( e );
+				//Logs.show( e );
 			}
 		}
 

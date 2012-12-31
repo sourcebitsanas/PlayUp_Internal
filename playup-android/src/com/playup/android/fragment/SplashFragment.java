@@ -11,7 +11,7 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +24,7 @@ import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.FragmentManagerUtil;
 import com.playup.android.util.Keys;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 
@@ -101,7 +101,7 @@ public class SplashFragment extends MainFragment {
 						});
 					}
 				} catch (Exception e) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 
@@ -219,7 +219,7 @@ public class SplashFragment extends MainFragment {
 									PlayupLiveApplication.getFragmentManagerUtil().endTransaction();
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show(e);
+									//Logs.show(e);
 								}		
 							}
 							
@@ -232,7 +232,7 @@ public class SplashFragment extends MainFragment {
 			}).start();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 		
 
@@ -272,7 +272,7 @@ public class SplashFragment extends MainFragment {
 			}
 		
 		} catch (Exception e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 	}
 

@@ -17,7 +17,7 @@ import android.graphics.Bitmap;
 import android.net.http.SslError;
 import android.os.Bundle;
 import android.os.Message;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +36,7 @@ import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.connection.methods.Crypto;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.MacCreation;
 import com.playup.android.util.PreferenceManagerUtil;
 import com.playup.android.util.Util;
@@ -81,9 +81,9 @@ public class WebViewFragment extends MainFragment {
 				//webView.destroy();
 			}
 		} catch  ( Exception e ) {
-			Logs.show(e);
+//			Logs.show(e);
 		} catch ( Error r ) {
-			Logs.show ( r );
+//			Logs.show ( r );
 		}
 
 	}
@@ -98,7 +98,7 @@ public class WebViewFragment extends MainFragment {
 		
 		RelativeLayout li = null;
 		try {
-			Log.e("123","IN ON CREATIVE VIEWWW============");
+//			Log.e("123","IN ON CREATIVE VIEWWW============");
 			li   =  ( RelativeLayout) inflater.inflate( R.layout.login_webview, null);
 
 			//webView = new WebView( PlayUpActivity.context );
@@ -117,7 +117,7 @@ public class WebViewFragment extends MainFragment {
 			//	webView.getSettings().setPluginsEnabled(true);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Log.e("234","setPluginState try catch"+e.getMessage());
+//				Log.e("234","setPluginState try catch"+e.getMessage());
 				
 			//	webView.getSettings().setPluginsEnabled(true);
 			}
@@ -151,7 +151,7 @@ public class WebViewFragment extends MainFragment {
 
 
 		} catch ( Exception e ) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 
 		return li;
@@ -187,9 +187,9 @@ public class WebViewFragment extends MainFragment {
 				progressDialog.show();	
 			}
 		} catch  ( Exception e ) {
-			Logs.show(e);
+//			Logs.show(e);
 		} catch ( Error r ) {
-			Logs.show ( r );
+//			Logs.show ( r );
 		}
 	}
 
@@ -213,7 +213,7 @@ public class WebViewFragment extends MainFragment {
 			
 			if ( bundle != null && bundle.containsKey( "url") ) {
 				url = bundle.getString( "url" );
-				//Log.e("123", "Inside Webview----->>>>"+url);
+				
 			}if (bundle != null &&bundle.containsKey("vMainColor")) {
 				vMainColor = bundle.getString("vMainColor");
 			}if (bundle != null && bundle.containsKey("vMainTitleColor")) {
@@ -229,7 +229,7 @@ public class WebViewFragment extends MainFragment {
 
 		}catch(Exception e){
 
-			Log.e("123","123"+e.getMessage());
+//			Log.e("123","123"+e.getMessage());
 
 		}
 	}
@@ -261,7 +261,7 @@ public class WebViewFragment extends MainFragment {
 
 						try{
 							
-							Log.e("123","Inside on progress changed >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+//							Log.e("123","Inside on progress changed >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 							
 							if ( isVisible() ) {
 								if ( progress < 100 ) {
@@ -281,7 +281,7 @@ public class WebViewFragment extends MainFragment {
 
 							}
 						}catch (Exception e) {
-							Logs.show(e);
+//							Logs.show(e);
 						}
 					}
 					
@@ -297,7 +297,7 @@ public class WebViewFragment extends MainFragment {
 							
 							callback.invoke(origin, true, false);
 						} catch (Exception e) {
-							Logs.show(e);
+//							Logs.show(e);
 						}
 					};
 					
@@ -375,7 +375,6 @@ public class WebViewFragment extends MainFragment {
 
 
 
-					//Log.e("123","url in webview >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    "+url);
 					if(vId != null && vSecret != null && vId.trim().length() > 0 && vSecret.trim().length() > 0){
 						MacCreation mac = new MacCreation(vId,vSecret,url,Constants.GET,false);
 						String authorizationHeader 	=	mac.getMacTokens();	
@@ -402,14 +401,14 @@ public class WebViewFragment extends MainFragment {
 
 
 					
-					Log.e("123", "on load url------"+url);
+//					Log.e("123", "on load url------"+url);
 				webView.loadUrl(url, map);
 
 
 
 			}
 		}catch(Exception e){
-			Log.e("123","123"+e.getMessage());
+//			Log.e("123","123"+e.getMessage());
 		}
 
 
@@ -435,7 +434,7 @@ public class WebViewFragment extends MainFragment {
 			}
 
 		}catch (Exception e) {
-			Log.e("123","123"+e.getMessage());
+//			Log.e("123","123"+e.getMessage());
 		}
 	}
 
@@ -444,7 +443,7 @@ public class WebViewFragment extends MainFragment {
 	@Override
 	public void onResume () {
 		super.onResume();
-		Log.e("123","IN ON Resume VIEWWW============");
+//		Log.e("123","IN ON Resume VIEWWW============");
 		//webView.resumeTimers();
 //	
 //		setTopBar("");
@@ -457,19 +456,19 @@ public class WebViewFragment extends MainFragment {
 			}
 		} catch (IllegalArgumentException e) {
 			// TODO Auto-generated catch block
-			Log.e("123","123"+e.getMessage());
+//			Log.e("123","123"+e.getMessage());
 		} catch (IllegalAccessException e) {
 			// TODO Auto-generated catch block
-			Log.e("123","123"+e.getMessage());
+//			Log.e("123","123"+e.getMessage());
 		} catch (InvocationTargetException e) {
 			// TODO Auto-generated catch block
-			Log.e("123","123"+e.getMessage());
+//			Log.e("123","123"+e.getMessage());
 		} catch (NoSuchMethodException e) {
 			// TODO Auto-generated catch block
-			Log.e("123","123"+e.getMessage());
+//			Log.e("123","123"+e.getMessage());
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
-			Log.e("123","123"+e.getMessage());
+//			Log.e("123","123"+e.getMessage());
 		}
 
 	}
@@ -513,7 +512,7 @@ public class WebViewFragment extends MainFragment {
 		}
 		
 		try {
-			Log.e("123", "onPause==============>>>>>");
+//			Log.e("123", "onPause==============>>>>>");
 //			webView.pauseTimers();
 //			webView.stopLoading();
 			
@@ -579,7 +578,7 @@ public class WebViewFragment extends MainFragment {
 							}
 						}
 					} catch (Exception e) {
-						Logs.show(e);
+//						Logs.show(e);
 					}
 				}
 
@@ -618,7 +617,7 @@ public class WebViewFragment extends MainFragment {
 			// TODO Auto-generated method stub
 			super.onPageFinished(view, url);
 			
-			Log.e("123","Paage Dowmloaded==================");
+//			Log.e("123","Paage Dowmloaded==================");
 			setTopBar(view.getTitle());
 		}
 

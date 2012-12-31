@@ -10,7 +10,7 @@ import com.playup.android.activity.PlayUpActivity;
 import com.playup.android.application.PlayupLiveApplication;
 
 
-import com.playup.android.util.Logs;
+
 
 import android.content.Context;
 import android.os.Bundle;
@@ -79,7 +79,7 @@ public class TeamScheduleAdapter extends BaseAdapter implements OnClickListener 
 			}
 		} catch (Exception e) {
 			
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 		
 		return 0;
@@ -128,7 +128,7 @@ public class TeamScheduleAdapter extends BaseAdapter implements OnClickListener 
 				
 			
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		
 		
@@ -153,7 +153,7 @@ public class TeamScheduleAdapter extends BaseAdapter implements OnClickListener 
 		
 	   } catch (Exception e) {
 		
-		Logs.show( e );
+		//Logs.show( e );
 	  }
 		
 
@@ -249,7 +249,7 @@ public class TeamScheduleAdapter extends BaseAdapter implements OnClickListener 
 				PlayupLiveApplication.getFragmentManagerUtil().setFragment("MatchRoomFragment", bundle);
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 	}
 

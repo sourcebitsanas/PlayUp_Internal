@@ -175,7 +175,7 @@ public class LeagueLobbyFragment extends MainFragment {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 				
 		
@@ -219,7 +219,7 @@ public class LeagueLobbyFragment extends MainFragment {
 			refreshDisplayTimer.clear();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -245,7 +245,7 @@ public class LeagueLobbyFragment extends MainFragment {
 				setValues();
 
 			} catch ( Exception e ) {
-				Logs.show(e);
+//				Logs.show(e);
 
 			}
 		}
@@ -270,7 +270,7 @@ public class LeagueLobbyFragment extends MainFragment {
 			progressBar = (RelativeLayout) content_layout.findViewById(R.id.progressBar);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -312,7 +312,7 @@ public class LeagueLobbyFragment extends MainFragment {
 						
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 		}).start();
@@ -335,7 +335,7 @@ public class LeagueLobbyFragment extends MainFragment {
 			}
 
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 		try{
@@ -384,7 +384,7 @@ public class LeagueLobbyFragment extends MainFragment {
 										setTopBar();
 										setSectionData();
 									} catch (Exception e) {
-										Logs.show(e);
+//										Logs.show(e);
 									}
 
 									
@@ -395,7 +395,7 @@ public class LeagueLobbyFragment extends MainFragment {
 						 
 						}
 					} catch (Exception e) {
-						Logs.show(e);
+//						Logs.show(e);
 					}
 					
 				}
@@ -403,7 +403,7 @@ public class LeagueLobbyFragment extends MainFragment {
 			
 			
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 
 		}
 
@@ -444,7 +444,7 @@ public class LeagueLobbyFragment extends MainFragment {
 						PlayupLiveApplication.callUpdateTopBarFragments(msg);
 					}
 				} catch (Exception e) {
-					Logs.show ( e );
+//					Logs.show ( e );
 				} 
 
 			}
@@ -499,14 +499,14 @@ public class LeagueLobbyFragment extends MainFragment {
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show(e);
+//									Logs.show(e);
 								}
 							}
 							} );
 						}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+//					Logs.show(e);
 				}
 				
 			}
@@ -643,7 +643,7 @@ public class LeagueLobbyFragment extends MainFragment {
 								}
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show ( e );
+//							Logs.show ( e );
 						}
 
 
@@ -652,7 +652,7 @@ public class LeagueLobbyFragment extends MainFragment {
 				});
 			}
 		} catch (Exception e) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 
 
@@ -703,7 +703,7 @@ public class LeagueLobbyFragment extends MainFragment {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 				
 			}
@@ -750,7 +750,7 @@ public class LeagueLobbyFragment extends MainFragment {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 				
 
@@ -791,7 +791,7 @@ public class LeagueLobbyFragment extends MainFragment {
 									runnableList.put ( vDisplayUrl, new Util().getDisplayUpdateForSectionItems( vDisplayUrl,isHref,vContentId,vBlockContentId, runnableList ) );
 								}
 							} catch (Exception e) {
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 						}
 					});
@@ -810,7 +810,7 @@ public class LeagueLobbyFragment extends MainFragment {
 					}
 
 				} catch ( Exception e )  {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 
@@ -857,7 +857,7 @@ public class LeagueLobbyFragment extends MainFragment {
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 						}
 					});
@@ -874,7 +874,7 @@ public class LeagueLobbyFragment extends MainFragment {
 					}
 
 				} catch ( Exception e )  {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 

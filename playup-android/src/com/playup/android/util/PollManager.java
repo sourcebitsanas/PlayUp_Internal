@@ -7,7 +7,7 @@ import java.util.TimerTask;
 
 import android.os.Bundle;
 import android.os.Message;
-import android.util.Log;
+
 
 import com.playup.android.activity.PlayUpActivity;
 import com.playup.android.application.PlayupLiveApplication;

@@ -8,12 +8,12 @@ import org.json.JSONObject;
 
 
 
-import android.util.Log;
+
 
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -194,9 +194,9 @@ public class DirectMessagesJsonUtil {
 			 vMarkerUrl = marker_jObj.optString( SELF_KEY );
 			 vMarkerHrefUrl = marker_jObj.optString( HREF_URL_KEY );
 			 
-			 Log.e("123","vMarkerUrl >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+vMarkerUrl);
+			// Log.e("123","vMarkerUrl >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+vMarkerUrl);
 			 
-			 Log.e("123","vMarkerHrefUrl >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+vMarkerHrefUrl);
+			// Log.e("123","vMarkerHrefUrl >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+vMarkerHrefUrl);
 			 
 			dbUtil.setHeader( vMarkerHrefUrl,vMarkerUrl, marker_jObj.getString( TYPE_KEY ), false );
 			marker_jObj = null;
@@ -233,7 +233,7 @@ public class DirectMessagesJsonUtil {
 
 		} catch (JSONException e) {
 
-			Logs.show( e) ;
+		//	Logs.show( e) ;
 		}  finally {
 			new Util().releaseMemory( jObj );
 			if ( !inTransaction ) {

@@ -21,7 +21,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.StrictMode;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
+
 import android.widget.Toast;
 
 import com.playup.android.R;
@@ -32,7 +32,7 @@ import com.playup.android.receiver.IntentReceiver;
 import com.playup.android.util.Constants;
 import com.playup.android.util.FragmentManagerUtil;
 import com.playup.android.util.Keys;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.PollManager;
 import com.urbanairship.AirshipConfigOptions;
 import com.urbanairship.UAirship;
@@ -303,7 +303,7 @@ public class PlayupLiveApplication extends Application {
 						Toast.makeText( PlayupLiveApplication.getInstance().getBaseContext(), resourceId, Toast.LENGTH_SHORT ).show();
 					} catch (NotFoundException e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 				}
 
@@ -327,7 +327,7 @@ public class PlayupLiveApplication extends Application {
 						Toast.makeText( PlayupLiveApplication.getInstance().getBaseContext(), toastMessage, Toast.LENGTH_SHORT ).show();
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 				}
 
@@ -400,12 +400,12 @@ public class PlayupLiveApplication extends Application {
 
 						}
 					} catch (NotFoundException e) {
-						Logs.show ( e );
+						//Logs.show ( e );
 					}catch (Exception e) {
 
-						Logs.show ( e );
+						//Logs.show ( e );
 					} catch ( Error e ) {
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 				}
 			} );

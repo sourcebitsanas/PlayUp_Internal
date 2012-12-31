@@ -30,7 +30,7 @@ import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.fragment.LeagueSelectionFragment;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 
 public class LeagueAdapter extends BaseAdapter implements OnTouchListener, OnClickListener  {
 
@@ -135,7 +135,7 @@ public class LeagueAdapter extends BaseAdapter implements OnTouchListener, OnCli
 
 			dbUtil = null;
 		} catch (Exception e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 
 	}
@@ -511,7 +511,7 @@ public class LeagueAdapter extends BaseAdapter implements OnTouchListener, OnCli
 				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show ( e );
+				//Logs.show ( e );
 			}
 		}
 	}
@@ -567,7 +567,7 @@ public class LeagueAdapter extends BaseAdapter implements OnTouchListener, OnCli
 				PlayupLiveApplication.getFragmentManagerUtil().setFragment("LiveSportsFragment", bundle);
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 	}
 
@@ -660,7 +660,7 @@ public class LeagueAdapter extends BaseAdapter implements OnTouchListener, OnCli
 
 			}
 		} catch (NumberFormatException e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}

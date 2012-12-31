@@ -29,7 +29,7 @@ import com.playup.android.fragment.PrivateLobbyInviteFriendFragment;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class PrivateLobbyInviteFriendsAdapter extends BaseAdapter implements OnClickListener {
@@ -163,7 +163,7 @@ public class PrivateLobbyInviteFriendsAdapter extends BaseAdapter implements OnC
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 
@@ -942,7 +942,7 @@ public class PrivateLobbyInviteFriendsAdapter extends BaseAdapter implements OnC
 				}
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 	}
 

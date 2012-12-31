@@ -183,7 +183,7 @@ public class FriendsFragment extends MainFragment {
 		if ( imageDownloader == null ) {
 			imageDownloader = new ImageDownloader();
 		}
-		Log.e("123","inside onResume of FriendsFragment >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ");
+//		Log.e("123","inside onResume of FriendsFragment >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ");
 		initialize( content_layout );
 		isDownloaded = false;
 		searchString =  null;		
@@ -253,7 +253,7 @@ public class FriendsFragment extends MainFragment {
 					msg.obj = "";
 					PlayupLiveApplication.callUpdateTopBarFragments(msg);
 				} catch (Exception e) {
-					Logs.show(e);
+//					Logs.show(e);
 				}
 				
 			}
@@ -431,7 +431,7 @@ public class FriendsFragment extends MainFragment {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 
@@ -455,7 +455,7 @@ public class FriendsFragment extends MainFragment {
 								return;
 							}
 							if ( !DatabaseUtil.getInstance().isUserAnnonymous() ) {
-								Log.e("123","inside onUpdate of FriendsFragment >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ");
+//								Log.e("123","inside onUpdate of FriendsFragment >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ");
 								onResume();
 							} 
 
@@ -463,7 +463,7 @@ public class FriendsFragment extends MainFragment {
 							// setValues();
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show ( e );
+//							Logs.show ( e );
 						}
 
 					}
@@ -515,7 +515,7 @@ public class FriendsFragment extends MainFragment {
 										setValues();
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show ( e );
+//										Logs.show ( e );
 									}
 								}
 							});
@@ -570,7 +570,7 @@ public class FriendsFragment extends MainFragment {
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+//									Logs.show ( e );
 								}
 							}
 						};
@@ -626,7 +626,7 @@ public class FriendsFragment extends MainFragment {
 											PlayupLiveApplication.getFragmentManagerUtil().popBackStack(topFragmentName);
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
-											Logs.show(e);
+//											Logs.show(e);
 										}
 									}
 
@@ -733,7 +733,7 @@ public class FriendsFragment extends MainFragment {
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 			});
@@ -765,7 +765,7 @@ public class FriendsFragment extends MainFragment {
 		dbUtil = null;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -889,7 +889,7 @@ public class FriendsFragment extends MainFragment {
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 			};
@@ -917,7 +917,7 @@ public class FriendsFragment extends MainFragment {
 			
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		
 	}
@@ -963,7 +963,7 @@ public class FriendsFragment extends MainFragment {
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 			};
@@ -983,7 +983,7 @@ public class FriendsFragment extends MainFragment {
 			dbUtil = null;
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		
 	}
@@ -1028,7 +1028,7 @@ public class FriendsFragment extends MainFragment {
 							}
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show ( e );
+//							Logs.show ( e );
 						}
 					}
 				};
@@ -1044,7 +1044,7 @@ public class FriendsFragment extends MainFragment {
 			}
 			dbUtil = null;
 		} catch (NumberFormatException e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 	/**
@@ -1185,7 +1185,7 @@ public class FriendsFragment extends MainFragment {
 			}
 
 		} catch ( Exception e ) {
-			Logs.show ( e  );
+//			Logs.show ( e  );
 		}
 	}
 

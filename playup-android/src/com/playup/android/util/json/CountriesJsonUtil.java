@@ -10,11 +10,10 @@ import org.json.JSONObject;
 
 
 
-import android.util.Log;
 
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 import com.playup.android.util.Types;
@@ -162,7 +161,7 @@ public class CountriesJsonUtil {
 
 			
 		}catch(Exception e){
-			Logs.show(e);
+			//Logs.show(e);
 
 		}finally{
 			

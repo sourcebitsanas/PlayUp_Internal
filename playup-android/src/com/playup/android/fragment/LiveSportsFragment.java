@@ -154,7 +154,7 @@ public class LiveSportsFragment extends MainFragment implements  OnClickListener
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 		};
@@ -174,7 +174,7 @@ public class LiveSportsFragment extends MainFragment implements  OnClickListener
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -258,7 +258,7 @@ public class LiveSportsFragment extends MainFragment implements  OnClickListener
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -276,7 +276,7 @@ public class LiveSportsFragment extends MainFragment implements  OnClickListener
 		}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -364,7 +364,7 @@ public class LiveSportsFragment extends MainFragment implements  OnClickListener
 						c = null;
 					}
 				} catch (Exception e) {
-					Logs.show(e);
+//					Logs.show(e);
 				}
 				
 			}
@@ -517,7 +517,7 @@ public class LiveSportsFragment extends MainFragment implements  OnClickListener
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -552,7 +552,7 @@ public class LiveSportsFragment extends MainFragment implements  OnClickListener
 
 			 }
 		 } catch ( Exception e ) {
-			 Logs.show( e );
+//			 Logs.show( e );
 		 }
 
 	 }
@@ -641,7 +641,7 @@ public class LiveSportsFragment extends MainFragment implements  OnClickListener
 							 }
 						} catch (Exception e) {
 							
-							Logs.show ( e );
+//							Logs.show ( e );
 							
 						}
 
@@ -650,7 +650,7 @@ public class LiveSportsFragment extends MainFragment implements  OnClickListener
 			 }
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	 }
 

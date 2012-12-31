@@ -5,13 +5,12 @@ import org.json.JSONObject;
 
 
 
-import android.util.Log;
 
 import com.playup.android.activity.PlayUpActivity;
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
@@ -410,7 +409,7 @@ public class UserJsonUtil {
 			}
 
 		} catch ( Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}  finally {
 			
 			new Util().releaseMemory(jsonObj);

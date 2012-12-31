@@ -160,7 +160,7 @@ public class InviteFriendFragment extends MainFragment {
 						}
 					} catch (Exception e) {
 						
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 			};
@@ -183,7 +183,7 @@ public class InviteFriendFragment extends MainFragment {
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		
 	}
@@ -222,7 +222,7 @@ public class InviteFriendFragment extends MainFragment {
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -253,7 +253,7 @@ public class InviteFriendFragment extends MainFragment {
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -328,7 +328,7 @@ public class InviteFriendFragment extends MainFragment {
 					
 					PlayupLiveApplication.callUpdateTopBarFragments(msg);
 				} catch (Exception e) {
-					Logs.show(e);
+//					Logs.show(e);
 				}
 				
 			}
@@ -378,7 +378,7 @@ public class InviteFriendFragment extends MainFragment {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 		};
@@ -397,7 +397,7 @@ public class InviteFriendFragment extends MainFragment {
 	}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -488,7 +488,7 @@ public class InviteFriendFragment extends MainFragment {
 											setValues();
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
-											Logs.show ( e );
+//											Logs.show ( e );
 										}
 									}
 								});
@@ -540,7 +540,7 @@ public class InviteFriendFragment extends MainFragment {
 										}
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show ( e );
+//										Logs.show ( e );
 									}
 								}
 							};
@@ -614,14 +614,14 @@ public class InviteFriendFragment extends MainFragment {
 							}
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show ( e );
+//							Logs.show ( e );
 						}
 					}
 				});
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -659,7 +659,7 @@ public class InviteFriendFragment extends MainFragment {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}

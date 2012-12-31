@@ -16,7 +16,7 @@ import com.playup.android.R;
 import com.playup.android.activity.PlayUpActivity;
 import com.playup.android.util.Constants;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 
 /**
  * match room adapter. 
@@ -125,7 +125,7 @@ public class LeaderBoardAdapter extends BaseAdapter {
 					
 				}
 			} catch (Exception e) {
-				Logs.show(e);
+				//Logs.show(e);
 			}
 
 		

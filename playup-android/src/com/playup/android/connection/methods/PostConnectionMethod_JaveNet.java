@@ -23,13 +23,13 @@ import org.apache.commons.httpclient.HttpException;
 
 
 import android.provider.Settings;
-import android.util.Log;
+
 
 
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.MacCreation;
 import com.playup.android.util.PreferenceManagerUtil;
 
@@ -71,7 +71,7 @@ public class PostConnectionMethod_JaveNet {
 	 */
 	private void setHeaders (URLConnection urlConnection) {
 
-			Log.w("111", "SetHeaders----PostConnectionMethod-----");
+		//	Log.w("111", "SetHeaders----PostConnectionMethod-----");
 		DatabaseUtil dbUtil = DatabaseUtil.getInstance();
 		
 		urlConnection.addRequestProperty(  Constants.API_VERSION_KEY, Constants.API_VERSION );
@@ -230,7 +230,7 @@ public class PostConnectionMethod_JaveNet {
 			
 		}catch(Exception e){
 		
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 			
 		return null;
@@ -315,7 +315,7 @@ public class PostConnectionMethod_JaveNet {
 			
 			if(STATUS_CODE == 401){
 				
-				Log.e("123","inside 401 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+url);
+			//	Log.e("123","inside 401 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+url);
 				
 				inputStream = urlConnection.getErrorStream();
 				
@@ -346,22 +346,22 @@ public class PostConnectionMethod_JaveNet {
 				inputStream.close();
 				inputStream = null;
 				
-				Logs.show(url + "==================================================================================== "+sb);
+				//Logs.show(url + "==================================================================================== "+sb);
 				
 				return new StringBuffer(sb.toString());
 			}
 
 		} catch ( UnknownHostException e ) {
-			Logs.show( e );
+			//Logs.show( e );
 
 
 		} catch (HttpException e) {
-			Logs.show( e );
+			//Logs.show( e );
 
 		} catch (IOException e) {
-			Logs.show( e );
+			//Logs.show( e );
 		} catch ( Exception e ) {
-			Logs.show( e );
+			//Logs.show( e );
 
 		} finally {
 			try{
@@ -386,7 +386,7 @@ public class PostConnectionMethod_JaveNet {
 				proxyString = null;
 				url = null;
 			}catch (Exception e) {
-				Logs.show( e );
+				//Logs.show( e );
 
 			}
 		}
@@ -511,16 +511,16 @@ public class PostConnectionMethod_JaveNet {
 			}
 
 		} catch ( UnknownHostException e ) {
-			Logs.show( e );
+			//Logs.show( e );
 
 
 		} catch (HttpException e) {
-			Logs.show( e );
+			//Logs.show( e );
 
 		} catch (IOException e) {
-			Logs.show( e );
+			//Logs.show( e );
 		} catch ( Exception e ) {
-			Logs.show( e );
+			//Logs.show( e );
 
 		} finally {
 			try{
@@ -545,7 +545,7 @@ public class PostConnectionMethod_JaveNet {
 				proxyString = null;
 				url = null;
 			}catch (Exception e) {
-				Logs.show( e );
+				//Logs.show( e );
 
 			}
 		}

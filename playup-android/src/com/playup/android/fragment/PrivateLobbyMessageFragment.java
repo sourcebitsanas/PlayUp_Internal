@@ -42,7 +42,7 @@ import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 import com.playup.android.util.json.PostMessage;
@@ -277,7 +277,7 @@ public class PrivateLobbyMessageFragment extends MainFragment  {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 		}, 500);
@@ -294,7 +294,7 @@ public class PrivateLobbyMessageFragment extends MainFragment  {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 		}, 1000);
@@ -320,7 +320,7 @@ public class PrivateLobbyMessageFragment extends MainFragment  {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 
 	}
@@ -525,7 +525,7 @@ public class PrivateLobbyMessageFragment extends MainFragment  {
 
 					characterCount.setText("" + (checkValue - result1));
 				}catch (Exception e) {
-					Logs.show( e );
+					//Logs.show( e );
 				}
 
 			}
@@ -555,7 +555,7 @@ public class PrivateLobbyMessageFragment extends MainFragment  {
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+								//Logs.show ( e );
 							}
 						}
 					}, 500);
@@ -584,7 +584,7 @@ public class PrivateLobbyMessageFragment extends MainFragment  {
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+								//Logs.show ( e );
 							}
 						}
 					}, 2000);
@@ -600,7 +600,7 @@ public class PrivateLobbyMessageFragment extends MainFragment  {
 		setProviders ();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 	}
 
@@ -662,7 +662,7 @@ public class PrivateLobbyMessageFragment extends MainFragment  {
 		dbUtil = null;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 
 	}
@@ -859,7 +859,7 @@ public class PrivateLobbyMessageFragment extends MainFragment  {
 														PlayupLiveApplication.getFragmentManagerUtil().popBackStack(topFragmentName);
 													} catch (Exception e) {
 														// TODO Auto-generated catch block
-														Logs.show(e);
+													//	Logs.show(e);
 														
 													}
 
@@ -883,7 +883,7 @@ public class PrivateLobbyMessageFragment extends MainFragment  {
 														callProvider ();
 													} catch (Exception e) {
 														// TODO Auto-generated catch block
-														Logs.show(e);
+													//	Logs.show(e);
 													}
 
 												}
@@ -906,7 +906,7 @@ public class PrivateLobbyMessageFragment extends MainFragment  {
 													// PlayupLiveApplication.showToast( R.string.error_message_posted );
 												} catch (Exception e) {
 													// TODO Auto-generated catch block
-													Logs.show(e);
+												//	Logs.show(e);
 												}
 
 											}
@@ -929,7 +929,7 @@ public class PrivateLobbyMessageFragment extends MainFragment  {
 					dbUtil = null;
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 
@@ -957,7 +957,7 @@ public class PrivateLobbyMessageFragment extends MainFragment  {
 						PlayupLiveApplication.getFragmentManagerUtil().setFragment( "ProviderFragment", bundle );
 					} catch (Exception e) {
 						
-						Logs.show ( e );
+					//	Logs.show ( e );
 					}
 
 				}

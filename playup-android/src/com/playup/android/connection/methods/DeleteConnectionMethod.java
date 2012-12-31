@@ -14,12 +14,12 @@ import java.util.Map;
 import java.util.zip.GZIPInputStream;
 
 import android.provider.Settings;
-import android.util.Log;
+
 
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.MacCreation;
 import com.playup.android.util.PreferenceManagerUtil;
 

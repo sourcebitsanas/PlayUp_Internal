@@ -74,7 +74,7 @@ public class MacCreation {
 			return fullURL;
 			
 		} catch (URISyntaxException e) {
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 		
 	
@@ -147,13 +147,13 @@ public class MacCreation {
 					
 				} catch (InvalidKeyException e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				} catch (SignatureException e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				} catch (NoSuchAlgorithmException e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 				
 				
@@ -168,7 +168,7 @@ public class MacCreation {
 
 
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 			
 			return macId;
@@ -204,7 +204,7 @@ public class MacCreation {
 			secureValue = value.toString();
 			//System.out.println("secureValue---%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->>>"+secureValue);
 			} catch (Exception e) {
-			 Logs.show(e);
+			// Logs.show(e);
 			 return(UUID.randomUUID().toString());
 		  }
 		return secureValue;
@@ -234,11 +234,11 @@ public class MacCreation {
 				 
 			} catch (IllegalStateException e) {
 				// TODO Auto-generated catch block
-				Logs.show(e);
+				//Logs.show(e);
 			} 
 			catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show(e);
+				//Logs.show(e);
 			} 
 			 return encoded64;
 

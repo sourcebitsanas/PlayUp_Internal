@@ -5,7 +5,7 @@ import java.util.Map;
 import android.app.Notification;
 
 import com.playup.android.util.Constants;
-import com.playup.android.util.Logs;
+
 import com.urbanairship.push.CustomPushNotificationBuilder;
 
 public class customNotificationBuilder extends CustomPushNotificationBuilder {

@@ -13,7 +13,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -36,7 +36,7 @@ import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class NotificationAdapter extends BaseAdapter  implements OnTouchListener, OnClickListener {
@@ -513,7 +513,7 @@ public class NotificationAdapter extends BaseAdapter  implements OnTouchListener
 														}
 														PlayupLiveApplication.getFragmentManagerUtil().setFragment("MatchHomeFragment",bundle);
 													} catch (Exception e) {
-														Logs.show(e);
+														//Logs.show(e);
 													}					
 												}
 											});
@@ -530,7 +530,7 @@ public class NotificationAdapter extends BaseAdapter  implements OnTouchListener
 														}
 														PlayupLiveApplication.getFragmentManagerUtil().setFragment("PrivateLobbyRoomFragment",bundle);
 													} catch (Exception e) {
-														Logs.show(e);
+													//	Logs.show(e);
 													}
 												}
 											});
@@ -556,7 +556,7 @@ public class NotificationAdapter extends BaseAdapter  implements OnTouchListener
 										jObj.put( ":uid", data.get( "vNotificationId" ).get( position ) );
 										jObj.put( "read", true );
 									} catch ( Exception e ) {
-										Logs.show(e);
+										//Logs.show(e);
 									}
 									dbUtil = null;
 									/*new Util().setNotificationConfirm ( vNotificationUrl, jObj.toString(), null );*/
@@ -565,7 +565,7 @@ public class NotificationAdapter extends BaseAdapter  implements OnTouchListener
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+								//Logs.show ( e );
 							}
 
 
@@ -581,7 +581,7 @@ public class NotificationAdapter extends BaseAdapter  implements OnTouchListener
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 	} 
 
@@ -698,7 +698,7 @@ public class NotificationAdapter extends BaseAdapter  implements OnTouchListener
 				mHandler.sendEmptyMessage(0);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show ( e );
+				//Logs.show ( e );
 			}
 		}
 	}
@@ -763,11 +763,11 @@ public class NotificationAdapter extends BaseAdapter  implements OnTouchListener
 				String vSelfUrl = null;//= data.get( "vUserSelfUrl" ).get( position );
 			
 				if(data.get( "vUserHrefUrl" ).get( position )!=null && data.get( "vUserHrefUrl" ).get( position ).trim().length()> 0 ){
-					Log.e("123","vUserHrefUrl >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+data.get( "vUserHrefUrl" ).get( position ));
+					//Log.e("123","vUserHrefUrl >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+data.get( "vUserHrefUrl" ).get( position ));
 					vSelfUrl = data.get( "vUserHrefUrl" ).get( position );
 					isHrefUrl	 = true;
 				}else{
-					Log.e("123","vUserSelfUrl >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+data.get( "vUserSelfUrl" ).get( position ));
+					//Log.e("123","vUserSelfUrl >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+data.get( "vUserSelfUrl" ).get( position ));
 					vSelfUrl = data.get( "vUserSelfUrl" ).get( position );
 				}
 
@@ -828,7 +828,7 @@ public class NotificationAdapter extends BaseAdapter  implements OnTouchListener
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 

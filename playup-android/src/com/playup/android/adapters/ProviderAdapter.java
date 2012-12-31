@@ -25,7 +25,7 @@ import com.playup.android.R;
 import com.playup.android.activity.PlayUpActivity;
 import com.playup.android.util.Constants;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class ProviderAdapter extends BaseAdapter implements OnTouchListener,OnClickListener{
@@ -191,7 +191,7 @@ public class ProviderAdapter extends BaseAdapter implements OnTouchListener,OnCl
 			new Util().shareTheScores(providerName, vShareUrl, jObj.toString(),isHref);
 
 		} catch (JSONException e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 		
 		

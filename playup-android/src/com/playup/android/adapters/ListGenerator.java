@@ -36,7 +36,7 @@ import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -388,7 +388,7 @@ public class ListGenerator  implements OnTouchListener{
 						lin.setTag(R.id.acceptedIgnore,vBackgroundColor);
 						newsBase.setBackgroundColor(Color.parseColor("#"+vBackgroundColor));
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 			
@@ -447,7 +447,7 @@ public class ListGenerator  implements OnTouchListener{
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 		
 		
@@ -483,7 +483,7 @@ public class ListGenerator  implements OnTouchListener{
 					stackedImageTile.setBackgroundColor(Color.parseColor("#"+bgColor));	
 				}
 			} catch (Exception e) {
-				Logs.show(e);
+			//	Logs.show(e);
 			}
 			
 			stackedImageView.setTag("fullImage");
@@ -495,7 +495,7 @@ public class ListGenerator  implements OnTouchListener{
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-		Logs.show(e);
+		//Logs.show(e);
 		}
 		
 		
@@ -678,7 +678,7 @@ public class ListGenerator  implements OnTouchListener{
 
 							}
 						} catch (RequestRepeatException e) {
-							Logs.show ( e );
+							//Logs.show ( e );
 						}
 
 					} else if ( type != null && type.equalsIgnoreCase( Types.CONTEST_SET_TYPE ) && !Constants.isFetchingCredentials) {
@@ -709,7 +709,7 @@ public class ListGenerator  implements OnTouchListener{
 							}
 							
 						} catch (RequestRepeatException e) {
-							Logs.show ( e );
+							//Logs.show ( e );
 						}
 					} else if ( type  != null && type.equalsIgnoreCase( Types.TEAM_SCHEDULE_TYPE ) ) { 
 
@@ -721,7 +721,7 @@ public class ListGenerator  implements OnTouchListener{
 					} 
 				}
 			} catch (Exception e) {
-				Logs.show(e);
+				//Logs.show(e);
 			} 
 		}
 		if (event.getAction() == MotionEvent.ACTION_CANCEL
@@ -780,7 +780,7 @@ public class ListGenerator  implements OnTouchListener{
 					try {
 						((LinearLayout)view.findViewById(R.id.newsBase)).setBackgroundColor(Color.parseColor("#"+vBackgroundColor));
 					} catch (Exception e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 					((TextView)view.findViewById(R.id.stackTitle)).setTextColor(Color.parseColor("#000000"));
 					((TextView)view.findViewById(R.id.stackSummary)).setTextColor(Color.parseColor("#696B6E"));
@@ -808,7 +808,7 @@ public class ListGenerator  implements OnTouchListener{
 					try {
 						((RelativeLayout)view.findViewById(R.id.listBase)).setBackgroundColor(Color.parseColor("#"+vBackgroundColor));
 					} catch (Exception e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 					((TextView)view.findViewById(R.id.leagueTitle)).setTextColor(Color.parseColor("#565656"));
 					((TextView)view.findViewById(R.id.leagueSubTitle)).setTextColor(Color.parseColor("#B8B6B8"));
@@ -819,7 +819,7 @@ public class ListGenerator  implements OnTouchListener{
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 			
 		}
 
@@ -868,7 +868,7 @@ public class ListGenerator  implements OnTouchListener{
 				mHandler.sendEmptyMessage(0);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show ( e );
+				//Logs.show ( e );
 			}
 		}
 	}
@@ -911,7 +911,7 @@ public class ListGenerator  implements OnTouchListener{
 			}
 		}catch(Exception e){
 
-			Logs.show(e);
+			//Logs.show(e);
 
 		}
 	}

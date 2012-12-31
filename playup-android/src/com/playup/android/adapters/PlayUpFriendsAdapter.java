@@ -9,7 +9,7 @@ import java.util.List;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -34,7 +34,7 @@ import com.playup.android.fragment.PostDirectMessageFragment;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class PlayUpFriendsAdapter extends BaseAdapter implements OnClickListener {
@@ -117,7 +117,7 @@ public class PlayUpFriendsAdapter extends BaseAdapter implements OnClickListener
 			imageDownloader = new ImageDownloader();
 		}
 		
-		Log.e("234", "data===========setData===============>>"+data);
+		//Log.e("234", "data===========setData===============>>"+data);
 		this.data = data;
 
 		HEADINGS = 1;
@@ -160,7 +160,7 @@ public class PlayUpFriendsAdapter extends BaseAdapter implements OnClickListener
 			this.data.clear();
 			this.data = null;
 		}
-		Log.e("234", "data===========setData2===============>>"+data);
+		//Log.e("234", "data===========setData2===============>>"+data);
 		this.data = data;		
 		HEADINGS = 1;
 		if (data != null && data.get("vFriendId") != null ) {
@@ -608,7 +608,7 @@ public class PlayUpFriendsAdapter extends BaseAdapter implements OnClickListener
 				bundle.putString( "vSecTitleColor",vSecTitleColor );
 				bundle.putString( "vDirectConversationUrl", vDirectConversationUrl );
 				
-				Log.e("234", "vUserSelfUrl=========!!==="+vUserSelfUrl);
+			//	Log.e("234", "vUserSelfUrl=========!!==="+vUserSelfUrl);
 				
 				Hashtable<String, Object> result = DatabaseUtil.getInstance().getDirectMessageUrl( vUserSelfUrl );
 				
@@ -621,9 +621,9 @@ public class PlayUpFriendsAdapter extends BaseAdapter implements OnClickListener
 					bundle.putBoolean("isvDirectMessageHrefUrl",isDirectMessageHrefUrl  );
 					
 					
-					Log.e("234", "result=========!!==="+result);
-					Log.e("234", "url================!!!====="+url);
-					Log.e("234", "isDirectMessageHrefUrl==!!===="+isDirectMessageHrefUrl);
+				//	Log.e("234", "result=========!!==="+result);
+				//	Log.e("234", "url================!!!====="+url);
+				//	Log.e("234", "isDirectMessageHrefUrl==!!===="+isDirectMessageHrefUrl);
 				}
 				
 				
@@ -640,7 +640,7 @@ public class PlayUpFriendsAdapter extends BaseAdapter implements OnClickListener
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 	}
 

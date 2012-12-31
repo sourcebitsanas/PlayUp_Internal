@@ -7,7 +7,7 @@ import org.json.JSONObject;
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -87,7 +87,7 @@ public class MyFriendConversationMessageJsonUtil {
 		
 		if ( !inTransaction ) {
 			
-		Logs.show ( "begin ------------------------------------MyFriendConversationMessageJsonUtil ");
+		//Logs.show ( "begin ------------------------------------MyFriendConversationMessageJsonUtil ");
 			dbUtil.getWritabeDatabase().beginTransaction();
 		}
 			
@@ -215,7 +215,7 @@ public class MyFriendConversationMessageJsonUtil {
 			
 			//new Util().releaseMemory( message_jObj );
 		} catch (JSONException e) {
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}  finally {
 			new Util().releaseMemory( message_jObj );
 			if ( !inTransaction ) {

@@ -98,7 +98,7 @@ public class CountriesFragment extends MainFragment{
 			}
 
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		
 		try{
@@ -140,7 +140,7 @@ public class CountriesFragment extends MainFragment{
 					m.setData(b);
 					PlayupLiveApplication.callUpdateTopBarFragments(m);
 				} catch (Exception e) {
-					Logs.show(e);
+//					Logs.show(e);
 				}
 				
 			}
@@ -164,7 +164,7 @@ public class CountriesFragment extends MainFragment{
 		if(runnableList != null && !runnableList.containsKey(Constants.GET_COUNTRIES_DATA) &&  Util.isInternetAvailable() )
 			runnableList.put(Constants.GET_COUNTRIES_DATA,new Util().getCountriesData(vRegionId,runnableList));
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	
 	}
@@ -184,7 +184,7 @@ public class CountriesFragment extends MainFragment{
 				countriesList.setAdapter(countriesAdapter);
 			}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -226,7 +226,7 @@ public class CountriesFragment extends MainFragment{
 							countriesTimer = null;
 						}
 					} catch (Exception e) {
-						Logs.show(e);
+//						Logs.show(e);
 					}
 					
 				}
@@ -235,7 +235,7 @@ public class CountriesFragment extends MainFragment{
 			
 		}	
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		
 	}
@@ -286,7 +286,7 @@ public class CountriesFragment extends MainFragment{
 							
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show(e);
+//						Logs.show(e);
 					}
 
 					

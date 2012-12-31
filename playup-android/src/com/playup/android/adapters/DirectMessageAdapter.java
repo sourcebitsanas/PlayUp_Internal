@@ -34,7 +34,7 @@ import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class DirectMessageAdapter extends BaseAdapter implements OnClickListener,OnTouchListener {
@@ -388,7 +388,7 @@ public class DirectMessageAdapter extends BaseAdapter implements OnClickListener
 
 				}
 			} catch (Exception e) {
-				Logs.show(e);
+				//Logs.show(e);
 			}
 		}
 
@@ -413,7 +413,7 @@ public class DirectMessageAdapter extends BaseAdapter implements OnClickListener
 					setData( DatabaseUtil.getInstance().getDirectConversationMessages ( vUserSelfUrl ), vUserSelfUrl,isUserSelfUrlHref );
 				}
 			} catch (Exception e) {
-				Logs.show(e);
+				//Logs.show(e);
 			}
 		}
 	};
@@ -459,7 +459,7 @@ public class DirectMessageAdapter extends BaseAdapter implements OnClickListener
 				PlayupLiveApplication.getFragmentManagerUtil().setFragment( "PostDirectMessageFragment", bundle );
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		
 	}
@@ -536,7 +536,7 @@ public class DirectMessageAdapter extends BaseAdapter implements OnClickListener
 					highLightBlueColor ( v, true );
 					super.handleMessage(msg);
 				} catch (Exception e) {
-					Logs.show(e);
+				//	Logs.show(e);
 				}
 			}
 		};
@@ -562,7 +562,7 @@ public class DirectMessageAdapter extends BaseAdapter implements OnClickListener
 				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show ( e );
+				//Logs.show ( e );
 			}
 		}
 	}

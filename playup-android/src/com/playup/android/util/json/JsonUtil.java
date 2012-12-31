@@ -9,14 +9,14 @@ import org.json.JSONObject;
 import android.app.NotificationManager;
 import android.content.ContentValues;
 import android.content.Context;
-import android.util.Log;
+
 
 import com.playup.android.activity.PlayUpActivity;
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.CacheUtil;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class JsonUtil {
@@ -270,7 +270,7 @@ public class JsonUtil {
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 				}
 
@@ -568,7 +568,7 @@ public class JsonUtil {
 				
 			new BlockContentJsonUtil ( str, inTransaction,vBlockContentId,iOrderId);
 		} catch ( Exception e) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 		
 		
@@ -579,7 +579,7 @@ public class JsonUtil {
 			if(vContentId != null && vContentId.trim().length() > 0)
 				new DisplayJsonUtil ( str, inTransaction,vBlockContentId,vContentId);
 		} catch ( Exception e) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 		
 		
@@ -589,7 +589,7 @@ public class JsonUtil {
 		try {
 			new CurrentSeasonJsonUtil ( str, inTransaction);
 		} catch ( Exception e) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 		
 		
@@ -605,7 +605,7 @@ public class JsonUtil {
 
 
 		} catch ( Exception e) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 		
 		
@@ -617,7 +617,7 @@ public class JsonUtil {
 		try {
 			new SectionJsonUtil ( str, inTransaction,isFromGeoTag,vSectionCompetitionId  );
 		} catch ( Exception e) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 		
 		
@@ -637,7 +637,7 @@ public class JsonUtil {
 			
 			vConversationId = myFriendConversationJsonUtil.getConversationId ();
 		} catch ( Exception e) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 		
 	}
@@ -647,7 +647,7 @@ public class JsonUtil {
 		try {
 			new MyLobbyJsonUtil ( str, inTransaction, vLobbyId, vLobbyUrl );
 		} catch ( Exception e) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 	}
 
@@ -662,7 +662,7 @@ public class JsonUtil {
 			new LeagueItemJsonUtil( str, inTransaction );
 
 		} catch ( Exception e) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 		
 	}
@@ -672,7 +672,7 @@ public class JsonUtil {
 		try {
 			new DirectMessageItemJsonUtil ( str, vDMessageId, inTransaction, shouldDelete );
 		} catch ( Exception e) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 	}
 
@@ -681,7 +681,7 @@ public class JsonUtil {
 		try {
 			new PlayupFriendsJsonUtil ( str, vGapId, friendsRefresh, inTransaction );
 		} catch ( Exception e) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 	}
 
@@ -691,7 +691,7 @@ public class JsonUtil {
 		try {
 			new SearchPlayupFriendsJsonUtil ( str, vGapId, inTransaction );
 		} catch ( Exception e) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 	}
 
@@ -701,7 +701,7 @@ public class JsonUtil {
 		try {
 			new DirectMsgsJsonUtil(  str, inTransaction, vDirectMessageId, fromGap );
 		} catch ( Exception e ) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 	}
 
@@ -721,7 +721,7 @@ public class JsonUtil {
 			}
 		
 		} catch ( Exception e ) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 	}
 
@@ -730,7 +730,7 @@ public class JsonUtil {
 		try {
 			new DirectConversationJsonUtil(  str, vUserId, inTransaction );
 		} catch ( Exception e ) {
-			Logs.show( e ); 
+			//Logs.show( e ); 
 		}
 	}
 
@@ -839,7 +839,7 @@ public class JsonUtil {
 		try {
 			new RecentActivityJsonUtil (  new JSONObject(str), vUserId, inTransaction );
 		} catch (JSONException e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -849,7 +849,7 @@ public class JsonUtil {
 		try {
 			new NotificationJsonUtil (  new JSONObject(str), vUserId, inTransaction );
 		} catch (JSONException e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -886,7 +886,7 @@ public class JsonUtil {
 		try {
 			new FriendsJsonUtil (  new JSONObject(str), vUserId, inTransaction );
 		} catch (JSONException e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -947,7 +947,7 @@ public class JsonUtil {
 				vCompetitionId = contestsJsonUtil.getCompetitionId();
 			}
 		} catch (JSONException e) {
-			Logs.show(e);
+			//Logs.show(e);
 
 		}
 	}
@@ -955,7 +955,7 @@ public class JsonUtil {
 	
 	private void associatedContestJson(String str, boolean inTransaction) {
 		try {
-			Log.e("123","inside getAssoiciatedContestsData jsonUtl>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ");
+			//Log.e("123","inside getAssoiciatedContestsData jsonUtl>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ");
 			
 			new AssociatedContestJson( new JSONObject( str ), inTransaction);
 		} catch (JSONException e) {
@@ -998,7 +998,7 @@ public class JsonUtil {
 		
 		if(isCredentialsExpirationSecanrio){
 			
-			Log.e("123","Json Util   baseData isCredentialsExpirationSecanrio>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
+			//Log.e("123","Json Util   baseData isCredentialsExpirationSecanrio>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
 			
 					try {
 						
@@ -1020,7 +1020,7 @@ public class JsonUtil {
 						
 					} catch (Exception e) {
 						
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 
 				
@@ -1031,7 +1031,7 @@ public class JsonUtil {
 				NotificationManager nMgr = (NotificationManager) PlayUpActivity.context.getSystemService( Context.NOTIFICATION_SERVICE );
 				nMgr.cancelAll();
 			} catch (Exception e) {
-				Logs.show(e);
+				//Logs.show(e);
 			}
 
 
@@ -1215,7 +1215,7 @@ public class JsonUtil {
 		try {
 			new ProviderJsonUtil ( new JSONObject(str ), inTransaction ) ;
 		} catch (JSONException e) {
-			Logs.show(e);
+			//Logs.show(e);
 
 		} 
 	}

@@ -8,11 +8,11 @@ import org.json.JSONObject;
 
 import android.R.bool;
 import android.content.ContentValues;
-import android.util.Log;
+
 
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -68,7 +68,7 @@ private boolean inTransaction = false;
 		} else {*/
 		
 		if ( !inTransaction ) {
-			Logs.show ( "begin ------------------------------------LiveFriendsJsonUtil ");
+		//	Logs.show ( "begin ------------------------------------LiveFriendsJsonUtil ");
 			dbUtil.getWritabeDatabase().beginTransaction();
 			
 		}
@@ -253,7 +253,7 @@ private boolean inTransaction = false;
 
 
 		}catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		} finally {
 			/*if ( Constants.X <= 320 && Constants.Y <= 480 && Constants.DPI <= 160 ) {
 			} else {*/

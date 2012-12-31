@@ -100,7 +100,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 			isProviderSet = false;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -180,7 +180,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 			refreshMyProfile();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 
@@ -197,7 +197,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 				runnableList.put(Constants.GET_REGIONS,new Util().getRegionData(runnableList));;
 		} catch (Exception e) {
 
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 
 
@@ -221,7 +221,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -304,7 +304,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 
 
 								} catch (Exception e) {
-									Logs.show(e);
+//									Logs.show(e);
 								}
 
 							}
@@ -313,7 +313,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 					}
 
 				} catch (Exception e) {
-					Logs.show(e);
+//					Logs.show(e);
 				}	
 			}
 		}).start();
@@ -356,7 +356,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 											regionCode.setText(Constants.RegionName);
 										}
 									} catch (Exception e) {
-										Logs.show(e);
+//										Logs.show(e);
 									}
 
 								}
@@ -366,12 +366,12 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 
 					} catch (Exception e) {
 
-						Logs.show(e);
+//						Logs.show(e);
 					}
 				}
 			}).start();
 		} catch ( Exception e ) {
-			Logs.show ( e ); 
+//			Logs.show ( e ); 
 		}
 
 
@@ -505,7 +505,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 																( ( TextView ) provider.findViewById( R.id.connectText ) ).setText( getString( R.string.connected ) );
 
 															} catch ( Exception e ) {
-																Logs.show ( e );
+//																Logs.show ( e );
 															}
 
 
@@ -517,7 +517,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 																provider.setTag(R.id.about_txtview,data.get( "vIconBroadcastHighLightUrl" ).get( i_temp ));
 
 															} catch ( Exception e ) {
-																Logs.show ( e );
+//																Logs.show ( e );
 															}
 											}
 
@@ -590,7 +590,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 										inflater = null;
 									}
 								} catch (Exception e) {
-									Logs.show(e);
+//									Logs.show(e);
 								}
 
 							}
@@ -598,7 +598,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 
 					}
 				} catch (Exception e) {
-					Logs.show(e);
+//					Logs.show(e);
 				}
 
 			}
@@ -655,7 +655,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 												setUserRegion();
 												return;
 											} catch (Exception e) {
-												Logs.show ( e );
+//												Logs.show ( e );
 											}
 										}
 									});
@@ -664,7 +664,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 
 							}catch (Exception e) {
 								// TODO: handle exception
-								Logs.show(e);
+//								Logs.show(e);
 							}
 
 
@@ -693,7 +693,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 												avatarImageView.setImageBitmap( null );
 
 											} catch ( Exception e ) {
-												Logs.show ( e );
+//												Logs.show ( e );
 											}
 										}
 									});
@@ -701,7 +701,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 
 
 							} catch (Exception e) {
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 
 
@@ -733,7 +733,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 
 						}
 					}catch (Exception e) {
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 
 
@@ -794,7 +794,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 													}
 												}
 					} catch (Exception e) {
-						Logs.show(e);
+//						Logs.show(e);
 					}
 					
 				}
@@ -918,7 +918,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 												imageDownloader.download( sel_icon_url,  ( ImageView ) v.findViewById( R.id.logo ), false,null );
 											} catch (Exception e) {
 												// TODO Auto-generated catch block
-												Logs.show(e);
+//												Logs.show(e);
 											}
 
 										}
@@ -979,7 +979,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -1002,7 +1002,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		return true;
 	}
@@ -1052,7 +1052,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 											setUserId ( iId );
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
-											Logs.show(e);
+//											Logs.show(e);
 										}
 
 
@@ -1070,7 +1070,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+//					Logs.show(e);
 				}
 
 			}
@@ -1097,7 +1097,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -1131,7 +1131,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -1204,7 +1204,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 										imageDownloader.download( iId , avatarUrl.replace("square", "large"),  avatarImageView, true,null );
 									}
 								} catch (Exception e) {
-									Logs.show(e);
+								//	/s.show(e);
 								}
 
 							}
@@ -1215,7 +1215,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+//					Logs.show(e);
 				}
 
 			}
@@ -1320,7 +1320,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 										callProvider( vProviderName );
 												
 									} catch ( Exception e ) {
-										Logs.show ( e );
+										//Logs.show ( e );
 									}
 								}
 							});
@@ -1363,7 +1363,7 @@ public class MyProfileFragment extends MainFragment  implements OnClickListener,
 			data = null;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 
 	}

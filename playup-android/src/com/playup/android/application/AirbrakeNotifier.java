@@ -36,7 +36,7 @@ import org.xmlpull.v1.XmlSerializer;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.os.AsyncTask;
-import android.util.Log;
+
 import android.util.Xml;
 
 /**

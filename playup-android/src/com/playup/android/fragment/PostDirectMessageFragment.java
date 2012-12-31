@@ -43,7 +43,7 @@ import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -318,7 +318,7 @@ public class PostDirectMessageFragment extends MainFragment {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 		}, 1000);
@@ -338,7 +338,7 @@ public class PostDirectMessageFragment extends MainFragment {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 
 		
@@ -376,7 +376,7 @@ public class PostDirectMessageFragment extends MainFragment {
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+								//Logs.show ( e );
 							}
 
 						}
@@ -420,7 +420,7 @@ public class PostDirectMessageFragment extends MainFragment {
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+							//	Logs.show ( e );
 							}
 
 
@@ -446,7 +446,7 @@ public class PostDirectMessageFragment extends MainFragment {
 								PlayupLiveApplication.showToast( R.string.error_message_posted );
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+								//Logs.show ( e );
 							}
 
 
@@ -457,7 +457,7 @@ public class PostDirectMessageFragment extends MainFragment {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-		Logs.show(e);
+	//	Logs.show(e);
 		}
 
 	}
@@ -566,7 +566,7 @@ public class PostDirectMessageFragment extends MainFragment {
 
 
 					}catch (JSONException e) {
-						Logs.show( e ); 
+						//Logs.show( e ); 
 					}	
 				}
 				return true;
@@ -608,7 +608,7 @@ public class PostDirectMessageFragment extends MainFragment {
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+								//Logs.show ( e );
 							}
 						}
 					}, 500);
@@ -636,7 +636,7 @@ public class PostDirectMessageFragment extends MainFragment {
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+								//Logs.show ( e );
 							}
 						}
 					}, 2000);
@@ -646,7 +646,7 @@ public class PostDirectMessageFragment extends MainFragment {
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 	}
 
@@ -680,7 +680,7 @@ public class PostDirectMessageFragment extends MainFragment {
 			PlayupLiveApplication.callUpdateTopBarFragments(msg);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 		}
 	/**
@@ -765,7 +765,7 @@ public class PostDirectMessageFragment extends MainFragment {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 	}
 

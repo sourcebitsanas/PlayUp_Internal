@@ -137,7 +137,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		
 	}
@@ -244,7 +244,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -285,7 +285,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 		};
@@ -306,7 +306,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -378,7 +378,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 			}
 
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 
@@ -399,7 +399,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -453,7 +453,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 										}
 										
 									} catch ( Exception e ) {
-										Logs.show( e );
+//										Logs.show( e );
 									}
 								}
 							});
@@ -463,7 +463,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 
@@ -472,7 +472,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -509,7 +509,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		
 	}
@@ -584,7 +584,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 								
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 
 						}
@@ -715,7 +715,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 					PlayupLiveApplication.callUpdateTopBarFragments(msg);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 
@@ -774,7 +774,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 										showProgressIndicator();
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show(e);
+//										Logs.show(e);
 									}
 
 								}
@@ -824,7 +824,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 									
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show(e);
+//									Logs.show(e);
 								} 
 							}
 						});
@@ -834,7 +834,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 					dbUtil = null;
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 			}
@@ -932,7 +932,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 								}
 
 							}catch(Exception e){
-								Logs.show(e);
+//								Logs.show(e);
 							}
 
 						} 
@@ -951,7 +951,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 						
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 			});
@@ -1007,7 +1007,7 @@ public class FixturesAndResultsFragment extends MainFragment implements OnGestur
 
 				} 
 			} catch (Exception e) {
-				Logs.show(e);
+//				Logs.show(e);
 			}
 			return true;
 		}

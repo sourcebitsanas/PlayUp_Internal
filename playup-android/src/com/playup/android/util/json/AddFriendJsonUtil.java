@@ -6,12 +6,12 @@ package com.playup.android.util.json;
 import org.json.JSONObject;
 
 import android.content.ContentValues;
-import android.util.Log;
+
 
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -29,7 +29,7 @@ public class AddFriendJsonUtil {
 	
 	private boolean inTransaction = false;
 	public AddFriendJsonUtil ( String str , boolean inTransaction ) {
-		Log.e("234","AddFriendJsonUtil==============>>>"+str);
+	///	Log.e("234","AddFriendJsonUtil==============>>>"+str);
 		this.inTransaction = inTransaction;
 		if ( str != null && str.trim().length() > 0 ) {
 			parseData ( str );

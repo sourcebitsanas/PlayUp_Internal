@@ -136,7 +136,7 @@ public class EditProfileFragment extends MainFragment implements OnClickListener
 						setValues();
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 
 				}
@@ -191,7 +191,7 @@ public class EditProfileFragment extends MainFragment implements OnClickListener
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 			}, 500);
@@ -437,7 +437,7 @@ public class EditProfileFragment extends MainFragment implements OnClickListener
 		}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -460,7 +460,7 @@ public class EditProfileFragment extends MainFragment implements OnClickListener
 		}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -502,7 +502,7 @@ public class EditProfileFragment extends MainFragment implements OnClickListener
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}

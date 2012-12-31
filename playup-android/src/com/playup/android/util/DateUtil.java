@@ -189,7 +189,7 @@ public class DateUtil {
 				
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		} finally {
 			date = null;
 		}
@@ -304,7 +304,7 @@ public class DateUtil {
 			}
 		} catch (Exception e) {
 			inCatch = true;
-			Logs.show(e);
+			//Logs.show(e);
 			
 		} finally {
 			date = null;
@@ -516,7 +516,7 @@ public class DateUtil {
 				return getTimeDifference(currentTime - startTime);
 			}
 		} catch (Exception e) {
-			  Logs.show(e);
+			 // Logs.show(e);
 		}
 		return null;
 
@@ -595,7 +595,7 @@ public class DateUtil {
 					str.append(formater.format(date)).append("\n").append( is24hr ? (hours+ ":"+min) : covertTo12hrFormat(hours,min,true));
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 				
 //				str.append(dateValue).append(" ").append(month).append(" ").
@@ -631,7 +631,7 @@ public class DateUtil {
 			}
 
 		} catch (Exception e) {
-			  Logs.show(e);
+			 // Logs.show(e);
 		}
 		return null;
 
@@ -699,7 +699,7 @@ public class DateUtil {
 			}
 
 		} catch (Exception e) {
-			  Logs.show(e);
+			  //Logs.show(e);
 		}
 		return false;
 
@@ -767,7 +767,7 @@ public class DateUtil {
 			}
 
 		} catch (Exception e) {
-			  Logs.show(e);
+			//  Logs.show(e);
 		}
 
 		return false;
@@ -834,12 +834,12 @@ public class DateUtil {
 			
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show(e);
+				//Logs.show(e);
 			}
 		} 
 		}catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 		return str.toString();
@@ -956,7 +956,7 @@ public class DateUtil {
 					
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 				
 			}	
@@ -974,13 +974,13 @@ public class DateUtil {
 					
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);				
+					//Logs.show(e);				
 				}
 				
 			}
 		} catch (NotFoundException e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		return result;
 	}
@@ -1309,7 +1309,7 @@ public class DateUtil {
 			date = parseDate(gmtTime,true);
 			
 		} catch (Exception e) {
-			  Logs.show(e);
+			  //Logs.show(e);
 		} 
 		calendar = Calendar.getInstance();
 		currentFormat.setTimeZone(calendar.getTimeZone());
@@ -1348,7 +1348,7 @@ public class DateUtil {
 			
 			
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 			return -1;
 		} 
 		

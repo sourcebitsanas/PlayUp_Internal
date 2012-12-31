@@ -42,7 +42,7 @@ import android.os.Message;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.style.ImageSpan;
-import android.util.Log;
+
 
 
 
@@ -64,7 +64,6 @@ import com.urbanairship.push.PushManager;
 import com.urbanairship.push.PushPreferences;
 
 public class Util {
-
 
 	/**
 	 * copies the data from inputstream into outputstream
@@ -102,7 +101,7 @@ public class Util {
 			is = null;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -126,7 +125,7 @@ public class Util {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-		Logs.show(e);
+		//Logs.show(e);
 		}
 		
 		return false;
@@ -160,7 +159,7 @@ public class Util {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		return false;
 	}
@@ -216,7 +215,7 @@ public class Util {
 											new Util().callLaunchScreen();
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
-											Logs.show(e);
+											//Logs.show(e);
 										}
 									}
 								});
@@ -232,7 +231,7 @@ public class Util {
 
 					request = null;
 				} catch (RequestRepeatException e) {
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 
 				PlayupLiveApplication.callUpdateOnFragments(null);
@@ -302,7 +301,7 @@ public class Util {
 							
 						}
 					}catch(Exception e){
-						Logs.show(e);
+						//Logs.show(e);
 					}
 					
 					try {
@@ -329,12 +328,12 @@ public class Util {
 						}
 						
 					} catch (RequestRepeatException e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 
 					PlayupLiveApplication.callUpdateOnFragments(null);
 				} catch (Exception e) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 		};
@@ -431,7 +430,7 @@ public class Util {
 							
 						}
 					}catch(Exception e){
-						Logs.show(e);
+						//Logs.show(e);
 					}
 					Message msg = new Message ();
 					if(signOutUrl!=null && signOutUrl.length()>0){
@@ -508,7 +507,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragments(msg);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 		};
@@ -595,7 +594,7 @@ public class Util {
 						}
 						
 					} catch (RequestRepeatException e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 
 					if(runnableList!=null&&runnableList.containsKey(Constants.GET_CONVERSATION_FRIENDS)){
@@ -608,7 +607,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 		};
@@ -697,7 +696,7 @@ public class Util {
 						}
 						
 					} catch (RequestRepeatException e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 					if(runnableList != null && runnableList.containsKey(vSectionUrl)){
 						runnableList.remove(vSectionUrl);
@@ -714,7 +713,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 			}
@@ -802,7 +801,7 @@ public class Util {
 						}
 						
 					} catch (RequestRepeatException e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 					if(runnableList!=null&&runnableList.containsKey(vSectionUrl)){
 						runnableList.remove(vSectionUrl);
@@ -819,7 +818,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 		};
@@ -909,7 +908,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 		};
@@ -995,7 +994,7 @@ public class Util {
 						}
 						
 					} catch (RequestRepeatException e) {
-						Logs.show(e);
+						//Logs.show(e);
 
 					}
 
@@ -1014,7 +1013,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 		};
@@ -1077,7 +1076,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragments(null);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 		};
@@ -1161,7 +1160,7 @@ public class Util {
 							}
 							
 						} catch (Exception e) {
-							Logs.show(e);
+							//Logs.show(e);
 						}
 						dbUtil = null;
 						request = null;
@@ -1173,7 +1172,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 		};
@@ -1280,7 +1279,7 @@ public class Util {
 							}
 							
 						} catch (Exception e) {
-							Logs.show( e );
+							//Logs.show( e );
 						}
 						dbUtil = null;
 						request = null;
@@ -1299,13 +1298,13 @@ public class Util {
 							}
 						} 
 						}catch(Exception e ){
-							Logs.show(e);
+							//Logs.show(e);
 						}
 						PlayUpActivity.refreshDirectConversation();
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 		};
@@ -1332,7 +1331,7 @@ public class Util {
 							strBuffer = null;
 						}
 					} catch (RequestRepeatException e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 					request = null;
 
@@ -1342,7 +1341,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragments( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 		};
@@ -1444,7 +1443,7 @@ public class Util {
 							}
 							
 						} catch (Exception e) {
-							Logs.show( e );
+							//Logs.show( e );
 						}
 						dbUtil = null;
 						request = null;
@@ -1457,7 +1456,7 @@ public class Util {
 						PlayUpActivity.refreshPlayUpFriends();
 					}
 				} catch (Exception e) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 
@@ -1549,7 +1548,7 @@ public class Util {
 
 							
 						} catch (Exception e) {
-							Logs.show( e );
+							//Logs.show( e );
 						}
 						dbUtil = null;
 						request = null;
@@ -1564,7 +1563,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 
@@ -1626,7 +1625,7 @@ public class Util {
 									
 								}
 							}catch(Exception e ){
-								Logs.show(e);
+								//Logs.show(e);
 							}
 							try {
 							
@@ -1650,7 +1649,7 @@ public class Util {
 
 								}
 							} catch (RequestRepeatException e) {
-								Logs.show ( e );
+								//Logs.show ( e );
 							}
 
 							request = null;
@@ -1664,7 +1663,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					///Logs.show ( e );
 				}
 			}
 		};
@@ -1767,12 +1766,12 @@ public class Util {
 					msg.arg1 = status;
 					PlayupLiveApplication.callUpdateOnFragments(msg);
 					}catch(Exception e ){
-						Logs.show(e);
+						//Logs.show(e);
 					}
 
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 		};
@@ -1826,7 +1825,7 @@ public class Util {
 						jObj.put( "status",  status );
 
 					} catch ( Exception e ) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 
 					// request to get the token
@@ -1870,7 +1869,7 @@ public class Util {
 
 
 					} catch (RequestRepeatException e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 					Message msg = new Message ();
 					msg.obj = "AddFriend";
@@ -1887,12 +1886,12 @@ public class Util {
 						PlayupLiveApplication.callUpdateOnFragments(msg);
 					}
 					}catch(Exception e){
-					Logs.show(e);	
+					//Logs.show(e);	
 					}
 					
 				}catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 		};
@@ -1989,7 +1988,7 @@ public class Util {
 					}
 					statusCode = request.getStatusCode();
 				} catch (RequestRepeatException e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 				if ( statusCode != 202 ) {
@@ -2001,7 +2000,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragments(null);
 				}
 				}catch(Exception e ){
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 		};
@@ -2037,7 +2036,7 @@ public class Util {
 					if(strBuffer!=null && strBuffer.toString().trim().length() > 0)
 						strBuffer.setLength(0);
 				} catch (RequestRepeatException e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 
@@ -2159,7 +2158,7 @@ public class Util {
 							
 
 						} catch (RequestRepeatException e) {
-							Logs.show(e);
+							///Logs.show(e);
 						}
 
 					
@@ -2170,7 +2169,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 			}
@@ -2270,7 +2269,7 @@ public class Util {
 							
 
 						} catch (RequestRepeatException e) {
-							Logs.show(e);
+							//Logs.show(e);
 						}
 
 					
@@ -2281,7 +2280,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 			}
@@ -2378,7 +2377,7 @@ public class Util {
 					}
 					
 				} catch (RequestRepeatException e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}
 				PlayupLiveApplication.callUpdateOnFragments(null);
 			}
@@ -2481,7 +2480,7 @@ public class Util {
 						}
 					} catch (RequestRepeatException e) {
 
-						Logs.show(e);
+						//Logs.show(e);
 
 					}
 					if(runnableList != null && runnableList.containsKey(vNextUrl)){
@@ -2492,7 +2491,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragments( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 			}
@@ -2579,7 +2578,7 @@ public class Util {
 					}
 
 				} catch (RequestRepeatException e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 			}
@@ -2642,7 +2641,7 @@ public class Util {
 			}
 		
 		} catch (RequestRepeatException e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 
@@ -2732,7 +2731,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 			}
@@ -2819,7 +2818,7 @@ public class Util {
 							status = 1;
 						}
 					} catch (RequestRepeatException e) {
-						Logs.show(e);
+					//	Logs.show(e);
 					}
 
 					if(runnableList!=null&&runnableList.containsKey(Constants.GET_CONVERSATION)){
@@ -2832,7 +2831,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragments( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 
@@ -2916,7 +2915,7 @@ public class Util {
 							status = 1;
 						}
 					} catch (RequestRepeatException e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 
 
@@ -2943,7 +2942,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 
@@ -2972,7 +2971,7 @@ public class Util {
 						strBuffer = null;
 					}
 				} catch (RequestRepeatException e) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 
@@ -3016,7 +3015,7 @@ public class Util {
 
 					}catch(Exception e){
 						Constants.pushNotificationDownload.put(vPushId, false);
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 
 
@@ -3090,10 +3089,10 @@ public class Util {
 						}
 					} catch (RequestRepeatException e) {
 						Constants.pushNotificationDownload.put(vPushId, false);
-						Logs.show( e );
+						//Logs.show( e );
 					}catch (JSONException e) {
 						Constants.pushNotificationDownload.put(vPushId, false);
-						Logs.show( e );
+						//.show( e );
 					}
 
 
@@ -3107,7 +3106,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragments( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 
@@ -3168,9 +3167,9 @@ public class Util {
 
 					}
 				} catch (RequestRepeatException e) {
-					Logs.show( e );
+					//Logs.show( e );
 				}catch (Exception e) {
-					Logs.show( e );
+					//Logs.show( e );
 				}
 				if(follow != null && follow.size() > 0){
 					follow.remove(0);					
@@ -3214,7 +3213,7 @@ public class Util {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 		return false;
 	}
@@ -3286,10 +3285,10 @@ public class Util {
 								strBuffer.setLength(0);
 						}
 					} catch (RequestRepeatException e) {
-						Logs.show ( e );
+						//Logs.show ( e );
 					}catch (Exception e) {
 						// TODO: handle exception
-						Logs.show ( e );
+						//Logs.show ( e );
 
 
 					}
@@ -3305,7 +3304,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar(msg);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 
@@ -3341,10 +3340,10 @@ public class Util {
 							strBuffer.setLength(0);
 					}
 				} catch (RequestRepeatException e) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}catch (Exception e) {
 
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 				Message msg = new Message ();
@@ -3427,10 +3426,10 @@ public class Util {
 								status = 1;
 							}
 						} catch (RequestRepeatException e) {
-							Logs.show ( e ) ;
+							//Logs.show ( e ) ;
 						}
 					} catch (Exception e) {
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 
 
@@ -3447,7 +3446,7 @@ public class Util {
 			PlayupLiveApplication.getThreadPoolExecutor().execute(runnable);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 	}
 
@@ -3548,7 +3547,7 @@ public class Util {
 
 					}
 				} catch (Exception e) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 
@@ -3614,7 +3613,7 @@ public class Util {
 							
 						}
 					}catch(Exception e ){
-						Logs.show(e);
+						//Logs.show(e);
 					}
 
 					try {
@@ -3645,10 +3644,10 @@ public class Util {
 							status = 1;
 						}
 					} catch (RequestRepeatException e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 				} catch (Exception e) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 
@@ -3761,7 +3760,7 @@ public class Util {
 								
 							}
 						}catch(Exception e){
-							Logs.show(e);
+							//Logs.show(e);
 						}
 						try {
 							StringBuffer strBuffer = (StringBuffer) request.send();
@@ -3790,7 +3789,7 @@ public class Util {
 
 							}
 						} catch (RequestRepeatException e) {
-							Logs.show ( e );
+							//Logs.show ( e );
 						}
 
 
@@ -3800,7 +3799,7 @@ public class Util {
 						PlayupLiveApplication.callUpdateOnFragments( msg );
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 
 				}
@@ -3848,7 +3847,7 @@ public class Util {
 					new Util().getDataFromServer(false);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 
 			}
@@ -3870,7 +3869,7 @@ public class Util {
 			NotificationManager nMgr = (NotificationManager) PlayUpActivity.context.getSystemService( Context.NOTIFICATION_SERVICE );
 			nMgr.cancelAll();
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 
@@ -3976,10 +3975,10 @@ public class Util {
 
 						}
 					} catch (RequestRepeatException e) {
-						Logs.show ( e );
+						//Logs.show ( e );
 					}catch (Exception e) {
 						
-						Logs.show(e);
+						//Logs.show(e);
 
 					}finally{
 						
@@ -4003,7 +4002,7 @@ public class Util {
 					Constants.isAllSportsDownloading = false;		
 					PlayUpActivity.refreshAllSports();
 				} catch (Exception e) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}finally{
 					if(runnableList !=null && runnableList.containsKey(Constants.GET_ALL_SPORTS)){
 						runnableList.remove(Constants.GET_ALL_SPORTS);
@@ -4049,7 +4048,7 @@ public class Util {
 							DatabaseUtil.getInstance().dropTables();
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show ( e );
+							//Logs.show ( e );
 						}
 					}
 				};
@@ -4065,7 +4064,7 @@ public class Util {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 		
 		
@@ -4169,7 +4168,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 		};
@@ -4269,7 +4268,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 		};
@@ -4405,7 +4404,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 		};
@@ -4515,7 +4514,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 		};
@@ -4668,7 +4667,7 @@ public class Util {
 					
 					PlayupLiveApplication.callUpdateOnFragments( msg );
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}finally{
 					
 					if(runnableList!=null && (runnableList.containsKey(Constants.GET_LEAGUES) || 
@@ -4781,9 +4780,9 @@ public class Util {
 
 						request = null;
 					} catch (RequestRepeatException e) {
-						Logs.show ( e );
+						//Logs.show ( e );
 					}catch (Exception e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}finally{
 						if(rounds != null && rounds.size() > 0){
 							rounds.remove(0);					
@@ -4813,7 +4812,7 @@ public class Util {
 
 					}
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}finally{
 					
 					
@@ -4917,7 +4916,7 @@ public class Util {
 						request = null;
 					} catch (RequestRepeatException e) {
 
-						Logs.show( e );
+					//	Logs.show( e );
 						if(runnableList!=null&&runnableList.containsKey(Constants.GET_CONTEST_DATA)){
 							runnableList.remove(Constants.GET_CONTEST_DATA);
 						}
@@ -4928,7 +4927,7 @@ public class Util {
 					msg.obj = "RoundUpdate";
 					PlayupLiveApplication.callUpdateOnFragments( msg );
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}finally{
 					if(runnableList!=null&&runnableList.containsKey(Constants.GET_CONTEST_DATA)){
 						runnableList.remove(Constants.GET_CONTEST_DATA);
@@ -5029,7 +5028,7 @@ public class Util {
 						request = null;
 					} catch (RequestRepeatException e) {
 
-						Logs.show( e );
+					//	Logs.show( e );
 
 						isUpdated	=	false;
 
@@ -5058,7 +5057,7 @@ public class Util {
 						PlayupLiveApplication.callUpdateOnFragmentsNotTopBar( msg );
 					}
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}finally{
 					
 					if(runnableList != null && runnableList.containsKey(vRoundContestId))
@@ -5140,7 +5139,7 @@ public class Util {
 					}
 				} catch (RequestRepeatException e) {
 
-					Logs.show ( e );
+					//Logs.show ( e );
 
 				}
 
@@ -5232,7 +5231,7 @@ public class Util {
 						}
 					} catch (RequestRepeatException e) {
 
-						Logs.show ( e );
+						//Logs.show ( e );
 
 					}
 
@@ -5248,7 +5247,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 			}
@@ -5336,7 +5335,7 @@ public class Util {
 						
 						
 					} catch (RequestRepeatException e) {
-						Logs.show ( e );
+						//Logs.show ( e );
 
 
 					}
@@ -5363,7 +5362,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 			}
@@ -5450,7 +5449,7 @@ public class Util {
 
 
 						isUpdated	=	false;
-						Logs.show ( e );
+					//	Logs.show ( e );
 					}
 
 
@@ -5466,7 +5465,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 			}
@@ -5570,7 +5569,7 @@ public class Util {
 						PlayupLiveApplication.callUpdateOnFragmentsNotTopBar(msg);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 				
 			}
@@ -5656,7 +5655,7 @@ public class Util {
 						}
 					} catch (RequestRepeatException e) {
 						isUpdated = false;
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 
 					if(runnableList!=null&&runnableList.containsKey(Constants.GET_CONTEST_LOBBY)){
@@ -5690,7 +5689,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 
@@ -5789,7 +5788,7 @@ public class Util {
 						vSportsLiveUrl = null;
 						request = null;
 					} catch (RequestRepeatException e) {
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 
 					if(runnableList!=null&&runnableList.containsKey(Constants.GET_LIVE_SPORTS)){
@@ -5800,7 +5799,7 @@ public class Util {
 					msg.obj = "getLiveSports";
 					PlayupLiveApplication.callUpdateOnFragments( msg );
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}finally{
 					
 					if(runnableList!=null&&runnableList.containsKey(Constants.GET_LIVE_SPORTS)){
@@ -5856,7 +5855,7 @@ public class Util {
 						vCompetitionRoundUrl = null;
 						request = null;
 					} catch (RequestRepeatException e) {
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 
 					if(runnableList!=null&&runnableList.containsKey(Constants.GET_COMPETITION_ROUND_DATA))
@@ -5870,7 +5869,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 			}
@@ -6006,7 +6005,7 @@ public class Util {
 					
 					}
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}finally{
 					if(runnableList!=null&&runnableList.containsKey(Constants.GET_CURRENT_SEASON_DATA))
 						runnableList.remove(Constants.GET_CURRENT_SEASON_DATA);
@@ -6041,7 +6040,7 @@ public class Util {
 			}
 			mJsonObject	=	null;
 		} catch (Exception e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 		
 	}
@@ -6074,7 +6073,7 @@ public class Util {
 				HttpRequest request = null;
 				
 				
-				Log.e("123","gapUrl >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   "+gapUrl);
+			//	Log.e("123","gapUrl >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   "+gapUrl);
 				
 				if(isHref){
 					String vTokenValue = checkForHrefTokenParam(gapUrl);
@@ -6122,11 +6121,11 @@ public class Util {
 				} catch (RequestRepeatException e) {
 					Constants.isFriendsGapDownloading = false;
 					status = 1;
-					Logs.show ( e );
+					//Logs.show ( e );
 
 				}catch (Exception e) {
 
-					Logs.show ( e );
+					//Logs.show ( e );
 					Constants.isFriendsGapDownloading = false;
 					status = 1;
 
@@ -6221,10 +6220,10 @@ public class Util {
 						}
 					} catch (RequestRepeatException e) {
 						Constants.isSearchGapDownloading = false;
-						Logs.show ( e );
+						//Logs.show ( e );
 					}catch (Exception e) {
 						Constants.isSearchGapDownloading = false;
-						Logs.show ( e );
+						//Logs.show ( e );
 
 
 					}
@@ -6240,7 +6239,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 
 			}
@@ -6327,10 +6326,10 @@ public class Util {
 						}
 					} catch (RequestRepeatException e) {
 						isUpdateAvailable	=	false;
-						Logs.show ( e );
+						//Logs.show ( e );
 					}catch (Exception e) {
 						isUpdateAvailable	=	false;
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 					
 					
@@ -6351,7 +6350,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar(msg);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 
@@ -6444,10 +6443,10 @@ public class Util {
 
 					}
 				} catch (RequestRepeatException e) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}catch (Exception e) {
 					// TODO: handle exception
-					Logs.show ( e );
+					//Logs.show ( e );
 
 				}
 				
@@ -6588,16 +6587,16 @@ public class Util {
 							}
 							}
 						} catch (RequestRepeatException e) {
-							Logs.show ( e );
+						//	Logs.show ( e );
 						}catch (Exception e) {
 
-							Logs.show ( e );
+						//	Logs.show ( e );
 						}
 
 					
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}finally{
 					
 				}
@@ -6640,7 +6639,7 @@ public class Util {
 
 							jObj.put( "position", pos );
 						} catch ( Exception e ) {
-							Logs.show ( e );
+							//Logs.show ( e );
 						}
 					}
 					
@@ -6709,16 +6708,16 @@ public class Util {
 									strBuffer.setLength(0);
 							}
 						} catch (RequestRepeatException e) {
-							Logs.show ( e );
+							//Logs.show ( e );
 						}catch (Exception e) {
 
-							Logs.show ( e );
+							//Logs.show ( e );
 						}
 
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 			}
@@ -6768,7 +6767,7 @@ public class Util {
 
 							jObj.put( "position", pos );
 						} catch ( Exception e ) {
-							Logs.show( e );
+							//Logs.show( e );
 
 						}
 					}
@@ -6804,7 +6803,7 @@ public class Util {
 								
 							}
 						}catch(Exception e ){
-							Logs.show(e);
+							//Logs.show(e);
 						}
 						
 						try {
@@ -6824,14 +6823,14 @@ public class Util {
 									strBuffer.setLength(0);
 							}
 						} catch (RequestRepeatException e) {
-							Logs.show( e );
+							//Logs.show( e );
 						}catch (Exception e) {
-							Logs.show( e );
+							//Logs.show( e );
 						}
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 		};
@@ -6873,10 +6872,10 @@ public class Util {
 							}
 						}
 					} catch (RequestRepeatException e) {
-						Logs.show ( e );
+						///Logs.show ( e );
 					}catch (Exception e) {
 						// TODO: handle exception
-						Logs.show ( e );
+						//Logs.show ( e );
 
 					}
 					if(runnableList!=null&&runnableList.containsKey(Constants.REFRESH_LIVE_FRIENDS)){
@@ -6891,7 +6890,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 
@@ -6932,11 +6931,11 @@ public class Util {
 						}
 					}
 				} catch (RequestRepeatException e) {
-					Logs.show(e);
+					//Logs.show(e);
 
 				}catch (Exception e) {
 					// TODO: handle exception
-					Logs.show(e);
+					//Logs.show(e);
 
 				}
 
@@ -6991,10 +6990,10 @@ public class Util {
 						}
 					}
 				} catch (RequestRepeatException e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}catch (Exception e) {
 					// TODO: handle exception
-					Logs.show(e);
+					//Logs.show(e);
 
 				}
 
@@ -7045,9 +7044,9 @@ public class Util {
 							strBuffer.setLength(0);
 					}
 				} catch (RequestRepeatException e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 
 				}
 
@@ -7135,9 +7134,9 @@ public class Util {
 						}
 						request = null;
 					} catch (RequestRepeatException e) {
-						Logs.show(e);
+					//	Logs.show(e);
 					}catch (Exception e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 
 					Message msg = new Message ();
@@ -7145,7 +7144,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar(msg);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 
@@ -7295,7 +7294,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}finally{
 					if(runnableList!=null&&runnableList.containsKey(Constants.GET_FREINDS_DATA)){
 						runnableList.remove(Constants.GET_FREINDS_DATA);
@@ -7355,10 +7354,10 @@ public class Util {
 
 							}
 						} catch (RequestRepeatException e) {
-							Logs.show(e);
+							//Logs.show(e);
 						}catch (Exception e) {
 							// TODO: handle exception
-							Logs.show(e);
+							//Logs.show(e);
 
 						}
 
@@ -7383,7 +7382,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 			}
@@ -7461,7 +7460,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 
@@ -7555,7 +7554,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 
@@ -7716,7 +7715,7 @@ public class Util {
 
 							request = null;
 						} catch (RequestRepeatException e) {
-							Logs.show(e);
+						//	Logs.show(e);
 						}	
 
 
@@ -7727,7 +7726,7 @@ public class Util {
 					dbUtil = null;
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 
 			}
@@ -7806,10 +7805,10 @@ public class Util {
 
 							}
 						} catch (RequestRepeatException e) {
-							Logs.show( e); 
+						//	Logs.show( e); 
 
 						}catch (Exception e) {
-							Logs.show( e); 
+							//Logs.show( e); 
 						}
 						if ( runnableList != null && runnableList.containsKey ( Constants.GET_DIRECT_CONVERSATION ) ) {
 							runnableList.remove(Constants.GET_DIRECT_CONVERSATION );
@@ -7821,7 +7820,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 
@@ -7916,7 +7915,7 @@ public class Util {
 
 								}
 						} catch (Exception e) {
-							Logs.show( e); 
+							//Logs.show( e); 
 						}
 
 
@@ -7927,7 +7926,7 @@ public class Util {
 					postMessage( vDirectMessageUrl.get("url").toString(), data,((Boolean)vDirectMessageUrl.get("isHref")).booleanValue() );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 				
 			}
@@ -8019,10 +8018,10 @@ public class Util {
 
 						}
 					} catch (RequestRepeatException e) {
-						Logs.show( e); 
+					//	Logs.show( e); 
 
 					}catch (Exception e) {
-						Logs.show( e); 
+						//Logs.show( e); 
 					}
 				}
 
@@ -8096,7 +8095,7 @@ public class Util {
 								
 							}
 						}catch(Exception e ){
-							Logs.show(e);
+							//Logs.show(e);
 						}
 						try {
 							StringBuffer strBuffer = (StringBuffer) request.send();
@@ -8133,10 +8132,10 @@ public class Util {
 
 							}
 						} catch (RequestRepeatException e) {
-							Logs.show( e); 
+							//Logs.show( e); 
 
 						}catch (Exception e) {
-							Logs.show( e); 
+							//Logs.show( e); 
 						}
 						if ( runnableList != null && runnableList.containsKey ( Constants.GET_DIRECT_MESSAGES ) ) {
 							runnableList.remove(Constants.GET_DIRECT_MESSAGES );
@@ -8151,7 +8150,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 
@@ -8235,10 +8234,10 @@ public class Util {
 
 							}
 						} catch (RequestRepeatException e) {
-							Logs.show( e); 
+							//Logs.show( e); 
 
 						}catch (Exception e) {
-							Logs.show( e); 
+							//Logs.show( e); 
 						}
 						Message msg = new Message ();
 						msg.obj = "PrivateLobbyMessages_gap";
@@ -8246,7 +8245,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 
@@ -8312,7 +8311,7 @@ public class Util {
 						jObj.put( ":type",  "application/vnd.playup.push.registration+json" );
 						jObj.put( "push_token",  registrationId );
 					} catch ( Exception e  ) {
-						Logs.show(e);
+					//	Logs.show(e);
 					}
 					
 					if(vPushNotificationUrl!=null && vPushNotificationUrl.trim().length()>0)
@@ -8361,16 +8360,16 @@ public class Util {
 
 							}
 						} catch (RequestRepeatException e) {
-							Logs.show(e);
+						//	Logs.show(e);
 						}catch (Exception e) {
-							Logs.show(e);
+							//Logs.show(e);
 						}
 					}
 
 					
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-				Logs.show(e);
+				//Logs.show(e);
 				}
 				
 			}
@@ -8472,16 +8471,16 @@ public class Util {
 
 						}
 					} catch (RequestRepeatException e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}catch (Exception e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 					Message msg = new Message ();
 					msg.obj = "refreshFriends";
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 
@@ -8661,10 +8660,10 @@ public class Util {
 
 						}
 					} catch (RequestRepeatException e) {
-						Logs.show( e );
+						//Logs.show( e );
 
 					}catch (Exception e) {
-						Logs.show( e );
+						//Logs.show( e );
 					}
 
 					Message msg = new Message ();
@@ -8674,7 +8673,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragments( msg );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 
@@ -8705,7 +8704,7 @@ public class Util {
 					PlayupLiveApplication.callUpdateOnFragments(m);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+				//	Logs.show(e);
 				}
 
 			}
@@ -8769,10 +8768,10 @@ public class Util {
 
 							}
 						} catch (RequestRepeatException e) {
-							Logs.show( e); 
+						//	Logs.show( e); 
 
 						}catch (Exception e) {
-							Logs.show( e); 
+						//	Logs.show( e); 
 						}finally{
 
 							if(runnableList != null && runnableList.containsKey(vDisplayUrl))
@@ -8803,7 +8802,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+				//	Logs.show(e);
 				}
 
 
@@ -8859,10 +8858,10 @@ public class Util {
 
 						}
 					} catch (RequestRepeatException e) {
-						Logs.show( e); 
+					//	Logs.show( e); 
 
 					}catch (Exception e) {
-						Logs.show( e); 
+						//Logs.show( e); 
 					}finally{
 
 						if(runnableList != null && runnableList.containsKey(vDisplayUrl))
@@ -8992,10 +8991,10 @@ public class Util {
 
 							}
 						} catch (RequestRepeatException e) {
-							Logs.show( e); 
+						//	Logs.show( e); 
 
 						}catch (Exception e) {
-							Logs.show( e); 
+						//	Logs.show( e); 
 						}finally{
 
 							if(runnableList != null && runnableList.containsKey(vDisplayUrl))
@@ -9010,7 +9009,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 
@@ -9071,7 +9070,7 @@ public class Util {
 						}
 
 					} catch (Exception e) {
-						Logs.show(e);
+					//	Logs.show(e);
 					}
 
 
@@ -9089,7 +9088,7 @@ public class Util {
 							current_version = current_version.replace( ".", "" );
 							pInfo = null;
 						} catch (Exception e) {
-							Logs.show(e);
+							//Logs.show(e);
 						}
 
 						try {
@@ -9118,9 +9117,9 @@ public class Util {
 							}
 
 						} catch ( Exception e ) {
-							Logs.show ( e );
+							//Logs.show ( e );
 						} catch ( Error e ) {
-							Logs.show ( e );
+							//Logs.show ( e );
 						}
 
 
@@ -9217,11 +9216,11 @@ public class Util {
 							}
 						} catch (RequestRepeatException e) {
 							isUpdated = false;
-							Logs.show( e); 
+							//Logs.show( e); 
 
 						}catch (Exception e) {
 							isUpdated = false;
-							Logs.show( e); 
+							//Logs.show( e); 
 						}finally{
 
 							if(runnableList != null && runnableList.containsKey(Constants.GET_REGIONS))
@@ -9245,7 +9244,7 @@ public class Util {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 
@@ -9317,11 +9316,11 @@ public class Util {
 
 						} catch (RequestRepeatException e) {
 							
-							Logs.show( e); 
+						//	Logs.show( e); 
 
 						}catch (Exception e) {
 							
-							Logs.show( e); 
+						//	Logs.show( e); 
 						}
 
 						
@@ -9365,10 +9364,10 @@ public class Util {
 					strBuffer = (StringBuffer) request.send();
 
 				} catch (RequestRepeatException e) {
-					Logs.show( e );
+					//Logs.show( e );
 
 				}catch (Exception e) {
-					Logs.show( e );
+					//Logs.show( e );
 				}
 
 
@@ -9461,7 +9460,7 @@ public class Util {
 						request = null;
 					} catch (RequestRepeatException e) {
 
-						Logs.show( e );
+						//Logs.show( e );
 
 
 
@@ -9485,7 +9484,7 @@ public class Util {
 						PlayupLiveApplication.callUpdateOnFragmentsNotTopBar( msg );
 					}
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}finally{
 					if(runnableList!=null&&runnableList.containsKey(Constants.GET_ASSOCIATED_CONTEST_DATA)){
 						runnableList.remove(Constants.GET_ASSOCIATED_CONTEST_DATA);
@@ -9561,11 +9560,11 @@ public class Util {
 							
 							
 						} catch (RequestRepeatException e) {
-							Logs.show(e);
+							//Logs.show(e);
 						}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 					
@@ -9671,7 +9670,7 @@ public class Util {
 						request = null;
 					} catch (RequestRepeatException e) {
 						isUpdated = false;
-						Logs.show( e );
+						//Logs.show( e );
 
 
 					}finally{
@@ -9691,7 +9690,7 @@ public class Util {
 					
 					PlayupLiveApplication.callUpdateOnFragments(m);
 				} catch (Exception e) {
-					Logs.show(e);
+				//	Logs.show(e);
 				}finally{
 					
 
@@ -9786,11 +9785,11 @@ public class Util {
 //						strBuffer.setLength(0);
 				} catch (RequestRepeatException e) {
 					
-					Logs.show(e);
+					//Logs.show(e);
 
 				}catch(Exception e){
 					
-					Logs.show(e);
+					//Logs.show(e);
 					
 					
 				}
@@ -9869,7 +9868,7 @@ public class Util {
 			//modified as per HREF
 			dbUtil.setColor ( jsonObj.optString( SELF_KEY ),jsonObj.optString(HREF_LINK), jsonObj.optString( UID_KEY ), vMainColor, vSecColor, vMainTitleColor, vSecTitleColor, vHeaderImg );
 		} catch (JSONException e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 
 
@@ -9932,7 +9931,7 @@ public class Util {
 					req = null;
 					
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}
 				
 				
@@ -10067,7 +10066,7 @@ public class Util {
 					
 				} catch (Exception e) {
 					
-					Logs.show(e);
+				//	Logs.show(e);
 					//Log.e("123", "Inside handle the error condition!!!!!!!!!!!!catch!!!!!!!!!!!!");
 					if(Util.isInternetAvailable()){
 					String message = "errorFethchingCredentials";
@@ -10139,7 +10138,7 @@ public class Util {
 			}
 				
 		} catch (Exception e) {
-		Logs.show(e);
+		///Logs.show(e);
 		}
 		return null;
 	}
@@ -10178,7 +10177,7 @@ public class Util {
 			}
 				
 		} catch (Exception e) {
-		Logs.show(e);
+		//Logs.show(e);
 		}
 		return -1;
 	}
@@ -10265,7 +10264,7 @@ public class Util {
 
 					request = null;
 				} catch (RequestRepeatException e) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 				return result;
@@ -10315,7 +10314,7 @@ public class Util {
 						
 					}
 					
-					Log.e("123", "Inside refreshProfileData after result != null>>>>>>>>>>>>>>>>>>>>>>>>>"+result);
+				//	Log.e("123", "Inside refreshProfileData after result != null>>>>>>>>>>>>>>>>>>>>>>>>>"+result);
 					if(result == null || ((String) result.get("url")) == null || (result.get("url").toString().trim().length() == 0))
 						return null;
 					
@@ -10408,12 +10407,12 @@ public class Util {
 						}
 						
 					} catch (RequestRepeatException e) {
-						Logs.show(e);
+					//	Logs.show(e);
 					}
 
 				
 				} catch (Exception e) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 				
 				return providerTokenUrl;
@@ -10533,7 +10532,7 @@ public class Util {
 					
 	}
 		} catch (Exception e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 		
 		
@@ -10698,7 +10697,7 @@ public class Util {
 				
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show(e);
+				///Logs.show(e);
 			}
 			
 		}
@@ -10780,7 +10779,7 @@ public class Util {
 				}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 	return url;
 }
@@ -10849,7 +10848,7 @@ public class Util {
 								} catch (RequestRepeatException e) {
 									
 									isUpdated = false;
-									Logs.show(e);
+									//Logs.show(e);
 				
 								}
 
@@ -10869,7 +10868,7 @@ public class Util {
 				
 				PlayupLiveApplication.callUpdateOnFragments( msg );
 			}catch(Exception e){
-				Logs.show(e);
+			//	Logs.show(e);
 				}
 			}
 		};
@@ -10896,8 +10895,10 @@ public class Util {
 				
 			}
 			
-			PlayupLiveApplication.showToast("Please wait! Application is refreshing.");
+			//PlayupLiveApplication.showToast("Please wait! Application is refreshing.");
+		
 //			Toast.makeText(PlayUpActivity.context, " Session has Expired. Please Login Again! ", Toast.LENGTH_SHORT).show();
+			PlayupLiveApplication.showToast(R.string.app_refreshing);
 			PlayupLiveApplication.getFragmentManagerUtil().popBackStack();
 
 
@@ -10951,7 +10952,7 @@ public class Util {
 										PlayupLiveApplication.getFragmentManagerUtil().endTransaction();
 									} catch (Exception e) {
 										
-										Logs.show(e);
+										//Logs.show(e);
 									}		
 								}
 								
@@ -10959,7 +10960,7 @@ public class Util {
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show(e);
+						//Logs.show(e);
 					}
 					
 
@@ -10967,7 +10968,7 @@ public class Util {
 
 			}).start();
 		}catch(Exception e ){
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		
 	}

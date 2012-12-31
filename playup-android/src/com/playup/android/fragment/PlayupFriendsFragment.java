@@ -31,7 +31,7 @@ import com.playup.android.adapters.PlayUpFriendsAdapter;
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 
@@ -186,7 +186,7 @@ public class PlayupFriendsFragment extends MainFragment  {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 	}
 
@@ -264,7 +264,7 @@ public class PlayupFriendsFragment extends MainFragment  {
 					msg.obj = "";
 					PlayupLiveApplication.callUpdateTopBarFragments(msg);
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}
 				
 			}
@@ -296,7 +296,7 @@ public class PlayupFriendsFragment extends MainFragment  {
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 
 	}
@@ -502,7 +502,7 @@ public class PlayupFriendsFragment extends MainFragment  {
 							}
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show ( e );
+						//	Logs.show ( e );
 						} 
 
 
@@ -565,7 +565,7 @@ public class PlayupFriendsFragment extends MainFragment  {
 										setValues();
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show ( e );
+									//	Logs.show ( e );
 									}
 								}
 							});
@@ -620,7 +620,7 @@ public class PlayupFriendsFragment extends MainFragment  {
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								//	Logs.show ( e );
 								}
 							}
 						};
@@ -677,7 +677,7 @@ public class PlayupFriendsFragment extends MainFragment  {
 												PlayupLiveApplication.getFragmentManagerUtil().popBackStack(topFragmentName);
 											} catch (Exception e) {
 												// TODO Auto-generated catch block
-												Logs.show(e);
+												//Logs.show(e);
 											}
 										}
 
@@ -772,7 +772,7 @@ public class PlayupFriendsFragment extends MainFragment  {
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+					///	Logs.show ( e );
 					}
 				}
 			});
@@ -830,7 +830,7 @@ public class PlayupFriendsFragment extends MainFragment  {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 		};
@@ -849,7 +849,7 @@ public class PlayupFriendsFragment extends MainFragment  {
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 
 	}
@@ -897,7 +897,7 @@ public class PlayupFriendsFragment extends MainFragment  {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 		};
@@ -920,7 +920,7 @@ public class PlayupFriendsFragment extends MainFragment  {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 		
 	}

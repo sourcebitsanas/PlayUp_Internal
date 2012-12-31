@@ -30,7 +30,7 @@ import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class DirectConversationAdapter extends BaseAdapter implements OnTouchListener {
@@ -239,7 +239,7 @@ public class DirectConversationAdapter extends BaseAdapter implements OnTouchLis
 				bundle.putString( "vSecTitleColor",vSecTitleColor );
 				PlayupLiveApplication.getFragmentManagerUtil().setFragment( "PublicProfileFragment", bundle );
 			} catch (Exception e) {
-				Logs.show(e);
+				//Logs.show(e);
 			}
 		}
 	};
@@ -313,7 +313,7 @@ public class DirectConversationAdapter extends BaseAdapter implements OnTouchLis
 					highLightBlueColor ( v, true );
 					super.handleMessage(msg);
 				} catch (Exception e) {
-					Logs.show(e);
+				//	Logs.show(e);
 				}
 			}
 		};
@@ -339,7 +339,7 @@ public class DirectConversationAdapter extends BaseAdapter implements OnTouchLis
 				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show ( e );
+				//Logs.show ( e );
 			}
 		}
 	}
@@ -442,7 +442,7 @@ public class DirectConversationAdapter extends BaseAdapter implements OnTouchLis
 											bundle.putString( "vSecTitleColor",vSecTitleColor );
 											PlayupLiveApplication.getFragmentManagerUtil().setFragment( "DirectMessageFragment", bundle );
 										} catch (Exception e) {
-											Logs.show(e);
+											//Logs.show(e);
 										}	
 									}
 								});
@@ -450,7 +450,7 @@ public class DirectConversationAdapter extends BaseAdapter implements OnTouchLis
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+					//	Logs.show ( e );
 					}
 					
 				}

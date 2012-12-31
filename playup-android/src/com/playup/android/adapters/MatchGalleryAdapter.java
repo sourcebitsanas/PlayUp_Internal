@@ -10,7 +10,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -29,7 +29,6 @@ import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
-import com.playup.android.util.Logs;
 
 public class MatchGalleryAdapter extends BaseAdapter implements OnTouchListener {
 
@@ -82,7 +81,7 @@ public class MatchGalleryAdapter extends BaseAdapter implements OnTouchListener 
 									isLoadingData = false;
 									MatchGalleryAdapter.this.notifyDataSetChanged();
 								} catch (Exception e) {
-									Logs.show ( e );
+									//Logs.show ( e );
 								}
 
 							}
@@ -91,7 +90,7 @@ public class MatchGalleryAdapter extends BaseAdapter implements OnTouchListener 
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 
@@ -309,7 +308,7 @@ public class MatchGalleryAdapter extends BaseAdapter implements OnTouchListener 
 								data.get("dEndTime").get(position),
 								data.get("dScheduledStartTime").get(position));
 					} catch (Exception e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 
 					String sportType = null;
@@ -375,7 +374,7 @@ public class MatchGalleryAdapter extends BaseAdapter implements OnTouchListener 
 								vh.team2Score.setText(summary2);
 
 							} catch (Exception e) {
-								Logs.show(e);
+							//	Logs.show(e);
 							}
 
 						}
@@ -539,7 +538,7 @@ public class MatchGalleryAdapter extends BaseAdapter implements OnTouchListener 
 
 											}
 										} catch (Exception e) {
-											Logs.show(e);
+										//	Logs.show(e);
 										}
 
 									}
@@ -569,7 +568,7 @@ public class MatchGalleryAdapter extends BaseAdapter implements OnTouchListener 
 								}
 
 							} catch (Exception e) {
-								Logs.show(e);
+								//Logs.show(e);
 							}
 
 						}
@@ -611,7 +610,7 @@ public class MatchGalleryAdapter extends BaseAdapter implements OnTouchListener 
 
 											}
 										} catch (Exception e) {
-											Logs.show(e);
+											//Logs.show(e);
 										}
 
 									}
@@ -657,18 +656,18 @@ public class MatchGalleryAdapter extends BaseAdapter implements OnTouchListener 
 										.getString(R.string.awaiting))
 										.replaceAll("(\\r|\\n|\\t)", " "));
 							} catch (Exception e) {
-								Logs.show(e);
+								//Logs.show(e);
 							}
 						}
 					}
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 		} catch ( Exception e ) {
-			Logs.show ( e );
+			//Logs.show ( e );
 		} catch ( Error e ) {
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 		try {
 			
@@ -684,9 +683,9 @@ public class MatchGalleryAdapter extends BaseAdapter implements OnTouchListener 
 			convertView.setTag( R.id.about_txtview, data.get( "vContestId" ).get( position ) );
 
 		} catch ( Exception e ) {
-			Logs.show ( e );
+			//Logs.show ( e );
 		} catch ( Error e ) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 		return convertView;
 	}
@@ -728,7 +727,7 @@ public class MatchGalleryAdapter extends BaseAdapter implements OnTouchListener 
 								try {
 									notifyDataSetChanged();
 								} catch (Exception e) {
-									Logs.show(e);
+								//	Logs.show(e);
 								}
 							}
 						});
@@ -738,7 +737,7 @@ public class MatchGalleryAdapter extends BaseAdapter implements OnTouchListener 
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 	}
 
@@ -809,7 +808,7 @@ public class MatchGalleryAdapter extends BaseAdapter implements OnTouchListener 
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 		}

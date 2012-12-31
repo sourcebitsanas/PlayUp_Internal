@@ -16,7 +16,7 @@ import android.os.Bundle;
 import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
+
 
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -45,7 +45,7 @@ import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 import com.playup.android.util.json.PostMessage;
@@ -296,7 +296,7 @@ public class PostMessageFragment extends MainFragment  {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 		}, 500);
@@ -313,7 +313,7 @@ public class PostMessageFragment extends MainFragment  {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 		}, 1000);
@@ -321,7 +321,7 @@ public class PostMessageFragment extends MainFragment  {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 
 
@@ -337,7 +337,7 @@ public class PostMessageFragment extends MainFragment  {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+		///	Logs.show(e);
 		}
 
 	}
@@ -547,7 +547,7 @@ public class PostMessageFragment extends MainFragment  {
 					}
 					characterCount.setText("" + (checkValue - result1));
 				}catch (Exception e) {
-					Logs.show( e );
+					//Logs.show( e );
 				}
 
 			}
@@ -577,7 +577,7 @@ public class PostMessageFragment extends MainFragment  {
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+							//	Logs.show ( e );
 							}
 						}
 					}, 500);
@@ -606,7 +606,7 @@ public class PostMessageFragment extends MainFragment  {
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+							//	Logs.show ( e );
 							}
 						}
 					}, 2000);
@@ -622,7 +622,7 @@ public class PostMessageFragment extends MainFragment  {
 		setProviders ();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 	}
 
@@ -669,7 +669,7 @@ public class PostMessageFragment extends MainFragment  {
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 
 	}
@@ -751,7 +751,7 @@ public class PostMessageFragment extends MainFragment  {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 
 
@@ -764,14 +764,14 @@ public class PostMessageFragment extends MainFragment  {
 	 */
 	private void postMessage() {
 		
-		Log.e("123","postMessage postMessage >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ");
+	//	Log.e("123","postMessage postMessage >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ");
 
 		Runnable runnable = new Runnable() {
 
 			@Override
 			public void run() {
 
-				Log.e("123","postMessage postMessage runnable>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ");
+			//	Log.e("123","postMessage postMessage runnable>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ");
 				try {
 					FlurryAgent.onEvent("post");
 					// Request to Base URL
@@ -786,15 +786,15 @@ public class PostMessageFragment extends MainFragment  {
 					String token = dbUtil.getUserToken();
 
 					
-					Log.e("123","postMessage vConversationId >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+token);
+				//	Log.e("123","postMessage vConversationId >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+token);
 					
 					if (token != null && token.trim().length() > 0) {
 						HttpRequest request = null;
 						String vConversationMessagesUrl = "";
 						Hashtable<String, Object> result = dbUtil.getConversationMessagesUrlForApiCall( vConversationId );
 						
-						Log.e("123","postMessage vConversationId >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+vConversationId);
-						Log.e("123","postMessage result >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+result);
+					//	Log.e("123","postMessage vConversationId >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+vConversationId);
+					//	Log.e("123","postMessage result >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+result);
 						
 						if(result != null && result.containsKey("isHref")){
 							 vConversationMessagesUrl = (String) result.get("url");
@@ -867,7 +867,7 @@ public class PostMessageFragment extends MainFragment  {
 														PlayupLiveApplication.getFragmentManagerUtil().popBackStackTill(fromFragment);
 													} catch (Exception e) {
 														// TODO Auto-generated catch block
-														Logs.show(e);
+													//	Logs.show(e);
 													}
 
 												}
@@ -890,7 +890,7 @@ public class PostMessageFragment extends MainFragment  {
 														callProvider ();
 													} catch (Exception e) {
 														// TODO Auto-generated catch block
-														Logs.show(e);
+													//	Logs.show(e);
 													}
 
 												}
@@ -913,7 +913,7 @@ public class PostMessageFragment extends MainFragment  {
 													//PlayupLiveApplication.showToast( R.string.error_message_posted );
 												} catch (Exception e) {
 													// TODO Auto-generated catch block
-													Logs.show(e);
+												//	Logs.show(e);
 												}
 
 											}
@@ -936,7 +936,7 @@ public class PostMessageFragment extends MainFragment  {
 					dbUtil = null;
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 
@@ -964,7 +964,7 @@ public class PostMessageFragment extends MainFragment  {
 						PlayupLiveApplication.getFragmentManagerUtil().setFragment( "ProviderFragment", bundle );
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 
 				}

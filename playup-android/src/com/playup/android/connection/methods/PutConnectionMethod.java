@@ -12,11 +12,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.zip.GZIPInputStream;
 
-import android.util.Log;
+
 
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.MacCreation;
 
 public class PutConnectionMethod {
@@ -144,7 +144,7 @@ public class PutConnectionMethod {
 					}
 
 				} catch ( Exception e ) {
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}	
 		}
@@ -213,7 +213,7 @@ public class PutConnectionMethod {
 					urlConnection = (HttpURLConnection) url.openConnection(proxy);
 
 				} catch ( Exception e ) {
-					Logs.show(e);
+					//Logs.show(e);
 
 					if ( checkForProxy ( ) ) {//Check for Playup Proxy
 						try {
@@ -222,7 +222,7 @@ public class PutConnectionMethod {
 							urlConnection = (HttpURLConnection) url.openConnection(proxy);
 
 						} catch ( Exception e1 ) {
-							Logs.show(e1);
+						//	Logs.show(e1);
 
 							urlConnection = (HttpURLConnection) url.openConnection();
 						}
@@ -236,7 +236,7 @@ public class PutConnectionMethod {
 					urlConnection = (HttpURLConnection) url.openConnection(proxy);
 
 				} catch ( Exception e ) {
-					Logs.show(e);
+					//Logs.show(e);
 
 					urlConnection = (HttpURLConnection) url.openConnection();
 				}
@@ -288,7 +288,7 @@ public class PutConnectionMethod {
 
 		} catch ( Exception e ) {
 
-			Logs.show ( e );
+			//Logs.show ( e );
 
 		} finally {
 			try{
@@ -305,7 +305,7 @@ public class PutConnectionMethod {
 				url = null;
 			}catch (Exception e) {
 
-				Logs.show ( e );
+				//Logs.show ( e );
 
 			}
 		}

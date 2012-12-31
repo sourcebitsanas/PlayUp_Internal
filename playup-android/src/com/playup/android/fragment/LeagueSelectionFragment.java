@@ -228,7 +228,7 @@ public class LeagueSelectionFragment extends MainFragment implements OnItemSelec
 						c = null;
 					}
 				} catch (Exception e) {
-					Logs.show(e);
+//					Logs.show(e);
 				}
 				
 			}
@@ -321,14 +321,14 @@ public class LeagueSelectionFragment extends MainFragment implements OnItemSelec
 							}
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show ( e );
+//							Logs.show ( e );
 						}
 					}
 				});
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -356,7 +356,7 @@ public class LeagueSelectionFragment extends MainFragment implements OnItemSelec
 						
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 			};
@@ -378,7 +378,7 @@ public class LeagueSelectionFragment extends MainFragment implements OnItemSelec
 		}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -440,7 +440,7 @@ public class LeagueSelectionFragment extends MainFragment implements OnItemSelec
 			progressLinear.setVisibility(View.VISIBLE);
 			leaguesListView.setVisibility(View.GONE);
 		} catch ( Exception e ) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 	}
 
@@ -469,7 +469,7 @@ public class LeagueSelectionFragment extends MainFragment implements OnItemSelec
 		}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -543,7 +543,7 @@ public class LeagueSelectionFragment extends MainFragment implements OnItemSelec
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 

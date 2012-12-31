@@ -13,7 +13,7 @@ import android.R.bool;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Message;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +25,7 @@ import com.playup.android.activity.PlayUpActivity;
 import com.playup.android.adapters.SectionGenerator;
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 
@@ -153,9 +153,9 @@ public class WelcomeFragment extends MainFragment {
 			
 			
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}catch (Error e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -215,7 +215,7 @@ public class WelcomeFragment extends MainFragment {
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 		
@@ -240,7 +240,7 @@ public class WelcomeFragment extends MainFragment {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -265,7 +265,7 @@ public class WelcomeFragment extends MainFragment {
 
 		} catch (Exception e) {
 			
-			Logs.show(e);
+//			Logs.show(e);
 
 		}
 
@@ -320,7 +320,7 @@ public class WelcomeFragment extends MainFragment {
 									setSectionData();
 
 								} catch (Exception e) {
-									Logs.show(e);
+//									Logs.show(e);
 								}
 
 							
@@ -330,7 +330,7 @@ public class WelcomeFragment extends MainFragment {
 					}
 				}
 				} catch (Exception e) {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 
@@ -385,7 +385,7 @@ public class WelcomeFragment extends MainFragment {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 			}
@@ -429,19 +429,19 @@ public class WelcomeFragment extends MainFragment {
 											progressBar.setVisibility( View.GONE );
 										}
 									} catch (Exception e) {
-										Logs.show(e);
+//										Logs.show(e);
 									}	
 								}
 								} );
 							}
 					} catch (Exception e) {
-						Logs.show(e);
+//						Logs.show(e);
 					}
 					
 				}
 			}).start();
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	
@@ -506,7 +506,7 @@ public class WelcomeFragment extends MainFragment {
 							}
 
 						} catch (Exception e) {
-							Logs.show ( e );
+//							Logs.show ( e );
 						}
 					}
 
@@ -515,7 +515,7 @@ public class WelcomeFragment extends MainFragment {
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 
@@ -563,7 +563,7 @@ public class WelcomeFragment extends MainFragment {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 				
 			}
@@ -604,7 +604,7 @@ public class WelcomeFragment extends MainFragment {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 				
 
@@ -652,7 +652,7 @@ public class WelcomeFragment extends MainFragment {
 									runnableList.put ( vDisplayUrl, new Util().getDisplayUpdateForTiles( vDisplayUrl,isHref,vContentId,vBlockContentId, runnableList ) );
 								}
 							} catch (Exception e) {
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 						}
 					});
@@ -671,7 +671,7 @@ public class WelcomeFragment extends MainFragment {
 					}
 
 				} catch ( Exception e )  {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 
@@ -727,7 +727,7 @@ public class WelcomeFragment extends MainFragment {
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 						}
 					});
@@ -748,7 +748,7 @@ public class WelcomeFragment extends MainFragment {
 					}
 
 				} catch ( Exception e )  {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 

@@ -11,7 +11,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -35,7 +35,7 @@ import com.playup.android.fragment.FriendsFragment;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class FriendsAdapter extends BaseAdapter implements OnTouchListener, OnClickListener {
@@ -86,7 +86,7 @@ public class FriendsAdapter extends BaseAdapter implements OnTouchListener, OnCl
 			inflater = (LayoutInflater) PlayUpActivity.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 		
 	}
@@ -1040,7 +1040,7 @@ public class FriendsAdapter extends BaseAdapter implements OnTouchListener, OnCl
 
 		} catch (Exception e) {
 			// TODO: handle exception
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 		return convertView;
 	}
@@ -1081,7 +1081,7 @@ public class FriendsAdapter extends BaseAdapter implements OnTouchListener, OnCl
 								highLightBlueColor(v, false);
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+								//Logs.show ( e );
 							}
 						}
 					});
@@ -1120,7 +1120,7 @@ public class FriendsAdapter extends BaseAdapter implements OnTouchListener, OnCl
 												PlayupLiveApplication.getFragmentManagerUtil().setFragment("MatchHomeFragment",bundle);
 											} catch (Exception e) {
 												// TODO Auto-generated catch block
-												Logs.show ( e );
+												//Logs.show ( e );
 											}
 										}
 									});
@@ -1140,7 +1140,7 @@ public class FriendsAdapter extends BaseAdapter implements OnTouchListener, OnCl
 												PlayupLiveApplication.getFragmentManagerUtil().setFragment("PrivateLobbyRoomFragment",bundle);
 											} catch (Exception e) {
 												// TODO Auto-generated catch block
-												Logs.show ( e );
+												//Logs.show ( e );
 											}
 										}
 									});
@@ -1277,7 +1277,7 @@ public class FriendsAdapter extends BaseAdapter implements OnTouchListener, OnCl
 				mHandler.sendEmptyMessage(0);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show ( e );
+			//	Logs.show ( e );
 			}
 		}
 	}
@@ -1293,9 +1293,9 @@ public class FriendsAdapter extends BaseAdapter implements OnTouchListener, OnCl
 			String topFragmentName = PlayupLiveApplication.getFragmentManagerUtil().getTopFragmentName();
 			
 			
-			Log.e("123","INSIED THE ONCLICK*****************");
+		//	Log.e("123","INSIED THE ONCLICK*****************");
 			if (v.getId() == R.id.inviteImage && !isListViewScrolling) {
-				Log.e("123","INSIED THE IF*****************");
+				//Log.e("123","INSIED THE IF*****************");
 				String vFriendId = v.getTag().toString();
 
 				DatabaseUtil dbUtil = DatabaseUtil.getInstance();
@@ -1362,11 +1362,11 @@ public class FriendsAdapter extends BaseAdapter implements OnTouchListener, OnCl
 
 
 				new Util().sendInvite ( vFriendId );
-				Log.e("123","INSIED THE IVITE SENDDDD*****************");
+			//	Log.e("123","INSIED THE IVITE SENDDDD*****************");
 				dbUtil = null;
 
 			} else if (v.getId() == R.id.imageViewpostAvatar) {
-				Log.e("123","INSIED THE ELSE *****************");
+			//	Log.e("123","INSIED THE ELSE *****************");
 				if (v.getTag() == null) {
 					return;
 				}
@@ -1401,7 +1401,7 @@ public class FriendsAdapter extends BaseAdapter implements OnTouchListener, OnCl
 				dbUtil = null;
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		} 
 
 	}

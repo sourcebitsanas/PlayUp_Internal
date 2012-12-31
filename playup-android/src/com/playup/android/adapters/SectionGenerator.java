@@ -5,7 +5,7 @@ import java.util.Hashtable;
 import java.util.List;
 
 import android.content.Context;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.widget.Gallery;
 import android.widget.LinearLayout;
@@ -13,7 +13,7 @@ import android.widget.LinearLayout.LayoutParams;
 
 import com.playup.android.R;
 import com.playup.android.activity.PlayUpActivity;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 
 public class SectionGenerator {
@@ -115,7 +115,7 @@ public class SectionGenerator {
 			tempGalleryAdapterTable = null;
 			tempViewTable = null;
 		} catch (Exception e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 		
 		
@@ -168,7 +168,7 @@ public class SectionGenerator {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}	
 		
 		
@@ -225,7 +225,7 @@ public class SectionGenerator {
 			featureGallery.setOnItemClickListener( headerAdapter );
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		
 	}
@@ -260,7 +260,7 @@ public class SectionGenerator {
 			new EuroTilesGridGenerator( blockItemData, tileBase,vMainColor,vMainTitleColor,vSecColor,vSecTitleColor);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 	
 	}
@@ -300,7 +300,7 @@ public class SectionGenerator {
 			new ListGenerator(blockItemData, stackBase,  vMainColor, vMainTitleColor, vSecColor, vSecTitleColor , (position == (size -1)) );
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -320,14 +320,14 @@ public class SectionGenerator {
 						headerAdapter = gallerdyAdapterTable.get(headerGalleryKeys.get(i));
 						headerAdapter.refresh();
 					} catch (Exception e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 					
 				}	
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		
 		

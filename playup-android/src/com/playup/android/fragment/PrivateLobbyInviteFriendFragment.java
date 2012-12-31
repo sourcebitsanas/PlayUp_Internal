@@ -24,7 +24,7 @@ import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class PrivateLobbyInviteFriendFragment extends MainFragment {
@@ -178,7 +178,7 @@ public class PrivateLobbyInviteFriendFragment extends MainFragment {
 						}
 					} catch (Exception e) {
 						
-						Logs.show ( e );
+					//	Logs.show ( e );
 					}
 				}
 			};
@@ -217,7 +217,7 @@ public class PrivateLobbyInviteFriendFragment extends MainFragment {
 		}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 
 	}
@@ -302,7 +302,7 @@ public class PrivateLobbyInviteFriendFragment extends MainFragment {
 					
 					PlayupLiveApplication.callUpdateTopBarFragments(msg);
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}
 				
 			}
@@ -386,7 +386,7 @@ public class PrivateLobbyInviteFriendFragment extends MainFragment {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 		};
@@ -406,7 +406,7 @@ public class PrivateLobbyInviteFriendFragment extends MainFragment {
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 
 	}
@@ -511,7 +511,7 @@ public class PrivateLobbyInviteFriendFragment extends MainFragment {
 											setValues();
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
-											Logs.show ( e );
+										//	Logs.show ( e );
 										}
 									}
 								});
@@ -562,7 +562,7 @@ public class PrivateLobbyInviteFriendFragment extends MainFragment {
 										}
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show ( e );
+									//	Logs.show ( e );
 									}
 								}
 							};
@@ -665,14 +665,14 @@ public class PrivateLobbyInviteFriendFragment extends MainFragment {
 							}
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show ( e );
+						//	Logs.show ( e );
 						}
 					}
 				});
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-		Logs.show(e);
+		//Logs.show(e);
 		}
 
 	}
@@ -715,7 +715,7 @@ public class PrivateLobbyInviteFriendFragment extends MainFragment {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 	}
 

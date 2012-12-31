@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.res.Resources.NotFoundException;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -31,7 +31,7 @@ import com.playup.android.fragment.InviteFriendFragment;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class InviteFriendsAdapter extends BaseAdapter implements OnClickListener {
@@ -408,7 +408,7 @@ public class InviteFriendsAdapter extends BaseAdapter implements OnClickListener
 				}
 				convertView.setOnTouchListener(null);
 			} catch (Exception e) {
-				Logs.show(e);
+			//	Logs.show(e);
 			}
 
 			return convertView;
@@ -454,7 +454,7 @@ public class InviteFriendsAdapter extends BaseAdapter implements OnClickListener
 					return convertView;
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}  
 			
@@ -669,7 +669,7 @@ public class InviteFriendsAdapter extends BaseAdapter implements OnClickListener
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show(e);
+						//Logs.show(e);
 					}
 					
 				} else {
@@ -869,14 +869,14 @@ public class InviteFriendsAdapter extends BaseAdapter implements OnClickListener
 			}
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+		//	Logs.show(e);
 		} catch (NotFoundException e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		catch (Exception e) {
 			// TODO: handle exception
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		return convertView;
 	}
@@ -905,7 +905,7 @@ public class InviteFriendsAdapter extends BaseAdapter implements OnClickListener
 			}
 			if ( v.getId() == R.id.avatarView ) {
 				
-				Log.e("234","INSIE THE AWATAR VIEW==============>");
+			//	Log.e("234","INSIE THE AWATAR VIEW==============>");
 				if ( v.getTag() == null ) {
 					return;
 				}
@@ -947,7 +947,7 @@ public class InviteFriendsAdapter extends BaseAdapter implements OnClickListener
 			
 				
 				int status = Integer.parseInt( v.getTag( R.id.about_txtview ).toString() );
-				Log.e("234","INSIE THE status VIEW===========>>>"+status);
+		//		Log.e("234","INSIE THE status VIEW===========>>>"+status);
 				if ( status == 0 ) {
 					String vFriendId = v.getTag().toString() ;
 					
@@ -985,7 +985,7 @@ public class InviteFriendsAdapter extends BaseAdapter implements OnClickListener
 				}
 			}
 		} catch (NumberFormatException e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 	}
 

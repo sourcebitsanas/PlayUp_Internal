@@ -8,7 +8,7 @@ import java.util.TimerTask;
 import android.os.Bundle;
 import android.os.Message;
 
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +22,7 @@ import com.playup.android.adapters.RegionsAdapter;
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class UpdateRegionFragment extends MainFragment{
@@ -129,7 +129,7 @@ public class UpdateRegionFragment extends MainFragment{
 							regionsTimer = null;
 						}
 					} catch (Exception e) {
-						Logs.show(e);
+//						Logs.show(e);
 					}
 					
 					
@@ -140,7 +140,7 @@ public class UpdateRegionFragment extends MainFragment{
 		}
 		
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 		
@@ -162,7 +162,7 @@ public class UpdateRegionFragment extends MainFragment{
 			}
 
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		
 		setRegions();
@@ -179,7 +179,7 @@ public class UpdateRegionFragment extends MainFragment{
 			if(runnableList != null && !runnableList.containsKey(Constants.GET_REGIONS)  && Util.isInternetAvailable() )
 				runnableList.put(Constants.GET_REGIONS,new Util().getRegionData(runnableList));
 		} catch (Exception e) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 
 	}
@@ -241,7 +241,7 @@ public class UpdateRegionFragment extends MainFragment{
 										}
 
 									} catch ( Exception e ) {
-										Logs.show ( e );
+//										Logs.show ( e );
 									}
 								}
 							});
@@ -252,7 +252,7 @@ public class UpdateRegionFragment extends MainFragment{
 
 
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -308,7 +308,7 @@ public class UpdateRegionFragment extends MainFragment{
 							
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show(e);
+//						Logs.show(e);
 					}
 
 				}
@@ -354,7 +354,7 @@ public class UpdateRegionFragment extends MainFragment{
 				PlayupLiveApplication.callUpdateTopBarFragments(msg);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show ( e );
+//				Logs.show ( e );
 			}
 			
 		}

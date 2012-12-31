@@ -43,7 +43,7 @@ import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class PrivateLobbyAdapter extends BaseAdapter implements OnTouchListener , OnClickListener {
@@ -140,14 +140,14 @@ public class PrivateLobbyAdapter extends BaseAdapter implements OnTouchListener 
 									try {
 										notifyDataSetChanged();
 									} catch ( Exception e ) {
-										Logs.show ( e );
+										//Logs.show ( e );
 									}
 								
 							}
 						});
 					}
 				} catch (Exception e) {
-					Logs.show(e);
+				//	Logs.show(e);
 				}
 			}
 		}).start();
@@ -669,7 +669,7 @@ public class PrivateLobbyAdapter extends BaseAdapter implements OnTouchListener 
 			return convertView;
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		return convertView;
 	}
@@ -767,7 +767,7 @@ public class PrivateLobbyAdapter extends BaseAdapter implements OnTouchListener 
 								}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+		//	Logs.show(e);
 		}	
 
 					
@@ -884,7 +884,7 @@ public class PrivateLobbyAdapter extends BaseAdapter implements OnTouchListener 
 									else if(selectedId == 2)
 										selectDeSelectState ( v, false, false );
 								} catch ( Exception e) {
-									Logs.show ( e );
+									//Logs.show ( e );
 								}
 							}
 						}, 100);
@@ -1054,7 +1054,7 @@ public class PrivateLobbyAdapter extends BaseAdapter implements OnTouchListener 
 					mHandler.sendEmptyMessage(0);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show ( e );
+				//Logs.show ( e );
 			}
 		}
 	}
@@ -1103,7 +1103,7 @@ public class PrivateLobbyAdapter extends BaseAdapter implements OnTouchListener 
 									dbUtil.deSelectMySports ( vCompetitionId_temp );
 									dbUtil.setCompetitionFavourite ( vCompetitionId_temp, 0 );
 								} catch (Exception e) {
-									Logs.show(e);
+									//Logs.show(e);
 								} 
 							}
 						}).start();
@@ -1123,7 +1123,7 @@ public class PrivateLobbyAdapter extends BaseAdapter implements OnTouchListener 
 									dbUtil.setSelectedMySports ( vCompetitionId_temp );
 									dbUtil.setCompetitionFavourite ( vCompetitionId_temp, 1 );
 								} catch (Exception e) {
-									Logs.show(e);
+									//Logs.show(e);
 								} 
 							}
 						}).start();
@@ -1133,7 +1133,7 @@ public class PrivateLobbyAdapter extends BaseAdapter implements OnTouchListener 
 					PlayupLiveApplication.callUpdateOnFragmentsNotTopBar(m);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 				//notifyDataSetChanged();
@@ -1160,7 +1160,7 @@ public class PrivateLobbyAdapter extends BaseAdapter implements OnTouchListener 
 					PlayupLiveApplication.getFragmentManagerUtil().setFragment("LeagueLobbyFragment",b);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 
@@ -1171,7 +1171,7 @@ public class PrivateLobbyAdapter extends BaseAdapter implements OnTouchListener 
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 

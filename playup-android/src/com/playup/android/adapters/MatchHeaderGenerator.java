@@ -25,7 +25,7 @@ import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
 
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 
 
 public class MatchHeaderGenerator {
@@ -259,7 +259,7 @@ public class MatchHeaderGenerator {
 			}
 				setHeaderData();
 		} catch (Exception e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		}	
 	}
 
@@ -289,7 +289,7 @@ public class MatchHeaderGenerator {
 
 
 				} catch ( Exception e ) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			   
 				if( output_data != null )
@@ -466,7 +466,7 @@ public class MatchHeaderGenerator {
 
 		} catch (Exception e) {
 
-			Logs.show( e );
+		//	Logs.show( e );
 		}
 
 
@@ -488,7 +488,7 @@ public class MatchHeaderGenerator {
 						lastEventDesc.setText(vLastEventDesc);
 					}
 			} catch (Exception e) {
-				Logs.show(e);
+				//Logs.show(e);
 			}
 
 	}
@@ -658,7 +658,7 @@ public class MatchHeaderGenerator {
 			
 					}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		} 
 
 		
@@ -854,7 +854,7 @@ public class MatchHeaderGenerator {
 				player2.setVisibility(View.GONE);
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -911,7 +911,7 @@ public class MatchHeaderGenerator {
 				player2.setText(awayTeamSummary);
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 
 		
@@ -1044,7 +1044,7 @@ public class MatchHeaderGenerator {
 					iActive1 = Integer.parseInt( data.get( "iActive1" ).get( position) ) ;
 					status1.setVisibility( ( iActive1 == 0 )? View.GONE : ( iActive1 == 1)? View.VISIBLE : View.INVISIBLE );
 				} catch ( Exception e ) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 			if ( data.get( "iActive2" ).get( position) != null && data.get( "iActive2" ).get( position ).trim().length() > 0  ) {
@@ -1052,14 +1052,14 @@ public class MatchHeaderGenerator {
 					iActive2 = Integer.parseInt( data.get( "iActive2" ).get( position) ) ;
 					status2.setVisibility( ( iActive2 == 0 )? View.GONE : ( iActive2 == 1)? View.VISIBLE : View.INVISIBLE );
 				} catch ( Exception e ) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 			
 			imageDownloader.download(data.get( "vHomeCalendarUrl" ).get( position ), teamFlag1, false, null);
 			imageDownloader.download(data.get( "vAwayCalendarUrl" ).get( position ), teamFlag2, false, null);
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 		
@@ -1175,7 +1175,7 @@ public class MatchHeaderGenerator {
 
 							leaderBoradView.addView(lin);
 						} catch (Exception e) {
-							Logs.show(e);
+							//Logs.show(e);
 
 						}
 					}
@@ -1202,7 +1202,7 @@ public class MatchHeaderGenerator {
 				
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		
 	}
@@ -1296,9 +1296,9 @@ public class MatchHeaderGenerator {
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}catch(Error e){
-			Logs.show(e);
+			//Logs.show(e);
 		}
 	}
 	

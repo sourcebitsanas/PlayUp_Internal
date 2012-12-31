@@ -10,7 +10,7 @@ import com.mobileapptracker.MobileAppTracker;
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.Keys;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.PreferenceManagerUtil;
 import com.playup.android.util.Util;
 
@@ -123,9 +123,9 @@ public class DatabaseControl extends SQLiteOpenHelper {
 			
 
 		} catch (Exception e)  {
-			Logs.show( e ); 
+			//Logs.show( e ); 
 		} catch ( Error e ) {
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 
 

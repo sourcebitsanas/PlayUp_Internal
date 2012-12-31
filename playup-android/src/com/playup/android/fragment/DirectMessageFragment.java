@@ -130,7 +130,7 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 		
 		deleteMarker();
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		
 	}
@@ -208,13 +208,13 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 		}
 		
 		
-		Log.e("234", "setDirectConversationUrl======>>>>vUserSelfUrl====>>>"+vUserSelfUrl);
+//		Log.e("234", "setDirectConversationUrl======>>>>vUserSelfUrl====>>>"+vUserSelfUrl);
 		
-		Log.e("234", "setDirectConversationUrl======>>>>vDirectConversationUrl====>>>"+vDirectConversationUrl);
+//		Log.e("234", "setDirectConversationUrl======>>>>vDirectConversationUrl====>>>"+vDirectConversationUrl);
 		
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -286,7 +286,7 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 					msg.obj = map;
 					PlayupLiveApplication.callUpdateTopBarFragments(msg);
 				} catch (Exception e) {
-					Logs.show(e);
+//					Logs.show(e);
 				}
 
 				
@@ -332,7 +332,7 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 						setTopBarFragment();
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 				
@@ -367,7 +367,7 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 		}
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -390,7 +390,7 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 			}
 		}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -401,7 +401,7 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 			new Util().getDirectCoversation(vDirectConversationUrl, runnableList ,isvDirectConversationUrlHref);
 		}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -484,7 +484,7 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+//								Logs.show ( e );
 							} 
 						}
 					});
@@ -493,7 +493,7 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -529,7 +529,7 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 			break;
 		}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -537,16 +537,16 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 		try{
 
 			
-			Log.e("123","put marker >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   ");
+//			Log.e("123","put marker >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   ");
 			
 		DatabaseUtil dbUtil = DatabaseUtil.getInstance();
 		Hashtable<String, Object> result = dbUtil.getDirectMessageUrl( vUserSelfUrl );
 		
-		Log.e("123","put marker result >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   "+result);
+//		Log.e("123","put marker result >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   "+result);
 		 
 		String vDirectMessageId = dbUtil.getDirectMessageId ((String) (result.get("url")) );
 		
-		Log.e("123","put marker vDirectMessageId >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   "+vDirectMessageId);
+//		Log.e("123","put marker vDirectMessageId >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   "+vDirectMessageId);
 
 		ContentValues values = new ContentValues();
 		values.put( "iUnreadCount",  0 );
@@ -560,11 +560,11 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 		Boolean isHref  =(Boolean) result1.get("isHref");
 		
 		
-		Log.e("123","put marker vDirectMarkerUrl >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   "+vDirectMarkerUrl);
+//		Log.e("123","put marker vDirectMarkerUrl >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   "+vDirectMarkerUrl);
 
 		new Util().putDirectDeleteMarker ( true , vDirectMarkerUrl,isHref );
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -579,7 +579,7 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 		new Util().putDirectDeleteMarker ( false , vDirectMarkerUrl,isHrefUrl );
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -658,7 +658,7 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 		};
@@ -681,7 +681,7 @@ public class DirectMessageFragment extends MainFragment implements OnClickListen
 
 		}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}

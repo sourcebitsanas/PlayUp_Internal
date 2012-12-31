@@ -22,13 +22,13 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
+
 
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.exception.NotApplicationContextException;
 import com.playup.android.interfaces.QueryInterface;
 import com.playup.android.util.Constants;
-import com.playup.android.util.Logs;
+
 
 public class DatabaseWrapper {
 
@@ -132,9 +132,9 @@ public class DatabaseWrapper {
 
 			getWritableSQLiteDatabase().execSQL( " DROP TABLE " + tableName );
 		} catch ( Exception e ) {
-			Logs.show ( e );
+			//Logs.show ( e );
 		} catch ( Error e ) {
-			Logs.show ( e ); 
+			//Logs.show ( e ); 
 		} finally {
 		}
 	}
@@ -216,9 +216,9 @@ public class DatabaseWrapper {
 			
 			
 		} catch ( Exception e ) {
-			Logs.show ( e );
+		//	Logs.show ( e );
 		} catch ( Error e ) { 
-			Logs.show ( e );
+			//Logs.show ( e );
 		} finally {
 			
 		
@@ -240,9 +240,9 @@ public class DatabaseWrapper {
 			
 			getWritableSQLiteDatabase().execSQL(  "DELETE FROM  " + tableName  );
 		} catch  ( Exception e ) {
-			Logs.show ( e );
+			//Logs.show ( e );
 		} catch ( Error e ) {
-			Logs.show ( e );
+			//Logs.show ( e );
 		} finally {
 			
 		}
@@ -316,9 +316,9 @@ public class DatabaseWrapper {
 				}
 			} catch ( Exception e ) {
 				
-				Logs.show(e);
+				//Logs.show(e);
 			} catch ( Error e ) {
-				Logs.show ( e );
+				//Logs.show ( e );
 			}
 		
 			
@@ -382,9 +382,9 @@ public class DatabaseWrapper {
 				}
 				
 			} catch ( Exception e ) {
-				Logs.show  ( e );
+				//Logs.show  ( e );
 			} catch ( Error e ) {
-				Logs.show ( e );
+				//Logs.show ( e );
 			}
 
 		
@@ -473,10 +473,10 @@ public class DatabaseWrapper {
 
 			return getReadOnlySQLiteDatabase().rawQuery( queryString, null);
 		} catch  ( Exception e ) {
-			Logs.show(e);
+			//Logs.show(e);
 			return null;
 		} catch ( Error e ) {
-			Logs.show(e);
+			//Logs.show(e);
 			return null;
 		} finally {
 
@@ -537,10 +537,10 @@ public class DatabaseWrapper {
 			}
 
 		}catch (Exception e) {
-			 Logs.show ( e );
+			// Logs.show ( e );
 			return null;
 		} catch ( Error e ) {
-			Logs.show( e );
+		//	Logs.show( e );
 			return null;
 		} finally {
 			

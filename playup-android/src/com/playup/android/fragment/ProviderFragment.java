@@ -24,7 +24,7 @@ import com.playup.android.dialog.NoProviderDialog;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 
 
 /**
@@ -267,7 +267,7 @@ public class ProviderFragment extends MainFragment implements OnClickListener {
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 	}
 
@@ -295,7 +295,7 @@ public class ProviderFragment extends MainFragment implements OnClickListener {
 								setValues();
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+							//	Logs.show ( e );
 							}
 						}
 					});
@@ -303,7 +303,7 @@ public class ProviderFragment extends MainFragment implements OnClickListener {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}

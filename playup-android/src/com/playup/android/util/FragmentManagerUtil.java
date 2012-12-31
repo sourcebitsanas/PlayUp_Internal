@@ -24,7 +24,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentManager.BackStackEntry;
 import android.support.v4.app.FragmentTransaction;
 
-import android.util.Log;
+
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
@@ -148,7 +148,7 @@ public class FragmentManagerUtil {
 				}
 				
 			} catch ( Exception e ) {
-				  Logs.show(e);
+				//  Logs.show(e);
 			}
 		// }
 		
@@ -286,10 +286,10 @@ public class FragmentManagerUtil {
 			}
 		} catch (Error e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			
 		}catch (Exception e) {
 			// TODO: handle exception
-			Logs.show(e);
+			//Logs.show(e);
 		}
 	}
 
@@ -346,7 +346,7 @@ public class FragmentManagerUtil {
 
 			fragmentName = null;
 		} catch ( Exception e ) {
-			  Logs.show ( e ); 
+			//  Logs.show ( e ); 
 		}
 	}
 	
@@ -377,7 +377,7 @@ public class FragmentManagerUtil {
 			
 			fragmentName = null;
 		} catch ( Exception e ) {
-			  Logs.show ( e ); 
+			 /// Logs.show ( e ); 
 		}
 	}
 	
@@ -410,7 +410,7 @@ public class FragmentManagerUtil {
 
 			fragmentName = null;
 		} catch ( Exception e ) {
-			  Logs.show ( e ); 
+			 // Logs.show ( e ); 
 		}
 	}
 	
@@ -668,10 +668,10 @@ public class FragmentManagerUtil {
 			}
 		} catch (Error e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+		//	Logs.show(e);
 		}catch (Exception e) {
 			// TODO: handle exception
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		
 		

@@ -20,7 +20,7 @@ public final class Keys {
 	/**
 	 * Production keys 
 	 **/
-
+/*
 
 //		// Flurry key 
 //	public static final String PLAYUP_FLURRY_KEY = "D7C2ZQNJQ5NXGTXVWB4T";
@@ -45,7 +45,7 @@ public final class Keys {
 	
 	
 	public static final String ROOT_URL = "http://api.playup.com/v2/clients/"; 
-	public static final String ROOT_URL_NO_SLASH = "http://api.playup.com/v2/clients"; 
+	public static final String ROOT_URL_NO_SLASH = "http://api.playup.com/v2/clients"; */
 //	public static final String FANBASE_URL_NO_SLASH = "http://fanbase.playup.com";
 	 
 
@@ -65,19 +65,19 @@ public final class Keys {
 	public static final String PLAYUP_UPGRADE_URL = "http://s3.amazonaws.com/playup-live-upgrade/staging/upgrade.json";
 //
 //	// analytics id
-	public  static String GOOGLE_ANALYTICS_TRACKING_ID			=	"UA-20528245-1";//Testing Account sourcebits*/
+	public  static String GOOGLE_ANALYTICS_TRACKING_ID			=	"UA-20528245-1";//Testing Account sourcebits
 	
 
 	
 	// staging urls
 
 
-//	public static final String BASE_URL ="http://staging.api.playupdev.com/"; 
-//	public static final String BASE_URL_NO_SLASH = "http://staging.api.playupdev.com"; 
-//	public static final String FANBASE_URL_NO_SLASH = "http://staging.fanbase.playupdev.com"; 
+	public static final String BASE_URL ="http://staging.api.playupdev.com/"; 
+	public static final String BASE_URL_NO_SLASH = "http://staging.api.playupdev.com"; 
+	public static final String FANBASE_URL_NO_SLASH = "http://staging.fanbase.playupdev.com"; 
 //	
-//	public static final String ROOT_URL = "http://staging.api.playupdev.com/v2/clients/"; 
-//	public static final String ROOT_URL_NO_SLASH = "http://staging.api.playupdev.com/v2/clients"; 
+	public static final String ROOT_URL = "http://staging.api.playupdev.com/v2/clients/"; 
+	public static final String ROOT_URL_NO_SLASH = "http://staging.api.playupdev.com/v2/clients"; 
 
 	
 

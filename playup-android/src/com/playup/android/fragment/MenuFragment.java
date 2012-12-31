@@ -236,7 +236,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 						}
 						
 					} catch (Exception e) {
-						Logs.show(e);
+//						Logs.show(e);
 					}
 					
 				}
@@ -365,7 +365,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 
 
 		} catch ( Exception e ) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -462,7 +462,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 
 										inflater = null;
 									} catch ( Exception e ) {
-										Logs.show ( e );
+//										Logs.show ( e );
 									}
 								}
 
@@ -472,7 +472,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 
 						}
 					} catch (Exception e) {
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 
 
@@ -486,7 +486,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 			Thread t = new Thread(r);
 			t.start();
 		} catch (Exception e) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 	}
 
@@ -577,7 +577,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 										inflater = null;
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show(e);
+//										Logs.show(e);
 									}
 
 								}
@@ -589,7 +589,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 
 
@@ -603,7 +603,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 			Thread t = new Thread(r);
 			t.start();
 		} catch (Exception e) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 
 	}
@@ -660,7 +660,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 										}
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show(e);
+//										Logs.show(e);
 									}
 								}
 
@@ -690,7 +690,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 										}
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show(e);
+//										Logs.show(e);
 									}
 								}
 
@@ -701,7 +701,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 			}
@@ -759,7 +759,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 										}
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show(e);
+//										Logs.show(e);
 									}
 								}
 							});
@@ -767,7 +767,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				} 
 			}
 		};
@@ -856,14 +856,14 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show(e);
+//									Logs.show(e);
 								}
 							}
 						});
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 		}).start();
@@ -920,14 +920,14 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 									imageDownloader.download( vUserId , avartar_url, avatarImageView, true,null);
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show(e);
+//									Logs.show(e);
 								}
 							}
 						});
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 
@@ -1037,7 +1037,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show(e);
+//									Logs.show(e);
 								} 
 
 							}
@@ -1046,7 +1046,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 
@@ -1157,7 +1157,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 						refreshMyProfile();
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 			});
@@ -1252,7 +1252,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 											PlayupLiveApplication.getFragmentManagerUtil().setFragment( "ProviderFragment", bundle );
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
-											Logs.show(e);
+//											Logs.show(e);
 										}
 									}
 								});
@@ -1270,7 +1270,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 											PlayupLiveApplication.getFragmentManagerUtil().setFragment("DirectConversationFragment");
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
-											Logs.show(e);
+//											Logs.show(e);
 										}
 									}
 								});
@@ -1278,7 +1278,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 			}).start();
@@ -1404,7 +1404,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 															}
 														} catch (Exception e) {
 															// TODO Auto-generated catch block
-															Logs.show(e);
+//															Logs.show(e);
 														}			
 													}
 												});
@@ -1413,7 +1413,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 										}
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show ( e );
+//										Logs.show ( e );
 									}
 
 								}

@@ -233,11 +233,6 @@ public class RadioListPopUp implements OnClickListener{
 				
 			case R.id.pause:
 				
-				
-				
-				
-				
-				
 				if(PlayUpActivity.mediaPlayerService != null)
 					Log.e("123"," MediaPlayerService.isServiceStarted  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+PlayUpActivity.mediaPlayerService.isServiceStarted);
 					

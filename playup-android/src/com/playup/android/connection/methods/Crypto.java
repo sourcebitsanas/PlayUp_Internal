@@ -16,12 +16,12 @@ import javax.crypto.spec.SecretKeySpec;
 
 import android.content.Context;
 import android.telephony.TelephonyManager;
-import android.util.Log;
+
 
 import com.playup.android.activity.PlayUpActivity;
 import com.playup.android.util.Base64;
 import com.playup.android.util.Constants;
-import com.playup.android.util.Logs;
+
 
 public class Crypto {
 	
@@ -44,7 +44,7 @@ public class Crypto {
 				return mUri.getPath();
 
 		} catch (URISyntaxException e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 		return "";
@@ -179,8 +179,8 @@ public class Crypto {
 			
 		//get Sha256 hash of mac_secret Token 
 		byte[] SHA256codedString = 	createSHA256Hash(vMacSecretToken);
-		System.out.println("SHA256codedString--------------->>>>"+SHA256codedString);
-		System.out.println("SHA256codedString.length--------------->>>>"+SHA256codedString.length);
+		//System.out.println("SHA256codedString--------------->>>>"+SHA256codedString);
+		//System.out.println("SHA256codedString.length--------------->>>>"+SHA256codedString.length);
 		    
 		//get MD5 hash of mac_secret Token
 		String MD5codedString 	 =  createMD5Hash(vMacSecretToken);
@@ -190,10 +190,10 @@ public class Crypto {
 				  
 		} catch (UnsupportedEncodingException e1) {
 				// TODO Auto-generated catch block
-				Logs.show(e1);
+				//Logs.show(e1);
 		}
-		System.out.println("MD5codedString.len()--------------->>>>"+MD5codedString.length());
-		System.out.println("MD5codedBytes.len()--------------->>>>"+MD5codedBytes.length+"\n");
+		//System.out.println("MD5codedString.len()--------------->>>>"+MD5codedString.length());
+		//System.out.println("MD5codedBytes.len()--------------->>>>"+MD5codedBytes.length+"\n");
 		    
 		
 		//Create SecretKey and Initialization vector for AES 256 CBC
@@ -207,13 +207,13 @@ public class Crypto {
 				// decrypt the message
 						byte[] decrypted = cipher.doFinal(messageInBytes);
 						
-						System.out.println("Plaintext::decrypted::::::::::::::::::::::: " + decrypted + "\n");
-						System.out.println("Plaintext::String:::::::::::::::::::::::::: " + new String(decrypted) + "\n");
-						System.out.println("Base64.encodeBase64String(decrypted):::::::::::::::::::::::::: " + com.playup.android.util.Base64.encodeBytes(decrypted) );
+						//System.out.println("Plaintext::decrypted::::::::::::::::::::::: " + decrypted + "\n");
+						//System.out.println("Plaintext::String:::::::::::::::::::::::::: " + new String(decrypted) + "\n");
+						//System.out.println("Base64.encodeBase64String(decrypted):::::::::::::::::::::::::: " + com.playup.android.util.Base64.encodeBytes(decrypted) );
 						
 						//do BAse65 encode and then URL encoding of the receieved value
 						finalString = URLEncoder.encode(  com.playup.android.util.Base64.encodeBytes(decrypted));
-						System.out.println(" Base64.encodeBase64String(decrypted)+URL encoded:::::::::::::::::::::::::: "+ finalString);
+						//System.out.println(" Base64.encodeBase64String(decrypted)+URL encoded:::::::::::::::::::::::::: "+ finalString);
 						
 						return finalString;
 			} catch (Exception e) {
@@ -221,16 +221,16 @@ public class Crypto {
 				e.printStackTrace();
 			}
 	} catch (NoSuchAlgorithmException e) {
-		Logs.show(e);
+		//Logs.show(e);
 	} catch (NoSuchPaddingException e) {
-		Logs.show(e);
+		//Logs.show(e);
 	} catch (IOException e) {
-		Logs.show(e);
+		//Logs.show(e);
 	}catch(Exception e){
-		Logs.show(e);
+		//Logs.show(e);
 	}
 	catch(Error e){
-		Logs.show(e);
+		//Logs.show(e);
 	}
 	return finalString;
  }

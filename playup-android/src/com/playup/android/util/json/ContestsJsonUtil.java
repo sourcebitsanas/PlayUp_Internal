@@ -7,12 +7,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.ContentValues;
-import android.util.Log;
+
 
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -651,7 +651,7 @@ public class ContestsJsonUtil {
 					if(clock_jObj.get( INNINGS_KEY ).toString().trim().length() > 0)					
 						innings = Integer.parseInt( clock_jObj.get( INNINGS_KEY ).toString() );
 				} catch ( Exception e ) {
-					Logs.show( e );
+					//Logs.show( e );
 				}
 				inningsHalf = clock_jObj.getString( INNINGS_HALF_KEY );
 
@@ -753,7 +753,7 @@ public class ContestsJsonUtil {
 			
 
 		} catch (JSONException e) {
-			Logs.show(e);
+			//Logs.show(e);
 		} finally {
 			/*if ( Constants.X <= 320 && Constants.Y <= 480 && Constants.DPI <= 160 ) {
 			} else {*/

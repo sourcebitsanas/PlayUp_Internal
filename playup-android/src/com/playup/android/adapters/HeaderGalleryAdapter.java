@@ -11,7 +11,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 
 
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +37,7 @@ import com.playup.android.exception.RequestRepeatException;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DateUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -127,7 +127,7 @@ public class HeaderGalleryAdapter extends BaseAdapter implements OnItemClickList
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 
 	}
@@ -386,7 +386,7 @@ public class HeaderGalleryAdapter extends BaseAdapter implements OnItemClickList
 								try {
 									getHeader(vContestId);
 								} catch (Exception e) {
-									Logs.show(e);
+									//Logs.show(e);
 		
 								}
 		
@@ -457,7 +457,7 @@ public class HeaderGalleryAdapter extends BaseAdapter implements OnItemClickList
 			return convertView;
 			
 		} catch (Exception e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 		return convertView;
 		
@@ -532,7 +532,7 @@ public class HeaderGalleryAdapter extends BaseAdapter implements OnItemClickList
 
 		} catch (Exception e) {
 
-			Logs.show( e );
+			//Logs.show( e );
 		}
 	}
 
@@ -687,7 +687,7 @@ public class HeaderGalleryAdapter extends BaseAdapter implements OnItemClickList
 										}
 										
 									} catch (RequestRepeatException e) {
-										Logs.show ( e );
+									//	Logs.show ( e );
 									}
 
 								} else if ( type != null &&  type.equalsIgnoreCase( Types.CONTEST_SET_TYPE )  && !Constants.isFetchingCredentials) {
@@ -714,7 +714,7 @@ public class HeaderGalleryAdapter extends BaseAdapter implements OnItemClickList
 
 										}
 									} catch (RequestRepeatException e) {
-										Logs.show ( e );
+										//Logs.show ( e );
 									}
 								}else if ( type  != null && type.equalsIgnoreCase( Types.TEAM_SCHEDULE_TYPE ) ) { 
 										b.putBoolean("isHref",(Boolean) v.getTag(R.id.avtarImage2));
@@ -725,7 +725,7 @@ public class HeaderGalleryAdapter extends BaseAdapter implements OnItemClickList
 									} 
 								
 							} catch (Exception e) {
-								Logs.show ( e );
+								//Logs.show ( e );
 							}
 						}
 					});
@@ -733,9 +733,9 @@ public class HeaderGalleryAdapter extends BaseAdapter implements OnItemClickList
 			}
 
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		} catch ( Error e ) {
-			Logs.show( e );
+			//Logs.show( e );
 		}
 	}
 
@@ -816,7 +816,7 @@ public class HeaderGalleryAdapter extends BaseAdapter implements OnItemClickList
 				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show(e);
+			//	Logs.show(e);
 			}
 
 
@@ -951,7 +951,7 @@ public class HeaderGalleryAdapter extends BaseAdapter implements OnItemClickList
 				view.setBackgroundColor( Color.GRAY );
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 			
 			view.setBackgroundColor( Color.GRAY );
 		}

@@ -30,9 +30,9 @@ public final class Logs {
 				}
 			}
 		} catch ( Exception e ) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		} catch ( Error e ) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		
 	}

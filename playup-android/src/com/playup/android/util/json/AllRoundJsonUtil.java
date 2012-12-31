@@ -9,7 +9,7 @@ import android.os.Message;
 
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -87,7 +87,7 @@ public class AllRoundJsonUtil {
 
 
 		}catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}finally{
 			new Util().releaseMemory(jsonObj);
 			if ( !inTransaction ) {

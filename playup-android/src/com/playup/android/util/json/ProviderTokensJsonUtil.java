@@ -3,11 +3,11 @@ package com.playup.android.util.json;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import android.util.Log;
+
 
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -84,7 +84,7 @@ public class ProviderTokensJsonUtil {
 				
 			
 		}catch (Exception e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		} finally {	
 			new Util().releaseMemory(jsonObject);
 				if ( !inTransaction ) {

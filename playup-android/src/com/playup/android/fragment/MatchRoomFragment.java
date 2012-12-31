@@ -240,7 +240,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 			getCompetitionData();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -277,7 +277,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 			
 			
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -299,7 +299,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 				publicMatchesTicketAdapter.setData( vContestId );
 			}
 		} catch ( Exception e ) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		} 
 	}
 	
@@ -354,10 +354,10 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 				isContestLobbyUrlHref = (Boolean) result.get("isHref");
 			}
 			
-			Log.e("123","vContestLobbyUrl >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   "+vContestLobbyUrl);
+//			Log.e("123","vContestLobbyUrl >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   "+vContestLobbyUrl);
 			
 			
-			Log.e("123","isContestLobbyUrlHref >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   "+isContestLobbyUrlHref);
+//			Log.e("123","isContestLobbyUrlHref >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   "+isContestLobbyUrlHref);
 			
 
 			if ( bundle != null && bundle.containsKey( "fromFragment" ) ) {
@@ -375,7 +375,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 			}
 		} catch (Exception e) {
 			
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -534,7 +534,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 										}
 										onResume();
 									} catch (Exception e) {
-										Logs.show(e);
+//										Logs.show(e);
 									}
 								}
 							});
@@ -559,14 +559,14 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 										refreshTiles();
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show(e);
+//										Logs.show(e);
 									}
 								}
 							});
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show(e);
+//						Logs.show(e);
 					}
 
 				}
@@ -588,14 +588,14 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 										
 									} catch (Exception e) {
 										
-										Logs.show(e);
+//										Logs.show(e);
 									}
 								}
 							});
 						
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show(e);
+//						Logs.show(e);
 					}
 
 				}
@@ -618,7 +618,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 								showPanels();
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show(e);
+//								Logs.show(e);
 							}
 
 						}
@@ -649,7 +649,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 								refreshScores();
 								setRoomData();
 							} catch (Exception e) {
-								Logs.show(e);
+//								Logs.show(e);
 							}
 						}
 					});
@@ -730,7 +730,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show(e);
+//								Logs.show(e);
 							}
 						}
 					});
@@ -738,7 +738,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 
 			}
 		} catch (NotFoundException e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -800,7 +800,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 						}
 					} catch (Exception e) {
 						// TODO: handle exception
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 			}).start();
@@ -866,13 +866,13 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 								refreshSubjectTimer.schedule(refreshScoreTask, cacheTime_refreshScore * 1000, (cacheTime_refreshScore * 1000));
 							}
 						} catch ( Exception e ) {
-							Logs.show ( e );
+//							Logs.show ( e );
 						}
 					}
 
 				} catch (Exception e) {
 					// TODO: handle exception
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 
@@ -916,7 +916,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 					}
 					
 				} catch (Exception e) {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 			}
@@ -942,7 +942,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 			//Set Typeface
 			
 		}catch(Exception e){
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 
 
@@ -997,7 +997,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 
 		}catch(Exception e){
 
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -1072,7 +1072,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 					
 					PlayupLiveApplication.callUpdateTopBarFragments(msg);
 				} catch (Exception e) {
-					Logs.show(e);
+//					Logs.show(e);
 				}
 				
 			}
@@ -1146,7 +1146,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 									}
 
 								} catch (Exception e) {
-									Logs.show ( e );
+//									Logs.show ( e );
 								}								
 
 
@@ -1158,7 +1158,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 
 				}catch(Exception e){
 
-					Logs.show ( e );
+//					Logs.show ( e );
 
 				}
 
@@ -1333,7 +1333,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 				}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 			}
@@ -1371,7 +1371,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 						}
 					});
@@ -1389,7 +1389,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 					}
 
 				} catch ( Exception e )  {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 
@@ -1629,7 +1629,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show(e);
+//									Logs.show(e);
 								}
 							}
 						});
@@ -1637,7 +1637,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 					
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 				
 			}
@@ -1660,7 +1660,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 			}
 
 		} catch ( Exception e)  {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -1719,7 +1719,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 			}
 		} catch (NotFoundException e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -1919,7 +1919,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 					refreshMatches ();
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 			}
@@ -1984,11 +1984,11 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 						}
 					}catch(Exception e){
 
-						Logs.show(e);
+//						Logs.show(e);
 					}
 				} catch (NumberFormatException e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 
@@ -2033,7 +2033,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 										stripLiveCount.setText(""+live);
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show(e);
+//										Logs.show(e);
 									}
 								}
 
@@ -2043,7 +2043,7 @@ public class MatchRoomFragment extends MainFragment implements OnClickListener,O
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 

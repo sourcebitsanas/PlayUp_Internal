@@ -36,7 +36,7 @@ import com.playup.android.activity.PlayUpActivity;
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.PreferenceManagerUtil;
 import com.playup.android.util.Util;
 
@@ -89,7 +89,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 			initialize(content_layout);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -172,7 +172,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 			// set values
 			setValues(null);
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -195,7 +195,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 			shareScores.setOnTouchListener( homeTouchListener );
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -310,7 +310,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 							}
 						}
 					} catch ( Exception e ) {
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 
 				}
@@ -1015,7 +1015,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -1052,7 +1052,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 										callUpdate ( msg );
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show(e);
+										//Logs.show(e);
 									}
 								}
 							});
@@ -1060,7 +1060,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 		};
@@ -1137,7 +1137,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 											}
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
-											Logs.show(e);
+//											Logs.show(e);
 										}
 
 									}
@@ -1146,7 +1146,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 							}
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show ( e );
+//							Logs.show ( e );
 						}
 
 
@@ -1161,7 +1161,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 		}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 	}
 
@@ -1239,7 +1239,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 					
 					title.setTextColor( Color.parseColor( "#FFFFFF" ) );
 					
-					Logs.show(e);
+//					Logs.show(e);
 				}
 			
 		} else {
@@ -1260,7 +1260,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 
 					}
 				
-				Logs.show(e);
+//				Logs.show(e);
 			}
 		}
 		else{
@@ -1277,7 +1277,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 		}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 
 	}
@@ -1383,7 +1383,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 
 				}
@@ -1509,7 +1509,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -1603,7 +1603,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -1662,7 +1662,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -1768,7 +1768,7 @@ public class TopBarFragment extends MainFragment implements OnClickListener	{
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 	}
 	

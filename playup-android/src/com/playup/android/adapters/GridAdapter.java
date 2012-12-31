@@ -6,7 +6,7 @@ import java.util.List;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -26,7 +26,7 @@ import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DateUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 
 public class GridAdapter extends BaseAdapter {
 
@@ -63,6 +63,8 @@ public class GridAdapter extends BaseAdapter {
 		
 		
 	}
+	
+	
 
 	
 
@@ -77,7 +79,7 @@ public class GridAdapter extends BaseAdapter {
 			}
 		} catch (Exception e) {
 			
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 		
 		return 0;
@@ -201,7 +203,7 @@ public class GridAdapter extends BaseAdapter {
 				
 				
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 		return convertView;
@@ -225,7 +227,7 @@ public class GridAdapter extends BaseAdapter {
 		
 	   } catch (Exception e) {
 		
-		Logs.show( e );
+		//Logs.show( e );
 	  }
 		
 

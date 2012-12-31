@@ -13,7 +13,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Message;
 
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +27,7 @@ import com.playup.android.adapters.SectionGenerator;
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class NewsFragment extends MainFragment {
@@ -165,9 +165,9 @@ public class NewsFragment extends MainFragment {
 			refreshDisplayTimer.clear();
 
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		} catch (Error e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -198,7 +198,7 @@ public class NewsFragment extends MainFragment {
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -220,7 +220,7 @@ public class NewsFragment extends MainFragment {
 			progressBar = (RelativeLayout) content_layout.findViewById(R.id.progressBar);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 
 	}
@@ -245,7 +245,7 @@ public class NewsFragment extends MainFragment {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 	}
 
@@ -267,7 +267,7 @@ public class NewsFragment extends MainFragment {
 			}
 
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 		try {
@@ -314,14 +314,14 @@ public class NewsFragment extends MainFragment {
 
 						}
 					} catch (Exception e) {
-						Logs.show(e);
+						//Logs.show(e);
 					}
 
 				}
 			}).start();
 
 		} catch (Exception e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 	}
 	
@@ -354,7 +354,7 @@ public class NewsFragment extends MainFragment {
 					PlayupLiveApplication.callUpdateTopBarFragments(msg);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 			}
@@ -396,14 +396,14 @@ public class NewsFragment extends MainFragment {
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show(e);
+									//Logs.show(e);
 								}			
 							}
 							} );
 						}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}
 				
 			}
@@ -480,7 +480,7 @@ public class NewsFragment extends MainFragment {
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+					//	Logs.show ( e );
 					}
 
 
@@ -528,7 +528,7 @@ public class NewsFragment extends MainFragment {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 				
 			}
@@ -566,7 +566,7 @@ public class NewsFragment extends MainFragment {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 				
 
@@ -609,7 +609,7 @@ public class NewsFragment extends MainFragment {
 									runnableList.put ( vDisplayUrl, new Util().getDisplayUpdateForSectionItems( vDisplayUrl,isHref,vContentId,vBlockContentId, runnableList ) );
 								}
 							} catch (Exception e) {
-								Logs.show ( e );
+								//Logs.show ( e );
 							}
 						}
 					});
@@ -628,7 +628,7 @@ public class NewsFragment extends MainFragment {
 					}
 
 				} catch ( Exception e )  {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 
@@ -678,7 +678,7 @@ public class NewsFragment extends MainFragment {
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+							//	Logs.show ( e );
 							}
 						}
 					});
@@ -695,7 +695,7 @@ public class NewsFragment extends MainFragment {
 					}
 
 				} catch ( Exception e )  {
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 

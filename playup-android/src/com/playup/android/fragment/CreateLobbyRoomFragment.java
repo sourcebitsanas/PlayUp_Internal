@@ -112,7 +112,7 @@ public class CreateLobbyRoomFragment extends MainFragment implements OnClickList
 		}
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -164,7 +164,7 @@ public class CreateLobbyRoomFragment extends MainFragment implements OnClickList
 		PlayupLiveApplication.getFragmentManagerUtil().updateTopBarFragment( msg );
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -196,7 +196,7 @@ public class CreateLobbyRoomFragment extends MainFragment implements OnClickList
 			hangoutEdittext.setText("");
 		}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -232,7 +232,7 @@ public class CreateLobbyRoomFragment extends MainFragment implements OnClickList
 			}
 		}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -248,7 +248,7 @@ public class CreateLobbyRoomFragment extends MainFragment implements OnClickList
 			break;
 		}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -300,9 +300,9 @@ public class CreateLobbyRoomFragment extends MainFragment implements OnClickList
 									PlayupLiveApplication.getFragmentManagerUtil().setFragment("PrivateLobbyRoomFragment", bundle,R.id.main );
 	
 								} catch ( Exception e ) {
-									Logs.show ( e );
+//									Logs.show ( e );
 								} catch ( Error e ) {
-									Logs.show ( e );
+//									Logs.show ( e );
 								}
 								
 								return;
@@ -310,7 +310,7 @@ public class CreateLobbyRoomFragment extends MainFragment implements OnClickList
 								//PlayupLiveApplication.showToast(R.string.createRoomFailedMsg);
 							}
 						} catch (Exception e) {
-							Logs.show ( e );
+//							Logs.show ( e );
 						}
 					}
 
@@ -324,7 +324,7 @@ public class CreateLobbyRoomFragment extends MainFragment implements OnClickList
 			
 		}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -393,7 +393,7 @@ public class CreateLobbyRoomFragment extends MainFragment implements OnClickList
 		}
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 
@@ -501,7 +501,7 @@ public class CreateLobbyRoomFragment extends MainFragment implements OnClickList
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 		}, 500);
@@ -513,7 +513,7 @@ public class CreateLobbyRoomFragment extends MainFragment implements OnClickList
 		}
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -529,7 +529,7 @@ public class CreateLobbyRoomFragment extends MainFragment implements OnClickList
 		}
 		setValues();
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 

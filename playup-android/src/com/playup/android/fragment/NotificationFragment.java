@@ -25,7 +25,7 @@ import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.Keys;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.PreferenceManagerUtil;
 
 
@@ -185,7 +185,7 @@ public class NotificationFragment extends MainFragment implements OnClickListene
 					PlayupLiveApplication.callUpdateTopBarFragments(msg);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 				
 			}
@@ -234,7 +234,7 @@ public class NotificationFragment extends MainFragment implements OnClickListene
 										}
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show(e);
+										//Logs.show(e);
 									}
 									
 								}
@@ -242,7 +242,7 @@ public class NotificationFragment extends MainFragment implements OnClickListene
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 					
 					
@@ -250,7 +250,7 @@ public class NotificationFragment extends MainFragment implements OnClickListene
 			}).start();
 
 		} catch ( Exception e ){
-			Logs.show( e );
+			//Logs.show( e );
 		}
 		
 	}
@@ -287,7 +287,7 @@ public class NotificationFragment extends MainFragment implements OnClickListene
 										notificationListView.setVisibility( View.GONE );
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show(e);
+									//	Logs.show(e);
 									}
 									
 								}
@@ -311,7 +311,7 @@ public class NotificationFragment extends MainFragment implements OnClickListene
 										notificationListView.setVisibility( View.GONE );
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show(e);
+									//	Logs.show(e);
 									}
 								}
 							});
@@ -320,7 +320,7 @@ public class NotificationFragment extends MainFragment implements OnClickListene
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 				
 			}
@@ -383,7 +383,7 @@ public class NotificationFragment extends MainFragment implements OnClickListene
 						setValues();
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 				}
 				

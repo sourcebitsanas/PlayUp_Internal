@@ -5,11 +5,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.ContentValues;
-import android.util.Log;
+
 
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -252,7 +252,7 @@ public class ConversationJsonUtil {
 
 
 		} catch (JSONException e) {
-			Logs.show(e);
+			//Logs.show(e);
 		} finally {
 
 			/**

@@ -26,7 +26,7 @@ import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.PreferenceManagerUtil;
 
 public class CountriesAdapter extends BaseAdapter implements OnTouchListener {
@@ -80,13 +80,13 @@ public class CountriesAdapter extends BaseAdapter implements OnTouchListener {
 								try {
 									notifyDataSetChanged();
 								} catch ( Exception e ) {
-									Logs.show ( e ) ;
+									//Logs.show ( e ) ;
 								}
 							}
 						});
 					}
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}
 			}
 			
@@ -112,13 +112,13 @@ public class CountriesAdapter extends BaseAdapter implements OnTouchListener {
 								try {
 									notifyDataSetChanged();
 								} catch ( Exception e ) {
-									Logs.show ( e ) ;
+									//Logs.show ( e ) ;
 								}
 							}
 						});
 					}
 				} catch (Exception e) {
-					Logs.show(e);
+				//	Logs.show(e);
 				}
 			}
 			
@@ -184,7 +184,7 @@ public class CountriesAdapter extends BaseAdapter implements OnTouchListener {
 			vh.base.setLayoutParams(params);
 
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 
@@ -271,7 +271,7 @@ public class CountriesAdapter extends BaseAdapter implements OnTouchListener {
 
 						}
 						catch (Exception e) {
-							Logs.show(e);
+						//	Logs.show(e);
 						}
 
 					}
@@ -283,7 +283,7 @@ public class CountriesAdapter extends BaseAdapter implements OnTouchListener {
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -350,7 +350,7 @@ public class CountriesAdapter extends BaseAdapter implements OnTouchListener {
 				}
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}

@@ -173,7 +173,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show(e);
+//				Logs.show(e);
 			}
 
 
@@ -203,7 +203,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 	
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 				
 			}
@@ -310,7 +310,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 					
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show(e);
+//						Logs.show(e);
 					}
 
 					
@@ -322,7 +322,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 				
 			
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -452,7 +452,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 									}
 								}catch(Exception e){
 
-									Logs.show(e);
+//									Logs.show(e);
 
 								}
 							}
@@ -461,7 +461,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 
@@ -503,7 +503,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 								
 								setValues();
 							} catch (Exception e) {
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 						}
 					});
@@ -517,7 +517,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 				
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -543,7 +543,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 		}
 		sportsImage = null;
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -571,7 +571,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 		}).start();
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -613,7 +613,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 						try {
 							selectDeSelectState(v, false);
 						} catch ( Exception e) {
-							Logs.show ( e );
+//							Logs.show ( e );
 						}
 					}
 				}, 100);
@@ -640,7 +640,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 
 		}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		return true;
 	}
@@ -686,7 +686,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 			}
@@ -720,7 +720,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 		mUpdater = Executors.newSingleThreadScheduledExecutor();
 		mUpdater.schedule(new UpdateCounterTask(), 200, TimeUnit.MILLISECONDS);
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -741,7 +741,7 @@ public class AllSportsFragment extends MainFragment implements  OnTouchListener 
 				mHandler.sendEmptyMessage(0);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show ( e );
+//				Logs.show ( e );
 			}
 		}
 	}

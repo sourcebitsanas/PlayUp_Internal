@@ -9,11 +9,11 @@ import org.json.JSONObject;
 
 
 
-import android.util.Log;
+
 
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -75,7 +75,7 @@ public class DirectConversationJsonUtil {
 			new Util().setColor(jObj);
 			
 
-			Log.e("123","DirectConversationJsonUtil >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ");
+		//	Log.e("123","DirectConversationJsonUtil >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ");
 
 			int total_count = jObj.getInt( TOTAL_COUNT_KEY );
 			int unread_count = jObj.getInt( UNREAD_COUNT );
@@ -113,7 +113,7 @@ public class DirectConversationJsonUtil {
 			
 		} catch (JSONException e) {
 			
-			Logs.show(e);
+			//Logs.show(e);
 
 		}  finally {
 			/*if ( Constants.X <= 320 && Constants.Y <= 480 && Constants.DPI <= 160 ) {

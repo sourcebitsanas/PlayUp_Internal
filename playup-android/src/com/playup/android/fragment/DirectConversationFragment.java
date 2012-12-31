@@ -185,7 +185,7 @@ public class DirectConversationFragment extends MainFragment  implements OnClick
 					
 					PlayupLiveApplication.callUpdateTopBarFragments(msg);
 				} catch (Exception e) {
-					Logs.show(e);
+//					Logs.show(e);
 				}
 			}
 			
@@ -223,7 +223,7 @@ public class DirectConversationFragment extends MainFragment  implements OnClick
 		}
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 	
@@ -282,7 +282,7 @@ public class DirectConversationFragment extends MainFragment  implements OnClick
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show(e);
+//									Logs.show(e);
 								}
 								
 							}
@@ -290,7 +290,7 @@ public class DirectConversationFragment extends MainFragment  implements OnClick
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 				
 				
@@ -351,7 +351,7 @@ public class DirectConversationFragment extends MainFragment  implements OnClick
 								setValues();
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 						}
 
@@ -367,7 +367,7 @@ public class DirectConversationFragment extends MainFragment  implements OnClick
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 

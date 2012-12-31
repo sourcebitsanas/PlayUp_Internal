@@ -21,7 +21,7 @@ import android.os.Bundle;
 import android.os.Message;
 
 
-import android.util.Log;
+
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -53,7 +53,7 @@ import com.playup.android.util.Constants;
 
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class PrivateLobbyFragment extends MainFragment implements
@@ -257,7 +257,7 @@ OnClickListener, OnTouchListener {
 					PlayupLiveApplication.callUpdateTopBarFragments(msg);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 		});
@@ -377,7 +377,7 @@ OnClickListener, OnTouchListener {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 
@@ -517,7 +517,7 @@ OnClickListener, OnTouchListener {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 
 			}
@@ -528,7 +528,7 @@ OnClickListener, OnTouchListener {
 		th.start();
 	} catch (Exception e) {
 		// TODO Auto-generated catch block
-		Logs.show ( e );
+		//Logs.show ( e );
 	}
 
 	}
@@ -649,7 +649,7 @@ OnClickListener, OnTouchListener {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 
 			}
@@ -719,7 +719,7 @@ OnClickListener, OnTouchListener {
 					getPrivateLobbyData();
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 			}
@@ -750,7 +750,7 @@ OnClickListener, OnTouchListener {
 										timer = new Timer();
 										timer.scheduleAtFixedRate(timerTask, cacheTime * 1000, cacheTime * 1000);
 									} catch ( Exception e  ) {
-										Logs.show ( e );
+									//	Logs.show ( e );
 									}
 								}
 
@@ -760,7 +760,7 @@ OnClickListener, OnTouchListener {
 					}
 				} catch (NumberFormatException e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 
@@ -992,8 +992,8 @@ OnClickListener, OnTouchListener {
 
 									refreshLobbyConversationData();
 								} catch (Exception e) {
-									// TODO Auto-generated catch block
-									Logs.show ( e );
+									/// TODO Auto-generated catch block
+									//Logs.show ( e );
 								}
 							}
 
@@ -1014,7 +1014,7 @@ OnClickListener, OnTouchListener {
 									refreshLobbyConversationData();
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								//	Logs.show ( e );
 								}
 							}
 
@@ -1067,7 +1067,7 @@ OnClickListener, OnTouchListener {
 									showMatchHeader();
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								//	Logs.show ( e );
 								}
 							}
 						}, 500 );
@@ -1086,7 +1086,7 @@ OnClickListener, OnTouchListener {
 									showMatchHeader();
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								//	Logs.show ( e );
 								}
 							}
 						});
@@ -1121,7 +1121,7 @@ OnClickListener, OnTouchListener {
 									//							setHeaders();
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								//	Logs.show ( e );
 								}
 							}
 
@@ -1142,7 +1142,7 @@ OnClickListener, OnTouchListener {
 									//							setHeaders();
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								///	Logs.show ( e );
 								}
 							}
 
@@ -1159,7 +1159,7 @@ OnClickListener, OnTouchListener {
 				 */
 				if (msg.getData() != null && msg.getData().containsKey("vContestLiveUrl")) {
 					
-					Log.e("123","insde onUpdate >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+(msg.getData().getString("vContestLiveUrl")));
+				//	Log.e("123","insde onUpdate >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+(msg.getData().getString("vContestLiveUrl")));
 					
 					refreshMatches(msg.getData().getString("vContestLiveUrl"),msg.getData().getBoolean("isHref"));
 				}
@@ -1191,11 +1191,11 @@ OnClickListener, OnTouchListener {
 
 										}
 									} catch ( Exception e ) {
-										Logs.show ( e );
+									//	Logs.show ( e );
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								//	Logs.show ( e );
 								}
 
 
@@ -1233,11 +1233,11 @@ OnClickListener, OnTouchListener {
 
 										}
 									} catch ( Exception e ) {
-										Logs.show ( e );
+										//Logs.show ( e );
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								//	Logs.show ( e );
 								}
 
 
@@ -1254,7 +1254,7 @@ OnClickListener, OnTouchListener {
 			}
 			
 			if (msg != null && msg.obj != null && msg.obj.toString().equalsIgnoreCase("RefreshMatches")) {
-				Log.e("123","insde onUpdate RefreshMatches >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+(msg.getData().getString("vContestLiveUrl")));
+				//Log.e("123","insde onUpdate RefreshMatches >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+(msg.getData().getString("vContestLiveUrl")));
 				if (msg.getData() != null	&& msg.getData().containsKey("vContestLiveUrl")) {
 					refreshMatches(msg.getData().getString("vContestLiveUrl"),msg.getData().getBoolean("isHref"));
 
@@ -1280,7 +1280,7 @@ OnClickListener, OnTouchListener {
 									setLiveCount(true);
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show(e);
+								//	Logs.show(e);
 								}
 								
 							}
@@ -1304,7 +1304,7 @@ OnClickListener, OnTouchListener {
 									
 									setLiveCount(true);
 								} catch (Exception e) {
-									Logs.show(e);
+									//Logs.show(e);
 								}
 								
 							}
@@ -1327,7 +1327,7 @@ OnClickListener, OnTouchListener {
 									adapter.refreshFavouriteTiles();
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show(e);
+							//	Logs.show(e);
 							}	
 							}
 						});
@@ -1338,7 +1338,7 @@ OnClickListener, OnTouchListener {
 			
 		} catch (NotFoundException e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 
 	}
@@ -1356,10 +1356,10 @@ OnClickListener, OnTouchListener {
 
 				try {
 					DatabaseUtil dbUtil = DatabaseUtil.getInstance();
-					Log.e("123","inside getLiveMatchesCount >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
+				///	Log.e("123","inside getLiveMatchesCount >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
 					Hashtable<String, List<String>> competitionUrl = dbUtil.getCompetitionLiveUrl();
 					
-					Log.e("123","inside getLiveMatchesCount >>>>>>>>>>>>>competitionUrl>>>>>>>>>>>>>>>>>>>>>>>  "+competitionUrl);
+				//	Log.e("123","inside getLiveMatchesCount >>>>>>>>>>>>>competitionUrl>>>>>>>>>>>>>>>>>>>>>>>  "+competitionUrl);
 					
 					if (competitionUrl != null && competitionUrl.get("vCompetitionLiveUrl").size() > 0 ) {
 
@@ -1434,7 +1434,7 @@ OnClickListener, OnTouchListener {
 									}
 
 								}catch(Exception e){
-									Logs.show(e);
+								//	Logs.show(e);
 
 
 								}
@@ -1445,12 +1445,12 @@ OnClickListener, OnTouchListener {
 
 
 						} catch ( Exception e ) {
-							Logs.show(e);
+							//Logs.show(e);
 						}
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 
 			}
@@ -1546,20 +1546,20 @@ OnClickListener, OnTouchListener {
 										}
 
 									} catch ( Exception e ) {
-										Logs.show  ( e );
+									//	Logs.show  ( e );
 									}
 								}
 								if ( c != null ) {
 									c.close();
 								}
 							} catch ( Exception e ) {
-								Logs.show  ( e );
+								//Logs.show  ( e );
 							}
 						}
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 
@@ -1586,12 +1586,12 @@ OnClickListener, OnTouchListener {
 			public void run() {
 
 				try {
-					Log.e("123","insde  RefreshMatches >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+vContestLiveUrl);
+				//	Log.e("123","insde  RefreshMatches >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+vContestLiveUrl);
 					
 					DatabaseUtil dbUtil = DatabaseUtil.getInstance();
 					int cacheTime = Integer.parseInt(dbUtil.getCacheTime(vContestLiveUrl));
 					
-					Log.e("123","insde  RefreshMatches >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+vContestLiveUrl+">>>>>>>>>>>>> cacheTime >>>>>>"+cacheTime);
+					//Log.e("123","insde  RefreshMatches >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+vContestLiveUrl+">>>>>>>>>>>>> cacheTime >>>>>>"+cacheTime);
 
 					try {
 						if (refreshMatchesTask != null) { 
@@ -1619,16 +1619,16 @@ OnClickListener, OnTouchListener {
 								try {
 									refreshMatchesTimer.get(vContestLiveUrl).schedule(refreshMatchesTask.get(vContestLiveUrl), 	(cacheTime * 1000), (cacheTime * 1000) );
 								} catch ( Exception e ) {
-									Logs.show  ( e ) ;
+								//	Logs.show  ( e ) ;
 								}
 							}
 						} 
 					} catch ( Exception e ) {
-						Logs.show (  e );
+						//Logs.show (  e );
 					}
 				} catch (NumberFormatException e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 
 			}
@@ -1676,7 +1676,7 @@ OnClickListener, OnTouchListener {
 											setHeaders();
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
-											Logs.show(e);
+										//	Logs.show(e);
 										}
 									}
 
@@ -1724,10 +1724,10 @@ OnClickListener, OnTouchListener {
 
 								//							
 							} catch (JSONException e) {
-								Logs.show(e);
+							//	Logs.show(e);
 							}
 						} catch (Exception e) {
-							Logs.show ( e );
+							//Logs.show ( e );
 						}
 
 
@@ -1846,7 +1846,7 @@ OnClickListener, OnTouchListener {
 										showLobbyMessage ();
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show ( e );
+									//	Logs.show ( e );
 									}
 
 								}
@@ -1909,7 +1909,7 @@ OnClickListener, OnTouchListener {
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								//	Logs.show ( e );
 								}
 
 
@@ -1923,7 +1923,7 @@ OnClickListener, OnTouchListener {
 
 				} catch (Exception e) {
 
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 
 			}
@@ -1968,7 +1968,7 @@ OnClickListener, OnTouchListener {
 										liveCountUp.setText(""+live);
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show(e);
+									//	Logs.show(e);
 									}
 								}
 
@@ -1976,7 +1976,7 @@ OnClickListener, OnTouchListener {
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 
 				}
@@ -2118,7 +2118,7 @@ OnClickListener, OnTouchListener {
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+								//Logs.show ( e );
 							}
 						}
 					});
@@ -2136,9 +2136,9 @@ OnClickListener, OnTouchListener {
 					refreshCompetitionTimer.get(vCompetitionUrl).schedule( refreshCompetitionTask.get(vCompetitionUrl), (cacheTime * 1000), (cacheTime * 1000));
 				} catch (NumberFormatException e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+					//Logs.show(e);
 				}catch(Exception e){
-					Logs.show(e);
+				//	Logs.show(e);
 				}
 
 				

@@ -125,7 +125,7 @@ public class LoginWebViewFragment extends MainFragment {
 			initialize();
 
 		} catch ( Exception e ) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 
 		return li;
@@ -151,7 +151,7 @@ public class LoginWebViewFragment extends MainFragment {
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -232,7 +232,7 @@ public class LoginWebViewFragment extends MainFragment {
 			
 		}catch(Exception e){
 
-			Logs.show(e);
+//			Logs.show(e);
 
 		}
 	}
@@ -264,7 +264,7 @@ public class LoginWebViewFragment extends MainFragment {
 		bundle = null;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -356,7 +356,7 @@ public class LoginWebViewFragment extends MainFragment {
 
 			}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 
@@ -383,7 +383,7 @@ public class LoginWebViewFragment extends MainFragment {
 			}
 
 		}catch (Exception e) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 	}
 
@@ -511,7 +511,7 @@ public class LoginWebViewFragment extends MainFragment {
 							}
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show ( e );
+//							Logs.show ( e );
 						}
 					}
 
@@ -550,7 +550,7 @@ public class LoginWebViewFragment extends MainFragment {
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -872,7 +872,7 @@ public class LoginWebViewFragment extends MainFragment {
 										}
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show ( e );
+//										Logs.show ( e );
 									}
 								}
 

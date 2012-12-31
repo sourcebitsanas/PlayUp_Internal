@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -22,7 +22,7 @@ import com.playup.android.activity.PlayUpActivity;
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 /**
@@ -273,7 +273,7 @@ public class PublicProfileAdapter extends BaseAdapter implements OnTouchListener
 			String type = DatabaseUtil.getInstance().getHeader(v.getTag (R.id.aboutText).toString());
 			if( type != null ){
 				
-				Log.e("123","PublicProfileAdpater >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+v.getTag ( R.id.about_txtview ));
+				//Log.e("123","PublicProfileAdpater >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+v.getTag ( R.id.about_txtview ));
 				
 				if( type.equalsIgnoreCase(Constants.ACCEPT_TYPE_COVERSATION )){
 					PlayupLiveApplication.getFragmentManagerUtil().setFragment( "MatchHomeFragment", bundle );
@@ -284,7 +284,7 @@ public class PublicProfileAdapter extends BaseAdapter implements OnTouchListener
 			
 			//PlayupLiveApplication.getFragmentManagerUtil().setFragment( "MatchHomeFragment", bundle );
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -374,7 +374,7 @@ public class PublicProfileAdapter extends BaseAdapter implements OnTouchListener
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 	}
 

@@ -11,7 +11,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
 
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,7 +28,7 @@ import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 /**
@@ -253,7 +253,7 @@ public class PublicProfileFragment extends MainFragment implements OnClickListen
 							
 							
 							//firstDisplay/refresh of user profile
-							Log.e("123","insde FAN_PROFILE_DATA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
+							//Log.e("123","insde FAN_PROFILE_DATA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
 							
 							closeDialog();
 							isDownloading = false;
@@ -277,7 +277,7 @@ public class PublicProfileFragment extends MainFragment implements OnClickListen
 						setValues();
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 				}
 
@@ -377,7 +377,7 @@ public class PublicProfileFragment extends MainFragment implements OnClickListen
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 
 	}
@@ -389,9 +389,9 @@ public class PublicProfileFragment extends MainFragment implements OnClickListen
 	private void fetchUserData () {
 
 		try{
-		Log.e("123","inside fetchUserData >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+isHref);
+	//	Log.e("123","inside fetchUserData >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+isHref);
 		
-		Log.e("123","inside fetchUserData >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  vSelfUrl    "+vSelfUrl);
+		//Log.e("123","inside fetchUserData >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  vSelfUrl    "+vSelfUrl);
 		
 		isDownloading = true;
 		//Praveen :changed
@@ -399,7 +399,7 @@ public class PublicProfileFragment extends MainFragment implements OnClickListen
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+	//		Logs.show ( e );
 		}
 	}
 
@@ -425,7 +425,7 @@ public class PublicProfileFragment extends MainFragment implements OnClickListen
 		
 		try{
 		
-		Log.e("123","insde   setFriendGraphic >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+isDownloading);
+	//	Log.e("123","insde   setFriendGraphic >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+isDownloading);
 
 		if(myId !=-1 && publicUserId !=-1 && myId == publicUserId) {
 
@@ -452,16 +452,16 @@ public class PublicProfileFragment extends MainFragment implements OnClickListen
 			}
 
 
-			Log.e("123","insde   setFriendGraphic !isDownloading>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
+		//	Log.e("123","insde   setFriendGraphic !isDownloading>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
 			
 			isPrimaryUser = false;
 			DatabaseUtil dbUtil = DatabaseUtil.getInstance();
 			//Praveen : changed
 			String status = dbUtil.getFrienshipStatus ( vSelfUrl );
 			
-			Log.e("123","insde   setFriendGraphic !isDownloading>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> status   "+status);
+		//	Log.e("123","insde   setFriendGraphic !isDownloading>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> status   "+status);
 			
-			Log.e("123", "Inside public Profilr Fragment"+ status);
+		//	Log.e("123", "Inside public Profilr Fragment"+ status);
 			if ( status != null && status.trim().length() > 0) {
 
 
@@ -523,7 +523,7 @@ public class PublicProfileFragment extends MainFragment implements OnClickListen
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 	}
 
@@ -574,7 +574,7 @@ public class PublicProfileFragment extends MainFragment implements OnClickListen
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 		
 	}
@@ -641,7 +641,7 @@ public class PublicProfileFragment extends MainFragment implements OnClickListen
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 	}
 
@@ -696,7 +696,7 @@ public class PublicProfileFragment extends MainFragment implements OnClickListen
 
 					}
 				} catch (Exception e) {
-					Logs.show(e);
+				//	Logs.show(e);
 				}
 				
 			}

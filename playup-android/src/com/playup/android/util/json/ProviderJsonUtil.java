@@ -4,12 +4,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.util.Log;
+
 
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 public class ProviderJsonUtil {
@@ -135,7 +135,7 @@ public class ProviderJsonUtil {
 			
 			
 		} catch (JSONException e) {
-			  Logs.show(e);
+			//  Logs.show(e);
 		}  finally {
 			/*if ( Constants.X <= 320 && Constants.Y <= 480 && Constants.DPI <= 160 ) {
 			} else {*/

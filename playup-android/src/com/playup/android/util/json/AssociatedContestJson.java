@@ -3,10 +3,10 @@ package com.playup.android.util.json;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.util.Log;
+
 
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -70,13 +70,13 @@ public class AssociatedContestJson {
 
 
 		} catch (JSONException e) {
-			Logs.show ( e );
+			//Logs.show ( e );
 
 		}catch (Exception e) {
-			Logs.show ( e );
+		//	Logs.show ( e );
 
 		}catch (Error e) {
-			Logs.show ( e );
+			//Logs.show ( e );
 
 		}
 

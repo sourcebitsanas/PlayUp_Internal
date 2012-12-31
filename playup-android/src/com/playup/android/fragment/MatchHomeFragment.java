@@ -221,9 +221,9 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 			}
 
 		} catch ( Exception e ) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		} catch ( Error e ) {
-			Logs.show ( e ) ;
+//			Logs.show ( e ) ;
 		}
 	}
 
@@ -259,7 +259,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 			vConversationId = null;
 		}
 		
-		Log.e("234", "MatchHomeFragment======>>>>vConversationId====>>>"+vConversationId);
+//		Log.e("234", "MatchHomeFragment======>>>>vConversationId====>>>"+vConversationId);
 		if (bundle != null && bundle.containsKey("vConversationUrl")) {
 			vConversationUrl  = bundle.getString("vConversationUrl");
 		} else {
@@ -353,7 +353,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 			
 		} catch ( Exception e ) {
 
-			Logs.show ( e );
+//			Logs.show ( e );
 
 		}
 	}
@@ -371,7 +371,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 				publicMatchesTicketAdapter.setData( vContestId );
 			}
 		} catch ( Exception e ) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		} 
 	}
 
@@ -436,7 +436,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 			setTypefaces();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -454,7 +454,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 							DatabaseUtil dbUtil = DatabaseUtil.getInstance();
 							dbUtil.setLastViewed(vConversationId);	
 						} catch (Exception e) {
-							Logs.show ( e );
+//							Logs.show ( e );
 						}
 
 					}
@@ -465,7 +465,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -503,7 +503,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 			//		}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -529,7 +529,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -550,7 +550,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 			// set the room messages
 			setRoomMessages();			
 		} catch ( Exception e ) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 
 
@@ -567,7 +567,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 			stripLiveCount.setTypeface( Constants.BEBAS_NEUE );
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -642,7 +642,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 			}
@@ -701,7 +701,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 										noFriendsView.setVisibility(View.VISIBLE);
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show ( e );
+//										Logs.show ( e );
 									}
 
 								}
@@ -733,7 +733,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 										}
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show ( e );
+//										Logs.show ( e );
 									}
 
 								}
@@ -744,7 +744,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 					}
 
 				} catch (Exception e) {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 			}
@@ -770,7 +770,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 			json.queryMethod1( Constants.QUERY_UPDATE, null, "recent", values, " vSubjectId = \"" + vConversationId + "\" ", null, false, true );
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -930,7 +930,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 
 									}
 								} catch (Exception e) {
-									Logs.show ( e );
+//									Logs.show ( e );
 								}
 
 
@@ -944,7 +944,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 
 
 				} catch (Exception e) {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 
@@ -1107,7 +1107,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 											try {
 												PlayupLiveApplication.getFragmentManagerUtil().setFragment("MatchRoomFragment", bundle);
 											} catch (Exception e) {
-												Logs.show(e);
+//												Logs.show(e);
 											}
 
 										}
@@ -1115,7 +1115,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 
 								}
 							} catch (Exception e) {
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 
 
@@ -1197,7 +1197,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 
 								}
 							} catch (Exception e) {
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 
 
@@ -1230,7 +1230,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 								
 
 							} catch (Exception e) {
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 
 						}
@@ -1238,7 +1238,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 				}
 			}
 		} catch ( Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -1408,7 +1408,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 				addFriendImage.setImageResource(R.drawable.private_friend_selector);
 			}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -1433,7 +1433,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 					try {
 						presenceDeleteCall(true);
 					} catch (Exception e) {
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 
@@ -1441,7 +1441,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 
 			pollingTimer.schedule(pollingTask, 300, 6000);
 		} catch (Exception e) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 
 	}
@@ -1483,7 +1483,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show(e);
+//								Logs.show(e);
 							}
 						}
 					};
@@ -1510,7 +1510,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 
 
 				} catch (Exception e) {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 
@@ -1544,7 +1544,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 							fetchConversationFriends();
 						}
 					} catch (Exception e) {
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 			};
@@ -1566,7 +1566,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 							refreshFriendsTimer.schedule( refreshfriendsTask, cacheTime * 1000, (cacheTime * 1000));
 						}
 					} catch (Exception e) {
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 
@@ -1575,7 +1575,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 			th.start();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 
@@ -1613,7 +1613,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show(e);
+//								Logs.show(e);
 							}
 						}
 					};
@@ -1631,7 +1631,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 						refreshSubjectTimer.schedule(refreshScoreTask, cacheTime_refreshScore * 1000, (cacheTime_refreshScore * 1000));
 					}
 				} catch (Exception e) {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 
@@ -1791,7 +1791,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 
 					}
 				} catch (Exception e) {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 		};
@@ -1827,7 +1827,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 						}
 					}
 				} catch (Exception e) {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 			}
@@ -1866,7 +1866,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 												showAssociatedContests();
 											} catch (Exception e) {
 												// TODO Auto-generated catch block
-												Logs.show(e);
+//												Logs.show(e);
 											}
 										}
 										
@@ -1919,7 +1919,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 
 					}
 				} catch (Exception e) {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 			}
@@ -1963,7 +1963,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 						c = null;
 					}
 				} catch (Exception e) {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 		}).start();
@@ -2028,7 +2028,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 				refreshMatchesTask = null;
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -2144,7 +2144,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 									PlayupLiveApplication.getFragmentManagerUtil().setFragment( "PublicProfileFragment", bundle );
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show(e);
+//									Logs.show(e);
 								}
 
 							}
@@ -2154,7 +2154,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 
 					}
 				} catch (Exception e) {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 
@@ -2219,7 +2219,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -2253,7 +2253,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 	
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		return true;
 	}
@@ -2310,7 +2310,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 							if(publicMatchesTicketAdapter != null)							
 								matchGallery.setSelection(publicMatchesTicketAdapter.getSelectedPosition(), true);
 						} catch (Exception e) {
-							Logs.show(e);
+//							Logs.show(e);
 						}
 
 					}
@@ -2360,7 +2360,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 							commonStrip.setVisibility( View.GONE );
 							matchHeaderBottom.setVisibility(View.GONE);
 						} catch (Exception e) {
-							Logs.show(e);
+//							Logs.show(e);
 						}
 
 					}
@@ -2370,7 +2370,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 				break;
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -2401,7 +2401,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 
 					refreshMatches ();
 				} catch (Exception e) {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 			}
@@ -2440,7 +2440,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 			
 			
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -2481,7 +2481,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 
 								getAssociatedData();
 							} catch (Exception e) {
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 						}
 					};
@@ -2498,12 +2498,12 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 						}
 
 					} catch ( Exception e ) {
-						Logs.show(e);
+//						Logs.show(e);
 					}
 				}
 			}).start();
 		} catch ( Exception e ) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 
 	}
@@ -2556,7 +2556,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 											}
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
-											Logs.show(e);
+//											Logs.show(e);
 										}
 
 									}
@@ -2567,7 +2567,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 
@@ -2576,7 +2576,7 @@ public class MatchHomeFragment extends MainFragment implements OnClickListener, 
 			Thread th = new Thread ( r );
 			th.start();
 		} catch (Exception e) {
-			Logs.show ( e );
+//			Logs.show ( e );
 		}
 
 	}

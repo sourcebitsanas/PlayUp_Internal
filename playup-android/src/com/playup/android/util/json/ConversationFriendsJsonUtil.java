@@ -7,7 +7,7 @@ import android.content.ContentValues;
 
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -238,7 +238,7 @@ public class ConversationFriendsJsonUtil {
 
 
 		}catch (Exception e) {
-			  Logs.show(e);
+			//  Logs.show(e);
 		} finally {
 			/*if ( Constants.X <= 320 && Constants.Y <= 480 && Constants.DPI <= 160 ) {
 			} else {*/

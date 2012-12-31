@@ -20,7 +20,6 @@ import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
 
-import com.playup.android.util.Logs;
 
 
 public class TeamScheduleGenerator {
@@ -159,7 +158,7 @@ public class TeamScheduleGenerator {
 
 
 				} catch ( Exception e ) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			   
 				if( output_data != null )
@@ -216,7 +215,7 @@ public class TeamScheduleGenerator {
 					}
 					
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				}
 				
 				
@@ -372,7 +371,7 @@ public class TeamScheduleGenerator {
 
 		} catch (Exception e) {
 
-			Logs.show( e );
+			//Logs.show( e );
 		}
 
 
@@ -396,7 +395,7 @@ public class TeamScheduleGenerator {
 						lastEventDesc.setText(vLastEventDesc);
 					}
 			} catch (Exception e) {
-				Logs.show(e);
+				//Logs.show(e);
 			}
 	}
 
@@ -543,7 +542,7 @@ public class TeamScheduleGenerator {
 
 					}
 				} catch (Exception e) {
-					Logs.show(e);
+					//Logs.show(e);
 				} 
 
 		
@@ -632,7 +631,7 @@ public class TeamScheduleGenerator {
 				player2.setVisibility(View.GONE);
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 
 	}
@@ -689,7 +688,7 @@ public class TeamScheduleGenerator {
 				player2.setText(awayTeamSummary);
 			}
 		} catch (NumberFormatException e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 		

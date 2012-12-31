@@ -108,7 +108,7 @@ public class DefaultFragment extends MainFragment {
 		}
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 		
 	}
@@ -162,9 +162,9 @@ public class DefaultFragment extends MainFragment {
 			
 			
 		} catch (Exception e) {
-			Logs.show(e);
+//			Logs.show(e);
 		} catch ( Error e) {
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 
@@ -231,7 +231,7 @@ public class DefaultFragment extends MainFragment {
 
 		}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -281,7 +281,7 @@ public class DefaultFragment extends MainFragment {
 						setSectionData();
 
 					} catch ( Exception e ) {
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 
 				}
@@ -289,7 +289,7 @@ public class DefaultFragment extends MainFragment {
 		}).start();
 		
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 	}
@@ -330,7 +330,7 @@ public class DefaultFragment extends MainFragment {
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show(e);
+//									Logs.show(e);
 								}			
 							}
 							} );
@@ -339,14 +339,14 @@ public class DefaultFragment extends MainFragment {
 						}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+//					Logs.show(e);
 				}
 				
 			}
 		}).start();
 
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 	}
 	
@@ -386,7 +386,7 @@ public class DefaultFragment extends MainFragment {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 
 			}
@@ -418,7 +418,7 @@ public class DefaultFragment extends MainFragment {
 
 						// called from section API 
 						if( msg != null && msg.obj != null &&  msg.obj.toString().equalsIgnoreCase("Sectiondata")){
-							Log.e("123", "INSIDE ONUPDATE DEFAULT SECTION");
+//							Log.e("123", "INSIDE ONUPDATE DEFAULT SECTION");
 							isDownloaded = true;
 							if( msg.arg1 ==1 ) {
 								setValues();
@@ -453,7 +453,7 @@ public class DefaultFragment extends MainFragment {
 
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+//						Logs.show ( e );
 					}
 				}
 
@@ -462,7 +462,7 @@ public class DefaultFragment extends MainFragment {
 
 		}
 		}catch(Exception e){
-			Logs.show(e);
+//			Logs.show(e);
 		}
 
 
@@ -510,7 +510,7 @@ public class DefaultFragment extends MainFragment {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 				
 			}
@@ -549,7 +549,7 @@ public class DefaultFragment extends MainFragment {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 				
 
@@ -591,7 +591,7 @@ public class DefaultFragment extends MainFragment {
 									runnableList.put ( vDisplayUrl, new Util().getDisplayUpdateForSectionItems( vDisplayUrl,isHref,vContentId,vBlockContentId, runnableList ) );
 								}
 							} catch (Exception e) {
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 						}
 					});
@@ -610,7 +610,7 @@ public class DefaultFragment extends MainFragment {
 					}
 
 				} catch ( Exception e )  {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 
@@ -656,7 +656,7 @@ public class DefaultFragment extends MainFragment {
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 						}
 					});
@@ -673,7 +673,7 @@ public class DefaultFragment extends MainFragment {
 					}
 
 				} catch ( Exception e )  {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 
@@ -719,7 +719,7 @@ public class DefaultFragment extends MainFragment {
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+//								Logs.show ( e );
 							}
 						}
 					});
@@ -736,7 +736,7 @@ public class DefaultFragment extends MainFragment {
 					}
 
 				} catch ( Exception e )  {
-					Logs.show ( e );
+//					Logs.show ( e );
 				}
 			}
 

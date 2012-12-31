@@ -24,7 +24,7 @@ import com.playup.android.activity.PlayUpActivity;
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.util.Constants;
 import com.playup.android.util.ImageDownloader;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.PreferenceManagerUtil;
 
 
@@ -189,7 +189,7 @@ public class RegionsAdapter extends BaseAdapter implements OnTouchListener {
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -261,7 +261,7 @@ public class RegionsAdapter extends BaseAdapter implements OnTouchListener {
 			}
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}

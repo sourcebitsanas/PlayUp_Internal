@@ -12,7 +12,7 @@ import android.graphics.PorterDuff.Mode;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -37,7 +37,7 @@ import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
 import com.playup.android.util.ImageDownloader;
 import com.playup.android.util.ImageDownloaderSports;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Types;
 import com.playup.android.util.Util;
 
@@ -1535,7 +1535,7 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -1581,7 +1581,7 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 				
 				}
 			} catch (Exception e) {
-				Logs.show(e);
+				//Logs.show(e);
 				
 				bgColor = null;
 			}
@@ -1769,7 +1769,7 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 			
 			
 		} catch (Exception e) {
-			Logs.show(e);
+		//	Logs.show(e);
 		}
 	}
 	
@@ -1833,7 +1833,7 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 	}
 
@@ -1887,7 +1887,7 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 									else if(selectedId == 2)
 										selectDeSelectState ( v, false, false );
 								} catch ( Exception e) {
-									Logs.show ( e );
+									//Logs.show ( e );
 								}
 							}
 						}, 100);
@@ -1902,9 +1902,9 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 				Bundle bundle = null;
 
 				if( v.getTag(R.id.activeUserMainLayout) != null && Boolean.parseBoolean(v.getTag(R.id.activeUserMainLayout).toString()) ){
-					Log.e("123","insie ON tOuch of mact room grid adapter >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
+				//	Log.e("123","insie ON tOuch of mact room grid adapter >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
 					if(v.getTag(R.id.about_txtview) != null && v.getTag(R.id.about_txtview).toString().trim().length() > 0 ){
-						Log.e("123","insie ON tOuch of mact room grid adapter >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+v.getTag(R.id.about_txtview).toString());
+					//	Log.e("123","insie ON tOuch of mact room grid adapter >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+v.getTag(R.id.about_txtview).toString());
 						String topFragmentName = PlayupLiveApplication.getFragmentManagerUtil().getTopFragmentName();
 						
 						Bundle b =  new Bundle();
@@ -1920,7 +1920,7 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 						String type = v.getTag(R.id.active_users_text).toString();
 						
 						
-						Log.e("123","insie ON tOuch of mact room grid adapter type >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+type);
+						//Log.e("123","insie ON tOuch of mact room grid adapter type >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+type);
 
 						if ( type != null && type.equalsIgnoreCase(Constants.ACCEPT_TYPE_SPORTS_JSON ) ) {
 							PlayupLiveApplication.getFragmentManagerUtil().setFragment("AllSportsFragment",b);						
@@ -1938,7 +1938,7 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 							PlayupLiveApplication.getFragmentManagerUtil().setFragment("NewsFragment",b);
 
 						} else if ( type != null &&  type.equalsIgnoreCase(Constants.ACCEPT_TYPE_HTML)){
-							Log.e("123","insie ON tOuch of mact room grid adapter type.equalsIgnoreCase(Constants.ACCEPT_TYPE_HTML) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
+							///Log.e("123","insie ON tOuch of mact room grid adapter type.equalsIgnoreCase(Constants.ACCEPT_TYPE_HTML) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
 							
 							li = (LinearLayout) PlayUpActivity.context.findViewById( R.id.main );
 							li.bringToFront();
@@ -2066,11 +2066,11 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 			return true;
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+		//	Logs.show(e);
 			return false;
 		}
 		catch(Exception e ){
-			Logs.show(e);
+		//	Logs.show(e);
 			return false;
 		}
 
@@ -2135,7 +2135,7 @@ public class MatchRoomGridAdapter extends BaseAdapter implements OnTouchListener
 					mHandler.sendEmptyMessage(0);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Logs.show ( e );
+				//Logs.show ( e );
 			}
 		}
 	}

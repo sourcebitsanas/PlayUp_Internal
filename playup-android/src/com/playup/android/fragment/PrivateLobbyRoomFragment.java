@@ -23,7 +23,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
 import android.util.DisplayMetrics;
-import android.util.Log;
+
 
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -58,7 +58,7 @@ import com.playup.android.util.Constants;
 
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.DateUtil;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.Util;
 
 import com.playup.android.util.json.JsonUtil;
@@ -234,10 +234,10 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 			return content_layout;
 
 		} catch  ( Exception e ) {
-			Logs.show ( e );
+			//Logs.show ( e );
 			return content_layout;
 		} catch ( Error e ) {
-			Logs.show ( e );
+			//Logs.show ( e );
 			return content_layout;
 		}
 	}
@@ -291,7 +291,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 		new Util().privateLobbyPutDeleteMarker( true , vConversationId);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 	}
 
@@ -314,7 +314,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 	}
 	
@@ -351,7 +351,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 
@@ -407,7 +407,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 	}
 
@@ -446,7 +446,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					doPresenceDeleteCall(true);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 
@@ -455,7 +455,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 		pollingTimer.schedule(pollingTask, 300, 6000);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 
 	}
@@ -506,7 +506,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 		}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 
 	}
@@ -574,7 +574,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 
@@ -649,7 +649,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 			// set the room messages
 			setRoomMessages();			
 		} catch ( Exception e ) {
-			Logs.show ( e ); 
+		//	Logs.show ( e ); 
 		}
 	}
 
@@ -736,7 +736,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 			}
@@ -806,7 +806,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 
 			}
@@ -904,7 +904,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+					//	Logs.show ( e );
 					}
 				}
 
@@ -914,7 +914,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 
 
 		} catch ( Exception e ) {
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 	}
 	
@@ -945,11 +945,11 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 									refreshContest();
 								}
 							} catch ( Exception e ) {
-								Logs.show ( e );
+							//	Logs.show ( e );
 							}
 						}
 					} catch ( Exception e ) {
-						Logs.show ( e );
+						//Logs.show ( e );
 					}
 					if(c != null)
 					{
@@ -989,7 +989,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 			public void run() {
 				try {
 					
-					Log.e("123","set Headers >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
+				//	Log.e("123","set Headers >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
 					
 					Hashtable<String, List<String>> contestData = PlayupLiveApplication.getDatabaseWrapper().select( " SELECT vSubjectId, vSubjectUrl,vSubjectHrefUrl " +
 							"FROM  friendConversation " +
@@ -1000,11 +1000,11 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					if ( contestData != null && contestData.get( "vSubjectId") != null && contestData.get( "vSubjectId").size() > 0 && 
 							contestData.get( "vSubjectId").get( 0 ) != null && contestData.get( "vSubjectId").get( 0 ).trim().length() > 0)  {
 						vContestId = contestData.get( "vSubjectId").get( 0 );
-						Log.e("123","set Headers vContestId >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+vContestId);
+						//Log.e("123","set Headers vContestId >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+vContestId);
 						
-						Log.e("123","set Headers vContestId ( vSubjectUrl).get( 0 )) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+contestData.get( "vSubjectUrl").get( 0 ));
+					//	Log.e("123","set Headers vContestId ( vSubjectUrl).get( 0 )) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+contestData.get( "vSubjectUrl").get( 0 ));
 						
-						Log.e("123","set Headers vContestId ( vSubjectUrl).get( 0 )) runnableList >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+runnableList);
+					//	Log.e("123","set Headers vContestId ( vSubjectUrl).get( 0 )) runnableList >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+runnableList);
 						
 						
 						if(contestData.get( "vSubjectHrefUrl").get( 0 ) != null && contestData.get( "vSubjectHrefUrl").get( 0 ).trim().length() > 0 && 
@@ -1020,7 +1020,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 						
 						else if(runnableList != null && !runnableList.containsKey(contestData.get( "vSubjectUrl").get( 0 ))  && Util.isInternetAvailable()  )	{
 							isSubjectDownloading  = true;
-							Log.e("123","set Headers vContestId runnableList != null && !runnableList.containsKey(contestData.get( vSubjectUrl).get( 0 )) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
+							//Log.e("123","set Headers vContestId runnableList != null && !runnableList.containsKey(contestData.get( vSubjectUrl).get( 0 )) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
 							if( contestData.get( "vSubjectUrl").get( 0 )!=null && contestData.get( "vSubjectUrl").get( 0 ).trim().length()>0){
 								runnableList.put(contestData.get( "vSubjectUrl").get( 0 ),	new Util().getPrivateContestsData ( contestData.get( "vSubjectUrl").get( 0 ),false, runnableList,false ));
 	
@@ -1068,7 +1068,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 
@@ -1143,7 +1143,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 									showHideOnlineFriends( true );
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								//	Logs.show ( e );
 								}
 							}
 
@@ -1185,7 +1185,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 									checkForRefresh();
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+									//Logs.show ( e );
 								}
 							}
 
@@ -1203,7 +1203,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 									checkForRefresh();
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								//	Logs.show ( e );
 								}
 							}
 
@@ -1242,7 +1242,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 									//							setHeaders();
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+									//Logs.show ( e );
 								}
 
 							}
@@ -1263,7 +1263,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 									//							setHeaders();
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								//	Logs.show ( e );
 								}
 
 							}
@@ -1303,7 +1303,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 										checkForRefresh();
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show ( e );
+								//		Logs.show ( e );
 									}
 
 								}
@@ -1364,11 +1364,11 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 
 										}
 									} catch ( Exception e ) {
-										Logs.show ( e );
+										//Logs.show ( e );
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+									//Logs.show ( e );
 								}
 
 
@@ -1403,7 +1403,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 
 									}
 								} catch ( Exception e ) {
-									Logs.show ( e );
+									//Logs.show ( e );
 								}
 
 
@@ -1520,7 +1520,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								//	Logs.show ( e );
 								}
 							}
 
@@ -1593,7 +1593,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								//	Logs.show ( e );
 								}
 							}
 
@@ -1605,7 +1605,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 			}
 		} catch (NotFoundException e) {
 			// TODO Auto-generated catch block
-		Logs.show(e);
+	//	Logs.show(e);
 		}
 	}
 
@@ -1619,7 +1619,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 		}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 	}
 
@@ -1819,7 +1819,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					getConversationMessages ();
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 		};
@@ -1846,12 +1846,12 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 						try {
 							refreshMessagesTimer.schedule( refreshMessagesTask, cacheTime * 1000, (cacheTime * 1000));
 						} catch ( Exception e ) {
-							Logs.show ( e );
+						//	Logs.show ( e );
 						}
 					}
 				} catch (NumberFormatException e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 
@@ -1988,7 +1988,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 
@@ -2069,12 +2069,12 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 						try {
 							refreshConversationTimer.schedule( refreshConversationTask, cacheTime * 1000, (cacheTime * 1000));
 						} catch ( Exception e ) {
-							Logs.show ( e );
+					//		Logs.show ( e );
 						}
 					}
 				} catch (NumberFormatException e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 
@@ -2121,7 +2121,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 
@@ -2187,7 +2187,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 							}
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show ( e );
+						//	Logs.show ( e );
 						}
 
 					}
@@ -2204,7 +2204,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 				addFriendImage.setImageResource(R.drawable.private_friend_selector);
 			}
 		}catch(Exception e){
-			Logs.show ( e );
+		//	Logs.show ( e );
 		}
 
 	}
@@ -2235,7 +2235,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 		};
@@ -2258,11 +2258,11 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 							refreshFriendsTimer.schedule( refreshfriendsTask, cacheTime * 1000, (cacheTime * 1000));
 						}
 					}catch(Exception e){
-						Logs.show(e);
+					//	Logs.show(e);
 					}
 				} catch (NumberFormatException e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 
@@ -2389,7 +2389,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 			}
 		};
@@ -2438,7 +2438,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 
@@ -2482,7 +2482,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 
 
@@ -2527,9 +2527,9 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 						@Override
 						public void run() {
 							
-							Log.e("123","refreshMatches TimerTask>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+vCompetitionLiveUrl);
+						//	Log.e("123","refreshMatches TimerTask>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+vCompetitionLiveUrl);
 							
-							Log.e("123","refreshMatches isHref>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+isHref);
+						//	Log.e("123","refreshMatches isHref>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> "+isHref);
 							
 							
 							try {
@@ -2538,7 +2538,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+						//		Logs.show ( e );
 							}
 						}
 					});
@@ -2555,7 +2555,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					}
 
 				} catch ( Exception e )  {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 
@@ -2633,7 +2633,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 								showMatchHeader();
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Logs.show ( e );
+							//	Logs.show ( e );
 							}
 						}
 					});
@@ -2684,7 +2684,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 
 
 				} catch (JSONException e) {
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 			}
 
@@ -2694,7 +2694,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 	}
 
@@ -2765,7 +2765,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 
 
@@ -2869,12 +2869,12 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 							contestTimer = new Timer();
 							contestTimer.schedule( contestTask , cacheTime * 1000, cacheTime * 1000 );
 						} catch ( Exception e ) {
-							Logs.show ( e );
+						//	Logs.show ( e );
 						}
 					}
 				} catch (NumberFormatException e) {
 					// TODO Auto-generated catch block
-					Logs.show ( e );
+					//Logs.show ( e );
 				}
 
 			}
@@ -2949,7 +2949,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 										return;
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
-										Logs.show ( e );
+									//	Logs.show ( e );
 									}
 
 								}
@@ -3004,7 +3004,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 									}
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
-									Logs.show ( e );
+								///	Logs.show ( e );
 								}
 
 							}
@@ -3018,7 +3018,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 
 				} catch (Exception e) {
 
-					Logs.show( e );
+				//	Logs.show( e );
 				}
 
 
@@ -3031,7 +3031,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+			//Logs.show ( e );
 		}
 	}
 
@@ -3067,7 +3067,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show ( e );
+					//	Logs.show ( e );
 					}
 
 				}
@@ -3139,7 +3139,7 @@ public class PrivateLobbyRoomFragment extends MainFragment implements OnClickLis
 		}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show ( e );
+	//		Logs.show ( e );
 		}
 
 	}
