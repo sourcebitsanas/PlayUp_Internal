@@ -32,8 +32,9 @@ import android.os.Message;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager.BackStackEntry;
 import android.telephony.TelephonyManager;
+import android.text.Html;
 import android.util.DisplayMetrics;
-import android.util.Log;
+
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -57,7 +58,7 @@ import com.playup.android.service.MediaPlayerService;
 import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 import com.playup.android.util.Keys;
-import com.playup.android.util.Logs;
+
 import com.playup.android.util.PreferenceManagerUtil;
 import com.playup.android.util.Util;
 import com.urbanairship.push.PushManager;
@@ -145,6 +146,8 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 	public void onCreate ( Bundle savedInstanceState ) {
 		try {
 			super.onCreate ( savedInstanceState );
+			
+		
 			requestWindowFeature ( Window.FEATURE_NO_TITLE );
 
 			PreferenceManagerUtil preferenceManagerUtil = new PreferenceManagerUtil();
@@ -186,9 +189,9 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 				pd.cancel();
 
 			} catch ( Exception e ) {
-				Logs.show ( e );
+			//	Logs.show ( e );
 			} catch ( Error e ) {
-				Logs.show ( e );
+				//Logs.show ( e );
 			} finally {
 
 				if ( PlayupLiveApplication.databaseWrapper == null ) {
@@ -234,7 +237,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 			setValues();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-		Logs.show(e);
+		//Logs.show(e);
 		}
 	}
 
@@ -324,7 +327,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 			}
 		} catch (NumberFormatException e) {
 
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -418,7 +421,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 					isHomePressed = false;
 				}
 			} catch (Exception e) {
-				Logs.show ( e );
+				//Logs.show ( e );
 			}
 			
 			
@@ -470,7 +473,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 			}
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -510,6 +513,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 		
 	}
 
+	
 	@Override
 	protected void onRestart() {
 		super.onRestart();
@@ -814,7 +818,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 
 										}
 									} catch (Exception e) {
-										Logs.show(e);
+										//Logs.show(e);
 									}
 								}
 							}).start();
@@ -822,7 +826,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show(e);
+						//Logs.show(e);
 					}
 				}
 
@@ -836,13 +840,13 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 
 				}
 			} catch (Exception e) {
-				Logs.show(e);
+				//Logs.show(e);
 			}
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
 
 
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -1021,7 +1025,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 							}
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show(e);
+							//Logs.show(e);
 						}
 
 					}
@@ -1033,13 +1037,13 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 						refreshNotificationTimer.schedule(refreshNotificationTask, (vUserNotificationCacheTime * 1000), (vUserNotificationCacheTime * 1000));
 					}
 				}catch(Exception e){
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 			}
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 
@@ -1173,7 +1177,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 							}
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show(e);
+							//Logs.show(e);
 						}
 					}
 				};
@@ -1183,14 +1187,14 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 
 					}
 				}catch(Exception e){
-					Logs.show(e);
+					//Logs.show(e);
 				}
 
 
 			}
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -1257,9 +1261,9 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 										new Util().getDirectConversationData();
 									}
 								} catch (Exception e ) {
-									Logs.show ( e );
+									//Logs.show ( e );
 								} catch ( Error e ) {
-									Logs.show ( e );
+									//Logs.show ( e );
 								}
 							}
 						};
@@ -1268,9 +1272,9 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 								directConversationTimer.schedule ( directConversationTask, ( vDirectConversationCacheTime * 1000 ),( vDirectConversationCacheTime * 1000 ) );	
 							}
 						} catch ( Exception e ) {
-							Logs.show(e);
+							//Logs.show(e);
 						} catch ( Error e ) {
-							Logs.show ( e );
+							//Logs.show ( e );
 						}
 					}
 					}else {
@@ -1279,7 +1283,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 					
 				} catch (Exception e) {
 					
-					Logs.show(e);
+				//	Logs.show(e);
 					
 				}
 			}
@@ -1314,7 +1318,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 							}
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							Logs.show(e);
+							//Logs.show(e);
 						}
 					}
 				};
@@ -1323,13 +1327,13 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 						playUpFriendsTimer.schedule( playUpFriendsTask,(vPlayUpFriendsUrlCacheTime * 1000),(vPlayUpFriendsUrlCacheTime * 1000));
 					}	
 				} catch ( Exception e ) {
-					Logs.show ( e );
+				//	Logs.show ( e );
 				}
 
 			}
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -1362,7 +1366,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 			mNotificationManager.notify(12, notification);
 		} catch (NotFoundException e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -1376,25 +1380,28 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 	public static void showErrorDialog(String msg){
 		
 		try {
+
 			if(!Constants.isCurrent)
 				return;
 			if( msg != null &&  msg.equalsIgnoreCase("errorFethchingCredentials")){
+
 				if(PlayUpActivity.handler != null){
 					
 					PlayUpActivity.handler.post(new Runnable() {
 						
 						@Override
 						public void run() {
+							
 							alertDialog = new AlertDialog.Builder(PlayUpActivity.context).create();
-							alertDialog.setTitle("Error!");
-							alertDialog.setMessage("Please Try Again");
-							alertDialog.setButton("Try Again", new DialogInterface.OnClickListener() {
+							alertDialog.setTitle(PlayupLiveApplication.getInstance().getResources().getString(R.string.error));
+							alertDialog.setMessage(PlayupLiveApplication.getInstance().getResources().getString(R.string.please_try_again));
+							alertDialog.setButton(PlayupLiveApplication.getInstance().getResources().getString(R.string.try_again), new DialogInterface.OnClickListener() {
 							      public void onClick(DialogInterface dialog, int which) {
 							 
 							       
 							    	  new Util().callRootApi();	
 							    } });
-							alertDialog.setButton2("Quit", new DialogInterface.OnClickListener() {
+							alertDialog.setButton2(PlayupLiveApplication.getInstance().getResources().getString(R.string.quit), new DialogInterface.OnClickListener() {
 							      public void onClick(DialogInterface dialog, int which) {
 							 
 							       	
@@ -1444,7 +1451,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
+			//Logs.show(e);
 		}
 		
 		

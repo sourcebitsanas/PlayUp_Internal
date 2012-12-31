@@ -9,7 +9,8 @@ import org.json.JSONObject;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
+
+
 
 import com.playup.android.application.PlayupLiveApplication;
 import com.playup.android.connection.methods.Crypto;
@@ -1552,10 +1553,12 @@ public class DatabaseUtil {
 				}
 				c.close();
 			} catch (Exception e) {
-				Logs.show(e);
-			} finally {
-				if (c != null && !c.isClosed()) {
-					c.close();
+
+				//Logs.show(e);
+			}finally{
+				if(c != null && !c.isClosed()){
+					c.close();					
+
 				}
 
 				c = null;
@@ -3796,8 +3799,10 @@ public class DatabaseUtil {
 				return result;
 			}
 			return null;
-		} catch (Exception e) {
-			Logs.show(e);
+
+		}catch (Exception e) {
+			//Logs.show(e);
+
 			return null;
 		} finally {
 			if (c != null && !c.isClosed())
@@ -4168,8 +4173,10 @@ public class DatabaseUtil {
 				return result;
 			}
 			return null;
-		} catch (Exception e) {
-			Logs.show(e);
+
+		}catch (Exception e) {
+			//Logs.show( e ); 
+
 			return null;
 		} finally {
 			if (c != null && !c.isClosed())
@@ -4213,8 +4220,10 @@ public class DatabaseUtil {
 				return result;
 			}
 			return null;
-		} catch (Exception e) {
-			Logs.show(e);
+
+		}catch (Exception e) {
+			//Logs.show( e ); 
+
 			return null;
 		} finally {
 			if (c != null && !c.isClosed())
@@ -6991,7 +7000,9 @@ public class DatabaseUtil {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+
+				//	Logs.show ( e );
+
 				}
 			}
 
@@ -8482,7 +8493,7 @@ public class DatabaseUtil {
 					.queryMethod2(Constants.QUERY_INSERT, null,
 							"root_resource", values, null);
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -8602,12 +8613,8 @@ public class DatabaseUtil {
 
 		if (isPrimary) {
 
-			Log.e("123",
-					"update rows >>>>>>>>>>>>>>>>>>"
-							+ PlayupLiveApplication.getDatabaseWrapper()
-									.queryMethod2(Constants.QUERY_UPDATE, null,
-											"user", values,
-											" isPrimaryUser = \"1\" "));
+			//Log.e("123","update rows >>>>>>>>>>>>>>>>>>"+ PlayupLiveApplication.getDatabaseWrapper().queryMethod2(Constants.QUERY_UPDATE, null,"user", values," isPrimaryUser = \"1\" "));
+			PlayupLiveApplication.getDatabaseWrapper().queryMethod2(Constants.QUERY_UPDATE, null,"user", values," isPrimaryUser = \"1\" ");
 
 		} else {
 			int count = PlayupLiveApplication.getDatabaseWrapper()
@@ -8615,7 +8622,7 @@ public class DatabaseUtil {
 							" SELECT iUserId FROM user WHERE vSelfUrl = \""
 									+ selfUrl + "\" ");
 			if (count > 0) {
-				Log.e("123",
+				/*Log.e("123",
 						"update rows >>>>>>>>>>>>>>>>>>"
 								+ PlayupLiveApplication.getDatabaseWrapper()
 										.queryMethod2(
@@ -8624,15 +8631,19 @@ public class DatabaseUtil {
 												"user",
 												values,
 												" vSelfUrl = \"" + selfUrl
-														+ "\" "));
+														+ "\" "));*/
+				PlayupLiveApplication.getDatabaseWrapper().queryMethod2(Constants.QUERY_UPDATE,null,"user",values," vSelfUrl = \"" + selfUrl+ "\" ");
 			} else {
-				Log.e("123",
+				/*Log.e("123",
 						"inserted rows >>>>>>>>>>>>>>>> "
 								+ PlayupLiveApplication.getDatabaseWrapper()
 										.queryMethod2(Constants.QUERY_INSERT,
-												null, "user", values, null));
+												null, "user", values, null));*/
+				 PlayupLiveApplication.getDatabaseWrapper().queryMethod2(Constants.QUERY_INSERT,null, "user", values, null);
 			}
 		}
+
+
 
 	}
 
@@ -8946,10 +8957,12 @@ public class DatabaseUtil {
 	/**
 	 * sets the user data into the database
 	 */
-	public void setUserToken(final String token, boolean queryMethod1) {
 
-		Log.e("123",
-				"map.containsKey( Constants.AUTHORIZATION_TOKEN_KEY ) !Constants.isLoggedIn setUserToken>>>>>>>>>>>>>>>>>>>>>>>>>>");
+	public void setUserToken( final String token, boolean queryMethod1 ) {
+		
+		
+		//Log.e("123","map.containsKey( Constants.AUTHORIZATION_TOKEN_KEY ) !Constants.isLoggedIn setUserToken>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
 
 		if (queryMethod1) {
 
@@ -8985,7 +8998,9 @@ public class DatabaseUtil {
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show(e);
+
+					//	Logs.show ( e );
+
 					}
 
 				}
@@ -9058,7 +9073,9 @@ public class DatabaseUtil {
 						}
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						Logs.show(e);
+
+					//	Logs.show ( e );
+
 					}
 
 				}
@@ -9092,8 +9109,10 @@ public class DatabaseUtil {
 
 	public void dropTables() {
 
-		Log.e("123", "######################## TABLES DROPED");
-		Hashtable<String, Object> result = getRegionUrlFromRoot();
+
+	//	Log.e("123", "######################## TABLES DROPED");
+		 Hashtable<String, Object> result = getRegionUrlFromRoot();
+
 		String vRegionUrl = (String) result.get("url");
 
 		DatabaseWrapper.getWritableSQLiteDatabase().delete("sections", null,
@@ -9224,7 +9243,9 @@ public class DatabaseUtil {
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Logs.show(e);
+
+					//Logs.show ( e );
+
 				}
 
 			}
@@ -9358,8 +9379,10 @@ public class DatabaseUtil {
 			c = null;
 
 		} catch (Exception e) {
-			Logs.show(e);
-			if (c != null && !c.isClosed())
+
+			//Logs.show( e );
+			if(c !=null && !c.isClosed())
+
 				c.close();
 
 			c = null;
@@ -12414,19 +12437,22 @@ public class DatabaseUtil {
 
 		ContentValues values = new ContentValues();
 
-		values.put("vPushId", vPushId);
-		values.put("vShortUrl", vShortUrl);
-		values.put("iPushType", pushType);
-		values.put("vSender", vSender);
-		values.put("iNotificationId", notificationId);
-		values.put("isRead", isRead);
 
-		Log.e("234", "vPushId=======================>>>" + vPushId);
-		Log.e("234", "vShortUrl=====================>>>" + vShortUrl);
-		Log.e("234", "pushType======================>>>" + pushType);
-		Log.e("234", "vSender=======================>>>" + vSender);
-		Log.e("234", "notificationId================>>>" + notificationId);
-		Log.e("234", "isRead========================>>>" + isRead);
+		values.put( "vPushId", vPushId );
+		values.put( "vShortUrl", vShortUrl );
+		values.put( "iPushType", pushType );
+		values.put( "vSender", vSender );
+		values.put( "iNotificationId", notificationId );
+		values.put( "isRead", isRead );
+		
+		
+	//	Log.e("234", "vPushId=======================>>>"+vPushId);
+		//Log.e("234", "vShortUrl=====================>>>"+vShortUrl);
+		//Log.e("234", "pushType======================>>>"+pushType);
+		//Log.e("234", "vSender=======================>>>"+vSender);
+		//Log.e("234", "notificationId================>>>"+notificationId);
+		//Log.e("234", "isRead========================>>>"+isRead);
+
 
 		int count = PlayupLiveApplication.getDatabaseWrapper().getTotalCount(
 				" SELECT vPushId FROM push_notifications WHERE  vPushId = \""
@@ -14326,8 +14352,10 @@ public class DatabaseUtil {
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
-			Logs.show(e);
-		} finally {
+
+			//Logs.show(e);
+		}finally{
+
 
 			if (c != null && !c.isClosed()) {
 
@@ -14393,8 +14421,10 @@ public class DatabaseUtil {
 
 			}
 
-		} catch (Exception e) {
-			Logs.show(e);
+
+		}catch (Exception e) {
+		//	Logs.show(e);
+
 
 		} finally {
 			if (c != null && !c.isClosed())
@@ -14973,7 +15003,7 @@ public class DatabaseUtil {
 			}
 		} catch (Exception e) {
 
-			Logs.show(e);
+		//	Logs.show(e);
 
 		} finally {
 
@@ -15459,10 +15489,12 @@ public class DatabaseUtil {
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
-		} finally {
 
-			if (c != null && !c.isClosed()) {
+			//Logs.show(e);
+		}finally{
+			
+			if(c != null && !c.isClosed()){
+
 				c.close();
 			}
 
@@ -15498,7 +15530,7 @@ public class DatabaseUtil {
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 			return false;
 		} finally {
 
@@ -15537,7 +15569,7 @@ public class DatabaseUtil {
 						Constants.QUERY_INSERT, null, "credentials", values,
 						null);
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -15578,9 +15610,11 @@ public class DatabaseUtil {
 			}
 
 		} catch (Exception e) {
-			Logs.show(e);
-		} finally {
-			if (c != null && !c.isClosed()) {
+
+			//Logs.show(e);
+		}finally{
+			if(c != null && !c.isClosed()){
+
 				c.close();
 				c = null;
 			}
@@ -15601,7 +15635,7 @@ public class DatabaseUtil {
 					Constants.QUERY_UPDATE, null, "user", values,
 					" iUserId = \"" + vUserId + "\" ");
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 
 	}
@@ -15645,10 +15679,12 @@ public class DatabaseUtil {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Logs.show(e);
-		} finally {
 
-			if (c != null && !c.isClosed())
+		//	Logs.show(e);
+		}finally{
+			
+			if(c != null && !c.isClosed())
+
 				c.close();
 
 			c = null;
@@ -15691,7 +15727,7 @@ public class DatabaseUtil {
 
 			}
 		} catch (Exception e) {
-			Logs.show(e);
+			//Logs.show(e);
 		}
 	}
 
@@ -15723,10 +15759,12 @@ public class DatabaseUtil {
 			}
 
 		} catch (Exception e) {
-			Logs.show(e);
-		} finally {
 
-			if (c != null && !c.isClosed()) {
+		//	Logs.show(e);
+		}finally{
+			
+			if(c != null && !c.isClosed()){
+
 				c.close();
 			}
 
@@ -15752,10 +15790,12 @@ public class DatabaseUtil {
 			}
 
 		} catch (Exception e) {
-			Logs.show(e);
-		} finally {
 
-			if (c != null && !c.isClosed()) {
+			//Logs.show(e);
+		}finally{
+			
+			if(c != null && !c.isClosed()){
+
 				c.close();
 			}
 
