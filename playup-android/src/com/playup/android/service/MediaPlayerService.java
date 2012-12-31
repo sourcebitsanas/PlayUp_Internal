@@ -1,6 +1,5 @@
 package com.playup.android.service;
 
-import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -11,14 +10,13 @@ import com.playup.android.util.Constants;
 import com.playup.android.util.Logs;
 
 import android.app.Notification;
-import android.app.NotificationManager;
+
 import android.app.PendingIntent;
 import android.app.Service;
-import android.content.ComponentName;
+
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
-import android.drm.DrmErrorEvent;
-import android.drm.DrmManagerClient;
+
 
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -27,7 +25,7 @@ import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnErrorListener;
 import android.media.MediaPlayer.OnInfoListener;
 import android.media.MediaPlayer.OnPreparedListener;
-import android.os.Binder;
+
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Message;
@@ -98,11 +96,8 @@ OnCompletionListener,OnErrorListener,OnBufferingUpdateListener,OnInfoListener{
 				
 
 					
-					AssetFileDescriptor afd = PlayupLiveApplication.getInstance().getAssets().openFd("default.mp3");
-					   
-				    
-			    
-				mediaPlayer.setDataSource(afd.getFileDescriptor(),afd.getStartOffset(),afd.getLength());
+//				AssetFileDescriptor afd = PlayupLiveApplication.getInstance().getAssets().openFd("default.mp3");
+//				mediaPlayer.setDataSource(afd.getFileDescriptor(),afd.getStartOffset(),afd.getLength());
 				    
 				}else{
 					mediaPlayer.setDataSource(intent.getStringExtra("vRadioUrl"));
