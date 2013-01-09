@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:background="#F7F7F7"
+   android:background="@layout/mydialog_shape"
    
     >
     
@@ -18,10 +18,10 @@
             android:layout_width="wrap_content"
             android:text="Live Radio"
             android:textSize="30dp"
-            android:padding="5dp"/>
+          />
 
         <ImageView
-            android:padding="5dp"
+            
             android:id="@+id/close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,7 +55,10 @@
             ></ListView>
     
     <ImageView
-        	android:padding="5dp"
+        	android:paddingTop="5dp"
+        	android:paddingLeft="5dp"
+        	android:paddingRight="5dp"
+        			
             android:id="@+id/micBottom"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"

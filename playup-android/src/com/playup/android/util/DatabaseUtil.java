@@ -15991,5 +15991,18 @@ public class DatabaseUtil {
 //		
 		
 	}
+	
+	/**
+	 * Aparna's method praveen added
+	 * @return
+	 */
+	public String getCurrentRadioId() {
+		Cursor c = PlayupLiveApplication.getDatabaseWrapper().selectQuery("SELECT vRadioId FROM radioStations WHERE isPlaying = 1");
+		if(c != null && c.getCount() > 0){
+		c.moveToFirst();
+		return c.getString(c.getColumnIndex("vRadioId"));
+		}
+		return null;
+		}
 
 }

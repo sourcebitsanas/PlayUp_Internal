@@ -22,9 +22,20 @@ public class RadioStationListAdapter extends BaseAdapter{
 	LayoutInflater inflater;
 	ViewHolder holder;
 	private ImageDownloader imageDownloader = null;
+	private String vCurrentRadioId;
 
-	public RadioStationListAdapter(Hashtable<String, List<String>> stationList) {		
+	public RadioStationListAdapter(Hashtable<String, List<String>> stationList,String vCurrentRadioId) {		
+		this.vCurrentRadioId = vCurrentRadioId;
+		this.stationList	=	stationList;
+		inflater = ( LayoutInflater ) PlayUpActivity.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		
+		if (imageDownloader == null) {
+			imageDownloader = new ImageDownloader();
+		}
+	}
+
+	public RadioStationListAdapter(Hashtable<String, List<String>> stationList) {
+		this.vCurrentRadioId = null;
 		this.stationList	=	stationList;
 		inflater = ( LayoutInflater ) PlayUpActivity.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		
@@ -66,6 +77,17 @@ public class RadioStationListAdapter extends BaseAdapter{
 		} else  {
 			holder		=	(ViewHolder) convertView.getTag();
 		}
+		
+//		if(vCurrentRadioId != null ){
+//			if(vCurrentRadioId.equalsIgnoreCase(stationList.get("vRadioId").get(0))){
+//			
+//			}
+//		}else{
+//			if(position == 0){
+//				
+//			}
+//		}
+		
 		
 		if(stationList.containsKey("vRadioTitle") && stationList.get("vRadioTitle") != null && stationList.get("vRadioTitle").get(position) != null && stationList.get("vRadioTitle").get(position).trim().length() >0 ){
 			holder.radioTitle.setText(stationList.get("vRadioTitle").get(position));
