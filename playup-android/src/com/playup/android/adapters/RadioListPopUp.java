@@ -5,21 +5,27 @@ import java.util.List;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout.LayoutParams;
 import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.PopupWindow.OnDismissListener;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.playup.android.R;
 import com.playup.android.activity.PlayUpActivity;
 import com.playup.android.service.MediaPlayerService;
+import com.playup.android.util.Constants;
 import com.playup.android.util.DatabaseUtil;
 
 public class RadioListPopUp implements OnClickListener{
@@ -32,14 +38,15 @@ public class RadioListPopUp implements OnClickListener{
 	public PopupWindow popupWindow = null;
 	private ListView radioListView;
 	private ImageView close;
-	private Button pauseButton;
+	private ImageView pauseButton;
 	private TextView radioName;
 	private TextView radiodesc;
 	private RelativeLayout bufferingLayout;
 	private RelativeLayout timeLayout;
 	private Hashtable<String, List<String>> stationList;
 	private TextView timeTextView;
-	
+	private Hashtable<String, List<String>> currentlyPlaying	=	null;
+	private TextView bufferingText;
 	
 	public RadioListPopUp() {
 			
@@ -145,24 +152,35 @@ public class RadioListPopUp implements OnClickListener{
 	}
 
 	
-
+	
 	private void initializeViews() {
 		popupView = layoutInflater.inflate(R.layout.popup_window, null);  
-          
- 		popupWindow = new PopupWindow(popupView,200,275);
-		popupWindow.setFocusable(true);
+		
+ 		popupWindow = new PopupWindow(popupView);
+ 		popupWindow.setWidth(LayoutParams.WRAP_CONTENT);
+ 		popupWindow.setHeight(LayoutParams.WRAP_CONTENT);
+ 		popupWindow.setBackgroundDrawable(new BitmapDrawable());
+	 	popupWindow.setFocusable(true);
+	 	popupWindow.setOutsideTouchable(false);
+	 	
+	 	//popupWindow = new PopupWindow(popupView,200,275);
+		//popupWindow.setFocusable(true);
 		
 		 radioListView	=	(ListView) popupView.findViewById(R.id.radioList);
 		 close	=	(ImageView) popupView.findViewById(R.id.close);
-		 pauseButton = (Button)popupView.findViewById(R.id.pause);
+		 pauseButton = (ImageView)popupView.findViewById(R.id.pause);
 			radioName = (TextView) popupView.findViewById(R.id.radioName);
 			radiodesc = (TextView) popupView.findViewById(R.id.radioDesc);
-			
+			radioName.setTypeface(Constants.OPEN_SANS_REGULAR);
+			radiodesc.setTypeface(Constants.OPEN_SANS_LIGHT);
 			bufferingLayout = (RelativeLayout) popupView.findViewById(R.id.bufferingLayout);
 			timeLayout = (RelativeLayout) popupView.findViewById(R.id.timeMain);
 			
 			timeTextView = (TextView)popupView.findViewById(R.id.time);
-		
+			timeTextView.setTypeface(Constants.OPEN_SANS_LIGHT);
+			
+			bufferingText	=	(TextView) popupView.findViewById(R.id.bufferingText);
+			bufferingText.setTypeface(Constants.OPEN_SANS_LIGHT);
 	}
 
 	public void show(){
@@ -182,6 +200,7 @@ public class RadioListPopUp implements OnClickListener{
 	             stationList	=	dbUtil.getRadioStaionsData(vContentId);
 	            
 	             
+	             
 	             	
 	             	if(PlayUpActivity.handler != null){
 	             		
@@ -196,10 +215,34 @@ public class RadioListPopUp implements OnClickListener{
 			    	            
 			    	             
 			    	         	if(stationList	!= null && stationList.get("vRadioId") != null && 
-			    	         			stationList.get("vRadioId").size() > 0){
+			    	         			stationList.get("vRadioId").size() > 0 ){
 				             		radioListView.setAdapter(new RadioStationListAdapter(stationList));
 				             	}
-			    	             popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
+							if (Constants.DENSITY.equalsIgnoreCase("high")) {
+								
+								popupWindow.showAtLocation(popupView, 0, 0, 0);
+								popupWindow.update(25, 75, 430, 690);
+								Log.e("123", "density of view----------------"+ Constants.DENSITY);
+								
+							} else if (Constants.DENSITY.equalsIgnoreCase("medium")) {
+								
+								popupWindow.showAtLocation(popupView, 0, 0, 0);
+								popupWindow.update(25, 75, 430, 690);
+								Log.e("123", "density of view----------------"+ Constants.DENSITY);
+								
+							} else if (Constants.DENSITY.equalsIgnoreCase("low")) {
+								
+								popupWindow.showAtLocation(popupView, 0, 0, 0);
+								popupWindow.update(25, 75, 200, 275);
+								Log.e("123", "density of view----------------"+ Constants.DENSITY);
+								
+							} else if (PlayUpActivity.isXhdpi) {
+								
+								popupWindow.showAtLocation(popupView, 0, 0, 0);
+								popupWindow.update(25, 75, 430, 720);
+								Log.e("123", "density of view----------------"+ Constants.DENSITY);
+								
+							}
 								
 							}
 						});
@@ -279,5 +322,23 @@ public class RadioListPopUp implements OnClickListener{
 		timeLayout.setVisibility(View.GONE);
 		
 	}
+
+
+		
+	
+	
+//	public boolean isShowingPopUpWindow(){
+//		if(popupWindow.isShowing()){
+//			return true;
+//		}else {
+//			return false;
+//		}
+//		
+//		
+//	}
+//	
+//	public void dismissPopUpWindow(){
+//		popupWindow.dismiss();
+//	}
 	
 }

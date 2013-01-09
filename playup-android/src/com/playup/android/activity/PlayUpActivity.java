@@ -24,6 +24,7 @@ import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.content.pm.PackageInfo;
 import android.content.res.Resources.NotFoundException;
+import android.media.AudioManager;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -149,7 +150,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 			
 		
 			requestWindowFeature ( Window.FEATURE_NO_TITLE );
-
+			
 			PreferenceManagerUtil preferenceManagerUtil = new PreferenceManagerUtil();
 			String locale = preferenceManagerUtil.get( "locale", null );
 			String curr_locale = PlayupLiveApplication.getInstance().getResources().getConfiguration().locale.getLanguage();
@@ -659,8 +660,7 @@ public class PlayUpActivity extends FragmentActivity implements ActivityInterfac
 
 
 		if ((keyCode == KeyEvent.KEYCODE_BACK)) {
-
-
+			
 			int backStackEntryCount = PlayupLiveApplication.getFragmentManager().getBackStackEntryCount();
 
 			if ( backStackEntryCount <= 1 ) {

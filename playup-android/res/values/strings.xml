@@ -182,5 +182,6 @@
    <string name="please_try_again">Please try again.</string>
    <string name="try_again">Try Again</string>
    <string name="quit">Quit</string>
+   <string name="radio_network_error">Network not connected</string>
   
 </resources>

@@ -15839,12 +15839,16 @@ public class DatabaseUtil {
 				" WHERE vContentId =\""+vContentId+"\" ORDER BY iOrderId");
 		
 		
-
-
 		}
 
 				
-
+	public Hashtable<String, List<String>> getRadioStationsDataToPass(String vContentId){
+		
+		return PlayupLiveApplication.getDatabaseWrapper().select("SELECT vContentId,vRadioId,vRadioTitle,vRadioSubTitle,vRadioIcon,vRadioDisplayTitle,vRadioDisplaySubTitle,vRadioStationBackground, " +
+				" vRadioStationUrl,vRadioSationHrefUrl, vRadioStationLinkType, iOrderId, isPlaying FROM radioStations "+  
+				" WHERE (vContentId =\""+vContentId+"\" AND isPlaying = 1 )  ORDER BY iOrderId");
+		
+	}
 			
 
 		

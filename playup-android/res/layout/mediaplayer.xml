@@ -1,80 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/headerBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        
-        >
-        
-        <TextView android:id="@+id/radioName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-           
-            android:paddingLeft="20dp"
-            android:layout_marginTop="10dp"/>
-        
-        <TextView android:id="@+id/radioDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            
-            android:ellipsize="marquee"
-            android:layout_below="@+id/radioName"
-            android:paddingLeft="20dp"/>
-        
-        <RelativeLayout android:id="@+id/timeMain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/radioDesc"
-            android:paddingLeft="5dp"
-            android:visibility="gone">
-            
-         <ImageView
-            android:padding="5dp"
+        android:src="@drawable/radio_grill" />
+    <!--
+         <View android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:id="@+id/dummy"
+        android:layout_below="@id/headerBackground"
+        android:background="#46FF64"/>
+    -->
+
+    <ImageView
+        android:id="@+id/pause"
+        android:paddingLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="35dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/radio_play_button" />
+
+    <TextView
+        android:id="@+id/radioName"
+        style="@style/connceton_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@id/pause"
+        android:ellipsize="end"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/radioDesc"
+        style="@style/radioDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioName"
+        android:layout_marginLeft="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/pause"
+        android:ellipsize="end"
+        android:singleLine="true" />
+
+    <!-- Mic layout with time -->
+
+    <RelativeLayout
+        android:id="@+id/timeMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioDesc"
+        android:visibility="visible" >
+
+        <ImageView
             android:id="@+id/mic"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-           	
-            android:src="@drawable/mic" />
-            
-        <TextView android:id="@+id/time"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-           
-            android:layout_toRightOf="@+id/mic"
-            android:gravity="center"/>
-        
-        </RelativeLayout>
-        
-        
-        <RelativeLayout android:id="@+id/bufferingLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/radioDesc"
-            android:paddingLeft="5dp">
-            
-          <ProgressBar
-              android:id = "@+id/progress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/mike_icon" />
 
         <TextView
+            android:id="@+id/time"
+            style="@style/radioTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Buffering"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/mic"
+            android:text="0:00:00" />
+    </RelativeLayout>
+
+    <!-- Buffering layout -->
+
+    <RelativeLayout
+        android:id="@+id/bufferingLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioDesc"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp" />
+
+        <TextView
+            android:id="@+id/bufferingText"
+            style="@style/radioTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/progress"
-            />
-        
-        </RelativeLayout>
-
-        <Button
-            android:id="@+id/pause"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/radioName"
-            android:paddingRight="10dp"
-           
-            android:background="@drawable/pause" />
-        
+            android:text="Buffering" />
     </RelativeLayout>
+
+    <!-- Network problem -->
+
+    <RelativeLayout
+        android:id="@+id/networkConnection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioDesc"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/network_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/error_icon" />
+
+        <TextView
+            android:id="@+id/network_error_text"
+            style="@style/radioTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/network_error"
+            android:paddingLeft="5dp"
+            android:text="@string/radio_network_error" />
+    </RelativeLayout>
+
+    <!-- bottom extra space -->
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:layout_below="@id/timeMain" />
+
+</RelativeLayout>

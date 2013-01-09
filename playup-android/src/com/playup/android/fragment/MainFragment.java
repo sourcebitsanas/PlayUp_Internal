@@ -26,7 +26,8 @@ public class MainFragment extends Fragment implements  FragmentInterface {
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);	
+		super.onCreate(savedInstanceState);
+
 	}
 
 	

@@ -88,6 +88,8 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 	private String vSecTitleColor = null;
 	private String vDisplayType = null;
 	private boolean pausePlay	=	false;
+	private Hashtable<String , List<String>> currentlyPlaying =null;
+	Hashtable <String , List<String>> stationList	=	null;
 
 
 
@@ -680,6 +682,18 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 					
 					lin.setTag(R.id.aboutText,tilesData.get("vContentId").get(position));
 					lin.setTag(R.id.about_txtview,"dummyUrl");
+					
+//					if(tilesData.get("vLinkHrefUrl").get(position) != null && tilesData.get("vLinkHrefUrl").get(position).trim().length() > 0){
+//						
+//						lin.setTag(R.id.about_txtview,tilesData.get("vLinkHrefUrl").get(position));
+//						
+//					}else if(tilesData.get("vLinkUrl").get(position) != null && tilesData.get("vLinkUrl").get(position).trim().length() > 0){
+//						
+//						lin.setTag(R.id.about_txtview,tilesData.get("vLinkUrl").get(position));
+//						
+//					}
+							
+					
 					lin.setTag(R.id.active_users_text,tilesData.get("vContentType").get(position));
 					lin.setOnTouchListener(this);
 					
@@ -708,11 +722,54 @@ public class EuroTilesGridGenerator  implements OnTouchListener{
 					
 				}
 			
-
+			// if this does not work then getRadioStationData and get RadioId from that and match with currentlyPlaying.
+				currentlyPlaying	=	dbUtil.getRadioStationsDataToPass(tilesData.get("vContentId").get(position));
+				Log.e("123", "currentlyPlaying---------------"+currentlyPlaying);
+			
+//			if(tilesData.get("vContentId").get(position) != null && tilesData.get("vContentId").get(position).length() > 0 ){
+//			
+//				stationList	=	dbUtil.getRadioStaionsData(tilesData.get("vContentId").get(position));
+//				if(stationList	!=	null &&stationList.containsKey("vRadioId")	&& stationList.get("vRadioId").size() >	0 ){
+//					
+//				}
+//				currentlyPlaying	=	dbUtil.getRadioStationsDataToPass(tilesData.get("vContentId").get(position));
+//			
+//			}
+//			
+//			if(currentlyPlaying !=null && currentlyPlaying.containsKey("vRadioId") && currentlyPlaying.get("vRadioId").toString().length() > 0 ){
+//				
+//				playerIcon.setImageResource(R.drawable.round_play);
+//				
+//			}else{
+//				playerIcon.setImageResource(R.drawable.pause_icon);
+//			}
 		
+//			Hashtable<String , List<String>> currentlyPlaying	=	dbUtil.getCurrentRadio();
+//			String vRadioUrl	=	null;
+//			if(currentlyPlaying != null ){
+//				if(currentlyPlaying.get("vRadioStationUrl").size()>0 && currentlyPlaying.get("vRadioStationUrl").toString().length() > 0) {
+//					
+//					vRadioUrl	=	currentlyPlaying.get("vRadioStationUrl").toString();
+//					if(tilesData.get("vRadioStationUrl").contains(vRadioUrl)){
+//						playerIcon.setImageResource(R.drawable.round_play);
+//					}
+//					
+//				}else if(currentlyPlaying.get("vRadioSationHrefUrl").size()>0 && currentlyPlaying.get("vRadioSationHrefUrl").toString().length() > 0){
+//					
+//					vRadioUrl	=	currentlyPlaying.get("vRadioSationHrefUrl").toString();
+//					if(tilesData.get("vRadioSationHrefUrl").contains(vRadioUrl)){
+//						playerIcon.setImageResource(R.drawable.round_play);
+//					}
+//					
+//				}else {
+//					playerIcon.setImageResource(R.drawable.pause_icon);
+//				}
+//				
+//			}else {
+//				playerIcon.setImageResource(R.drawable.pause_icon);
+//			}
 		
-		
-
+				lin.setOnTouchListener(this);
 			return lin;
 			
 		}

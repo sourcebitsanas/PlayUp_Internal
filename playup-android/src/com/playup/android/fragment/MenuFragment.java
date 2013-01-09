@@ -90,9 +90,10 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 	View directmMsgDivider ;
 
 	int hotItemId = 100;
-	private Button pauseButton;
+	private ImageView pauseButton;
 	private TextView radioName;
 	private TextView radiodesc;
+	private TextView bufferingText;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -141,12 +142,19 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 		myRecentActivityText = (TextView) content_layout.findViewById(R.id.my_recent_activity_text);
 		directmMsgDivider = ( View ) content_layout.findViewById( R.id.directmMsgDivider );
 
-		pauseButton = (Button)content_layout.findViewById(R.id.pause);
+		pauseButton = (ImageView)content_layout.findViewById(R.id.pause);
 		radioName = (TextView) content_layout.findViewById(R.id.radioName);
 		radiodesc = (TextView) content_layout.findViewById(R.id.radioDesc);
 		
+		radioName.setTypeface(Constants.OPEN_SANS_REGULAR);
+		radiodesc.setTypeface(Constants.OPEN_SANS_LIGHT);
+		bufferingText	=	(TextView) content_layout.findViewById(R.id.bufferingText);
+		bufferingText.setTypeface(Constants.OPEN_SANS_LIGHT);
+		
 		content_layout.findViewById(R.id.bufferingLayout).setVisibility(View.GONE);
 		content_layout.findViewById(R.id.timeMain).setVisibility(View.VISIBLE);
+		
+		
 		// initialize views
 		initializeViews(content_layout);
 		
@@ -379,11 +387,13 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 		if(currentRadio != null && currentRadio.get("vRadioId") != null && currentRadio.get("vRadioId").size() > 0){
 			
 			PlayUpActivity.mediaPlayerService.startTimer();
+			Log.e("123", "setting radio name and desc------"+currentRadio.get("vRadioTitle").get(0)+"--------"+currentRadio.get("vRadioSubTitle").get(0));
 			radioName.setText(currentRadio.get("vRadioTitle").get(0));
 			radiodesc.setText(currentRadio.get("vRadioSubTitle").get(0));
 			pauseButton.setTag(R.id.aboutScrollView, false);
 			pauseButton.setTag(R.id.about_txtview, currentRadio.get("vRadioStationUrl").get(0));
 		}else{
+			Log.e("123", "else of setting radio details");
 			radioName.setText("Welcome To Playup");
 			radiodesc.setText("About Us");
 			pauseButton.setTag(R.id.aboutScrollView, true);
@@ -1088,7 +1098,7 @@ public class MenuFragment extends MainFragment implements OnClickListener, OnTou
 							
 							content_layout.findViewById(R.id.bufferingLayout).setVisibility(View.GONE);
 							content_layout.findViewById(R.id.timeMain).setVisibility(View.VISIBLE);
-							
+							((TextView)content_layout.findViewById(R.id.time)).setTypeface(Constants.OPEN_SANS_LIGHT);
 							((TextView)content_layout.findViewById(R.id.time)).setText(msg.getData().getString("time"));
 							
 							refreshMyProfile();

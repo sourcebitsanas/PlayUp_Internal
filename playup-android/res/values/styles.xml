@@ -99,6 +99,13 @@
         <item name="android:textColor">#FF4653</item>
     </style>
 
+    <style name="radioTime" parent="userName_parent">
+        <item name="android:textColor">#DDDDDD</item>
+    </style>
+    
+    <style name="radioDescription" parent="userName_parent">
+        <item name="android:textColor">#BCBCBC</item>
+    </style>
          
     <style name="UserNumber_parent">
         <item name="android:textSize">13sp</item>
